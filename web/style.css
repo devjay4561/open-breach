@@ -1,0 +1,1145 @@
+@font-face{font-family:BreachKR;src:url('assets/fonts/NotoSansKR.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:BreachDisplay;src:url('assets/fonts/Oswald-700.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:BreachMono;src:url('assets/fonts/JetBrainsMono-500.woff2') format('woff2');font-style:normal;font-weight:500;font-display:swap}
+:root{
+  /* Semantic tokens (design plan "색 토큰"). Legacy names below are kept as aliases. */
+  --surface-0:#0d1310;--surface-1:#141c17eb;--surface-2:#1c2620;
+  --line:#2f3b33;--line-soft:#232e27;
+  --text-hi:#f2efe4;--text:#c4cdc6;--text-lo:#7f8f84;
+  --friendly:#7fd8c6;--threat:#ff5a48;--live:#f2b84b;--civilian:#8fb6ff;
+  --action:#ff5a48;
+  --op-1:#a1d6c3;--op-2:#92b9e3;--op-3:#d2bc87;--op-4:#c2a5d4;
+  /* Legacy aliases used throughout existing CSS; point them at the new tokens.
+     --muted/--faint keep their original values (not covered by the semantic
+     table) so the existing text-tier hierarchy (text > muted > faint) holds. */
+  --bg:var(--surface-0);--panel:var(--surface-2);--panel-deep:var(--surface-1);
+  --muted:#9baba0;--faint:#687a6d;
+  --red:var(--action);--red-hover:#ff7060;--cyan:var(--friendly);--amber:var(--live);
+  --display:BreachDisplay,'Arial Narrow',BreachKR,sans-serif;
+  --mono:BreachMono,ui-monospace,SFMono-Regular,Consolas,monospace;
+  --ui-scale:1;color-scheme:dark;font-family:BreachKR,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-synthesis:none}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:var(--bg);color:var(--text);font-size:calc(13px * var(--ui-scale));line-height:1.6;word-break:keep-all}button,input,select{font:inherit}button{color:inherit;background:none;border:0;border-radius:0;cursor:pointer;transition:background .16s,color .16s,border-color .16s;touch-action:manipulation}button:hover{color:#fff;background:#ffffff0a}button:disabled{cursor:not-allowed;opacity:.4}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}button,select,input{pointer-events:auto}button>*{pointer-events:none}button svg{width:19px;height:19px;display:block;flex:none}button[data-icon]{display:inline-grid;place-items:center}a{color:var(--cyan)}[hidden]{display:none!important}h1,h2,h3,p,dl,dd{margin:0}svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:square;stroke-linejoin:miter}kbd{font:12px var(--mono);border:1px solid var(--line);padding:2px 5px;color:var(--muted);white-space:nowrap}small{font-size:12px}input[type=range]{accent-color:var(--cyan);cursor:pointer}input[type=checkbox]{accent-color:var(--cyan);width:17px;height:17px}select{background:var(--panel);border:1px solid var(--line);padding:8px 12px;color:var(--text)}#canvas{position:fixed;inset:0;width:100%;height:100%;outline:0;display:block}#vignette{position:fixed;inset:0;pointer-events:none;box-shadow:inset 0 0 130px #0a120c70}.screen{position:fixed;inset:0;pointer-events:none}.screen button,.screen a,.screen .panel,.mission-panel{pointer-events:auto}.eyebrow,.section-label,.edition,.wordmark-mini,.menu-footer,.brief-stats dt,.brief-stats small,.mission-tab small,.world-caption,.load-meta,.loading-note,.panel-label,.field-marker,.roster-label,.operation-clock>span,.mode-pill,.signals>span,.tutorial-footer,.result-score>span{font-family:var(--mono);font-size:12px;letter-spacing:.08em}.eyebrow{color:var(--muted);font-weight:500}.primary{display:flex;align-items:center;justify-content:space-between;background:var(--red);color:#fff;border:1px solid var(--red);font-weight:700;min-height:48px;padding:12px 22px}.primary:hover{background:var(--red-hover);border-color:var(--red-hover);color:#fff}.primary:disabled{opacity:.5}.primary svg{width:21px}.icon-button{width:37px;height:37px;padding:8px;font-size:24px}.panel{background:var(--panel-deep);border:1px solid var(--line)}.status-dot{display:inline-block;width:5px;height:5px;background:var(--cyan);margin-right:8px}.brand-symbol{display:block;width:23px;height:24px;position:relative;flex:none}.brand-symbol:before,.brand-symbol:after{content:'';position:absolute;top:0;width:9px;height:24px;border:4px solid var(--red)}.brand-symbol:before{left:0;border-right:0}.brand-symbol:after{right:0;border-left:0}.menu-header{display:flex;align-items:center;justify-content:space-between;padding:30px 42px;position:absolute;top:0;left:0;right:0}.wordmark{display:flex;gap:12px;align-items:center;font-size:22px;font-weight:900;letter-spacing:-.05em;line-height:1}.wordmark-mini{display:block;color:var(--muted);font-size:12px;letter-spacing:.17em;margin-top:7px;font-weight:400}.menu-header nav{display:flex;gap:23px;align-items:center;pointer-events:auto}.menu-header nav button{font-size:12px;padding:5px 8px}.menu-header nav button span{margin-left:12px;color:var(--muted)}.mission-panel{position:absolute;top:140px;bottom:70px;left:5.3vw;width:398px;display:flex;flex-direction:column}.edition{display:flex;align-items:center;color:var(--muted);font-size:12px;letter-spacing:.1em}.edition-no{margin-left:auto;color:var(--faint)}.game-title{font-family:var(--display);font-stretch:condensed;font-size:104px;letter-spacing:-.045em;line-height:.84;font-weight:900;margin:25px 0 16px;position:relative}.game-title>span:first-child{display:block;font-family:BreachKR,sans-serif;font-size:31px;font-weight:800;letter-spacing:.26em;line-height:1.3;margin-bottom:5px}.title-square{display:inline-block;background:var(--red);width:12px;height:12px;vertical-align:baseline;margin-left:8px}.game-tagline{color:#bfc9be;font-size:14px;letter-spacing:.04em;margin-bottom:29px}.section-label{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:17px;margin-bottom:13px;color:var(--muted);font-size:12px}.section-label>span:first-child{font:600 12px BreachKR,sans-serif;color:var(--text)}.mission-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mission-tab{display:grid;grid-template-columns:35px 1fr;align-items:center;text-align:left;padding:12px;border:1px solid var(--line);background:#142018b3;position:relative}.mission-tab>span{grid-row:1/3;font:20px var(--mono);color:var(--faint)}.mission-tab>strong{font-size:12px;font-weight:600}.mission-tab>small{font-size:12px;color:var(--muted);margin-top:3px}.mission-tab.active{background:#29392e;border-color:#738d79}.mission-tab.active:after{content:'';position:absolute;left:-1px;top:10px;bottom:10px;width:3px;background:var(--cyan)}.mission-tab.active>span{color:var(--cyan)}.brief-heading{display:flex;justify-content:space-between;align-items:center;margin-top:24px}.brief-heading h2{font-size:20px;letter-spacing:-.06em;font-weight:600}.completed-badge{color:var(--cyan);font-size:12px}#brief-description{font-size:12px;color:var(--muted);line-height:1.9;margin-top:10px;word-break:keep-all}.brief-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:19px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.brief-stats>div+div{padding-left:17px;border-left:1px solid var(--line)}.brief-stats dt{font-family:BreachKR,sans-serif;font-size:12px;color:var(--muted);margin-bottom:4px;letter-spacing:0}.brief-stats dd{font:24px var(--mono);line-height:1.4}.brief-stats small{font-size:12px;color:var(--faint)}.brief-objectives{padding:0;margin:15px 0 21px;list-style:none;counter-reset:objectives}.brief-objectives li{font-size:12px;color:#c0cabb;margin-top:6px;counter-increment:objectives}.brief-objectives li:before{content:'0'counter(objectives);font:12px var(--mono);color:var(--faint);margin-right:12px}.start-button{width:100%;margin-top:auto;min-height:70px;text-align:left;font-size:20px;letter-spacing:-.03em}.start-button small{display:block;font:12px var(--mono);letter-spacing:.16em;opacity:.75;margin-bottom:3px}.button-arrow{font-size:30px;font-weight:300}.menu-utility{display:flex;justify-content:space-between;margin-top:12px;color:var(--muted);font-size:12px}.menu-utility button{padding:2px 0}.menu-utility kbd{font-size:12px;margin-left:5px}.world-caption{position:absolute;right:8vw;bottom:102px;display:flex;align-items:center;gap:18px;color:var(--faint);font-size:12px;line-height:2}.world-caption b{font-weight:400;color:#a7b6a4;font-size:12px}.crosshair{font-size:35px;color:var(--cyan);font-weight:200}.menu-footer{position:absolute;left:42px;right:42px;bottom:22px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--faint)}.menu-footer>span:first-child{font:12px BreachKR,sans-serif}.menu-footer button{font:12px BreachKR,sans-serif;margin:0 22px;color:var(--muted)}.menu-footer small{font-size:12px;color:var(--faint)}.menu:before{content:'';position:absolute;top:0;left:0;bottom:0;width:510px;background:#111a13ed;box-shadow:70px 0 80px #111a1390;z-index:-1}
+.hud-header{position:absolute;top:0;left:0;right:0;height:68px;display:flex;align-items:center;padding:0 24px;background:var(--panel-deep);border-bottom:1px solid var(--line);gap:22px;pointer-events:auto}.hud-brand{display:flex;gap:11px;align-items:center;padding:0 22px 0 0;border-right:1px solid var(--line);font-weight:900;letter-spacing:-.05em;font-size:21px}.hud-brand .brand-symbol{transform:scale(.8)}.header-mission{line-height:1.4;min-width:107px}.header-mission>.eyebrow{font-size:12px;color:var(--faint);display:block}.header-mission>strong{display:block;font-size:13px;margin-top:4px;font-weight:600}.objectives{display:flex;gap:26px;flex:1;margin-left:18px}.objectives>div{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted)}.objectives b{font:12px var(--mono);font-weight:400;color:var(--text)}.objective-symbol{font:22px var(--mono);color:var(--cyan)}.operation-clock{line-height:1.3;padding-right:21px;border-right:1px solid var(--line)}.operation-clock>span{display:block;color:var(--faint);font-size:12px}.operation-clock output{font:21px var(--mono)}.mode-pill{display:flex;align-items:center;gap:8px;color:var(--cyan);font-family:BreachKR,sans-serif;font-size:12px;letter-spacing:.02em;white-space:nowrap}.mode-pill>span{width:6px;height:6px;border:1px solid currentColor}.mode-pill.executing{color:var(--red)}.mode-pill.executing>span{background:currentColor}.header-actions{display:flex;gap:2px;margin-left:3px}.header-actions .icon-button{color:var(--muted);width:30px;height:30px}.header-actions svg{width:17px}.tutorial{position:absolute;left:24px;top:91px;width:260px;padding:15px 18px}.panel-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-bottom:13px}.panel-label b{font-weight:400;color:var(--cyan);margin-left:8px}.panel-label button{font-size:19px;line-height:1;padding:0 1px}.tutorial-progress{height:2px;background:var(--line);margin:3px 0 16px}.tutorial-progress>span{display:block;height:2px;background:var(--cyan);width:16.6%;transition:width .25s}.tutorial h2{font-size:15px;letter-spacing:-.035em;font-weight:600;margin-bottom:8px}.tutorial p{font-size:12px;color:var(--muted);line-height:1.8;word-break:keep-all}.tutorial-footer{display:flex;align-items:center;justify-content:space-between;margin-top:15px;font-size:12px}.tutorial-footer>span{color:var(--cyan);border:1px solid var(--line);padding:2px 6px}.tutorial-footer>button{font:12px BreachKR,sans-serif;color:var(--muted);padding:3px 0}.world-hint{position:absolute;top:86px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;background:#141c16ed;border:1px solid var(--line-soft);padding:9px 15px;white-space:nowrap;font-size:12px;color:var(--muted)}#world-hint-icon{color:var(--cyan);font-size:18px;line-height:1}.world-hint kbd{font-size:12px}.field-marker{position:absolute;left:25px;bottom:180px;display:flex;align-items:center;gap:12px;color:var(--faint);font-size:12px}.field-marker>span:first-child{font-size:22px;color:var(--muted)}.field-marker>span:last-child{margin-left:18px;color:var(--muted)}.right-tools{position:absolute;right:24px;bottom:181px;display:flex;gap:10px;align-items:center;pointer-events:auto}.queue-toggle{display:flex;align-items:center;gap:9px;padding:10px 13px;background:var(--panel-deep);border:1px solid var(--line);font-size:12px}.queue-toggle svg{width:15px;height:15px;color:var(--muted)}.queue-toggle b{font:12px var(--mono);color:var(--cyan);font-weight:400;margin-left:6px}.signals{display:flex;align-items:center;gap:4px;background:var(--panel-deep);border:1px solid var(--line);padding:4px}.signals>span{font-size:12px;color:var(--faint);margin:0 6px}.signals>button{font:12px var(--mono);border:1px solid var(--line);width:29px;height:29px;color:var(--amber)}.signals>button:hover{background:var(--amber);color:var(--bg)}.signals>button.signaled{background:var(--amber);color:var(--bg)}.queue-panel{position:absolute;right:24px;bottom:234px;width:306px;max-height:calc(100vh - 330px);display:flex;flex-direction:column;padding:15px 15px 0}.queue-panel .panel-label b{margin-left:0}.command-list{overflow:auto;min-height:40px;margin:0 -15px}.command-row{display:grid;grid-template-columns:22px 1fr auto;gap:8px;padding:11px 13px;border-top:1px solid var(--line-soft);align-items:center}.command-row>span{font:12px var(--mono);color:var(--faint)}.command-row strong{font-size:12px;font-weight:500;display:block}.command-row small{font-size:12px;color:var(--muted);display:block}.command-row.running{background:#2a3b31}.command-row.failed{background:#38271f}.command-row.failed small{color:var(--amber)}.command-row.done{opacity:.45}.queue-row-buttons{display:flex}.queue-row-buttons button{padding:4px;width:22px;font-size:13px;color:var(--muted)}.queue-panel>footer{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:12px;color:var(--faint)}.queue-panel>footer button{font-size:12px;color:var(--muted);padding:4px}.empty-state{padding:24px 20px;color:var(--muted);text-align:center;font-size:12px;line-height:1.8}.operation-log{position:absolute;right:25px;top:91px;display:flex;flex-direction:column;align-items:flex-end;gap:5px;max-width:330px}.log-entry{background:#131b16eb;border-left:2px solid var(--line);padding:6px 10px;font-size:12px;color:#a9b5a7}.log-entry time{font:12px var(--mono);color:var(--faint);margin-right:9px}.log-entry.important{border-color:var(--amber);color:var(--amber)}.command-deck{position:absolute;left:24px;right:24px;bottom:19px;background:var(--panel-deep);border:1px solid var(--line);pointer-events:auto}.deck-top{display:flex;gap:0;align-items:stretch;height:89px}.roster-label{width:83px;border-right:1px solid var(--line);padding:16px 14px;color:var(--faint);font-size:12px;line-height:1.4;flex:none}.roster-label b{display:block;font-size:21px;font-weight:400;line-height:1.1;margin-top:5px;color:var(--muted)}.unit-cards{display:flex;flex:1;min-width:0}.unit-card{flex:1;border-right:1px solid var(--line);text-align:left;padding:13px 16px 11px;position:relative;min-width:0;display:grid;grid-template-columns:31px minmax(0,1fr);column-gap:12px;align-items:center}.unit-card.selected{background:#25342b}.unit-card.selected:before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--unit-color,var(--cyan))}.unit-avatar{grid-row:1/3;width:28px;height:37px;position:relative;color:var(--unit-color,var(--cyan));display:grid;place-items:center;font:15px var(--mono);border:1px solid #516655;background:#15231b;clip-path:polygon(20% 0,80% 0,100% 15%,100% 100%,0 100%,0 15%)}.unit-card.down .unit-avatar{color:var(--red);opacity:.55}.unit-main{display:flex;justify-content:space-between;gap:10px;align-items:center}.unit-main strong{font:12px var(--mono);font-weight:600;letter-spacing:.05em;white-space:nowrap}.unit-main small{font-size:12px;color:var(--muted);white-space:nowrap}.unit-readout{display:flex;align-items:center;justify-content:space-between;font:12px var(--mono);color:var(--muted);margin-top:4px}.hp-bar{width:43px;height:3px;background:#425044}.hp-bar i{display:block;height:100%;background:var(--unit-color,var(--cyan))}.unit-status{font-size:12px;display:block;grid-column:1/3;margin-top:6px;color:var(--faint);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.unit-card.selected .unit-status{color:var(--cyan)}.execution-button{width:189px;flex:none;justify-content:center;gap:17px;border:0;margin:9px;min-height:0}.execution-button>span:last-child{text-align:left;line-height:1.4}.execution-button strong{display:block;font-size:15px}.execution-button small{display:block;font:12px var(--mono);letter-spacing:.16em;opacity:.6;margin-top:4px}.execution-button.executing{background:var(--amber);color:#242316}.deck-bottom{border-top:1px solid var(--line);height:47px;display:flex;justify-content:space-between;align-items:stretch}.tools{display:flex;align-items:stretch;flex:1}.tools>button{display:flex;gap:8px;align-items:center;justify-content:center;padding:0 17px;border-right:1px solid var(--line-soft);font-size:12px;white-space:nowrap;position:relative}.tools>button svg{color:var(--muted);width:17px;height:17px}.tools>button kbd{font-size:12px;padding:0 3px;color:var(--faint)}.tools>button.active{color:var(--cyan);background:#25382c}.tools>button.active svg{color:var(--cyan)}.tools>button.active:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--cyan)}.deck-utility{display:flex;align-items:stretch;margin-left:auto}.deck-utility button{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);padding:0 17px;border-left:1px solid var(--line-soft)}.deck-utility svg{width:15px;height:15px}.deck-utility #deck-more{font-size:24px;letter-spacing:-.1em;padding:0 13px}
+.loading-screen{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--bg);text-align:center;padding:30px}.load-mark{display:flex;gap:6px;margin-bottom:38px;transform:skewY(-20deg)}.load-mark span{background:var(--red);height:43px;width:11px;animation:loader 1.3s infinite}.load-mark span:nth-child(2){animation-delay:.16s}.load-mark span:nth-child(3){animation-delay:.32s}.loading-screen h1{font-size:28px;letter-spacing:-.055em;font-weight:500;margin:17px 0 10px}.loading-screen>p:not(.eyebrow):not(.loading-note){font-size:12px;color:var(--muted);max-width:550px;word-break:keep-all}.load-track{width:320px;height:2px;background:var(--line);margin-top:33px}.load-track>div{height:2px;width:0;background:var(--red);transition:width .25s}.load-meta{display:flex;width:320px;justify-content:space-between;margin-top:10px;color:var(--muted);font-size:12px}.loading-note{position:absolute;bottom:30px;font:12px BreachKR,sans-serif;letter-spacing:0;color:var(--faint)}#load-retry{margin-top:24px;min-width:190px}.loading-screen.error .load-mark span{animation:none;background:var(--amber)}.loading-screen.error .load-track{display:none}.loading-screen.error .load-meta{display:none}.replay-header{position:absolute;top:22px;left:24px;right:24px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}.replay-header strong{display:block;font-size:16px;font-weight:500;margin-top:4px}.replay-header .eyebrow{font-size:12px;color:var(--faint)}.replay-header>span{font:12px var(--mono);color:var(--muted)}.replay-header>div:last-child{display:flex;gap:12px;align-items:center;font-size:12px}.replay-header button{padding:8px 10px}.replay-header strong>span{font:12px BreachKR,sans-serif;color:var(--amber);border:1px solid #675940;padding:3px 6px;margin-left:9px}.replay-deck{position:absolute;left:6%;right:6%;bottom:28px;padding:20px 24px}.replay-timeline{display:flex;gap:18px;align-items:center}.replay-timeline output{font:12px var(--mono);color:var(--muted)}.replay-timeline input{flex:1;height:3px}.replay-controls{display:flex;align-items:center;justify-content:space-between;margin-top:18px}.replay-controls>div{display:flex;align-items:center;gap:12px}.replay-controls label{font-size:12px;color:var(--faint);margin-left:14px}.replay-controls select{font-size:12px;padding:7px 10px;max-width:160px}.replay-controls .replay-play{display:grid;place-items:center;background:var(--red);height:35px;width:49px}.replay-controls .replay-play svg{width:16px;height:16px}.replay-controls .icon-button{height:30px;width:30px}.replay-controls #replay-speeds{display:flex;margin-left:12px;gap:4px}.replay-controls #replay-speeds button{font:12px var(--mono);width:40px;height:29px;color:var(--muted)}.replay-controls #replay-speeds button.active{background:#314135;color:var(--cyan)}.restore-hud{position:fixed;right:24px;bottom:24px;padding:9px 16px;font-size:12px;z-index:30}.restore-hud kbd{margin-left:9px}.result-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#08100bd9;z-index:40;backdrop-filter:blur(5px)}.result-card{width:445px;text-align:center;padding:32px 36px}.result-card>.eyebrow{font-size:12px;color:var(--faint)}.result-symbol{margin:23px auto 19px;border:1px solid var(--cyan);width:45px;height:45px;display:grid;place-items:center;transform:rotate(45deg);font-size:24px;color:var(--cyan)}.result-card h1{font-weight:600;font-size:32px;letter-spacing:-.07em}.result-card>p:not(.eyebrow):not(.note){font-size:12px;color:var(--muted);margin-top:8px}.result-score{display:flex;align-items:center;justify-content:center;gap:17px;margin:20px 0}.result-score>strong{font:70px var(--mono);font-weight:300;letter-spacing:-.09em;color:var(--cyan)}.result-score>span{text-align:left;font-size:12px;color:var(--faint);line-height:1.8}.result-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-bottom:23px}.result-stats>div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}.result-stats>div:nth-child(odd){padding-right:18px}.result-stats>div:nth-child(even){padding-left:18px}.result-stats dt{color:var(--muted)}.result-stats dd{font:12px var(--mono)}.result-card>.primary{width:100%;font-size:13px;justify-content:center;gap:10px}.result-card>.primary>span:last-child{margin-left:auto}.result-actions{display:flex;justify-content:center;gap:12px;font-size:12px;margin:11px 0 16px}.result-actions button{padding:6px 0}.note{font-size:12px;color:var(--faint);line-height:1.8;word-break:keep-all}.result-card.failed .result-symbol{color:var(--red);border-color:var(--red)}.result-card.failed .result-score>strong{color:var(--red)}
+dialog{width:min(680px,calc(100vw - 40px));max-height:calc(100vh - 64px);padding:0;background:var(--panel-deep);color:var(--text);border:1px solid var(--line);box-shadow:0 30px 100px #0005;overflow:auto}dialog::backdrop{background:#07100bcc;backdrop-filter:blur(5px)}dialog>header{position:sticky;top:0;background:var(--panel-deep);z-index:1;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}dialog h2{font-weight:600;font-size:23px;letter-spacing:-.05em;margin-top:4px}dialog .eyebrow{font-size:12px;color:var(--faint)}#modal-content{padding:24px 28px}.modal-intro{font-size:12px;color:var(--muted);line-height:1.9;margin-bottom:22px;word-break:keep-all}.settings-group+.settings-group{margin-top:22px}.settings-group h3{font:12px var(--mono);letter-spacing:.1em;color:var(--cyan);padding-bottom:9px;border-bottom:1px solid var(--line)}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line-soft)}.setting-row label{font-size:12px;line-height:1.5}.setting-row label small{display:block;color:var(--faint);font-size:12px;margin-top:4px}.setting-row select{font-size:12px;min-width:110px;padding:6px 10px}.setting-row input[type=range]{width:130px}.setting-control{display:flex;align-items:center;gap:11px}.setting-control output{font:12px var(--mono);min-width:28px;color:var(--muted)}/* RB2: sticky confirm footer (plan item 4) — at short viewports (1280x800,
+   1366x768) modal bodies like the roster/loadout picker overflow and the
+   confirm button used to scroll out of view entirely. Pinning the footer
+   to the dialog's own scroll edge keeps it reachable without hunting for
+   it, while the dialog body still scrolls normally above it. */
+.dialog-footer{display:flex;gap:10px;justify-content:flex-end;align-items:center;margin:23px -28px -24px;padding:14px 28px;position:sticky;bottom:0;background:#141c17;border-top:1px solid var(--line);z-index:2}
+/* RD2 (plan item 3): --panel-deep (var(--surface-1)) carries an eb alpha
+   channel for the floating HUD panels, which made this sticky dialog
+   footer translucent -- scrolled content (e.g. the controls tab's "기본값
+   으로 초기화" button and "GAMEPAD LAYOUT" heading) showed through it. The
+   footer now paints with a fully opaque color instead. #modal-content also
+   reserves bottom padding so the last section's content scrolls clear of
+   the footer instead of stopping directly underneath it. */
+#modal-content{padding-bottom:84px}.secondary{border:1px solid var(--line);padding:9px 15px;font-size:12px;background:#1c2920}.secondary:hover{border-color:var(--muted)}.dialog-footer .note{flex:1}.controls-table{width:100%;border-collapse:collapse;font-size:12px}.controls-table th{font-weight:400;color:var(--muted);text-align:left;width:36%;padding:10px 0;border-bottom:1px solid var(--line-soft)}.controls-table td{padding:10px 0;border-bottom:1px solid var(--line-soft)}.help-callout{border-left:2px solid var(--cyan);padding:11px 15px;background:#223127;color:var(--muted);font-size:12px;line-height:1.9;margin:20px 0}.help-callout strong{color:var(--text);font-weight:500}.guide-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:20px}.guide-steps>div{padding:13px;background:#1d2a21;border:1px solid var(--line-soft)}.guide-steps span{font:23px var(--mono);color:var(--faint);display:block}.guide-steps strong{font-size:12px;font-weight:500;display:block;margin:5px 0}.guide-steps p{font-size:12px;color:var(--muted);line-height:1.8}.library-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.library-toolbar>span{font:12px var(--mono);color:var(--faint)}.replay-list{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}.replay-record{display:grid;grid-template-columns:43px 1fr auto;align-items:center;gap:13px;padding:14px;border:1px solid var(--line);background:#1a251e}.record-icon{font:13px var(--mono);color:var(--cyan);width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line)}.record-details strong{font-size:12px;font-weight:500}.record-details small{display:block;color:var(--faint);font:12px var(--mono);margin-top:5px}.record-actions{display:flex;gap:5px}.record-actions button{font-size:12px;padding:7px;color:var(--muted)}.record-actions button:first-child{color:var(--cyan)}.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.choice-button{border:1px solid var(--line);padding:18px;font-size:14px;background:#223026}.choice-button small{display:block;font-size:12px;color:var(--muted);margin-top:5px}.wait-time{display:flex;align-items:center;gap:20px;margin:25px 0}.wait-time input{flex:1}.wait-time output{font:28px var(--mono);color:var(--cyan);min-width:70px}.plan-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.plan-options button{padding:18px;text-align:left;border:1px solid var(--line);background:#1d2b21}.plan-options strong{display:block;font-size:12px;font-weight:500}.plan-options small{display:block;color:var(--faint);font-size:12px;margin-top:5px}.credits p{font-size:12px;color:var(--muted);line-height:1.9;margin-bottom:14px}.credits h3{font-size:14px;font-weight:500;margin:18px 0 8px}.toasts{position:fixed;left:50%;transform:translateX(-50%);top:144px;z-index:150;display:flex;flex-direction:column;gap:7px;pointer-events:none;max-width:min(520px,90vw)}.toast{background:#243529;border:1px solid #4b6855;border-left:3px solid var(--cyan);color:var(--text);padding:11px 17px;font-size:12px;box-shadow:0 5px 20px #0002;animation:toast-in .2s ease-out;line-height:1.7}.toast.error,.toast.warning{border-color:#6a5036;border-left-color:var(--amber);background:#332b20}.storage-warning{color:var(--amber)!important}.loading-screen.loading-out{opacity:0;pointer-events:none;transition:opacity .4s}.reduced-motion *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.footer-error{color:var(--amber);font-size:12px;margin-top:15px}::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--line)}@keyframes loader{0%,100%{opacity:.25;transform:scaleY(.65)}50%{opacity:1;transform:scaleY(1)}}@keyframes toast-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(min-height:930px){.mission-panel{top:18vh;bottom:12vh;width:425px}.game-title{font-size:114px}.game-tagline{margin-bottom:37px}.brief-heading{margin-top:29px}.brief-objectives{margin-top:22px;margin-bottom:28px}.brief-stats{margin-top:24px;padding:18px 0}.start-button{margin-top:23px}.menu-utility{margin-top:15px}.brief-objectives li{margin-top:10px}.menu:before{width:560px}}
+@media(max-height:800px){.mission-panel{top:108px;bottom:66px;width:365px}.game-title{font-size:87px;margin:17px 0 12px}.game-title>span:first-child{font-size:26px}.game-tagline{font-size:12px;margin-bottom:20px}.section-label{padding-top:12px;margin-bottom:10px}.mission-tab{padding:9px 11px}.brief-heading{margin-top:17px}.brief-heading h2{font-size:18px}#brief-description{font-size:12px;margin-top:7px}.brief-stats{margin-top:12px;padding:10px 0}.brief-stats dd{font-size:21px}.brief-objectives{margin:11px 0 15px}.brief-objectives li{font-size:12px;margin-top:4px}.start-button{min-height:57px;font-size:17px;padding:9px 19px}.menu:before{width:480px}.result-card{padding-top:22px;padding-bottom:20px}.result-symbol{margin:18px auto}.result-score{margin:12px 0}.result-score>strong{font-size:62px}.menu-header{padding-top:24px}.world-hint{top:85px;font-size:12px}.tutorial{width:236px;padding:13px 15px}.tutorial p{font-size:12px}.tutorial h2{font-size:14px}}
+@media(max-width:1450px){.tools>button{padding:0 12px;gap:6px}.unit-card{padding-left:12px;padding-right:12px;column-gap:8px}.unit-main small{display:none}.unit-main strong{font-size:12px}.execution-button{width:165px}.roster-label{width:65px;padding:15px 11px}.hud-header{gap:15px}.objectives{gap:18px;margin-left:4px}.world-hint{left:53%;max-width:450px;white-space:normal}.game-title{font-size:88px}.menu-panel{width:375px}.hud-brand{padding-right:17px}.header-actions .icon-button{width:27px}.operation-clock{padding-right:15px}.deck-utility button{padding:0 12px}}
+@media(max-width:1150px){.hud-brand>span{display:none}.hud-brand{padding-right:13px}.objectives{gap:12px}.objectives>div{font-size:12px;gap:6px}.objective-symbol{display:none}.header-mission{min-width:94px}.hud-header{padding:0 15px;gap:13px}.unit-avatar{display:none}.unit-card{grid-template-columns:1fr}.unit-status{grid-column:1}.tools>button{padding:0 11px;gap:5px}.tools>button kbd{display:none}.deck-utility #save-plan>span:last-child{display:none}.execution-button{width:149px}.execution-button strong{font-size:13px}.roster-label{width:60px}.world-hint{display:none}.mission-panel{left:4vw}.menu-header{padding-left:4vw;padding-right:4vw}.menu:before{width:430px}.game-title{font-size:89px}.mission-panel{width:345px}.operation-clock output{font-size:18px}.world-caption{right:4vw}.queue-panel{width:270px}.operation-log{max-width:265px}}
+@media(max-width:850px){.mission-panel{width:330px;left:24px}.menu-header{padding-left:24px;padding-right:24px}.menu-header nav{gap:9px}.menu-header nav button{font-size:12px}.menu-header nav button:nth-child(2){display:none}.menu:before{width:385px}.menu-footer{left:24px;right:24px}.menu-footer>span:first-child{display:none}.menu-footer>span:last-child{margin-left:auto}.world-caption{display:none}.hud-header{height:59px}.hud-brand{display:none}.objectives{gap:10px}.objectives>div>span:not(.objective-symbol){display:none}.objectives>div:before{content:'⌖';color:var(--cyan)}.objectives #civilian-objective:before{content:'◇'}.header-mission{min-width:83px}.operation-clock>span{display:none}.header-actions{gap:0}.header-actions .icon-button{width:26px}.command-deck{left:12px;right:12px;bottom:12px}.deck-top{height:80px}.roster-label{display:none}.unit-card{padding:10px}.execution-button{width:108px;margin:6px;gap:9px}.execution-button strong{font-size:12px}.execution-button svg{width:15px}.execution-button small{font-size:12px}.deck-bottom{height:45px}.tools>button{flex:1;padding:0 8px;font-size:12px;gap:5px}.tools>button svg{width:14px}.tools>button:nth-child(7)>span:last-child{display:none}.deck-utility button{padding:0 9px}.deck-utility #deck-more{padding:0 10px}.right-tools{right:12px;bottom:152px;gap:6px}.field-marker{left:12px;bottom:150px}.tutorial{left:12px;top:76px;width:205px;padding:12px}.tutorial h2{font-size:12px}.tutorial p{font-size:12px}.tutorial-footer{font-size:12px}.tutorial-footer>button{font-size:12px}.queue-panel{right:12px;bottom:203px;max-height:calc(100vh - 290px);width:265px}.operation-log{top:76px;right:12px;max-width:240px}.replay-header{left:12px;right:12px;top:12px;padding:13px}.replay-header>span{display:none}.replay-header>div:last-child{gap:2px;font-size:12px}.replay-header button{padding:6px}.replay-deck{left:12px;right:12px;bottom:12px;padding:15px}.replay-controls{gap:15px}.replay-controls>div{gap:7px}.replay-controls label{display:none}.replay-controls select{font-size:12px;padding:7px;max-width:125px}.replay-controls #replay-speeds{margin-left:3px;gap:0}.replay-controls #replay-speeds button{width:32px;font-size:12px}}
+@media(max-width:600px){.menu:before{width:100%;box-shadow:none;background:#111a13dd}.mission-panel{left:24px;right:24px;width:auto;max-width:390px;margin:0 auto;top:105px;bottom:55px}.menu-header nav button:first-child{font-size:12px}.menu-footer{bottom:16px}.menu-footer button{margin:0 12px}.wordmark{font-size:20px}.game-title{font-size:80px}.game-title>span:first-child{font-size:25px}.edition{font-size:12px}.game-tagline{font-size:12px}.brief-stats dd{font-size:20px}.brief-objectives li{font-size:12px}.hud-header{padding:0 9px;gap:10px}.header-mission{min-width:80px}.header-mission>strong{font-size:12px}.header-mission>.eyebrow{font-size:12px}.objectives{gap:8px;flex:1;margin:0}.objectives b{font-size:12px}.operation-clock{padding-right:10px}.operation-clock output{font-size:14px}.mode-pill{font-size:12px;gap:5px}.header-actions .icon-button{width:24px}.header-actions button:first-child{display:none}.unit-card{padding:8px 7px}.unit-main strong{font-size:12px}.unit-readout{font-size:12px}.hp-bar{width:22px}.unit-status{font-size:12px}.execution-button{width:85px;gap:7px;margin:5px;padding:5px}.execution-button svg{width:12px}.execution-button strong{font-size:12px}.execution-button small{font-size:12px}.tools>button{padding:0 7px;flex-direction:column;gap:1px;font-size:12px;min-width:31px}.tools>button svg{width:13px;height:13px}.tools>button:nth-child(7)>span:last-child{display:block}.deck-utility #save-plan{display:none}.deck-utility #deck-more{font-size:19px;padding:0 8px}.tutorial{width:180px}.operation-log{max-width:190px}.log-entry{font-size:12px;padding:5px 7px}.log-entry time{display:none}.field-marker{font-size:12px;gap:8px}.field-marker>span:last-child{display:none}.queue-toggle{font-size:12px;padding:9px}.queue-toggle svg{display:none}.signals>span{display:none}.signals>button{width:25px;height:25px}.right-tools{bottom:153px}.replay-controls{flex-direction:column;gap:12px}.replay-controls>div{width:100%;justify-content:center}.replay-header strong{font-size:12px}.replay-header .eyebrow{font-size:12px}.replay-header #replay-hide{display:none}.replay-header button{font-size:12px;padding:5px}.replay-header #replay-library{display:none}.result-card{width:calc(100vw - 32px);max-width:420px;padding:25px}.result-card h1{font-size:28px}dialog{width:calc(100vw - 24px);max-height:calc(100vh - 30px)}dialog>header{padding:18px 20px}#modal-content{padding:20px}.guide-steps{grid-template-columns:1fr;gap:7px}.guide-steps>div{padding:10px;display:grid;grid-template-columns:25px 1fr;gap:2px 12px}.guide-steps span{grid-row:1/3;font-size:20px}.guide-steps strong{margin:0}.guide-steps p{font-size:12px}.record-actions{flex-direction:column}.record-actions button{padding:3px 6px}.record-details small{font-size:12px}.setting-row input[type=range]{width:100px}.setting-row label{font-size:12px}.toasts{top:120px}.toast{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+/* Accessible text scaling keeps the map viewport and control hit areas stable. */
+.unlock-facing{padding:10px 13px;border:1px solid #6b6747;background:#292d1e;color:var(--amber);font-size:12px;white-space:nowrap;align-self:center;margin:0 10px}
+.hud .tools>button{font-size:calc(12px * var(--ui-scale))}.unit-main strong{font-size:calc(12px * var(--ui-scale))}.unit-main small,.unit-status{font-size:calc(12px * var(--ui-scale))}.unit-readout{font-size:calc(12px * var(--ui-scale))}.header-mission>strong{font-size:calc(12px * var(--ui-scale))}.objectives>div{font-size:calc(12px * var(--ui-scale))}.objectives b{font-size:calc(12px * var(--ui-scale))}.mode-pill{font-size:calc(12px * var(--ui-scale))}.tutorial h2{font-size:calc(14px * var(--ui-scale))}.tutorial p{font-size:calc(12px * var(--ui-scale))}.command-row strong{font-size:calc(12px * var(--ui-scale))}.command-row small{font-size:calc(12px * var(--ui-scale))}.setting-row label,.modal-intro{font-size:calc(12px * var(--ui-scale))}.controls-table{font-size:calc(12px * var(--ui-scale))}.replay-controls select,.replay-header button{font-size:calc(12px * var(--ui-scale))}.result-stats dt{font-size:calc(12px * var(--ui-scale))}.result-actions button,.deck-utility button,.queue-toggle,.signals>button{font-size:calc(12px * var(--ui-scale))}.toast{font-size:calc(12px * var(--ui-scale))}
+body[data-ui-scale="1.5"] .tools>button kbd{display:none}body[data-ui-scale="1.5"] .tools>button{padding:0 12px}body[data-ui-scale="1.5"] .deck-utility #save-plan>span:last-child{display:none}body[data-ui-scale="1.5"] .unit-main small{display:none}body[data-ui-scale="1.5"] .header-actions{gap:0}body[data-ui-scale="1.5"] .world-hint{font-size:13px}
+@media(max-width:1150px){body[data-ui-scale="1.5"] .tools>button{padding:0 10px;font-size:12px}.unlock-facing{font-size:12px;padding:10px}}
+@media(max-width:850px){.hud .tools>button{font-size:calc(12px * var(--ui-scale))}body[data-ui-scale="1.5"] .hud .tools>button{font-size:12px;padding:0 8px}.unit-main strong{font-size:calc(12px * var(--ui-scale))}.unit-readout{font-size:calc(12px * var(--ui-scale))}.unit-status{font-size:calc(12px * var(--ui-scale))}body[data-ui-scale="1.5"] .tutorial{width:230px}.header-mission>strong{font-size:calc(12px * var(--ui-scale))}.mode-pill{font-size:calc(12px * var(--ui-scale))}.unlock-facing{font-size:12px;padding:9px}}
+@media(max-width:600px){.hud .tools>button{font-size:12px}body[data-ui-scale="1.5"] .hud .tools>button{font-size:12px;padding:0 6px}.unit-main strong{font-size:12px}.unit-readout{font-size:12px}.unit-status{font-size:12px}.unlock-facing{position:absolute;bottom:46px;right:0}.result-actions button{font-size:12px}.header-mission>strong{font-size:12px}.mode-pill{font-size:12px}}
+
+/* Compact operation HUD: 56px header + 104px command deck at desktop scale.
+   Full orders stay in the existing expandable queue; critical unit state remains visible. */
+@media(min-width:851px){
+  .hud-header{height:56px;padding:0 20px;gap:18px;background:#131b16f5}
+  .hud-brand{font-size:18px;gap:7px;padding-right:16px}
+  .hud-brand .brand-symbol{transform:scale(.67)}
+  .header-mission>strong{margin-top:2px}
+  .operation-clock output{font-size:19px}
+  .command-deck{left:20px;right:20px;bottom:12px;background:#131b16f5}
+  .deck-top{height:62px}
+  .deck-bottom{height:40px}
+  .roster-label{width:61px;padding:10px 12px;font-size:12px}
+  .roster-label b{font-size:17px;margin-top:3px}
+  .unit-card{padding:6px 12px 5px;column-gap:9px;grid-template-columns:25px minmax(0,1fr)}
+  .unit-avatar{width:23px;height:29px;font-size:12px}
+  .unit-readout{margin-top:1px}
+  .unit-status{margin-top:2px;line-height:1.2}
+  .execution-button{width:156px;margin:6px;gap:12px;padding:5px 12px}
+  .execution-button strong{font-size:13px}
+  .execution-button small{font-size:12px;margin-top:2px}
+  .tools>button{padding:0 13px;min-height:40px}
+  .deck-utility button{padding:0 13px;min-height:40px}
+  .right-tools{right:20px;bottom:128px;gap:8px}
+  .queue-toggle{padding:7px 11px;min-height:36px}
+  .signals{padding:3px}
+  .signals>button{height:28px;min-width:28px}
+  .queue-panel{right:20px;bottom:173px;max-height:calc(100vh - 250px)}
+  .field-marker{left:21px;bottom:132px}
+  .tutorial{left:20px;top:72px}
+  .operation-log{right:20px;top:72px}
+  .world-hint{top:68px;padding:6px 12px;font-size:12px}
+  body[data-ui-scale="1.5"] .hud-header{height:64px}
+  body[data-ui-scale="1.5"] .deck-top{height:74px}
+  body[data-ui-scale="1.5"] .deck-bottom{height:44px}
+  body[data-ui-scale="1.5"] .unit-card{padding-top:7px;padding-bottom:7px}
+  body[data-ui-scale="1.5"] .right-tools{bottom:144px}
+  body[data-ui-scale="1.5"] .field-marker{bottom:148px}
+  body[data-ui-scale="1.5"] .queue-panel{bottom:189px}
+  body[data-ui-scale="1.5"] .tutorial,body[data-ui-scale="1.5"] .operation-log{top:80px}
+  body[data-ui-scale="1.5"] .world-hint{top:76px}
+}
+@media(min-width:851px) and (max-width:1150px){
+  .unit-card{grid-template-columns:1fr}
+  .hud-header{gap:12px;padding:0 15px}
+  .execution-button{width:138px}
+  .tools>button{padding:0 10px}
+}
+@media(max-width:850px){
+  .hud-header{height:56px}
+  .objectives b{white-space:nowrap;font-size:calc(12px * var(--ui-scale))}
+  .deck-top{height:66px}
+  .deck-bottom{height:44px}
+  .unit-card{padding-top:6px;padding-bottom:6px}
+  .unit-status{margin-top:3px}
+  .right-tools{bottom:134px}
+  .field-marker{bottom:136px}
+  .queue-panel{bottom:182px;max-height:calc(100vh - 254px)}
+  .tutorial,.operation-log{top:70px}
+  body[data-ui-scale="1.5"] .deck-top{height:76px}
+  body[data-ui-scale="1.5"] .right-tools{bottom:144px}
+  body[data-ui-scale="1.5"] .field-marker{bottom:146px}
+  body[data-ui-scale="1.5"] .queue-panel{bottom:192px}
+}
+
+.motion-lab{pointer-events:none}.lab-header,.lab-controls{pointer-events:auto;position:absolute;left:24px;right:24px;padding:18px 22px}.lab-header{top:22px;display:flex;justify-content:space-between;align-items:center}.lab-header h2{margin:4px 0;font-size:20px}.lab-header p,.lab-controls p{margin:4px 0 0;color:var(--muted,#a5b3a7);font-size:12px}.lab-controls{bottom:22px}.lab-selectors{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.lab-selectors label{display:flex;gap:10px;align-items:center;font-size:12px}.lab-selectors select{min-width:130px}.lab-timeline{display:flex;gap:16px;align-items:center;margin-top:12px;font-size:12px}.lab-timeline input{flex:1}.lab-timeline output{min-width:52px}@media(max-width:600px){.lab-header,.lab-controls{left:10px;right:10px;padding:12px}.lab-header p{max-width:220px}.lab-selectors{gap:10px}.lab-selectors select{min-width:90px}}
+
+/* Play readability: stronger selected state, lighter map chrome, explicit controls. */
+.hud-header .mode-pill{padding:5px 9px;border:1px solid #426455;background:#203c2e;font-weight:600;font-size:calc(12px * var(--ui-scale))}
+.hud-header .mode-pill.executing{color:#f0c783;border-color:#725c38;background:#3d3120}
+.unit-card.selected{background:#2b4437;box-shadow:inset 0 0 0 1px var(--unit-color,var(--cyan))}
+.unit-card.selected:before{height:3px}
+.unit-card .unit-status{color:#b6c0b5}
+.unit-card.selected .unit-status{color:#e3f1dc}
+.unit-avatar{border-color:#718776;background:#10251b;font-weight:600}
+.tools>button.active{background:#345342;color:#edf9e7;box-shadow:inset 0 0 0 1px #8ccaae}
+.tools>button.active svg{color:#b9efd3}
+.queue-toggle[aria-expanded="true"]{border-color:var(--cyan);color:var(--cyan);background:#213b2b}
+.queue-row-buttons button{width:28px;min-height:30px}
+.command-row.failed{border-left:3px solid var(--amber)}
+.command-row.running{border-left:3px solid var(--cyan)}
+.objectives b,.operation-clock output{font-variant-numeric:tabular-nums;white-space:nowrap}
+.map-shortcuts{position:absolute;left:21px;top:68px;display:flex;gap:15px;align-items:center;pointer-events:none;font-size:12px;color:#a8b4a8}
+.map-shortcuts>span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.map-shortcuts kbd{font-family:inherit;font-size:12px;padding:1px 4px;border-color:#536253;background:#17271fd9;color:#d1dbca}
+.hud:has(.tutorial:not([hidden])) .map-shortcuts{display:none}
+@media(min-width:851px){
+  .unit-main strong{font-size:calc(12px * var(--ui-scale));letter-spacing:.03em}
+  .unit-readout{font-size:calc(12px * var(--ui-scale))}
+  .unit-status{font-size:calc(12px * var(--ui-scale));line-height:1.25}
+  .hud .tools>button{font-size:calc(12px * var(--ui-scale))}
+  .world-hint{top:auto;bottom:128px;left:20px;transform:none;max-width:calc(100vw - 460px);min-height:36px;padding:6px 11px;background:#15251eeb;border-left:2px solid var(--cyan);font-size:12px;white-space:normal}
+  #world-hint-text{overflow:hidden;text-overflow:ellipsis}
+  .world-hint kbd{flex:none;color:#c6d6c6}
+  body[data-ui-scale="1.5"] .world-hint{top:auto;bottom:144px;font-size:13px}
+  body[data-ui-scale="1.5"] .map-shortcuts{top:76px}
+}
+@media(min-width:1151px) and (max-width:1320px){
+  .hud-header{gap:12px;padding:0 16px}
+  .hud-brand{padding-right:12px;font-size:16px}
+  .objectives{gap:14px;margin-left:0}
+  .hud .tools>button{padding:0 10px;gap:5px}
+  .tools>button kbd{display:none}
+  .deck-utility #save-plan>span:last-child{display:none}
+  .unit-card{padding-left:10px;padding-right:10px;column-gap:7px}
+  body[data-ui-scale="1.5"] .hud-brand>span{display:none}
+  body[data-ui-scale="1.5"] .unit-status{font-size:12px}
+}
+@media(max-height:760px) and (min-width:851px){
+  .map-shortcuts{font-size:12px;gap:10px;top:64px}
+  .tutorial{top:82px;max-height:calc(100vh - 260px);overflow:auto}
+  .operation-log{top:68px;max-width:245px}
+  .command-deck{bottom:10px}
+  .world-hint,.right-tools{bottom:124px}
+  .queue-panel{bottom:168px;max-height:calc(100vh - 244px)}
+  body[data-ui-scale="1.5"] .world-hint,body[data-ui-scale="1.5"] .right-tools{bottom:140px}
+  body[data-ui-scale="1.5"] .queue-panel{bottom:184px}
+}
+@media(min-width:1600px){
+  .command-deck{left:max(24px,calc((100vw - 1600px)/2));right:max(24px,calc((100vw - 1600px)/2))}
+  .unit-main small{display:block;font-size:12px}
+  .unit-status{font-size:calc(12px * var(--ui-scale))}
+  .hud .tools>button{font-size:calc(12px * var(--ui-scale))}
+  .world-hint{left:max(24px,calc((100vw - 1600px)/2))}
+  .right-tools,.queue-panel{right:max(24px,calc((100vw - 1600px)/2))}
+}
+@media(max-width:850px){
+  .map-shortcuts{display:none}
+  .hud-header .mode-pill{padding:3px 5px}
+  .queue-row-buttons button{width:26px}
+}
+
+/* Compact personal objectives; no overlay during command input. */
+.result-goals{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:16px 0 8px}.result-goals span{padding:6px 9px;border:1px solid #ffffff20;color:#899188;font-size:12px}.result-goals .achieved{color:#c5ddba;border-color:#b2c8a250;background:#b2c8a20b}.result-comparison{font-size:12px;color:#c5ddba;line-height:1.6;min-height:1.6em}.result-actions{flex-wrap:wrap}
+/* Keep debrief actions visible; its content scrolls on short viewports. */
+.result-overlay{padding:16px 0}
+.result-card{display:flex;flex-direction:column;max-height:calc(100dvh - 32px);overflow:hidden}
+.result-stats{overflow-y:auto;flex:0 1 auto;min-height:0}
+.result-card>.primary,.result-actions,.result-card>.note{flex:none}
+
+.mission-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.mission-tab{min-width:0;padding:9px 12px}.brief-record{font-size:12px;color:#b9cbae;line-height:1.5;margin:10px 0}.mission-panel{overflow-y:auto;scrollbar-width:thin;padding-right:6px}
+
+.mission-panel .game-title{font-size:72px;margin:8px 0 10px}.mission-panel .game-title>span:first-child{font-size:23px}.mission-panel .game-tagline{margin-bottom:14px}.mission-panel .brief-heading{margin-top:14px}.mission-panel .brief-stats{margin-top:12px;padding:10px 0}.mission-panel .brief-objectives{margin:10px 0}.mission-panel .start-button{margin-top:12px}.mission-tab{column-gap:10px}.mission-tab>span{font-size:16px}
+
+.difficulty-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12px}.difficulty-row select{background:#26352c;color:#e3eadf;border:1px solid #65836e;padding:4px 12px;min-width:110px}.difficulty-note{font-size:12px;color:#b8c8b2;margin:3px 0 6px}.mission-panel .game-title{font-size:60px}.mission-panel .brief-heading{margin-top:9px}.mission-panel .brief-stats{padding:6px 0}.mission-panel .brief-objectives{margin:5px 0}
+
+.mission-panel{top:108px;bottom:58px}.mission-panel .game-tagline{margin-bottom:9px}.mission-panel .brief-heading{margin-top:5px}.mission-panel .start-button{position:sticky;bottom:0;z-index:2}
+
+/* Shared operation conditions and local preparation. */
+.operation-options{border-top:1px solid #75867735;border-bottom:1px solid #75867735;padding:9px 0;margin:8px 0;font-size:12px}.operation-options>label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:5px 0}.operation-options select,.operation-options input[type=number]{color:#e6ecdf;background:#24362b;border:1px solid #607664;padding:5px 8px;max-width:160px}.operation-options .note{font-size:12px;margin:5px 0;line-height:1.5}.modifier-options{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:8px 0}.modifier-options label{display:flex;align-items:center;gap:5px;color:#bdcdb5}.modifier-options input{accent-color:#a1d6c3}.preparation-actions{display:flex;flex-wrap:wrap;gap:5px}.preparation-actions button{padding:6px 8px;border:1px solid #627764;color:#c6d9bf;font-size:12px;background:#23382a}.brief-stars{display:flex;flex-wrap:wrap;gap:4px;margin:7px 0}.brief-stars>span{font-size:12px;color:#a6b39d;border:1px solid #ffffff18;padding:3px 5px}.brief-stars .achieved{color:#d0e9c2;border-color:#a3ca7f80}.squad-roster{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0}.roster-choice{display:flex;gap:9px;align-items:flex-start;padding:10px;border:1px solid #5c775b70;background:#203629}.roster-choice input{accent-color:#a1d6c3;margin-top:3px}.roster-choice strong{font-size:12px}.roster-choice small{display:block;line-height:1.5;color:#acbda6;font-size:12px;margin-top:2px}.roster-choice.unavailable{opacity:.48}.loadout-list{margin:16px 0;border-top:1px solid #566b5260}.loadout-row{display:grid;grid-template-columns:70px 1fr 1fr;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #566b5260;font-size:12px}.loadout-row label{display:flex;align-items:center;gap:8px}.loadout-row select{max-width:145px;font-size:12px;background:#24392c;border:1px solid #60765c;color:#d6e5ca;padding:5px}.equipment-notes{font-size:12px;line-height:1.5;color:#a8bda1}.equipment-notes p{margin:5px 0}.equipment-notes strong{color:#d3e3c7}.campaign-record{padding:12px;font-size:12px;line-height:1.6;border:1px solid #79936a60;background:#243728}
+.context-popover{position:fixed;z-index:110;min-width:200px;max-width:min(320px,calc(100vw - 16px));padding:7px;box-shadow:0 10px 45px #0009;background:#16261bf7;border:1px solid #85a67680}.context-popover>p{font-size:12px;color:#9aae91;padding:5px 8px;margin:0 0 4px;border-bottom:1px solid #65785450}.context-popover>button{display:flex;align-items:center;gap:10px;flex-wrap:wrap;width:100%;text-align:left;padding:9px 8px;font-size:12px;color:#d9e8cc}.context-popover>button:hover,.context-popover>button:focus-visible{background:#33543b;outline:1px solid #99c48e}.context-popover>button:disabled{opacity:.45;cursor:not-allowed}.context-popover>button kbd{font-size:12px;min-width:18px;text-align:center;border:1px solid #7b99705c;background:#19291d;padding:2px}.context-popover>button small{display:block;width:100%;padding-left:28px;font-size:12px;color:#a6b69c}.selected-command{background:#385a4060;box-shadow:inset 0 0 0 1px #8dc49a}.command-row[data-select-command]{cursor:pointer}.command-row[data-select-command]:focus-visible{outline:1px solid #a1d6c3}.tools>button.submenu-active{color:#e8f8d9;background:#345342;box-shadow:inset 0 0 0 1px #8ccaae}
+body:has(.map-editor) #modal{width:min(1120px,calc(100vw - 24px))}.editor-tools{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.editor-tools button{padding:7px 9px;border:1px solid #506b4c;font-size:11px;background:#253b2b}.editor-tools button.active{background:#446a45;color:#f1f9e7;border-color:#a4c999}.editor-workspace{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:14px}.editor-stage{background:#101c14;border:1px solid #526b4a}.editor-stage canvas{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}.editor-inspector{background:#1d3022;border:1px solid #526b4a;padding:10px;overflow:auto;max-height:400px}.editor-inspector label{display:grid;grid-template-columns:80px minmax(0,1fr);gap:7px;align-items:center;font-size:11px;margin:7px 0}.editor-inspector input,.editor-inspector select,.editor-goals select,.editor-title input{min-width:0;width:100%;padding:5px;background:#152a1a;border:1px solid #657957;color:#d9e8d0}.editor-inspector small{font-size:10px;color:#a6b69c}.editor-json{margin-top:14px}.editor-json textarea{width:100%;min-height:170px;resize:vertical;padding:10px;font:11px/1.4 monospace;background:#101e15;color:#c7dcc1;border:1px solid #607a52}.editor-json summary{cursor:pointer;font-size:12px;margin:8px 0}.editor-errors{font-size:11px;line-height:1.6;color:#e2b79a;max-height:120px;overflow:auto}.editor-goals,.editor-title{display:flex;gap:10px;align-items:center;font-size:12px;margin:8px 0}.editor-goals select{max-width:210px}.editor-title input{max-width:250px}.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.editor-actions button{padding:8px 12px;border:1px solid #68855c;background:#253f2a;font-size:11px}.map-editor .note{line-height:1.6}
+@media(max-width:700px){.editor-workspace{grid-template-columns:1fr}.editor-inspector{max-height:230px}.squad-roster{grid-template-columns:1fr}.loadout-row{grid-template-columns:1fr;gap:6px}.loadout-row label{justify-content:space-between}.loadout-row select{max-width:75%}}
+.editor-template-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px;background:#24372a;font-size:12px;border:1px solid #607554;margin-bottom:10px}.editor-template-row select{max-width:380px;background:#182c1e;color:#d9e8cd;border:1px solid #617657;padding:6px}.editor-template-row small{font-size:10px;color:#acbda2}
+
+/* 0-3 Planning/Live mode frame: thin viewport border + corner marks + top-center
+   status banner so the current mode reads at a glance, even in a small thumbnail.
+   Hidden outside live play (menu, result, replay, lab). */
+#mode-frame{position:fixed;inset:0;z-index:5;pointer-events:none;display:none;border:2px solid var(--friendly);transition:border-color .2s}
+body[data-mode="PLANNING"] #mode-frame,body[data-mode="EXECUTING"] #mode-frame{display:block}
+body[data-mode="EXECUTING"] #mode-frame{border-color:var(--live)}
+#mode-frame .corner{position:absolute;width:22px;height:22px;border:0}
+#mode-frame .corner.tl{top:-2px;left:-2px;border-top:3px solid var(--friendly);border-left:3px solid var(--friendly)}
+#mode-frame .corner.tr{top:-2px;right:-2px;border-top:3px solid var(--friendly);border-right:3px solid var(--friendly)}
+#mode-frame .corner.bl{bottom:-2px;left:-2px;border-bottom:3px solid var(--friendly);border-left:3px solid var(--friendly)}
+#mode-frame .corner.br{bottom:-2px;right:-2px;border-bottom:3px solid var(--friendly);border-right:3px solid var(--friendly)}
+body[data-mode="EXECUTING"] #mode-frame .corner{border-color:var(--live)!important}
+/* 1-1: the in-HUD top bar now shows mode + clock together (see .topbar-center
+   below), so the old floating top-center banner tab would duplicate/overlap
+   that text. Keep only the viewport corner marks during live play. */
+body:has(#hud:not([hidden])) .mode-banner{display:none}
+.mode-banner{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:6px 18px;background:var(--surface-1);border:1px solid var(--friendly);border-top:0;color:var(--friendly);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.14em;white-space:nowrap;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 100%,0 100%)}
+body[data-mode="EXECUTING"] .mode-banner{color:var(--live);border-color:var(--live);animation:mode-pulse .2s ease-out}
+body[data-mode="PLANNING"] .mode-banner{animation:mode-pulse .2s ease-out}
+@keyframes mode-pulse{0%{box-shadow:0 0 0 0 currentColor;opacity:.6}100%{box-shadow:0 0 18px 2px transparent;opacity:1}}
+@media(prefers-reduced-motion:reduce){body[data-mode="EXECUTING"] .mode-banner,body[data-mode="PLANNING"] .mode-banner{animation:none}}
+
+/* 0-6 Contextual cursor tooltip: replaces the permanent top hint bar and the
+   top-left shortcut row. Follows the pointer over the map; shows one hint at a
+   time so guidance never appears twice. */
+.cursor-hint{position:fixed;z-index:12;pointer-events:none;display:none;align-items:center;gap:10px;max-width:340px;padding:7px 12px;background:var(--surface-1);border:1px solid var(--line-soft);border-left:2px solid var(--friendly);color:var(--text-hi);font-size:12px;white-space:nowrap;transform:translate(16px,18px)}
+.cursor-hint.visible{display:flex}
+.cursor-hint kbd{flex:none}
+
+/* 0-4: single logo on the main menu (the large mission-panel title is now the
+   only wordmark); the header keeps just the utility nav, pushed to the right. */
+.menu-header{justify-content:flex-end}
+.menu-header nav{margin-left:auto}
+
+/* ============================================================
+   1-1 In-game HUD, 3-column layout (plan §4 "플레이 화면").
+   Top bar 48px / left operator column 260px / right event+command
+   column 280px / bottom single-row hotbar 72px. The map underneath
+   is untouched; only these chrome regions capture pointer events
+   (".screen button/.panel" rule already does this — these asides
+   get the same treatment explicitly below).
+   ============================================================ */
+.hud-topbar{position:absolute;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 16px;background:var(--surface-1);border-bottom:1px solid var(--line);pointer-events:auto;z-index:6}
+.topbar-zone{display:flex;align-items:center;gap:16px;min-width:0}
+.topbar-left{flex:1}
+/* Centered independent of the left/right zone widths, so the clock/mode
+   readout always sits on the screen's true center axis. */
+.topbar-center{gap:16px;flex:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
+.topbar-center>*{pointer-events:auto}
+.topbar-right{flex:none}
+.hud-topbar .hud-brand{padding:0 14px 0 0;border-right:1px solid var(--line);flex:none}
+.hud-topbar .hud-brand span{display:none}
+.hud-topbar .header-mission{min-width:0}
+.hud-topbar .objectives{margin-left:0}
+.hud-topbar .mode-pill{order:0;flex:none;white-space:nowrap;padding:4px 9px;border:1px solid #426455;background:#203c2e;font-weight:600}
+.hud-topbar .mode-pill.executing{border-color:#725c38;background:#3d3120;color:#f0c783}
+.hud-topbar .mode-pill.paused,.hud-header .mode-pill.paused{border-color:#5c6b64;background:#202b25;color:var(--text-lo)}
+.hud-topbar .mode-pill.paused>span,.hud-header .mode-pill.paused>span{background:none}
+.hud-topbar .operation-clock{order:1;border:0;padding:0;line-height:1;flex:none}
+.hud-topbar .operation-clock output{font:24px var(--mono);font-weight:600;color:var(--text-hi);white-space:nowrap}
+body[data-mode="EXECUTING"] .hud-topbar .operation-clock output{color:var(--live)}
+.topbar-center{padding:4px 16px;background:var(--surface-1);border:1px solid var(--line-soft);border-top:0}
+
+.hud-left{position:absolute;top:48px;left:0;bottom:72px;width:260px;display:flex;flex-direction:column;gap:8px;padding:10px 10px 8px;overflow:visible;pointer-events:auto;background:linear-gradient(100deg,#0d1310f0 55%,transparent)}
+.hud-left .tutorial{position:static;width:auto;flex:none}
+/* Scroll boundary lives on this inner wrapper (not .hud-left itself) so a
+   position:absolute .tutorial sibling can float outside the 72px portrait
+   strip in the narrow layout without being clipped by the roster's own
+   overflow-y:auto. */
+.roster-scroll{display:flex;flex-direction:column;gap:8px;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden}
+.hud-left .roster-label{width:auto;border-right:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:2px 3px;color:var(--faint);font:12px var(--mono);letter-spacing:.08em;flex-wrap:nowrap;white-space:nowrap}
+.hud-left .roster-label span{overflow:hidden;text-overflow:ellipsis}
+.hud-left .roster-label b{color:var(--text-hi);font:16px var(--mono);font-weight:600;flex:none}
+.unit-cards{display:flex;flex-direction:column;gap:6px}
+
+.hud-right{position:absolute;top:48px;right:0;bottom:72px;width:280px;display:flex;flex-direction:column;gap:8px;padding:10px 10px 8px;pointer-events:auto;overflow:hidden;transition:transform .18s ease-out;background:linear-gradient(260deg,#0d1310f0 55%,transparent)}
+/* Event log (top half) and command queue (bottom half) both stay permanently
+   visible in the right column, each with a real empty state, instead of the
+   queue being a hidden popup — fills the column instead of leaving it blank. */
+.hud-right .operation-log{position:static;max-width:none;align-items:stretch;flex:1 1 40%;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:5px;padding-right:2px}
+.hud-right .queue-toggle,.hud-right #queue-close{display:none}
+.hud-right .queue-panel{position:static;width:auto;flex:1 1 60%;min-height:0;display:flex;flex-direction:column;border-top:2px solid var(--line);padding-top:8px}
+.hud-right .queue-panel .command-list{flex:1;min-height:0}
+.hud-right .operation-log:empty:before{content:'최근 작전 사건이 여기에 표시됩니다.';color:var(--text-lo);font-size:12px;padding:8px 2px;display:block}
+#hud-right-toggle{display:none;position:absolute;top:58px;right:0;width:26px;height:46px;align-items:center;justify-content:center;color:var(--muted);z-index:7;clip-path:polygon(40% 0,100% 0,100% 100%,40% 100%,0 50%)}
+#hud-right-toggle[aria-expanded="true"]{color:var(--friendly)}
+
+.hud-hotbar{position:absolute;left:0;right:0;bottom:0;height:72px;display:flex;align-items:stretch;background:var(--surface-1);border-top:1px solid var(--line);pointer-events:auto;z-index:6}
+.hud-hotbar .tools{display:flex;flex:1;align-items:stretch;min-width:0}
+.hud-hotbar .tools>button{flex-direction:column;gap:4px;min-width:64px;flex:1 1 72px;position:relative;font-size:12px}
+.hud-hotbar .tools>button span:last-child{font-size:12px}
+.hud-hotbar .tools>button .icon-badge{position:relative;display:flex;align-items:flex-end;gap:3px}
+.hud-hotbar .tools>button svg{width:19px;height:19px}
+.hud-hotbar .tools>button kbd{display:inline-block;position:static;padding:0 3px;font-size:12px;line-height:14px;border-color:var(--text-lo);background:var(--surface-0);color:var(--text-hi);align-self:flex-end}
+.hotbar-utility{display:flex;align-items:stretch;border-left:1px solid var(--line-soft);flex:none}
+.hotbar-utility button{padding:0 14px;color:var(--muted)}
+.hotbar-execute{display:flex;align-items:center;gap:12px;padding:0 14px;border-left:1px solid var(--line);flex:none}
+.hotbar-execute .signals{background:none;border:0;padding:0;gap:6px}
+.hotbar-execute .execution-button{min-height:52px;width:168px;flex:none}
+
+@media(max-width:1399px){
+  .hud-left{width:72px;padding:8px 6px;overflow:visible}
+  /* The tutorial card can't shrink to the 72px portrait strip and stay
+     readable, so it floats at its normal width just right of the strip
+     (inside the left safe-area inset, which only ever reports .hud-left's
+     own 72px width) instead of being squeezed by it or covering the
+     portraits underneath. */
+  .hud-left .tutorial{position:absolute;top:0;left:100%;margin-left:8px;width:260px;z-index:8;box-shadow:0 10px 30px #000a}
+  .hud-left .roster-label{flex-direction:column;gap:2px}
+  .hud-left .roster-label span{display:none}
+  .hud-left .unit-card{grid-template-columns:1fr;grid-template-areas:"portrait" "hp";padding:6px 4px;justify-items:center;text-align:center}
+  .hud-left .unit-portrait{width:40px;height:40px}
+  .hud-left .unit-main,.hud-left .unit-readout,.hud-left .unit-status,.hud-left .unit-action{display:none}
+  .hud-left .unit-hp-segments{width:100%}
+  .hud-right{transform:translateX(100%);box-shadow:-18px 0 40px #000a}
+  .hud-right.open{transform:none}
+  #hud-right-toggle{display:flex}
+}
+@media(min-width:1400px){#hud-right-toggle{display:none!important}.hud-right{transform:none!important}}
+
+/* Operator Card: portrait, name/role, segmented HP, ammo, current action +
+   remaining command count. Hit = red flash + shake; incapacitated = grayscale
+   + diagonal hatch. Reduced-motion already kills all animation durations
+   globally (".reduced-motion *"), so the shake/pulse below is silenced there. */
+/* Explicit grid areas (not relying on implicit auto-placement order) keep the
+   card to a fixed, compact ~120px height: portrait block on the left, name/HP
+   stacked top-right, action-icon + ammo readout, one clamped status line. */
+.unit-card{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-areas:"portrait main" "portrait hp" "action readout" "status status";grid-template-rows:18px 10px 16px 16px;column-gap:9px;row-gap:3px;padding:8px 10px;align-items:start;text-align:left;border:1px solid var(--line);background:#141c17c2;position:relative;min-width:0;flex:none}
+.unit-portrait{grid-area:portrait;align-self:start;width:44px;height:44px;display:grid;place-items:center;font:18px var(--display);font-weight:700;color:var(--unit-color,var(--friendly));background:radial-gradient(circle at 50% 35%,#1d2f24 0%,#10251b 75%);border:1px solid var(--unit-color,var(--friendly));clip-path:polygon(16% 0,84% 0,100% 18%,100% 100%,0 100%,0 18%)}
+.unit-card.selected{border-color:var(--unit-color,var(--friendly));background:#1d2e24;box-shadow:inset 0 0 0 1px var(--unit-color,var(--friendly))}
+.unit-card.selected .unit-portrait{box-shadow:0 0 0 2px #0d1310,0 0 0 3px var(--unit-color,var(--friendly))}
+.unit-main{grid-area:main;display:flex;align-items:baseline;justify-content:space-between;gap:8px;min-width:0;margin-top:0}
+.unit-main strong{font-size:13px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.unit-main small{color:var(--muted);font-size:12px;flex:none}
+.unit-hp-segments{grid-area:hp;display:flex;gap:3px;align-self:center}
+.unit-hp-segments i{flex:1;height:6px;background:#30402f;display:block}
+.unit-hp-segments i.filled{background:var(--unit-color,var(--friendly))}
+.unit-readout{grid-area:readout;display:flex;justify-content:space-between;align-items:center;font:12px var(--mono);color:var(--muted);margin-top:0}
+.unit-action{grid-area:action;align-self:center;justify-self:center;display:flex;align-items:center;gap:3px;color:var(--text-lo)}
+.unit-action svg{width:14px;height:14px}
+.unit-action b{font:12px var(--mono);color:var(--live);font-weight:700}
+.unit-status{grid-area:status;font-size:12px;color:var(--faint);line-height:16px;height:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.unit-card.selected .unit-status{color:#e3f1dc}
+@keyframes unit-hit{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(3px)}60%{transform:translateX(-2px)}80%{transform:translateX(2px)}}
+.unit-card.hit-flash{animation:unit-hit .5s ease-out;box-shadow:inset 0 0 0 2px var(--threat),0 0 16px -4px var(--threat)}
+.unit-card.hit-flash .unit-portrait{background:radial-gradient(circle at 50% 35%,#4a1a16,#2a0f0d);border-color:var(--threat)}
+.unit-card.down{filter:grayscale(1) brightness(.72);background:repeating-linear-gradient(135deg,#141c17 0 8px,#1b1310 8px 16px)}
+.unit-card.down .unit-portrait{color:var(--threat);border-color:#5a2c26}
+
+/* Event log: kill-feed style with semantic icons; new entries slide in, fade
+   after 8s (JS tags .fading once an entry has been visible that long). */
+.hud-right .operation-log{position:static}
+.log-entry{display:flex;align-items:flex-start;gap:8px;background:#131b16ee;border-left:2px solid var(--line);padding:7px 10px;font-size:12px;color:var(--text);line-height:1.3;min-width:0}
+.log-entry>span{overflow:hidden;text-overflow:ellipsis;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-width:0;flex:1}
+.log-entry .log-glyph,.log-entry time{margin-top:1px}
+.log-entry.entering{animation:log-in .18s ease-out}
+.log-entry.fading{opacity:.4;transition:opacity .6s ease-out}
+.log-entry time{font:12px var(--mono);color:var(--faint);flex:none}
+.log-glyph{flex:none;width:15px;text-align:center;font-size:13px;font-style:normal}
+.log-entry.threat{border-color:var(--threat)}.log-entry.threat .log-glyph{color:var(--threat)}
+.log-entry.danger{border-color:var(--threat);background:#2a1512e6;color:#ffcdc4}.log-entry.danger .log-glyph{color:var(--threat)}
+.log-entry.civ{border-color:var(--civilian)}.log-entry.civ .log-glyph{color:var(--civilian)}
+.log-entry.success{border-color:var(--friendly)}.log-entry.success .log-glyph{color:var(--friendly)}
+.log-entry.action{border-color:var(--live)}.log-entry.action .log-glyph{color:var(--live)}
+.log-entry.info .log-glyph{color:var(--text-lo)}
+@keyframes log-in{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+
+/* Reusable Panel (clipped-corner) component, built for this round's HUD
+   panels and intended for reuse by the menu/overlay rebuild next round. */
+.panel-cut{clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);border:1px solid var(--line);position:relative;background:var(--surface-1)}
+.panel-cut:before{content:'';position:absolute;top:0;left:12px;right:12px;height:2px;background:var(--friendly)}
+#tutorial.panel,#queue-panel.panel{clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+#tutorial.panel:before,#queue-panel.panel:before{content:'';position:absolute;top:0;left:12px;right:12px;height:2px;background:var(--friendly);z-index:1}
+
+/* Reusable Cycler (replaces <select> for menu rows) and Toggle Card
+   (replaces checkboxes) components — CSS now, wired into the menu/briefing
+   screens in the next round per the design plan's component list. */
+.cycler{display:flex;align-items:stretch;border:1px solid var(--line);background:var(--surface-2)}
+.cycler>button{width:34px;display:grid;place-items:center;color:var(--muted);font-size:16px}
+.cycler>button:hover{color:var(--text-hi)}
+.cycler>output{flex:1;display:flex;align-items:center;justify-content:center;font:12px var(--mono);letter-spacing:.04em;color:var(--text-hi);min-width:0;padding:0 8px}
+.toggle-card{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);background:var(--surface-2);text-align:left;cursor:pointer}
+.toggle-card[aria-pressed="true"]{border-color:var(--friendly);background:#1d2e24}
+.toggle-card .toggle-icon{flex:none;width:22px;height:22px;color:var(--muted)}
+.toggle-card[aria-pressed="true"] .toggle-icon{color:var(--friendly)}
+.toggle-card strong{display:block;font-size:12px}
+.toggle-card small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+
+/* P0 leftover: toast must never overlap the centered result card/title —
+   park toasts in the top-right corner while the debrief overlay is open. */
+body:has(#result:not([hidden])) .toasts{left:auto;right:20px;top:20px;transform:none;max-width:320px;align-items:flex-end}
+
+/* P0 leftover: detail stats region ends on a clean row boundary; the fade
+   hint only appears while content actually overflows (toggled from JS) and
+   disappears once scrolled to the bottom. */
+.result-stats{position:relative;mask-image:none}
+.result-stats.has-overflow{mask-image:linear-gradient(to bottom,#000 calc(100% - 26px),transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 26px),transparent 100%)}
+
+/* ============================================================
+   RB: 3-stage menu flow (plan §1-3 "타이틀/작전 선택/브리핑·편성").
+   The old single left-panel form (.mission-panel, .menu-header, the
+   side-panel backdrop) is replaced by four full-bleed sub-screens
+   inside #menu; #menu itself still only toggles on state.mode==='MENU'
+   (renderState), while app.js's showMenuScreen() swaps which child is
+   visible. The title keeps its diorama; the operations board is opaque,
+   and briefing exposes the canvas only inside its map frame.
+   ============================================================ */
+.menu:before{content:none}
+.menu-header{display:none}
+.menu-screen{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;animation:menu-screen-in .18s ease-out forwards}
+.menu-screen[hidden]{display:none}
+@keyframes menu-screen-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.menu-screen{animation:none;opacity:1}}
+
+/* Vignette + film-grain over the diorama, title screen only. */
+#menu-grain{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#title-screen:before{content:'';position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 32% 72%,transparent 0%,transparent 38%,#060a07cc 86%);box-shadow:inset 0 0 220px 40px #060a07cc}
+/* RB2: the engine's set_safe_area insets (menu_focus/diorama fit) are only
+   honored by the new engine build; until that lands, the old build keeps
+   painting the diorama under the whole screen, so the menu column needs
+   its own opaque scrim or text sits directly on a busy 3D view (plan
+   item 1). Widened enough to also cover the bottom footer strip. */
+#title-screen:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,#0d1310f0 0%,#0d1310f0 38%,#0d1310b0 50%,transparent 64%),linear-gradient(0deg,#0d1310e6 0%,#0d1310e6 16%,transparent 34%)}
+
+/* 1. Title */
+.title-screen{justify-content:flex-end;padding:0 0 76px 5.3vw;gap:28px}
+.title-brand{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.title-brand .brand-symbol{transform:scale(1.4)}
+.title-wordmark{font-family:var(--display);font-stretch:condensed;font-size:40px;font-weight:900;letter-spacing:-.02em;line-height:1;margin:0}
+.title-wordmark>span{font:800 14px BreachKR,sans-serif;letter-spacing:.26em;display:block;color:var(--muted);margin-bottom:4px}
+/* RB2: the mark used to sit on the text baseline (vertical-align:baseline),
+   which on this condensed display face reads as a stray dot trailing under
+   the wordmark rather than a deliberate accent. Centering it on the cap
+   height and giving it a hairline halo makes it read as an intentional
+   breach-mark suffix instead. */
+.title-square{display:inline-block;vertical-align:.08em;background:var(--red);width:12px;height:12px;margin-left:10px;box-shadow:0 0 0 3px #ff5a4820}
+.title-nav{display:flex;flex-direction:column;gap:2px;position:relative;z-index:1;width:min(360px,70vw)}
+.title-nav-item{display:flex;align-items:center;justify-content:space-between;padding:13px 4px;font-family:var(--display);font-stretch:condensed;font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--text-lo);text-align:left;border-left:2px solid transparent;transition:color .14s,border-color .14s,padding-left .14s}
+.title-nav-item .nav-arrow{font-size:18px;color:var(--text-lo);opacity:0;transition:opacity .14s}
+.title-nav-item:hover,.title-nav-item.focused,.title-nav-item:focus-visible{color:var(--text-hi);border-left-color:var(--friendly);padding-left:16px;outline:0}
+.title-nav-item:hover .nav-arrow,.title-nav-item.focused .nav-arrow,.title-nav-item:focus-visible .nav-arrow{opacity:1;color:var(--friendly)}
+.title-footer{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:18px 5.3vw;font:12px var(--mono);letter-spacing:.06em;color:var(--faint);z-index:1}
+.title-footer-save{display:flex;align-items:center;gap:0}
+.title-footer button{font:12px var(--mono);color:var(--muted);letter-spacing:.06em}
+@media(max-width:850px){.title-screen{padding:0 24px 92px;align-items:stretch}.title-nav{width:auto}.title-nav-item{font-size:21px}.title-footer{padding:14px 24px;flex-wrap:wrap;gap:8px}}
+
+/* Shared chrome for the select/briefing/campaign sub-screens: a thin header
+   bar with a back button, then a scrollable body that fills the rest. */
+.screen-header{display:flex;align-items:center;gap:20px;padding:22px 5.3vw 14px;flex:none;position:relative;z-index:1;background:linear-gradient(#0d1310e6,#0d1310b0 70%,transparent)}
+.screen-header .section-label{justify-content:flex-start;gap:14px;border-top:0;padding-top:0;margin-bottom:0}
+.back-button{font:12px var(--mono);letter-spacing:.08em;color:var(--muted);padding:6px 2px}
+.back-button:hover{color:var(--text-hi)}
+
+/* 2. Mission select: a solid operations board, with two independent scroll areas. */
+.select-screen,.campaign-screen{background:var(--surface-0);--panel-deep:#141c17}
+.operation-board-header{background:var(--surface-0);border-bottom:1px solid var(--line);padding-top:20px;padding-bottom:20px;gap:28px}
+.board-heading{border-left:1px solid var(--line);padding-left:28px}
+.board-heading .eyebrow{font-size:11px;color:var(--friendly);letter-spacing:.14em}
+.board-heading h1{font-size:28px;font-weight:700;letter-spacing:-.05em;line-height:1.4;margin-top:3px;color:var(--text-hi)}
+.select-screen .operation-collections{padding:18px 5.3vw 10px;gap:8px}
+.select-screen .operation-collections button{padding:6px 13px;border:1px solid var(--line);color:var(--muted)}
+.select-screen .operation-collections button[aria-pressed="true"]{background:#20372c;border-color:#507565;color:var(--friendly)}
+.select-screen .operation-collections span{margin-left:8px}
+.select-screen .progression-strip{padding-bottom:10px;margin-bottom:14px;border-bottom:1px solid var(--line-soft)}
+.select-body{flex:1;min-height:0;display:flex;gap:20px;padding:4px 5.3vw 28px;overflow:auto;position:relative}
+.mission-index{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;gap:12px}
+.board-section-label{display:flex;align-items:center;justify-content:space-between;color:var(--text-lo);padding-right:6px}
+.board-section-label h2{font-size:13px;font-weight:600;color:var(--text)}
+.board-section-label>span{font:11px var(--mono);letter-spacing:.08em}
+.operation-collections{display:flex;align-items:center;gap:10px;padding:0 0 12px;flex-wrap:wrap}.operation-collections button[aria-pressed="true"]{border-color:var(--accent,#b9ad86);background:#353b33}.operation-collections span{font-size:12px;color:#a8afa3}.historical-map-facts{font-size:12px;line-height:1.7;color:#babfad;white-space:pre-line}.mission-map-size{font-size:12px;color:#a9b79b}
+.cqb-family-note{font-size:12px;line-height:1.65;margin:8px 0;overflow-wrap:anywhere}
+.cqb-share{min-width:0;flex:none;border-top:1px solid var(--line-soft);padding-top:8px}
+.cqb-share>div{display:flex;gap:6px;flex-wrap:wrap}
+.cqb-share button{font-size:12px;padding:6px 8px;border:1px solid var(--line);line-height:1.5}
+.cqb-share .note,.result-competition{font-size:12px;line-height:1.65;overflow-wrap:anywhere}
+.mission-grid{flex:1 1 56%;display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(260px,auto);align-content:start;gap:14px;min-width:0;min-height:0;overflow-y:auto;padding-right:6px}
+.mission-card{display:flex;flex-direction:column;border:1px solid var(--line);background:#141c17;text-align:left;overflow:hidden;position:relative}
+.mission-card:hover{border-color:#738d79}
+.mission-card.active{border-color:var(--friendly);background:#1a2a20}
+.mission-card.active:after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--friendly)}
+.mission-thumb{flex:1;min-height:120px;position:relative;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(0deg,#1b2620 0 2px,transparent 2px 22px),repeating-linear-gradient(90deg,#1b2620 0 2px,transparent 2px 22px),linear-gradient(145deg,#182018,#0f1511)}
+.mission-card.active .mission-thumb{background:repeating-linear-gradient(0deg,#213a2a 0 2px,transparent 2px 22px),repeating-linear-gradient(90deg,#213a2a 0 2px,transparent 2px 22px),linear-gradient(145deg,#182018,#0f1511)}
+/* True top-down floor plan traced from the mission's rooms/walls rects. */
+.mission-floorplan{width:72%;height:72%;filter:drop-shadow(0 2px 6px #0008)}
+.mission-floorplan .fp-rooms rect{fill:#2a3b31;stroke:#4c6354;stroke-width:1}
+.mission-floorplan .fp-walls rect{fill:#0d1310}
+.mission-card.active .mission-floorplan .fp-rooms rect{fill:#223c2c;stroke:var(--friendly)}
+/* Stylized fallback glyph + code + room count, used before catalog geometry
+   has arrived (plan item 2, "distinctive stylized art per mission"). */
+.mission-glyph{position:absolute;inset:0;margin:auto;width:56%;height:56%;color:#3c4d41;stroke-width:3}
+.mission-card.active .mission-glyph{color:var(--friendly)}
+.thumb-code{position:absolute;left:10px;top:8px;font:12px var(--mono);letter-spacing:.1em;color:var(--faint)}
+.thumb-rooms{position:absolute;right:10px;bottom:8px;font:14px var(--mono);color:var(--muted)}
+.thumb-rooms small{font-size:12px;color:var(--faint);margin-left:3px}
+.mission-card-info{flex-shrink:0;padding:11px 13px;display:flex;flex-direction:column;gap:5px}
+.mission-code{font:12px var(--mono);color:var(--faint);letter-spacing:.08em}
+.mission-card-info strong{font-size:14px;font-weight:600}
+.mission-stars{font-size:12px;color:#5a6b5c;letter-spacing:.1em}
+.mission-stars .achieved{color:var(--live)}
+.mission-card .mission-rank{font:12px var(--mono);color:var(--friendly)}
+.mission-card.locked .mission-thumb{opacity:.45;filter:grayscale(.4)}
+.roe-badge{display:inline-block;font-size:12px;line-height:1.4;padding:2px 6px;border:1px solid #708a77;color:var(--friendly);background:var(--surface-0);max-width:100%}
+.roe-badge[data-roe="high_intensity"]{border-color:#9b784d;color:var(--amber)}
+.mission-thumb>.roe-badge{position:absolute;left:6px;bottom:6px}
+.roe-note{font-size:12px;line-height:1.5;color:var(--muted);margin:6px 0 10px;word-break:keep-all}
+.door-structure{font-size:12px;line-height:1.5;padding:5px 8px;border-bottom:1px solid var(--line-soft)}
+.door-structure p{margin:0 0 4px}.door-structure small{display:block;font-size:12px;color:var(--muted)}
+#context-popover{max-height:calc(100vh - 16px);overflow-y:auto}
+/* P0 UI gate: show the ten core operations as five complete rows on shorter
+   desktop screens. The compact horizontal cards keep all existing text and
+   floorplans inside the viewport instead of exposing a clipped next row. */
+@media(min-width:1001px) and (max-height:1100px){
+  .select-screen:has([data-collection="base"][aria-pressed="true"]) .mission-grid{grid-template-rows:repeat(5,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:10px}
+  .select-screen:has([data-collection="base"][aria-pressed="true"]) .mission-card{flex-direction:row;min-height:0}
+  .select-screen:has([data-collection="base"][aria-pressed="true"]) .mission-thumb{flex:0 0 25%;min-height:0;min-width:0}
+  .select-screen:has([data-collection="base"][aria-pressed="true"]) .mission-card-info{flex:1;min-width:0;padding:6px 9px;gap:3px;justify-content:center;line-height:1.2}
+}
+.mission-lock{font-size:12px;line-height:1.5;color:#d6b68f}
+.mission-unlock-note{font-size:12px;line-height:1.6;color:var(--friendly)}
+.mission-unlock-note.locked{color:#d6b68f}
+.progression-strip{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 5.3vw 14px;font-size:12px;color:var(--friendly);flex-wrap:wrap}
+.progression-strip button{font-size:12px;padding:7px 10px}
+.progression-overview{display:flex;gap:18px;align-items:center;padding:16px;background:var(--panel-deep);border:1px solid var(--line)}
+.progression-overview>strong{font:32px var(--mono);color:var(--live);white-space:nowrap}
+.progression-overview p,.progression-next{font-size:13px;line-height:1.7}
+.progression-next{padding:12px 0;color:var(--friendly)}
+.unlock-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0 24px}
+.unlock-card{border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--panel-deep)}
+.unlock-card.owned{border-color:#527565}
+.unlock-card h4{margin:0;font-size:17px}.unlock-card p{margin:0;font-size:13px;line-height:1.6;flex:1}.unlock-card small,.unlock-status{font-size:12px;color:#d6b68f}.owned .unlock-status{color:var(--friendly)}
+.unlock-card progress{width:100%;height:5px;accent-color:var(--friendly)}
+.loadout-field{display:flex;align-items:center;gap:8px;font-size:12px}
+.unlock-map-list{display:grid;gap:8px;margin:12px 0 20px}.unlock-map-list>div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.unlock-map-list span{font-size:12px;color:var(--muted);text-align:right}
+.result-progression{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}.result-progression strong{color:var(--live)}.result-progression p{margin:8px 0;color:var(--muted)}.result-progression ul{margin:8px 0;padding-left:18px;color:var(--friendly)}.result-progression button{font-size:12px;padding:7px 10px}
+@media(max-width:600px){.unlock-grid{grid-template-columns:1fr}.unlock-map-list>div{flex-direction:column}.unlock-map-list span{text-align:left}.progression-overview{align-items:flex-start}}
+.mission-detail{flex:1 1 42%;min-width:280px;min-height:0;max-width:420px;padding:22px 24px;overflow:auto;align-self:start;background:var(--panel-deep)}
+.select-screen .mission-detail{align-self:stretch;border-top:2px solid var(--friendly)}
+.select-screen .mission-detail .brief-heading{margin-top:12px}
+.mission-detail .start-button{margin-top:18px;position:sticky;bottom:0;z-index:1}
+/* Variant chip row (plan item 2): quick preview/pick of 도전 + the named
+   variants right on the detail panel, in sync with the briefing cyclers. */
+.brief-variants{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.variant-chip{padding:5px 10px;border:1px solid var(--line);background:#182018;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.variant-chip:hover{border-color:#738d79;color:var(--text-hi)}
+.variant-chip.active{border-color:var(--friendly);background:#1d2e24;color:var(--friendly)}
+@media(max-width:1000px){.select-body{flex-direction:column}.mission-index{flex:none;min-height:300px}.mission-grid{overflow:visible;flex:none}.mission-detail{max-width:none;flex:none;overflow:visible}.operation-board-header{gap:16px}.board-heading{padding-left:16px}.board-heading h1{font-size:24px}.select-screen .operation-collections span{margin-left:0;width:100%}}
+
+/* 3. Briefing / loadout. Left 60% map overview (the live diorama shows
+   through; only the room-name caption sits on top), right 40% a solid
+   deployment panel, bottom band compact (<=220px) spanning the full width
+   under both (plan item 3). */
+.briefing-body{flex:1;min-height:0;display:flex;gap:18px;padding:4px 5.3vw 16px;overflow:hidden}
+.briefing-map{flex:1 1 60%;position:relative;min-width:0;border:1px solid var(--line)}
+.briefing-screen{--panel-deep:#141c17}
+.briefing-screen .screen-header{background:var(--surface-0)}
+body:has(#menu:not([hidden]) #briefing-screen:not([hidden])):not(:has(dialog.squad-modal[open])) #canvas{clip-path:inset(var(--briefing-map-top,50%) var(--briefing-map-right,50%) var(--briefing-map-bottom,50%) var(--briefing-map-left,50%))}
+/* RB2: backdrop for the map column itself — the engine honors
+   set_safe_area for the camera fit, but the old build ignores it entirely,
+   so without this the diorama (or, pre-engine-update, empty canvas) shows
+   through with nothing but the caption on top (plan item 1). A soft scrim
+   anchored to the caption corner keeps it readable either way. */
+.briefing-map:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 0% 0%,#0d1310e0 0%,#0d1310a0 22%,transparent 48%)}
+/* The diorama already shows its own in-world room labels; this caption only
+   needs to sit clear of them, tucked in the map panel's own top-left
+   corner instead of floating mid-scene where it collided with engine text. */
+.briefing-map .world-caption{position:absolute;left:12px;top:12px;right:auto;bottom:auto;gap:10px;background:#0d1310cc;padding:6px 10px;border-left:2px solid var(--friendly)}
+.briefing-map .world-caption .crosshair{font-size:20px}
+/* Right column: a solid panel filling the full body height (not just its
+   content height), so the diorama never peeks out beneath it. */
+.briefing-deploy{flex:1 1 40%;max-width:380px;min-width:260px;align-self:stretch;height:100%;padding:16px 16px 14px;display:flex;flex-direction:column;gap:10px;overflow:auto;background:var(--panel-deep)}
+.deploy-slots{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.deploy-slot{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 8px;border:1px dashed var(--line);background:var(--surface-2);min-height:92px;justify-content:center;text-align:center}
+.deploy-slot.filled{border-style:solid;border-color:#516655}
+.deploy-slot .slot-portrait{width:34px;height:34px;display:grid;place-items:center;font:14px var(--mono);font-weight:700;color:var(--unit-color,var(--friendly));border:1px solid var(--unit-color,var(--friendly));background:#15231b;clip-path:polygon(16% 0,84% 0,100% 18%,100% 100%,0 100%,0 18%)}
+.deploy-slot strong{font-size:12px;font-weight:600}
+.deploy-slot small{font-size:12px;color:var(--muted)}
+.deploy-slot.empty{color:var(--faint);font-size:12px}
+.briefing-utility{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:auto;padding-top:8px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--muted)}
+.briefing-utility button{padding:2px 0}
+/* Compact bottom band: a single row of (options | modifiers | start)
+   instead of stacked blocks, capped at 220px tall total. */
+.briefing-footer{flex:none;max-height:220px;padding:12px 5.3vw;display:flex;flex-direction:row;align-items:stretch;gap:22px;overflow:hidden}
+.briefing-options{flex:none;display:flex;flex-direction:column;gap:7px;justify-content:center}
+.briefing-options>.cycler-field{flex-direction:row;align-items:center;gap:8px}
+.cycler-field{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}
+.cycler-field-label{letter-spacing:.04em;white-space:nowrap}
+.cycler-field input[type=number]{background:var(--surface-2);border:1px solid var(--line);color:var(--text-hi);padding:7px 10px;width:100px}
+.briefing-footer .difficulty-note,.briefing-footer .seed-preview{display:none}
+.briefing-footer .modifier-options{flex:1;grid-template-columns:repeat(2,1fr);align-content:center;gap:6px 8px;min-width:0;max-width:460px}
+.briefing-footer .start-button{flex:0 0 220px;min-height:0;align-self:center;margin:0}
+@media(max-width:1150px){.briefing-body{flex-direction:column;overflow:auto}.briefing-map{min-height:220px}.briefing-deploy{max-width:none;height:auto}.briefing-footer{flex-direction:column;max-height:none;gap:10px}.briefing-footer .difficulty-note,.briefing-footer .seed-preview{display:block}.briefing-options{flex-direction:row;flex-wrap:wrap}.briefing-footer .modifier-options{grid-template-columns:repeat(2,1fr)}.briefing-footer .start-button{flex:none;min-height:57px}}
+
+/* Cycler: ◀ value ▶ plus a click-to-open option list (keeps full keyboard/
+   gamepad stepping AND lets a test or a mouse user jump straight to a
+   value), replacing every <select> in the title/select/briefing screens. */
+.cycler{position:relative}
+.cycler>output{cursor:pointer}
+.cycler-prev[disabled],.cycler-next[disabled]{opacity:.3;cursor:not-allowed}
+.cycler-list{position:absolute;top:100%;left:0;right:0;z-index:20;margin-top:2px;max-height:220px;overflow:auto;display:flex;flex-direction:column}
+.cycler-list>button{padding:8px 10px;text-align:left;font-size:12px;color:var(--text)}
+.cycler-list>button:hover{background:#243529;color:var(--text-hi)}
+.cycler-list>button[aria-selected="true"]{color:var(--friendly)}
+
+/* Toggle Card: modifier toggles (replaces checkboxes). RB2: the on-state
+   needs to be unmistakable at a glance (plan item 3) — a filled check box,
+   a highlighted border/background, and the reward/penalty line (the
+   modifier's effect description) stays visible in both states instead of
+   only showing on hover, so the player always sees what they're trading. */
+.modifier-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.toggle-card{width:100%;display:flex;align-items:flex-start;gap:9px;padding:8px 10px;border:1px solid var(--line);border-left:3px solid var(--line);background:#182018;text-align:left;word-break:keep-all}
+.toggle-card:hover{border-color:#738d79}
+.toggle-icon{flex:none;width:16px;height:16px;margin-top:1px;display:grid;place-items:center;border:1px solid var(--line);font-size:12px;line-height:1;color:var(--friendly);background:#0f1813}
+.toggle-card strong{display:block;font-size:12px;font-weight:600;white-space:nowrap}
+.toggle-card small{display:block;font-size:12px;color:var(--muted);line-height:1.3;margin-top:2px}
+.toggle-card[aria-pressed="true"]{border-color:var(--friendly);border-left-color:var(--friendly);background:#1d2e24;box-shadow:inset 0 0 0 1px var(--friendly)}
+.toggle-card[aria-pressed="true"] .toggle-icon{background:var(--friendly);color:#0d1310;border-color:var(--friendly)}
+.toggle-card[aria-pressed="true"] strong{color:var(--friendly)}
+.toggle-card[aria-pressed="true"] strong:after{content:' · 적용됨';color:var(--friendly);font-weight:400;font-size:12px}
+.toggle-card[aria-pressed="true"] strong[data-applied]:after{content:attr(data-applied)}
+@media(max-width:850px){.modifier-options{grid-template-columns:repeat(2,1fr)}}
+
+/* Operator Card: roster drawer (absorbed "대원·장비" modal) */
+.squad-roster{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.operator-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;padding:12px 8px;border:1px solid var(--line);background:#1a2820;text-align:center}
+.operator-card[aria-pressed="true"]{border-color:var(--friendly);background:#1d2e24}
+.operator-card:disabled{opacity:.45}
+.operator-portrait{width:40px;height:40px;display:grid;place-items:center;font:16px var(--mono);font-weight:700;color:var(--muted);border:1px solid var(--line);background:#15231b;clip-path:polygon(16% 0,84% 0,100% 18%,100% 100%,0 100%,0 18%)}
+.operator-card[aria-pressed="true"] .operator-portrait{color:var(--friendly);border-color:var(--friendly)}
+/* RB2: selected operators get a check badge (top-left of the card) and a
+   slot-number badge on the portrait, so the squad's deployment order is
+   visible straight from the roster picker (plan item 4). The badge sits in
+   its own unclipped wrapper — nesting it inside .operator-portrait would
+   have it cut off by that element's own clip-path polygon. */
+.operator-card[aria-pressed="true"]:before{content:'✓';position:absolute;top:6px;left:6px;width:17px;height:17px;border-radius:50%;background:var(--friendly);color:#0d1310;font-size:12px;font-weight:700;line-height:17px;z-index:1}
+.operator-portrait-wrap{position:relative;display:inline-flex}
+.slot-badge{position:absolute;top:-7px;right:-7px;width:17px;height:17px;border-radius:50%;background:var(--live);color:#241f11;font:12px var(--mono);font-weight:700;font-style:normal;display:grid;place-items:center;box-shadow:0 0 0 2px #1a2820;z-index:1}
+.operator-card strong{font-size:12px}
+.operator-card small{font-size:12px;color:var(--muted);line-height:1.4}
+.loadout-list{margin:16px 0;border-top:1px solid #566b5260}
+.loadout-row{display:grid;grid-template-columns:70px 1fr 1fr;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #566b5260;font-size:12px}
+.loadout-row>span{color:var(--muted)}
+@media(max-width:700px){.squad-roster{grid-template-columns:repeat(2,1fr)}.loadout-row{grid-template-columns:1fr;gap:6px}}
+
+/* Bright equipment catalog; only the portrait window exposes the engine canvas. */
+dialog.squad-modal{width:min(1240px,calc(100vw - 32px));max-height:calc(100dvh - 32px);background:transparent;color-scheme:light;--panel-deep:#f1f2ec;--panel:#e9ebe3;--surface-2:#e9ebe3;--text-hi:#202d29;--text:#2d3933;--muted:#53625a;--faint:#65736a;--line:#c4cec3;--line-soft:#dbe1d6;--friendly:#236956;--cyan:#236956;--amber:#87571d}
+body:has(dialog.squad-modal[open]) #menu{visibility:hidden}
+body:has(dialog.squad-modal[open]) #canvas{clip-path:inset(var(--operator-preview-top,50%) var(--operator-preview-right,50%) var(--operator-preview-bottom,50%) var(--operator-preview-left,50%))}
+body:has(dialog.squad-modal[open]) #result{visibility:hidden}
+dialog.squad-modal::backdrop{background:transparent;backdrop-filter:none}
+dialog.squad-modal{box-shadow:0 0 0 100vmax #17221bcc,0 16px 70px #14211855}
+.squad-modal>header{padding:15px 24px;z-index:25;background:#e9ece3}
+.squad-modal h2{font-size:23px;color:var(--text-hi)}
+.squad-modal #modal-content{padding:0;background:transparent}
+.squad-modal button:focus-visible,.squad-modal output:focus-visible,.squad-modal summary:focus-visible,.squad-modal input:focus-visible{outline:2px solid var(--friendly);outline-offset:3px}
+.squad-selection{padding:12px 24px 0;background:var(--panel-deep)}
+.squad-selection-header{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+.squad-members summary{cursor:pointer;white-space:nowrap;color:var(--text)}
+.squad-members summary b{margin-left:8px;font:12px var(--mono);color:var(--friendly)}
+.squad-members-body{padding:18px 24px;position:absolute;left:0;right:0;background:var(--panel-deep);border-bottom:1px solid var(--line);box-shadow:0 12px 24px #24372826;z-index:24}
+.squad-modal .squad-roster{grid-template-columns:repeat(8,minmax(0,1fr));gap:7px}
+.squad-modal .operator-card{background:#e8ece2;min-width:0;padding:10px 5px}
+.squad-modal .operator-card[aria-pressed="true"]{background:#dae7db}
+.squad-modal .operator-portrait{background:#f4f5ef;color:var(--muted)}
+.squad-modal .slot-badge{background:var(--friendly);color:#fff;box-shadow:0 0 0 2px #e8ece2}
+.squad-modal .operator-card[aria-pressed="true"]:before{color:#fff}
+.operator-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:12px 0 14px}
+.customize-operator{display:flex;align-items:center;gap:12px;text-align:left;padding:10px 12px;border:1px solid var(--line);background:#e9ece3;min-width:0;transition:background .18s,border-color .18s}
+.customize-operator:hover{background:#dfe8db}
+.customize-operator[aria-pressed="true"]{background:#236956;border-color:#236956;color:#fff}
+.customize-operator strong{font-size:14px;display:block}
+.customize-operator small{display:block;font-size:11px;color:var(--muted)}
+.customize-operator[aria-pressed="true"] small{color:#d3e8dd}
+.operator-tab-number{font:18px var(--display);opacity:.6}
+.operator-tab-status{margin-left:auto;font-size:10px;white-space:nowrap}
+.operator-workbench{display:grid;grid-template-columns:minmax(280px,38%) minmax(0,1fr);border-top:1px solid var(--line);align-items:stretch}
+.operator-workbench,.operator-preview{scroll-margin-top:90px}
+.operator-preview-column{display:flex;flex-direction:column;min-width:0;position:relative;border-right:1px solid var(--line)}
+.operator-preview-column:after{content:'';flex:1;background:#cbd4c5;pointer-events:none}
+.weapon-showcase{margin:0;background:#e9eae3;overflow:hidden}
+.weapon-showcase figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px 0}
+.weapon-showcase figcaption .eyebrow{font-size:10px;letter-spacing:.07em}
+.weapon-showcase figcaption strong{font-size:18px;color:var(--text-hi)}
+.weapon-showcase>img{display:block;width:100%;height:180px;object-fit:contain;mix-blend-mode:multiply}
+.weapon-showcase>p{padding:0 20px 12px;font-size:12px;color:var(--muted);line-height:1.6}
+.weapon-quick-stats{display:flex;gap:14px;justify-content:space-between;padding:11px 20px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);background:#e9eae3}
+.weapon-quick-stats b{display:inline-block;margin-left:6px;font:14px var(--mono);color:var(--text-hi)}
+.customizer-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px;background:#dde3d7;border-top:1px solid var(--line)}
+.customizer-heading h3{font-size:22px;line-height:1.25;color:var(--text-hi)}
+.customizer-heading .eyebrow{font:10px var(--mono);letter-spacing:.12em}
+.customizer-heading>small{color:var(--muted);font-size:11px;text-align:right;max-width:50%}
+.operator-preview{height:clamp(210px,calc(100dvh - 692px),300px);min-height:210px;flex:none;position:relative;background:transparent}
+.operator-preview>span{position:absolute;bottom:10px;left:16px;font:10px var(--mono);letter-spacing:.06em;color:#34483e;pointer-events:none}
+.customization-controls{padding:18px 22px 22px;background:var(--panel-deep);min-width:0}
+.customization-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.customization-toolbar h3{font-size:22px;line-height:1.4;color:var(--text-hi)}
+.customization-toolbar .eyebrow{font:10px var(--mono);letter-spacing:.14em}
+.preset-field{display:grid;gap:4px;max-width:230px;font-size:11px}
+.preset-field .cycler{height:31px;background:#e8ece3}
+.primary-gear-field{display:block}
+.primary-gear-field>span{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:5px}
+.primary-gear-field>span small{font-size:11px;color:var(--faint);font-weight:400}
+.gear-picker{display:grid;grid-template-columns:24px minmax(0,1fr) 24px;background:#e9ece3;min-width:0}
+.gear-picker>button{width:24px;font-size:10px}
+.gear-picker>output{font-family:inherit;font-size:11px;min-height:33px;padding:5px 2px;letter-spacing:0;text-align:center;line-height:1.35}
+.gear-current-photo{grid-column:1 / -1;cursor:pointer}
+.gear-current-photo img{display:block;width:100%;height:76px;object-fit:contain;mix-blend-mode:multiply}
+.gear-empty{display:grid;place-items:center;min-height:76px;font-size:11px;color:var(--faint)}
+.gear-picker .cycler-list{background:#eef0e8;max-height:360px;border:1px solid var(--line);box-shadow:0 8px 20px #24372825}
+.gear-picker .cycler-list>button{display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 8px;align-items:center;padding:7px;color:var(--text-hi);border-bottom:1px solid var(--line-soft);font-family:inherit}
+.gear-picker .cycler-list>button>img{width:72px;height:56px;object-fit:contain;grid-row:1 / 3;mix-blend-mode:multiply}
+.gear-picker .cycler-list>button>small{font-size:10px;color:var(--muted)}
+.gear-picker .cycler-list>button>.gear-empty{grid-row:1 / 3;min-height:56px}
+.gear-picker .cycler-list>button:hover{background:#dae5d7;color:var(--text-hi)}
+.gear-picker .cycler-list>button[aria-selected="true"]{background:#d9e7d9;color:var(--friendly)}
+.gear-picker .cycler-list>button:disabled{opacity:1;color:#647168;cursor:not-allowed;background:#e2e5dd}
+.gear-picker .cycler-list>button:disabled img{opacity:.55;filter:grayscale(1)}
+.gear-gallery{border:0;background:transparent}
+.gear-gallery>output{justify-content:flex-start;padding:3px 6px;min-height:25px}
+.gear-gallery .cycler-list{position:static;z-index:auto;grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;max-height:none;background:transparent;border:0;box-shadow:none;margin:3px 0 14px;overflow:visible}
+.gear-gallery .cycler-list>button{display:flex;flex-direction:column;align-items:stretch;gap:3px;padding:6px;border:1px solid var(--line);background:#e7eae1;text-align:left;position:relative}
+.gear-gallery .cycler-list>button>img{width:100%;height:57px;object-fit:contain}
+.gear-gallery .cycler-list>button>span{font-size:11px;font-weight:600}
+.gear-gallery .cycler-list>button>small{font-size:10px}
+.gear-gallery .cycler-list>button[aria-selected="true"]{border-color:var(--friendly);box-shadow:inset 0 -3px var(--friendly)}
+.customization-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.customization-fields .loadout-field{display:grid;gap:5px;min-width:0}
+.customization-fields .loadout-field>span{font-size:11px;color:var(--muted)}
+.attachment-options{border:0;padding:0;margin:16px 0 12px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;min-width:0}
+.attachment-options legend{color:var(--text);font-size:12px;font-weight:600;margin-bottom:7px}
+.attachment-options legend small{font-size:11px;font-weight:400;color:var(--muted);margin-left:7px}
+.attachment-options button{border:1px solid var(--line);padding:6px;display:flex;flex-direction:column;gap:4px;font-size:11px;text-align:left;background:#e9ece3;min-width:0;transition:background .18s,border-color .18s}
+.attachment-options button img{display:block;width:100%;height:52px;object-fit:contain;mix-blend-mode:multiply}
+.attachment-options button strong{font-size:11px;font-weight:600}
+.attachment-options button small{font-size:10px;color:var(--muted);line-height:1.5}
+.attachment-options button[aria-pressed="true"]{border-color:var(--friendly);color:var(--friendly);background:#dce8db;box-shadow:inset 0 -2px var(--friendly)}
+.attachment-options button:disabled{opacity:.5;filter:grayscale(1)}
+.camera-tool button{display:flex;width:100%;align-items:center;gap:12px;border:1px solid var(--line);padding:6px 10px;background:#e9ece3;text-align:left}
+.camera-tool button img{width:70px;height:55px;object-fit:contain;mix-blend-mode:multiply}
+.camera-tool button strong{font-size:12px}
+.camera-tool button small{display:block;font-size:11px;color:var(--muted)}
+.camera-tool button>b{margin-left:auto;white-space:nowrap;font-size:11px;font-weight:500}
+.camera-tool button[aria-pressed="true"]{border-color:var(--friendly);background:#dce8db;color:var(--friendly)}
+.selected-tool-note{margin:8px 0 12px;font-size:11px;line-height:1.6;color:var(--muted)}
+.performance-settings,.appearance-settings{border-top:1px solid var(--line);padding:10px 0}
+.performance-settings summary,.appearance-settings summary{cursor:pointer;font-size:12px;font-weight:500}
+.performance-settings summary small,.appearance-settings summary small{margin-left:10px;color:var(--muted);font-size:11px;font-weight:400}
+.stat-heading{margin-top:10px;font-size:11px;color:var(--muted)}
+.equipment-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;margin:8px 0 16px}
+.equipment-stats>div{display:flex;align-items:center;justify-content:space-between;gap:6px;border-bottom:1px solid var(--line-soft);padding:6px 0;font-size:12px;min-width:0}
+.equipment-stats dt{color:var(--muted)}
+.equipment-stats dd{display:flex;align-items:baseline;gap:6px;white-space:nowrap;font-family:var(--mono)}
+.equipment-stats .stat-delta{font-size:10px;color:var(--cyan)}
+.armor-coverage{display:flex;gap:12px;align-items:center;padding:14px;background:#e4e9df;border:1px solid var(--line)}
+.armor-coverage svg{width:56px;flex:none;fill:#e9eee4;stroke:#647d6b}
+.armor-coverage svg .protected{fill:#9ac0a7;stroke:var(--friendly)}
+.armor-coverage strong{font-size:12px}.armor-coverage p{font-size:11px;color:var(--muted);margin:4px 0}
+.armor-coverage small{display:block;font-size:11px;line-height:1.6;color:var(--faint)}
+.appearance-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
+.appearance-inputs label{font-size:11px;color:var(--muted);display:grid;gap:4px}
+.appearance-inputs input{width:100%;min-width:0;padding:7px;background:#f9faf5;border:1px solid var(--line);color:var(--text);font-size:12px}
+.appearance-colors{display:flex;gap:9px;padding:3px 0 7px}
+.appearance-patches{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.appearance-patches button{font:11px var(--mono);border:1px solid var(--line);padding:5px 8px;background:#e8ece2}
+.appearance-patches button[aria-pressed="true"]{color:var(--friendly);border-color:var(--friendly)}
+.appearance-colors button{width:26px;height:26px;border:2px solid var(--line);background:var(--swatch);position:relative}
+.appearance-colors button[aria-pressed="true"]{outline:1px solid var(--friendly);outline-offset:3px}
+.appearance-colors button[aria-pressed="true"]:after{content:'✓';position:absolute;inset:0;color:white;font-size:14px;text-shadow:0 1px 3px black}
+.profile-save{display:flex;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.profile-save>span{color:var(--muted);font-size:11px}
+.squad-modal .secondary{background:#e6ebe0}
+.squad-modal .dialog-footer{background:#e9ece3;margin:0;padding:14px 24px}
+.squad-modal .dialog-footer .primary{background:#236956;border-color:#236956;color:#fff;font-size:13px;min-width:116px;justify-content:center}
+.squad-modal .dialog-footer .primary:hover{background:#1b5746}
+.roster-unavailable{color:var(--amber)!important}
+@media(min-width:901px) and (max-height:800px){.squad-modal>header{padding:10px 24px}.squad-modal h2{font-size:20px}.squad-selection{padding-top:8px}.operator-tabs{padding:8px 0}.customize-operator{padding:7px 10px}.weapon-showcase>img{height:115px;object-fit:contain}.weapon-showcase>p{display:none}.weapon-showcase figcaption{padding-top:10px}.weapon-showcase figcaption strong{font-size:18px}.weapon-quick-stats{padding:7px 20px}.customizer-heading{padding:9px 20px}.operator-preview{height:clamp(150px,calc(100dvh - 550px),245px);min-height:150px}}
+@media(max-width:1000px){.customization-controls{padding:16px}.customization-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.gear-current-photo img{height:64px}.gear-empty{min-height:64px}.attachment-options{grid-template-columns:repeat(2,minmax(0,1fr))}.gear-gallery .cycler-list{grid-template-columns:repeat(2,minmax(0,1fr))}.squad-members-body{padding:16px}.squad-modal .squad-roster{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:700px){dialog.squad-modal{width:calc(100vw - 16px)}.squad-modal>header{padding:12px 16px}.squad-modal h2{font-size:20px}.squad-selection{padding:10px 12px 0}.squad-selection-header>span{font-size:11px;max-width:55%}.squad-members summary{font-size:11px}.operator-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.customize-operator{padding:8px;gap:8px}.customize-operator strong{font-size:13px}.operator-workbench{grid-template-columns:1fr}.operator-preview-column:after{display:none}.operator-preview-column{position:static;border-right:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.weapon-showcase{grid-column:1;grid-row:1 / 3}.weapon-showcase figcaption{display:block;padding:12px 12px 0}.weapon-showcase figcaption strong{display:block;font-size:20px}.weapon-showcase>img{height:130px}.weapon-showcase>p{display:none}.weapon-quick-stats{padding:9px 12px;gap:6px;flex-wrap:wrap}.weapon-quick-stats span{font-size:10px}.weapon-quick-stats b{font-size:12px}.customizer-heading{grid-column:2;grid-row:1;padding:10px 12px;display:block;border-top:0}.customizer-heading h3{font-size:20px}.customizer-heading>small{display:block;text-align:left;max-width:none;font-size:10px;margin-top:4px}.operator-preview{grid-column:2;grid-row:2;height:210px;min-height:210px}.operator-preview>span{font-size:8px;left:8px;right:8px}.customization-controls{padding:16px}.customization-toolbar h3{font-size:20px}.preset-field{max-width:190px}.gear-gallery .cycler-list{grid-template-columns:repeat(2,minmax(0,1fr))}.equipment-stats{grid-template-columns:1fr}.camera-tool button{gap:7px;padding:6px}.camera-tool button img{width:50px}.camera-tool button small{font-size:10px}.profile-save{align-items:flex-start}.profile-save button{font-size:11px;white-space:nowrap}.squad-modal .dialog-footer{padding:12px}.squad-modal .dialog-footer .note{font-size:10px}.performance-settings summary small{display:block;margin-left:16px}}
+
+/* Campaign screen (absorbed modal) */
+.campaign-body{flex:1;margin:4px 5.3vw 28px;padding:22px 24px;overflow:auto;max-width:720px}
+
+/* ============================================================
+   RC: Debrief redesign (plan §7) — 3-column landscape result
+   screen. Keeps every legacy id/class the browser tests rely on
+   (#result-code, .result-card, .result-stats, .result-actions,
+   .result-card > .note:last-child, #watch-replay, #retry-plan,
+   #next-mission) and layers the new layout on top of them.
+   ============================================================ */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.result-card-wide{width:min(1040px,calc(100vw - 32px));text-align:left;padding:26px 32px 20px}
+.result-card-wide>.eyebrow{text-align:center;display:block}
+.result-grid{display:grid;grid-template-columns:1.1fr 1.3fr 1fr;gap:0;min-height:0;overflow-y:auto;margin-top:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.result-col{padding:18px 20px;min-width:0}
+.result-col+.result-col{border-left:1px solid var(--line)}
+.result-col-rank{text-align:left;display:flex;flex-direction:column}
+/* RC fix: the rank stamp used to float in normal text flow above the title,
+   so at some sizes its oversized glyph box visually overlapped "작전 완료" /
+   the subtitle beneath it. A fixed-size stamp tile sits in its own flex cell
+   to the left of the title/subtitle instead, so the two can never collide. */
+.rank-head{display:flex;align-items:center;gap:18px}
+.rank-head-text{min-width:0}
+.result-col-rank h1{font-size:22px}
+.result-col-rank #result-message{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.7}
+/* Rank stamp: the letter grade (S/A/B/C or ✕ on failure) in a bounded tile
+   (not raw oversized text flow), so it can never overlap neighbouring
+   content. Double outline + halftone-ish repeating-gradient fill reads as an
+   inked stamp; a blunt "stamped down" entrance (scale+rotate settle) still
+   resolves instantly under reduced motion. */
+.result-symbol{flex:none;width:112px;height:112px;display:grid;place-items:center;font:900 72px var(--display);line-height:1;color:var(--friendly);background:repeating-linear-gradient(135deg,#7fd8c612 0 3px,transparent 3px 7px);border:3px double var(--friendly);box-shadow:0 0 0 1px #7fd8c640,0 0 24px -6px #7fd8c666;transform:rotate(-7deg);animation:rank-stamp .5s cubic-bezier(.2,1.6,.4,1)}
+.result-card.failed .result-symbol{color:var(--threat);background:repeating-linear-gradient(135deg,#ff5a4812 0 3px,transparent 3px 7px);border-color:var(--threat);box-shadow:0 0 0 1px #ff5a4840,0 0 24px -6px #ff5a4866}
+@keyframes rank-stamp{0%{opacity:0;transform:scale(2.6) rotate(-7deg)}60%{opacity:1;transform:scale(.92) rotate(-7deg)}100%{transform:scale(1) rotate(-7deg)}}
+.result-score{margin:14px 0 4px;display:flex;align-items:baseline;gap:10px}
+.result-score>strong{font:52px var(--mono);font-weight:300;color:var(--friendly);font-variant-numeric:tabular-nums}
+.result-card.failed .result-score>strong{color:var(--threat)}
+.result-score>span{font-size:12px;color:var(--faint);text-align:left;line-height:1.6}
+/* Medal row: up to 5 goal medals, lighting up in sequence (staggered
+   transition-delay per nth-child) instead of the old flat ★/☆ text list.
+   RC fix: widened (58px -> 84px) + word-break:keep-all so a 2-3 syllable
+   label (e.g. "임무 완료") never splits mid-syllable. */
+.result-goals{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 2px}
+.result-goals span{display:flex;flex-direction:column;align-items:center;gap:4px;width:84px;font-size:12px;color:var(--text-lo);text-align:center;word-break:keep-all;opacity:0;transform:translateY(6px);animation:medal-in .35s ease-out forwards}
+.result-goals span:before{content:'';width:30px;height:30px;border-radius:50%;border:2px solid var(--line);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--friendly)}
+.result-goals span:nth-child(1){animation-delay:.15s}.result-goals span:nth-child(2){animation-delay:.35s}.result-goals span:nth-child(3){animation-delay:.55s}.result-goals span:nth-child(4){animation-delay:.75s}.result-goals span:nth-child(5){animation-delay:.95s}.result-goals span:nth-child(6){animation-delay:1.15s}
+.result-goals .achieved{color:var(--friendly)}
+.result-goals .achieved:before{content:'✓';border-color:var(--friendly);background:radial-gradient(circle,#2a4237,var(--surface-2));box-shadow:0 0 12px -2px var(--friendly)}
+@keyframes medal-in{from{opacity:0;transform:translateY(6px) scale(.7)}to{opacity:1;transform:translateY(0) scale(1)}}
+.result-col-squad .panel-label{margin-bottom:10px}
+/* RC fix: richer, vertically balanced operator cards (portrait tile + four
+   stat chips) to fill out what used to be a mostly-empty column with 2
+   operators — min-height keeps 2-card rosters from looking sparse. */
+.result-operators{display:flex;flex-direction:column;gap:10px;max-height:360px;overflow-y:auto}
+.result-operator{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);background:var(--surface-2);min-height:76px}
+.result-operator.mvp{border-color:var(--live);box-shadow:inset 0 0 0 1px var(--live)}
+.result-operator.incap{opacity:.6;filter:grayscale(.6)}
+.result-operator .op-portrait{flex:none;width:48px;height:48px;display:grid;place-items:center;font:20px var(--display);font-weight:700;color:var(--unit-color,var(--friendly));border:1px solid var(--unit-color,var(--friendly));background:radial-gradient(circle at 50% 35%,#1d2f24,#10251b 75%);clip-path:polygon(16% 0,84% 0,100% 18%,100% 100%,0 100%,0 18%)}
+.result-operator-body{min-width:0;flex:1;display:flex;flex-direction:column;gap:6px}
+.result-operator .op-name{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.result-operator .op-mvp-badge{font:12px var(--mono);color:var(--live);border:1px solid #725c38;padding:1px 6px;background:#3d3120}
+.result-operator .op-status{font-size:12px;color:var(--faint);margin-left:auto;font-weight:400}
+.result-operator .op-stats{display:flex;gap:6px;flex-wrap:wrap}
+.result-operator .op-stat{display:flex;align-items:baseline;gap:4px;font:12px var(--mono);color:var(--text);background:var(--surface-1);border:1px solid var(--line-soft);padding:3px 7px}
+.result-operator .op-stat b{font-weight:600;color:var(--friendly)}
+.result-operator.incap .op-stat b{color:var(--threat)}
+/* RC fix: the "작전 리플레이" caption used to sit centered on top of the
+   final-frame thumbnail, overlapping it. It's now a figcaption pinned to
+   the bottom of the frame over a scrim gradient (never the bare image). */
+.result-replay-preview{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(160deg,#182218,#0d1310);border:1px solid var(--line);color:var(--muted);position:relative;overflow:hidden;margin:0}
+.result-replay-preview img,.result-replay-preview canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.replay-preview-glyph{font-size:26px;color:var(--friendly);z-index:1}
+.replay-preview-label{position:absolute;left:0;right:0;bottom:0;margin:0;z-index:1;padding:16px 10px 8px;font:12px var(--mono);letter-spacing:.08em;text-align:center;color:var(--text-hi);background:linear-gradient(to top,#060a07ee,transparent)}
+.result-replay-preview:not(:has(img)) .replay-preview-label{position:static;background:none;padding:0;color:var(--muted)}
+.result-comparison{font-size:12px;color:#c5ddba;line-height:1.6;min-height:1.6em;margin-top:12px}
+.result-details{margin-top:12px}
+.result-details>summary{cursor:pointer;font:12px var(--mono);color:var(--muted);letter-spacing:.06em;padding:6px 0;list-style:none;display:flex;align-items:center;gap:6px}
+.result-details>summary::-webkit-details-marker{display:none}
+.result-details[open]>summary .chevron{transform:rotate(180deg)}
+.result-details .chevron{transition:transform .15s ease-out;display:inline-block}
+/* Room feedback stays inside the existing scrolling result grid. Its own
+   bounded content keeps action buttons reachable for multiple observed rooms. */
+.result-doctrine{grid-column:1/-1;min-width:0;padding:10px 20px;border-top:1px solid var(--line)}
+.result-doctrine>summary{cursor:pointer;display:flex;gap:8px;align-items:center;font-size:12px;color:var(--friendly);padding:5px 0;list-style:none}
+.result-doctrine>summary::-webkit-details-marker{display:none}
+.result-doctrine[open]>summary .chevron{transform:rotate(180deg)}
+.result-doctrine .note{font-size:12px;line-height:1.6;margin:6px 0}
+.doctrine-rooms{max-height:min(280px,38dvh);overflow:auto;min-width:0;overscroll-behavior:contain}
+.doctrine-room{min-width:0;margin:10px 0 14px}
+.doctrine-room h3{font-size:13px;line-height:1.5;margin-bottom:6px;color:var(--text-hi);overflow-wrap:anywhere}
+.doctrine-table{table-layout:fixed;width:100%;border-collapse:collapse;font-size:12px;line-height:1.6;text-align:left}
+.doctrine-table th,.doctrine-table td{padding:7px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top;overflow-wrap:anywhere}
+.doctrine-table thead th{color:var(--muted);font-weight:500}
+.doctrine-table th:nth-child(1){width:14%}.doctrine-table th:nth-child(2){width:14%}.doctrine-table th:nth-child(3){width:28%}
+.doctrine-table td:last-child{color:var(--muted)}
+.doctrine-grade.good{color:var(--friendly)}.doctrine-grade.caution{color:var(--amber)}.doctrine-grade.fail{color:var(--threat)}.doctrine-grade.na{color:var(--faint)}
+.doctrine-table small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.doctrine-seek{display:block;margin-top:5px;padding:4px 6px;border:1px solid var(--line);font-size:12px;line-height:1.5;text-align:left;color:var(--friendly);max-width:100%;overflow-wrap:anywhere}
+.prior-attempt-toggle{width:100%;min-width:0;flex:none;font-size:12px;line-height:1.5;padding:6px 4px;margin-bottom:8px;border:1px solid var(--line);background:var(--surface-1);overflow-wrap:anywhere}
+.prior-attempt-toggle[aria-pressed="true"]{color:var(--friendly);border-color:var(--friendly);background:var(--surface-2)}
+/* RC fix: action tiers — next-mission is the sole primary (filled --action),
+   watch-replay is secondary (outlined, friendly accent), retry/retry-plan/
+   menu are tertiary (plain, low-emphasis text buttons). */
+.result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:16px 0 10px;font-size:12px}
+.result-actions button{padding:10px 16px;border:1px solid var(--line);background:#16211a}
+.result-actions button:hover{border-color:#4c6a57}
+.result-actions .secondary{border-color:var(--friendly);color:var(--friendly);background:transparent}
+.result-actions .secondary:hover{background:#1d2e24}
+.result-actions .tertiary{border-color:transparent;background:transparent;color:var(--muted);padding:10px 12px}
+.result-actions .tertiary:hover{color:var(--text-hi);border-color:var(--line)}
+.result-actions #next-mission.primary{padding:10px 20px}
+@media(max-width:1000px){.result-grid{grid-template-columns:1fr}.result-col+.result-col{border-left:0;border-top:1px solid var(--line)}.result-symbol{font-size:96px}.result-card-wide{padding:20px}}
+@media(max-height:820px){.result-symbol{font-size:96px}.result-stats{max-height:150px}}
+/* P0 UI gate: keep every detail statistic in two compact columns on short
+   screens, including the content that expands when its summary is opened. */
+@media(min-width:1001px) and (max-height:820px){
+  .result-details .result-stats{grid-template-columns:repeat(2,minmax(0,1fr));max-height:196px;margin-bottom:0}
+  .result-details .result-stats>div{padding:5px 4px;line-height:1.2;gap:5px}
+}
+@media(prefers-reduced-motion:reduce){.result-symbol,.result-goals span{animation:none!important;opacity:1!important;transform:none!important}}
+
+/* RC: Pause — left slide-in vertical menu (plan §6). The play scene
+   desaturates instead of blurring, so the frozen plan state stays legible
+   behind the panel. */
+.pause-panel{position:fixed;left:0;top:0;bottom:0;width:320px;z-index:60;display:flex;flex-direction:column;gap:14px;padding:30px 26px;background:#141c17;border-right:1px solid var(--line);box-shadow:60px 0 90px -20px #00000090;transform:translateX(-100%);transition:transform .22s ease-out}
+.pause-panel.open{transform:translateX(0)}
+.pause-panel h2{font-size:24px;font-weight:600;letter-spacing:-.04em;margin-top:2px}
+/* RC fix: the panel must be fully opaque (no HUD bleed-through) and the HUD
+   chrome it overlaps (left operator column, tutorial card) must be hidden
+   outright while paused, not just left translucent underneath. */
+body.pause-active .hud-left,body.pause-active #tutorial,body.pause-active .map-shortcuts{visibility:hidden}
+.pause-menu{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.pause-menu button{display:flex;align-items:center;gap:14px;padding:13px 14px;border:1px solid var(--line);background:#16211a;font-size:13px;text-align:left}
+.pause-menu button:hover{background:#223228;border-color:#4c6a57}
+.pause-menu button svg{width:18px;height:18px;color:var(--muted);flex:none}
+.pause-menu #resume-game{border-color:var(--friendly);color:var(--friendly)}
+.pause-menu #resume-game svg{color:var(--friendly)}
+body.pause-active #canvas{filter:saturate(.3) brightness(.82);transition:filter .25s ease-out}
+@media(prefers-reduced-motion:reduce){.pause-panel{transition:none}}
+
+/* RC: FX consumer layer (plan §5 / 2-1) — purely additive, pointer-events
+   none throughout so it never blocks input. Godot emits identical events
+   live and during replay (bridge contract); this layer just renders them. */
+#fx-layer{position:fixed;inset:0;z-index:45;pointer-events:none;overflow:hidden}
+.fx-stamp{position:absolute;display:flex;flex-direction:column;align-items:center;gap:2px;transform:translate(-50%,-50%) scale(1.6) rotate(-8deg);opacity:0;transition:opacity .18s ease-out,transform .18s cubic-bezier(.2,1.4,.4,1);color:var(--friendly);text-shadow:0 2px 10px #000a}
+.fx-stamp.top-center{left:50%;top:84px;transform:translate(-50%,0) scale(1.6) rotate(-4deg)}
+.fx-stamp.top-center.show{transform:translate(-50%,0) scale(1) rotate(-4deg)}
+.fx-stamp.show{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-8deg)}
+.fx-stamp strong{font:900 26px var(--display);letter-spacing:.04em;border:2px solid currentColor;padding:4px 14px}
+.fx-stamp span{font:12px var(--mono);letter-spacing:.08em;color:var(--text-hi)}
+.fx-banner{position:absolute;left:50%;top:92px;transform:translate(-50%,-10px);opacity:0;transition:opacity .15s ease-out,transform .15s ease-out;background:var(--surface-1);border:1px solid var(--line-soft);padding:8px 18px;font:12px var(--mono);letter-spacing:.06em;white-space:nowrap}
+.fx-banner.show{opacity:1;transform:translate(-50%,0)}
+.fx-banner-threat{border-color:var(--threat);color:var(--threat)}
+.fx-banner-down{border-color:var(--threat);color:var(--threat);top:132px}
+.fx-vignette{position:absolute;inset:0;opacity:0;box-shadow:inset 0 0 160px 10px var(--threat);transition:opacity .12s ease-out}
+.fx-vignette.show{opacity:.55}
+.fx-vignette.fx-subtle.show{opacity:.12}
+.fx-hit-confirm{position:absolute;width:12px;height:12px;transform:translate(-50%,-50%);color:#efe9d8;opacity:.8}
+.fx-hit-confirm:before,.fx-hit-confirm:after{content:'';position:absolute;left:0;top:5px;width:12px;height:1px;background:currentColor;transform:rotate(45deg);box-shadow:0 0 1px #000}
+.fx-hit-confirm:after{transform:rotate(-45deg)}
+.fx-blocked-confirm{color:#8faec5}
+.reduced-motion .fx-hit-confirm{opacity:.35}
+@media(prefers-reduced-motion:reduce){.fx-hit-confirm{opacity:.35}}
+.fx-letterbox{position:absolute;inset:0;opacity:0;transition:opacity .2s ease-out}
+.fx-letterbox.show{opacity:1}
+.fx-letterbox i{position:absolute;left:0;right:0;height:11vh;background:#05080650;display:block}
+.fx-letterbox i:first-child{top:0}
+.fx-letterbox i:last-child{bottom:0}
+.unit-card.fx-shake{animation:fx-card-shake .4s ease}
+.unit-card.fx-incap{filter:grayscale(1) brightness(.6);position:relative}
+.unit-card.fx-incap:after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(45deg,transparent 0 6px,#ff5a4850 6px 7px)}
+@keyframes fx-card-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+@media(prefers-reduced-motion:reduce){.fx-stamp,.fx-banner,.fx-vignette,.fx-letterbox{transition:none!important}.unit-card.fx-shake{animation:none!important}}
+.reduced-motion .fx-stamp,.reduced-motion .fx-banner,.reduced-motion .fx-vignette,.reduced-motion .fx-letterbox{transition:none!important}
+.reduced-motion .unit-card.fx-shake{animation:none!important}
+.reduced-motion .unit-card.hit-flash{animation:none;box-shadow:inset 0 0 0 1px var(--threat)}
+@media(prefers-reduced-motion:reduce){.unit-card.hit-flash{box-shadow:inset 0 0 0 1px var(--threat)}}
+
+/* RC: Replay — 56px compact header, icon-group controls, timeline markers. */
+.replay-header{padding:9px 16px;min-height:0}
+.replay-header strong{font-size:13px;margin-top:1px}
+.replay-header .eyebrow{font-size:12px}
+.replay-header>div:last-child{gap:4px}
+.replay-header .icon-button{width:30px;height:30px}
+.icon-group{display:flex;border:1px solid var(--line);background:var(--panel-deep)}
+.icon-group .icon-button{width:34px;height:30px;border-right:1px solid var(--line)}
+.icon-group .icon-button:last-child{border-right:0}
+.icon-group .icon-button[aria-pressed="true"],.icon-group .icon-button.active{background:#314135;color:var(--cyan)}
+.replay-track{position:relative;flex:1;display:flex;align-items:center}
+.replay-track input{width:100%}
+.replay-markers{position:absolute;left:0;right:0;top:50%;height:0;pointer-events:none}
+.replay-marker{position:absolute;top:50%;width:8px;height:8px;transform:translate(-50%,-50%) rotate(45deg);border:1px solid #0008;pointer-events:auto;cursor:pointer}
+.replay-marker:hover,.replay-marker:focus-visible{transform:translate(-50%,-50%) rotate(45deg) scale(1.4)}
+.replay-marker[data-kind="spotted"]{background:var(--live)}
+.replay-marker[data-kind="neutralized"]{background:var(--friendly)}
+.replay-marker[data-kind="hit"]{background:var(--threat)}
+.replay-marker[data-kind="breach"]{background:var(--civilian)}
+
+/* RD1: settings dialog tabs (plan §9 / task 2-2) ------------------------- */
+.settings-tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.settings-tabs button{padding:10px 14px;font-size:12px;color:var(--muted);border-bottom:2px solid transparent}
+.settings-tabs button.active{color:var(--text-hi);border-bottom-color:var(--friendly)}
+.settings-tabs button:hover{color:var(--text-hi)}
+.settings-tab-body .settings-group:first-child{margin-top:0}
+.binding-list{display:flex;flex-direction:column;gap:6px}
+.binding-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.binding-label{font-size:12px;color:var(--text)}
+.binding-key{min-width:120px;text-align:center;font:12px var(--mono);padding:8px 10px;border:1px solid var(--line);background:var(--surface-2);color:var(--text-hi)}
+.binding-key:hover{border-color:var(--friendly)}
+.binding-row.capturing .binding-key{border-color:var(--live);color:var(--live);animation:binding-pulse 1s ease-in-out infinite}
+@keyframes binding-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.gamepad-diagram{width:100%;max-width:320px;display:block;margin-top:10px;stroke:var(--line);fill:none}
+.gamepad-diagram .gp-body{fill:var(--surface-2);stroke:var(--line)}
+.gamepad-diagram .gp-stick{fill:#000;fill-opacity:.25;stroke:var(--muted)}
+.gamepad-diagram .gp-shoulder,.gamepad-diagram .gp-center{fill:var(--surface-1);stroke:var(--muted)}
+.gamepad-diagram .gp-face circle{fill:var(--surface-1);stroke:var(--friendly)}
+.gamepad-diagram .gp-face-label{fill:var(--friendly);stroke:none;font:600 9px var(--mono);text-anchor:middle}
+.gamepad-diagram .gp-label{fill:var(--muted);stroke:none;font:9px var(--mono);text-anchor:middle}
+
+/* RD1: colorblind-safe palette swap (plan 2-2 접근성 / bridge `palette`).
+   Swaps only the semantic friendly/threat/civilian tokens; every component
+   built on those variables (unit cards, FX, result cards, replay markers)
+   updates automatically without per-component overrides. Pairs chosen to
+   stay distinguishable under the named deficiency while keeping a warm
+   "friendly" and an alarming "threat" feel. */
+body[data-palette="deutan"],body[data-palette="protan"]{--friendly:#3fa7ff;--threat:#ffb000;--civilian:#c9a6ff}
+body[data-palette="tritan"]{--friendly:#ff7a3d;--threat:#e4457e;--civilian:#3fd6c9}
+
+/* RD1: gamepad DOM-menu focus ring (plan 2-3) ---------------------------- */
+.gamepad-focus{outline:3px solid var(--live)!important;outline-offset:2px;box-shadow:0 0 0 5px #0000,0 0 16px #f2b84b80!important}
+
+/* Facing is temporary by default; the explicit strafe option lives beside F. */
+.face-options{position:fixed;display:flex;gap:6px;padding:8px;pointer-events:auto;z-index:70}
+.face-options button{padding:9px 14px;border:1px solid var(--line);font-size:12px}
+.face-options button[aria-pressed="true"]{color:var(--cyan);border-color:var(--cyan);background:#213a2a}
+
+/* P2 keeps the original 72px deck until an own-unit group or drill exists.
+   The observed deck height is also the native camera's bottom safe inset. */
+.hotbar-controls{display:contents}
+.hud-hotbar:has(.drill-timeline:not([hidden])){height:auto;flex-direction:column}
+.hud-hotbar:has(.drill-timeline:not([hidden])) .hotbar-controls{display:flex;align-items:stretch;min-height:72px;height:72px;flex:none}
+.hud-left,.hud-right{bottom:var(--drill-deck-height,72px)}
+/* Keep every tool and utility independently clickable on a 900px deck.
+   The fixed execute cluster leaves enough width for all eight tool buttons. */
+@media(max-width:1100px){
+  .hud-hotbar .tools>button{min-width:56px;padding-inline:4px}
+  .hud-hotbar .hotbar-utility button{padding-inline:10px}
+  .hud-hotbar .hotbar-execute{gap:8px;padding-inline:10px}
+  .hud-hotbar .hotbar-execute .execution-button{width:140px}
+}
+.drill-selection-hint{font-size:12px;line-height:1.5;color:var(--text-lo);padding:0 2px;margin:0 0 8px}
+.unit-card[data-selection-order]:not([data-selection-order="0"]):after{content:attr(data-selection-order);position:absolute;right:6px;top:5px;font:12px var(--mono);color:var(--unit-color,var(--cyan));border:1px solid currentColor;padding:0 3px;background:var(--surface-0)}
+.unit-card.primary-selected{outline:1px solid var(--unit-color,var(--cyan));outline-offset:-3px}
+.room-drill-panel{position:fixed;right:12px;top:60px;width:min(410px,calc(100vw - 24px));max-height:calc(100vh - 60px - var(--drill-deck-height,72px) - 12px);z-index:85;pointer-events:auto;background:var(--surface-1);display:flex;flex-direction:column;padding:14px;box-shadow:0 16px 50px #000a;border:1px solid #85a67680}
+.room-drill-panel>header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:9px;gap:10px}
+.room-drill-panel h2{font-size:18px;margin:5px 0 0}
+.room-drill-panel>header>button{padding:7px 10px;font-size:20px}
+#drill-editor-content,#formation-editor-content{overflow:auto;min-height:0;padding:10px 2px}
+.drill-intro,.drill-preview-summary p,.drill-doctrine-note{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 10px;word-break:keep-all}
+.room-drill-panel fieldset{border:0;padding:0;margin:0 0 12px;min-width:0}
+.room-drill-panel legend{font-size:12px;color:var(--text-hi);margin-bottom:6px}
+.drill-methods,.drill-signals{display:flex;gap:5px;flex-wrap:wrap}
+.drill-methods button,.drill-signals button,.drill-options button{border:1px solid var(--line);padding:7px 9px;font-size:12px}
+.room-drill-panel button[aria-pressed="true"]{color:var(--cyan);border-color:var(--cyan);background:#213a2a}
+.room-drill-panel button:disabled{opacity:.4}
+#drill-order>div,#formation-order>div{display:flex;align-items:center;gap:6px;min-height:34px;border-bottom:1px solid var(--line-soft)}
+#drill-order strong,#formation-order strong{flex:1;min-width:0;font-size:12px;overflow-wrap:anywhere}
+#drill-order small,#formation-order small{font-size:12px;color:var(--amber)}
+#drill-order button,#formation-order button{font-size:12px;border:1px solid var(--line);padding:4px 6px;flex:none}
+.drill-number{display:inline-grid;place-items:center;width:18px;height:18px;border:1px solid var(--cyan);font:12px var(--mono);color:var(--cyan);flex:none}
+.drill-options{display:flex;align-items:center;gap:10px;margin:4px 0 8px}
+.drill-short{font:12px var(--mono);letter-spacing:.1em;padding:4px 8px;color:var(--amber);border:1px solid var(--amber)}
+.drill-preview-summary{padding:10px;background:var(--surface-0);border:1px solid var(--line);font-size:12px;color:var(--muted);margin:10px 0}
+.drill-preview-summary>strong{display:block;color:var(--text-hi);margin-bottom:5px}
+.drill-preview-legend{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.drill-preview-legend>span{display:flex;align-items:center;gap:4px;font-size:12px}
+.drill-preview-summary>small{font-size:12px;line-height:1.5}
+.drill-doctrine-note{font-size:12px;margin-bottom:0}
+.room-drill-panel>footer{border-top:1px solid var(--line);padding-top:9px;flex:none}
+#drill-preview-error,#formation-preview-error{font-size:12px;line-height:1.5;color:var(--amber);margin:0 0 8px}
+#drill-preview-error:empty,#formation-preview-error:empty{display:none}
+#drill-commit,#formation-commit{width:100%;padding:10px}
+.formation-delay{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px}
+.formation-delay button{padding:6px 10px;font-size:12px;border:1px solid var(--line)}
+.formation-delay output{font:12px var(--mono);min-width:65px;text-align:center}
+.formation-delay-note{font-size:12px;color:var(--muted);line-height:1.5;margin:6px 0 12px}
+.drill-timeline{background:var(--surface-0);border-bottom:1px solid var(--line);padding:0 10px 5px;min-width:0}
+.drill-timeline>header{display:flex;align-items:center;gap:10px;min-height:34px;font-size:12px;flex-wrap:wrap}
+.drill-timeline>header>strong{color:var(--cyan);font-weight:500}
+.drill-timeline>header>button{font:12px var(--mono);border:1px solid var(--line);padding:3px 7px}
+.drill-timeline>header>[data-tool="formation"][aria-pressed="true"]{color:var(--cyan);border-color:var(--cyan)}
+.drill-timeline>header>small{margin-left:auto;color:var(--muted);font-size:12px}
+.drill-timeline-grid{min-width:0}
+.drill-timeline-head,.drill-timeline-row{display:grid;grid-template-columns:120px repeat(4,minmax(0,1fr));gap:4px}
+.drill-timeline-head{font-size:12px;line-height:22px;color:var(--muted)}
+.drill-timeline-row{min-height:35px;align-items:stretch;border-top:1px solid var(--line-soft)}
+.drill-timeline-row>button{display:flex;align-items:center;gap:7px;font-size:12px;text-align:left;min-width:0}
+.drill-timeline-row>button>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.drill-timeline-row>button.drill-unit-down{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:7px;row-gap:0}
+.drill-unit-down .drill-number{grid-row:span 2;align-self:center}
+.drill-unit-down small{font-size:12px;color:var(--muted);line-height:1.15}
+.drill-stage{display:flex;align-items:center;gap:3px;overflow:auto;min-width:0;scrollbar-width:thin}
+.drill-stage-empty{color:var(--faint);font-size:12px}
+.drill-command{display:flex;align-items:center;flex:none;border:1px solid var(--line);background:var(--surface-1);height:27px}
+.drill-command>button{display:flex;align-items:center;gap:3px;padding:3px 5px;white-space:nowrap;font-size:12px}
+.drill-command svg{width:12px;height:12px;color:var(--muted)}
+.drill-command-edit{display:flex}
+.drill-command-edit button{width:19px;padding:3px 2px;font-size:12px;color:var(--muted)}
+.drill-command-edit button:disabled{opacity:.3}
+.drill-command.failed{border-color:var(--amber)}
+.drill-delay-control{display:flex;gap:7px;align-items:center;font-size:12px;margin-left:auto}
+.drill-delay-control>output{min-width:42px;font:12px var(--mono);color:var(--cyan)}
+.drill-delay-track{position:relative;width:180px;height:20px;border:1px solid var(--line);background:linear-gradient(transparent 45%,#59715e 45% 55%,transparent 55%);touch-action:none;cursor:ew-resize}
+.drill-delay-track>i{position:absolute;top:2px;bottom:2px;width:8px;transform:translateX(-50%);background:var(--cyan);pointer-events:none}
+.drill-delay-track:disabled{opacity:.4;cursor:default}
+.drill-delay-track:focus-visible{outline:1px solid var(--cyan);outline-offset:3px}
+@media(max-width:1100px){.drill-timeline>header>small{width:100%;margin-left:0}.drill-delay-track{width:130px}.drill-timeline-head,.drill-timeline-row{grid-template-columns:90px repeat(4,minmax(0,1fr))}}
+/* P1: keep plain kick and charge-on-failure selection visibly distinct. */
+#door-submenu button[aria-pressed="true"]{color:var(--cyan);background:#213a2a;box-shadow:inset 0 0 0 1px var(--cyan)}
+
+.camera-pan-button{padding:7px 11px;border:1px solid var(--line);font-size:12px;white-space:nowrap}
+.camera-pan-button[aria-pressed="true"]{background:#213a2a;border-color:var(--cyan);color:var(--cyan)}
+#canvas.camera-pan-tool{cursor:grab}
+#canvas.camera-dragging{cursor:grabbing}
+
+/* Scene transitions stay above dialogs and render before engine work begins. */
+#transition-loading{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:30px;border:0;background:#111714;color:var(--text);text-align:center;overflow:auto}
+#transition-loading[open]{display:flex;flex-direction:column;align-items:center;justify-content:center}
+#transition-loading::backdrop{background:#111714}
+#transition-loading h1{font-size:clamp(24px,4vw,32px);font-weight:500;letter-spacing:-.055em;margin:17px 0 12px}
+#transition-message{font-size:13px;line-height:1.8;color:var(--muted);max-width:440px}
+#transition-loading .load-mark{flex-shrink:0}
+.transition-track{width:min(320px,80vw);height:2px;background:var(--line);margin-top:32px;overflow:hidden}
+.transition-track i{display:block;width:40%;height:100%;background:var(--red);animation:transition-sweep 1.4s ease-in-out infinite;will-change:transform}
+#transition-reload{margin-top:28px}
+@keyframes transition-sweep{from{transform:translateX(-100%)}to{transform:translateX(350%)}}
+@media(prefers-reduced-motion:reduce){.transition-track i{animation:none;transform:translateX(75%)}}
+
+.operator-settings{margin-top:8px;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px}.operator-settings label{display:grid;gap:4px;color:var(--muted,#a8b4ad)}.operator-settings select{min-width:0;width:100%;background:#23322f;color:#edf3e9;border:1px solid #52645e;border-radius:4px;padding:6px}.operator-settings button,.operator-settings small{grid-column:1/-1}.operator-settings button{padding:7px;border:1px solid #52645e;background:#23322f;color:#edf3e9;border-radius:4px}.operator-settings button[aria-pressed="true"]{background:#456656;border-color:#a1d6c3}.operator-settings small{color:#b8c9be;line-height:1.4}.operator-settings :disabled{opacity:.45}
+
+/* Posture controls need readable labels even when the roster is compact.
+   Reserve their real width in the engine's safe area, with portraits in two
+   columns so all four operators and their controls fit a shorter desktop. */
+@media(min-width:851px) and (max-width:1399px){
+  .hud-left:has(.operator-settings){width:240px;padding:8px}
+  .hud-left:has(.operator-settings) .tutorial{position:static;width:auto;margin-left:0;box-shadow:none}
+  .hud-left:has(.operator-settings) .roster-label{flex-direction:row}
+  .hud-left:has(.operator-settings) .roster-label span{display:inline}
+  .hud-left:has(.operator-settings) .unit-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;flex:0 0 auto;align-content:start}
+  .hud-left:has(.operator-settings) .unit-card{grid-template-rows:44px 8px;row-gap:4px}
+  .hud-left:has(.operator-settings) .operator-settings{margin-top:auto;flex:none}
+}
+
+/* Historical stages live with the squad so the centered clock remains clear. */
+.historical-objective{padding:9px 11px;flex:none;background:var(--surface-1)}
+.historical-objective>div{display:flex;justify-content:space-between;gap:10px;color:var(--friendly);font-size:12px}
+.historical-objective b{font-family:var(--mono)}
+.historical-objective p{margin-top:4px;color:var(--text-lo);font-size:12px;line-height:1.5}
+.hud-topbar .topbar-left{max-width:calc(50% - 145px);gap:12px}
+.hud-topbar .header-mission{flex:1 1 auto;overflow:hidden}
+.hud-topbar .header-mission strong,.hud-topbar .header-mission>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hud-topbar .objectives{flex:none}

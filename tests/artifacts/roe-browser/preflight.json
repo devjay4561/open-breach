@@ -1,0 +1,318 @@
+{
+	"cases": [
+		{
+			"mission": {
+				"bounds": [
+					20,
+					12
+				],
+				"civilians": [],
+				"custom": true,
+				"doors": [
+					{
+						"axis": "z",
+						"d": 1.8,
+						"hinge_side": -1.0,
+						"id": "entry",
+						"material": "wood",
+						"state": "CLOSED",
+						"swing_sign": -1.0,
+						"w": 0.2,
+						"x": 10.0,
+						"z": 5.8
+					}
+				],
+				"enemies": [
+					{
+						"ammo": 24,
+						"enemy_type": "sentry",
+						"facing": 0.0,
+						"hp": 100.0,
+						"id": "unseen",
+						"name": "UNSEEN",
+						"passive": true,
+						"weapon": "standard",
+						"x": 17.0,
+						"z": 9.0
+					}
+				],
+				"fail": [],
+				"focus": [
+					8,
+					6
+				],
+				"id": "ROE_PRECISION_UI",
+				"objectives": [
+					"교전수칙을 검증하세요."
+				],
+				"props": [],
+				"revision": 1,
+				"roe": "precision",
+				"rooms": [
+					{
+						"d": 12.0,
+						"id": "own_room",
+						"indoor": true,
+						"w": 10.0,
+						"x": 5.0,
+						"z": 6.0
+					},
+					{
+						"d": 12.0,
+						"id": "hidden_room",
+						"indoor": true,
+						"w": 10.0,
+						"x": 15.0,
+						"z": 6.0
+					}
+				],
+				"schema_version": 6,
+				"seed": 42,
+				"stars": [],
+				"title": "교전수칙 검증",
+				"title_en": "ROE Check",
+				"units": [
+					{
+						"ammo": 24,
+						"armor": "none",
+						"equipment": {
+							"frag": 1,
+							"stun": 1
+						},
+						"facing": 0.0,
+						"helmet": "none",
+						"hp": 100.0,
+						"id": "alpha",
+						"name": "ALPHA",
+						"role": "TEST",
+						"weapon": "standard",
+						"x": 2.0,
+						"z": 5.8
+					},
+					{
+						"ammo": 24,
+						"armor": "none",
+						"equipment": {
+							"frag": 1,
+							"stun": 1
+						},
+						"facing": 0.0,
+						"helmet": "none",
+						"hp": 100.0,
+						"id": "bravo",
+						"name": "BRAVO",
+						"role": "TEST",
+						"weapon": "standard",
+						"x": 2.0,
+						"z": 7.0
+					}
+				],
+				"walls": [
+					{
+						"d": 4.9,
+						"height": 2.6,
+						"id": "jamb_thin",
+						"thin": true,
+						"w": 0.2,
+						"x": 10.0,
+						"z": 2.45
+					},
+					{
+						"d": 5.3,
+						"height": 2.6,
+						"id": "jamb_concrete",
+						"material": "concrete",
+						"w": 0.2,
+						"x": 10.0,
+						"z": 9.35
+					}
+				],
+				"win": [
+					{
+						"type": "reach_zone",
+						"zone": [
+							18.0,
+							1.0,
+							0.5,
+							0.5
+						]
+					}
+				]
+			},
+			"preview": {
+				"i18n_key": "frag.forbidden",
+				"message": "정밀 교전수칙에서는 파편 수류탄을 사용할 수 없습니다",
+				"message_key": "frag.forbidden",
+				"ok": false
+			},
+			"roe": "precision",
+			"target": [
+				7.5,
+				5.8
+			]
+		},
+		{
+			"mission": {
+				"bounds": [
+					20,
+					12
+				],
+				"civilians": [],
+				"custom": true,
+				"doors": [
+					{
+						"axis": "z",
+						"d": 1.8,
+						"hinge_side": -1.0,
+						"id": "entry",
+						"material": "wood",
+						"state": "CLOSED",
+						"swing_sign": -1.0,
+						"w": 0.2,
+						"x": 10.0,
+						"z": 5.8
+					}
+				],
+				"enemies": [
+					{
+						"ammo": 24,
+						"enemy_type": "sentry",
+						"facing": 0.0,
+						"hp": 100.0,
+						"id": "unseen",
+						"name": "UNSEEN",
+						"passive": true,
+						"weapon": "standard",
+						"x": 17.0,
+						"z": 9.0
+					}
+				],
+				"fail": [],
+				"focus": [
+					8,
+					6
+				],
+				"id": "ROE_HIGH_INTENSITY_UI",
+				"objectives": [
+					"교전수칙을 검증하세요."
+				],
+				"props": [],
+				"revision": 1,
+				"roe": "high_intensity",
+				"rooms": [
+					{
+						"d": 12.0,
+						"id": "own_room",
+						"indoor": true,
+						"w": 10.0,
+						"x": 5.0,
+						"z": 6.0
+					},
+					{
+						"d": 12.0,
+						"id": "hidden_room",
+						"indoor": true,
+						"w": 10.0,
+						"x": 15.0,
+						"z": 6.0
+					}
+				],
+				"schema_version": 6,
+				"seed": 42,
+				"stars": [],
+				"title": "교전수칙 검증",
+				"title_en": "ROE Check",
+				"units": [
+					{
+						"ammo": 24,
+						"armor": "none",
+						"equipment": {
+							"frag": 1,
+							"stun": 1
+						},
+						"facing": 0.0,
+						"helmet": "none",
+						"hp": 100.0,
+						"id": "alpha",
+						"name": "ALPHA",
+						"role": "TEST",
+						"weapon": "standard",
+						"x": 2.0,
+						"z": 5.8
+					},
+					{
+						"ammo": 24,
+						"armor": "none",
+						"equipment": {
+							"frag": 1,
+							"stun": 1
+						},
+						"facing": 0.0,
+						"helmet": "none",
+						"hp": 100.0,
+						"id": "bravo",
+						"name": "BRAVO",
+						"role": "TEST",
+						"weapon": "standard",
+						"x": 2.0,
+						"z": 7.0
+					}
+				],
+				"walls": [
+					{
+						"d": 4.9,
+						"height": 2.6,
+						"id": "jamb_thin",
+						"thin": true,
+						"w": 0.2,
+						"x": 10.0,
+						"z": 2.45
+					},
+					{
+						"d": 5.3,
+						"height": 2.6,
+						"id": "jamb_concrete",
+						"material": "concrete",
+						"w": 0.2,
+						"x": 10.0,
+						"z": 9.35
+					}
+				],
+				"win": [
+					{
+						"type": "reach_zone",
+						"zone": [
+							18.0,
+							1.0,
+							0.5,
+							0.5
+						]
+					}
+				]
+			},
+			"preview": {
+				"available_frags": 1,
+				"core_radius": 1.0,
+				"ok": true,
+				"radius": 4.0,
+				"source": [
+					2.0,
+					5.80000019073486,
+					1.2
+				],
+				"target": [
+					7.5,
+					5.80000019073486,
+					0.1
+				]
+			},
+			"roe": "high_intensity",
+			"target": [
+				7.5,
+				5.8
+			]
+		}
+	],
+	"seed": 42,
+	"step": 0.0333333333333333
+}

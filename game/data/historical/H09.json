@@ -1,0 +1,984 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H09",
+  "revision": 2,
+  "title": "리버 애시",
+  "title_en": "RIVER ASH",
+  "seed": 20261018,
+  "bounds": [
+    110,
+    70
+  ],
+  "focus": [
+    55.0,
+    35.0
+  ],
+  "rooms": [
+    {
+      "id": "village_hut_0",
+      "x": 15,
+      "z": 35,
+      "w": 7,
+      "d": 9,
+      "label": "마을 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_1",
+      "x": 30,
+      "z": 55,
+      "w": 8,
+      "d": 8,
+      "label": "마을 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_2",
+      "x": 35,
+      "z": 20,
+      "w": 9,
+      "d": 7,
+      "label": "마을 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_3",
+      "x": 50,
+      "z": 40,
+      "w": 8,
+      "d": 9,
+      "label": "마을 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_4",
+      "x": 70,
+      "z": 20,
+      "w": 10,
+      "d": 8,
+      "label": "인질 체류 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_5",
+      "x": 75,
+      "z": 45,
+      "w": 8,
+      "d": 9,
+      "label": "마을 오두막",
+      "indoor": true
+    },
+    {
+      "id": "village_hut_6",
+      "x": 90,
+      "z": 15,
+      "w": 10,
+      "d": 9,
+      "label": "마을 오두막",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "village_hut_0_n_s0",
+      "x": 12.9875,
+      "z": 30.5,
+      "w": 2.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_0_n_last",
+      "x": 17.0125,
+      "z": 30.5,
+      "w": 2.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_0_s_s0",
+      "x": 12.9875,
+      "z": 39.5,
+      "w": 2.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_0_s_last",
+      "x": 17.0125,
+      "z": 39.5,
+      "w": 2.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_0_w_last",
+      "x": 11.5,
+      "z": 35.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_0_e_last",
+      "x": 18.5,
+      "z": 35.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_1_n_last",
+      "x": 30.0,
+      "z": 51.0,
+      "w": 8.0,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_1_s_s0",
+      "x": 27.7375,
+      "z": 59.0,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_1_s_last",
+      "x": 32.2625,
+      "z": 59.0,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_1_w_last",
+      "x": 26.0,
+      "z": 55.0,
+      "w": 0.2,
+      "d": 8.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_1_e_last",
+      "x": 34.0,
+      "z": 55.0,
+      "w": 0.2,
+      "d": 8.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_n_s0",
+      "x": 32.4875,
+      "z": 16.5,
+      "w": 3.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_n_last",
+      "x": 37.5125,
+      "z": 16.5,
+      "w": 3.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_s_s0",
+      "x": 32.4875,
+      "z": 23.5,
+      "w": 3.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_s_last",
+      "x": 37.5125,
+      "z": 23.5,
+      "w": 3.975,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_w_last",
+      "x": 30.5,
+      "z": 20.0,
+      "w": 0.2,
+      "d": 7.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_2_e_last",
+      "x": 39.5,
+      "z": 20.0,
+      "w": 0.2,
+      "d": 7.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_3_n_last",
+      "x": 50.0,
+      "z": 35.5,
+      "w": 8.0,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_3_s_s0",
+      "x": 47.7375,
+      "z": 44.5,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_3_s_last",
+      "x": 52.2625,
+      "z": 44.5,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_3_w_last",
+      "x": 46.0,
+      "z": 40.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_3_e_last",
+      "x": 54.0,
+      "z": 40.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_n_s0",
+      "x": 67.2375,
+      "z": 16.0,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_n_last",
+      "x": 72.7625,
+      "z": 16.0,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_s_s0",
+      "x": 67.2375,
+      "z": 24.0,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_s_last",
+      "x": 72.7625,
+      "z": 24.0,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_w_last",
+      "x": 65.0,
+      "z": 20.0,
+      "w": 0.2,
+      "d": 8.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_4_e_last",
+      "x": 75.0,
+      "z": 20.0,
+      "w": 0.2,
+      "d": 8.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_5_n_last",
+      "x": 75.0,
+      "z": 40.5,
+      "w": 8.0,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_5_s_s0",
+      "x": 72.7375,
+      "z": 49.5,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_5_s_last",
+      "x": 77.2625,
+      "z": 49.5,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_5_w_last",
+      "x": 71.0,
+      "z": 45.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_5_e_last",
+      "x": 79.0,
+      "z": 45.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_n_s0",
+      "x": 87.2375,
+      "z": 10.5,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_n_last",
+      "x": 92.7625,
+      "z": 10.5,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_s_s0",
+      "x": 87.2375,
+      "z": 19.5,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_s_last",
+      "x": 92.7625,
+      "z": 19.5,
+      "w": 4.475,
+      "d": 0.2,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_w_last",
+      "x": 85.0,
+      "z": 15.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    },
+    {
+      "id": "village_hut_6_e_last",
+      "x": 95.0,
+      "z": 15.0,
+      "w": 0.2,
+      "d": 9.0,
+      "height": 2.6,
+      "material": "concrete"
+    }
+  ],
+  "doors": [
+    {
+      "id": "village_hut_0_n_d0",
+      "x": 15,
+      "z": 30.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_0_s_d0",
+      "x": 15,
+      "z": 39.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_1_s_d0",
+      "x": 30,
+      "z": 59.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_2_n_d0",
+      "x": 35,
+      "z": 16.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_2_s_d0",
+      "x": 35,
+      "z": 23.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_3_s_d0",
+      "x": 50,
+      "z": 44.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_4_n_d0",
+      "x": 70,
+      "z": 16.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_4_s_d0",
+      "x": 70,
+      "z": 24.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_5_s_d0",
+      "x": 75,
+      "z": 49.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_6_n_d0",
+      "x": 90,
+      "z": 10.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "village_hut_6_s_d0",
+      "x": 90,
+      "z": 19.5,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "hut_living_prop_0",
+      "type": "table",
+      "x": 13.2,
+      "z": 33,
+      "w": 1.5,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_1",
+      "type": "bed",
+      "x": 28.2,
+      "z": 53,
+      "w": 1,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_2",
+      "type": "table",
+      "x": 33.2,
+      "z": 18,
+      "w": 1.5,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_3",
+      "type": "bed",
+      "x": 48.2,
+      "z": 38,
+      "w": 1,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_4",
+      "type": "table",
+      "x": 68.2,
+      "z": 18,
+      "w": 1.5,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_5",
+      "type": "bed",
+      "x": 73.2,
+      "z": 43,
+      "w": 1,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "hut_living_prop_6",
+      "type": "table",
+      "x": 88.2,
+      "z": 13,
+      "w": 1.5,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 15,
+      "z": 48,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 15.85,
+      "z": 48,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 15,
+      "z": 48.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 15.85,
+      "z": 48.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 17,
+      "z": 36,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e2",
+      "x": 33,
+      "z": 55,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e3",
+      "x": 40,
+      "z": 31,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e4",
+      "x": 45,
+      "z": 30,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e5",
+      "x": 70,
+      "z": 17,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    },
+    {
+      "id": "e6",
+      "x": 76,
+      "z": 49,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    },
+    {
+      "id": "e7",
+      "x": 97,
+      "z": 32,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    },
+    {
+      "id": "e8",
+      "x": 57,
+      "z": 56,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 70,
+      "z": 22,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 90,
+      "z": 17,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 49,
+      "z": 43,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 74.8,
+      "z": 47,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "오두막 사이의 근거리 통로를 확보하세요.",
+    "억류 인원을 확인하고 모두 확보하세요."
+  ],
+  "scenery": [
+    {
+      "id": "hut_shell_0",
+      "asset": "hut",
+      "x": 15,
+      "z": 35,
+      "rotation": 0,
+      "scale": 0.8,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_1",
+      "asset": "hut",
+      "x": 30,
+      "z": 55,
+      "rotation": 0,
+      "scale": 0.8,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_2",
+      "asset": "hut",
+      "x": 35,
+      "z": 20,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_3",
+      "asset": "hut",
+      "x": 50,
+      "z": 40,
+      "rotation": 0,
+      "scale": 0.8,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_4",
+      "asset": "hut",
+      "x": 70,
+      "z": 20,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_5",
+      "asset": "hut",
+      "x": 75,
+      "z": 45,
+      "rotation": 0,
+      "scale": 0.8,
+      "height": 0
+    },
+    {
+      "id": "hut_shell_6",
+      "asset": "hut",
+      "x": 90,
+      "z": 15,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "village_edge_palm_0",
+      "asset": "palm_tree",
+      "x": 7,
+      "z": 12,
+      "rotation": 0,
+      "scale": 0.9,
+      "height": 0
+    },
+    {
+      "id": "village_edge_palm_1",
+      "asset": "palm_tree",
+      "x": 10,
+      "z": 61,
+      "rotation": 0,
+      "scale": 0.9,
+      "height": 0
+    },
+    {
+      "id": "village_edge_palm_2",
+      "asset": "palm_tree",
+      "x": 45,
+      "z": 8,
+      "rotation": 0,
+      "scale": 0.9,
+      "height": 0
+    },
+    {
+      "id": "village_edge_palm_3",
+      "asset": "palm_tree",
+      "x": 62,
+      "z": 64,
+      "rotation": 0,
+      "scale": 0.9,
+      "height": 0
+    },
+    {
+      "id": "village_edge_palm_4",
+      "asset": "palm_tree",
+      "x": 99,
+      "z": 53,
+      "rotation": 0,
+      "scale": 0.9,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "브레스크 개울 · 울드렌 자유구",
+    "location_en": "Vresk Creek · Uldren Free Zone",
+    "accuracy_note": "켈브리스 마을의 오두막을 수색하고 억류 인원을 구출하세요.",
+    "accuracy_note_en": "Search the huts of Kelvrith Village and rescue the captives."
+  },
+  "environment": {
+    "time_of_day": "day",
+    "lighting": 0.95,
+    "biome": "jungle",
+    "ground_color": "#365b4b",
+    "water": false,
+    "ground_surface": "concrete"
+  },
+  "description": "켈브리스 마을의 오두막을 수색하고 억류 인원을 구출하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Search the huts of Kelvrith Village and rescue the captives."
+}

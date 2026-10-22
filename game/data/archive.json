@@ -1,0 +1,588 @@
+{
+  "schema_version": 1,
+  "id": "M02",
+  "revision": 3,
+  "title": "닫힌 기록실",
+  "title_en": "Sealed Archive",
+  "seed": 2093,
+  "bounds": [
+    24,
+    20
+  ],
+  "focus": [
+    12,
+    10
+  ],
+  "rooms": [
+    {
+      "id": "lobby",
+      "label": "01 / RECEPTION",
+      "x": 12,
+      "z": 13,
+      "w": 18,
+      "d": 6,
+      "color": "#687a77",
+      "indoor": true,
+      "lighting": 1,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "archive",
+      "label": "02 / ARCHIVE",
+      "x": 7.5,
+      "z": 6.5,
+      "w": 9,
+      "d": 7,
+      "color": "#777666",
+      "indoor": true,
+      "lighting": 1,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "office",
+      "label": "03 / OFFICE",
+      "x": 16.5,
+      "z": 6.5,
+      "w": 9,
+      "d": 7,
+      "color": "#66777b",
+      "indoor": true,
+      "lighting": 1,
+      "floor_surface": "tile"
+    }
+  ],
+  "walls": [
+    {
+      "x": 3.9,
+      "z": 16,
+      "w": 1.7999999999999998,
+      "d": 0.24,
+      "id": "archive_walls_1",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 14.1,
+      "z": 16,
+      "w": 13.8,
+      "d": 0.24,
+      "id": "archive_walls_2",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 3,
+      "z": 9.5,
+      "w": 0.24,
+      "d": 13,
+      "id": "archive_walls_3",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 21,
+      "z": 9.5,
+      "w": 0.24,
+      "d": 13,
+      "id": "archive_walls_4",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 4.8,
+      "z": 10,
+      "w": 3.5999999999999996,
+      "d": 0.24,
+      "id": "archive_walls_5",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 12.25,
+      "z": 10,
+      "w": 7.700000000000001,
+      "d": 0.24,
+      "id": "archive_walls_6",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 19.45,
+      "z": 10,
+      "w": 3.1000000000000014,
+      "d": 0.24,
+      "id": "archive_walls_7",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 12,
+      "z": 4.05,
+      "w": 0.24,
+      "d": 2.0999999999999996,
+      "id": "archive_walls_8",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 12,
+      "z": 8.45,
+      "w": 0.24,
+      "d": 3.0999999999999996,
+      "id": "archive_walls_9",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 10.8,
+      "z": 3,
+      "w": 15.600000000000001,
+      "d": 0.24,
+      "id": "archive_walls_0_service1",
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "x": 20.7,
+      "z": 3,
+      "w": 0.6000000000000014,
+      "d": 0.24,
+      "id": "archive_walls_0_service2",
+      "height": 2.8,
+      "material": "concrete"
+    }
+  ],
+  "doors": [
+    {
+      "id": "a1",
+      "x": 7.5,
+      "z": 10,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "a2",
+      "x": 17,
+      "z": 10,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "a3",
+      "x": 12,
+      "z": 6,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "service_north",
+      "x": 19.5,
+      "z": 3,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D04",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    }
+  ],
+  "props": [
+    {
+      "type": "desk",
+      "x": 12,
+      "z": 13.5,
+      "w": 3,
+      "d": 1,
+      "solid": true,
+      "id": "archive_props_0",
+      "cover": "low",
+      "height": 0.74,
+      "material": "wood"
+    },
+    {
+      "type": "sofa",
+      "x": 19.5,
+      "z": 13,
+      "w": 1,
+      "d": 3,
+      "solid": true,
+      "id": "archive_props_1",
+      "cover": "low",
+      "height": 0.86,
+      "material": "fabric"
+    },
+    {
+      "type": "plant",
+      "x": 4,
+      "z": 11,
+      "w": 0.7,
+      "d": 0.7,
+      "solid": false,
+      "id": "archive_props_2",
+      "cover": "none",
+      "height": 1.1,
+      "material": "foliage"
+    },
+    {
+      "type": "rug",
+      "x": 7,
+      "z": 13,
+      "w": 3.5,
+      "d": 3,
+      "solid": false,
+      "id": "archive_props_3",
+      "cover": "none",
+      "height": 0.025,
+      "material": "fabric"
+    },
+    {
+      "type": "bookshelf",
+      "x": 5,
+      "z": 5,
+      "w": 0.7,
+      "d": 2,
+      "solid": true,
+      "id": "archive_props_4",
+      "cover": "full",
+      "height": 1.3,
+      "material": "wood"
+    },
+    {
+      "type": "bookshelf",
+      "x": 8,
+      "z": 5,
+      "w": 0.7,
+      "d": 2,
+      "solid": true,
+      "id": "archive_props_5",
+      "cover": "full",
+      "height": 1.3,
+      "material": "wood"
+    },
+    {
+      "type": "bookshelf",
+      "x": 10.8,
+      "z": 8,
+      "w": 0.7,
+      "d": 2,
+      "solid": true,
+      "id": "archive_props_6",
+      "cover": "full",
+      "height": 1.3,
+      "material": "wood"
+    },
+    {
+      "type": "desk",
+      "x": 17,
+      "z": 4.3,
+      "w": 3,
+      "d": 1,
+      "solid": true,
+      "id": "archive_props_7",
+      "cover": "low",
+      "height": 0.74,
+      "material": "wood"
+    },
+    {
+      "type": "chair",
+      "x": 17,
+      "z": 5.2,
+      "w": 0.6,
+      "d": 0.6,
+      "solid": false,
+      "id": "archive_props_8",
+      "cover": "none",
+      "height": 0.92,
+      "material": "fabric"
+    },
+    {
+      "type": "cabinet",
+      "x": 20,
+      "z": 7,
+      "w": 0.6,
+      "d": 2,
+      "solid": true,
+      "id": "archive_props_9",
+      "cover": "full",
+      "height": 1.3,
+      "material": "wood"
+    },
+    {
+      "type": "rug",
+      "x": 16.5,
+      "z": 7.5,
+      "w": 4,
+      "d": 3,
+      "solid": false,
+      "id": "archive_props_10",
+      "cover": "none",
+      "height": 0.025,
+      "material": "fabric"
+    }
+  ],
+  "units": [
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "role": "대원",
+      "x": 3,
+      "z": 17.4,
+      "facing": -1.5707963268,
+      "weapon": "standard",
+      "reserve_ammo": 72,
+      "stance": "standing",
+      "movement_mode": "normal"
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "role": "대원",
+      "x": 2.2,
+      "z": 18.5,
+      "facing": -1.5707963268,
+      "weapon": "standard",
+      "reserve_ammo": 72,
+      "stance": "standing",
+      "movement_mode": "normal"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "a_e1",
+      "x": 9,
+      "z": 12,
+      "facing": 1.5707963268,
+      "weapon": "light",
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 9,
+          "z": 12,
+          "facing": 1.5707963268
+        },
+        {
+          "x": 8.3,
+          "z": 12,
+          "facing": 1.5707963268
+        }
+      ],
+      "response_role": "guard",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "strength": "weak"
+    },
+    {
+      "id": "a_e2",
+      "x": 6.5,
+      "z": 7,
+      "facing": 1.5707963268,
+      "weapon": "light",
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 6.5,
+          "z": 7,
+          "facing": 1.5707963268,
+          "patrol": [
+            [
+              6.5,
+              7
+            ],
+            [
+              8.8,
+              6.2
+            ]
+          ]
+        },
+        {
+          "x": 6.5,
+          "z": 7.7,
+          "facing": 1.5707963268,
+          "patrol": [
+            [
+              6.5,
+              7
+            ],
+            [
+              8.8,
+              6.2
+            ]
+          ]
+        }
+      ],
+      "patrol": [
+        [
+          6.5,
+          7
+        ],
+        [
+          8.8,
+          6.2
+        ]
+      ],
+      "response_role": "reserve",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "strength": "medium"
+    },
+    {
+      "id": "a_e3",
+      "x": 17,
+      "z": 7.5,
+      "facing": 1.5707963268,
+      "weapon": "light",
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 17,
+          "z": 7.5,
+          "facing": 1.5707963268,
+          "patrol": [
+            [
+              17,
+              7.5
+            ],
+            [
+              15,
+              6.5
+            ]
+          ]
+        },
+        {
+          "x": 17.7,
+          "z": 7.5,
+          "facing": 1.5707963268,
+          "patrol": [
+            [
+              17,
+              7.5
+            ],
+            [
+              15,
+              6.5
+            ]
+          ]
+        }
+      ],
+      "patrol": [
+        [
+          17,
+          7.5
+        ],
+        [
+          15,
+          6.5
+        ]
+      ],
+      "response_role": "patrol",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "strength": "medium"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "a_c1",
+      "x": 19,
+      "z": 4.5,
+      "name": "기록실 직원"
+    }
+  ],
+  "objectives": [
+    "모든 위협을 처리하세요.",
+    "민간인을 확보하세요.",
+    "북쪽 직원 출입구를 통한 다른 경로가 있습니다."
+  ],
+  "default_seed": 2093,
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "variant": "normal",
+  "modifiers": [],
+  "stars": [
+    {
+      "id": "single_plan",
+      "label": "단일 계획",
+      "stat": "plan_revisions",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "no_stun",
+      "label": "스턴 미사용",
+      "stat": "stuns_used",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "no_hits",
+      "label": "피격 0",
+      "stat": "hits_taken",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "small_team",
+      "label": "소수 투입",
+      "stat": "units_deployed",
+      "op": "lte",
+      "value": 1
+    },
+    {
+      "id": "no_reload",
+      "label": "재장전 0",
+      "stat": "reloads",
+      "op": "eq",
+      "value": 0
+    }
+  ],
+  "environment": {
+    "time_of_day": "day",
+    "lighting": 1
+  },
+  "description_en": " A northern staff entrance provides another route.",
+  "description": " 북쪽 직원 출입구를 통한 다른 경로가 있습니다."
+}

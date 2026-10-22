@@ -1,0 +1,537 @@
+{
+  "checks": 40,
+  "failures": [
+    "M01/shared all four operators enter without manual replanning",
+    "M01/shared finished entry releases passage reservations",
+    "M01H/shared all four operators enter without manual replanning",
+    "M01H/shared finished entry releases passage reservations"
+  ],
+  "scenarios": [
+    {
+      "command_failures": 0,
+      "complete": true,
+      "door": {
+        "_clearance_operator_id": "bravo",
+        "_enemy_opening": false,
+        "_nav_progress": 1.0,
+        "_open_duration": 0.8,
+        "_open_target": 1.0,
+        "_operator_clearance": [
+          13.3119993209839,
+          17.4500007629395
+        ],
+        "axis": "x",
+        "blocked": false,
+        "d": 0.24,
+        "destroyed": false,
+        "height": 2.1,
+        "hinge_side": -1.0,
+        "hp": 100.0,
+        "id": "d1",
+        "label": "정문",
+        "locked": false,
+        "material": "wood",
+        "owner_command_id": "",
+        "owner_id": "",
+        "progress": 1.0,
+        "reason": "",
+        "state": "OPEN",
+        "swing_sign": -1.0,
+        "w": 1.8,
+        "x": 12.0,
+        "z": 17.0
+      },
+      "scenario": "M01/spread",
+      "time": 9.99999999999998,
+      "units": [
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "alpha",
+          "position": [
+            11.0205316543579,
+            14.7651510238647
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "bravo",
+          "position": [
+            12.0109691619873,
+            13.8587656021118
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "charlie",
+          "position": [
+            12.9811973571777,
+            14.7581748962402
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "delta",
+          "position": [
+            12.0156602859497,
+            15.5571603775024
+          ],
+          "status": "READY"
+        }
+      ]
+    },
+    {
+      "command_failures": 0,
+      "complete": false,
+      "door": {
+        "_clearance_operator_id": "bravo",
+        "_enemy_opening": false,
+        "_nav_progress": 1.0,
+        "_open_duration": 0.8,
+        "_open_target": 1.0,
+        "_operator_clearance": [
+          13.3119993209839,
+          17.4500007629395
+        ],
+        "axis": "x",
+        "blocked": false,
+        "d": 0.24,
+        "destroyed": false,
+        "height": 2.1,
+        "hinge_side": -1.0,
+        "hp": 100.0,
+        "id": "d1",
+        "label": "정문",
+        "locked": false,
+        "material": "wood",
+        "owner_command_id": "",
+        "owner_id": "",
+        "progress": 1.0,
+        "reason": "",
+        "state": "OPEN",
+        "swing_sign": -1.0,
+        "w": 1.8,
+        "x": 12.0,
+        "z": 17.0
+      },
+      "scenario": "M01/shared",
+      "time": 30.0000000000007,
+      "units": [
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "앞 인물을 피해 우회 중",
+              "resolved_target": [
+                11.7856969833374,
+                16.0173721313477
+              ],
+              "state": "RUNNING",
+              "type": "MOVE"
+            }
+          ],
+          "id": "alpha",
+          "position": [
+            12.1361618041992,
+            16.5571384429932
+          ],
+          "status": "MOVING"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "bravo",
+          "position": [
+            12.0216426849365,
+            15.5608854293823
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [
+                12.5173721313477,
+                15.7143030166626
+              ],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "charlie",
+          "position": [
+            12.5860891342163,
+            15.7326774597168
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [
+                11.7856969833374,
+                16.0173721313477
+              ],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "delta",
+          "position": [
+            11.7918767929077,
+            16.0311908721924
+          ],
+          "status": "READY"
+        }
+      ]
+    },
+    {
+      "command_failures": 0,
+      "complete": true,
+      "door": {
+        "_clearance_operator_id": "bravo",
+        "_enemy_opening": false,
+        "_nav_progress": 1.0,
+        "_open_duration": 0.8,
+        "_open_target": 1.0,
+        "_operator_clearance": [
+          13.3119993209839,
+          17.4500007629395
+        ],
+        "axis": "x",
+        "blocked": false,
+        "d": 0.24,
+        "destroyed": false,
+        "height": 2.1,
+        "hinge_side": -1.0,
+        "hp": 100.0,
+        "id": "d1",
+        "label": "정문",
+        "locked": false,
+        "material": "wood",
+        "owner_command_id": "",
+        "owner_id": "",
+        "progress": 1.0,
+        "reason": "",
+        "state": "OPEN",
+        "swing_sign": -1.0,
+        "w": 1.8,
+        "x": 12.0,
+        "z": 17.0
+      },
+      "scenario": "M01H/spread",
+      "time": 9.99999999999998,
+      "units": [
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "alpha",
+          "position": [
+            11.0205316543579,
+            14.7651510238647
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "bravo",
+          "position": [
+            12.0109691619873,
+            13.8587656021118
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "charlie",
+          "position": [
+            12.9811973571777,
+            14.7581748962402
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "delta",
+          "position": [
+            12.0156602859497,
+            15.5571603775024
+          ],
+          "status": "READY"
+        }
+      ]
+    },
+    {
+      "command_failures": 0,
+      "complete": false,
+      "door": {
+        "_clearance_operator_id": "bravo",
+        "_enemy_opening": false,
+        "_nav_progress": 1.0,
+        "_open_duration": 0.8,
+        "_open_target": 1.0,
+        "_operator_clearance": [
+          13.3119993209839,
+          17.4500007629395
+        ],
+        "axis": "x",
+        "blocked": false,
+        "d": 0.24,
+        "destroyed": false,
+        "height": 2.1,
+        "hinge_side": -1.0,
+        "hp": 100.0,
+        "id": "d1",
+        "label": "정문",
+        "locked": false,
+        "material": "wood",
+        "owner_command_id": "",
+        "owner_id": "",
+        "progress": 1.0,
+        "reason": "",
+        "state": "OPEN",
+        "swing_sign": -1.0,
+        "w": 1.8,
+        "x": 12.0,
+        "z": 17.0
+      },
+      "scenario": "M01H/shared",
+      "time": 30.0000000000007,
+      "units": [
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "앞 인물을 피해 우회 중",
+              "resolved_target": [
+                11.7856969833374,
+                16.0173721313477
+              ],
+              "state": "RUNNING",
+              "type": "MOVE"
+            }
+          ],
+          "id": "alpha",
+          "position": [
+            12.1361618041992,
+            16.5571384429932
+          ],
+          "status": "MOVING"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "bravo",
+          "position": [
+            12.0216426849365,
+            15.5608854293823
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [
+                12.5173721313477,
+                15.7143030166626
+              ],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "charlie",
+          "position": [
+            12.5860891342163,
+            15.7326774597168
+          ],
+          "status": "READY"
+        },
+        {
+          "commands": [
+            {
+              "reason": "",
+              "resolved_target": [],
+              "state": "SUCCEEDED",
+              "type": "OPEN_DOOR"
+            },
+            {
+              "reason": "",
+              "resolved_target": [
+                11.7856969833374,
+                16.0173721313477
+              ],
+              "state": "SUCCEEDED",
+              "type": "MOVE"
+            }
+          ],
+          "id": "delta",
+          "position": [
+            11.7918767929077,
+            16.0311908721924
+          ],
+          "status": "READY"
+        }
+      ]
+    }
+  ]
+}

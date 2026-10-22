@@ -1,0 +1,474 @@
+{
+  "schema_version": 6,
+  "id": "SH04",
+  "revision": 1,
+  "title": "킬하우스 04 · T와 L",
+  "title_en": "Shoot house 04 · T and L junctions",
+  "subtitle": "CQB DOCTRINE",
+  "description": "T자 교차로에서 높낮이 역할을 나누고 L자 방향 전환을 계획하세요.",
+  "description_en": "Split stance roles at the T junction, then plan the L turn.",
+  "seed": 9004,
+  "default_seed": 9004,
+  "bounds": [
+    17.2,
+    32.0
+  ],
+  "focus": [
+    8.6,
+    11.399999999999999
+  ],
+  "roe": "precision",
+  "noise_discipline": "verbal",
+  "variant": "normal",
+  "modifiers": [],
+  "rooms": [
+    {
+      "id": "r3",
+      "label": "03",
+      "x": 5.8,
+      "z": 11.399999999999999,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r4",
+      "label": "04",
+      "x": 11.399999999999999,
+      "z": 11.399999999999999,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "prep",
+      "label": "PREP",
+      "x": 8.6,
+      "z": 17.45,
+      "w": 15.2,
+      "d": 6.5,
+      "indoor": false,
+      "color": "#555d54"
+    },
+    {
+      "id": "t_stem",
+      "label": "T APPROACH",
+      "x": 8.6,
+      "z": 25.0,
+      "w": 2.96,
+      "d": 9.2,
+      "indoor": false
+    },
+    {
+      "id": "t_cross",
+      "label": "T / L",
+      "x": 8.6,
+      "z": 18.8,
+      "w": 11.76,
+      "d": 2.96,
+      "indoor": false
+    }
+  ],
+  "walls": [
+    {
+      "x": 4.8,
+      "z": 20.4,
+      "w": 4.4,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_cross_south_1"
+    },
+    {
+      "x": 12.399999999999999,
+      "z": 20.4,
+      "w": 4.4,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_cross_south_2"
+    },
+    {
+      "x": 2.6,
+      "z": 18.799999999999997,
+      "w": 0.24,
+      "d": 3.1999999999999993,
+      "material": "wood",
+      "id": "t_cross_west_1"
+    },
+    {
+      "x": 14.6,
+      "z": 18.799999999999997,
+      "w": 0.24,
+      "d": 3.1999999999999993,
+      "material": "wood",
+      "id": "t_cross_east_1"
+    },
+    {
+      "x": 7.0,
+      "z": 25.0,
+      "w": 0.24,
+      "d": 9.200000000000003,
+      "material": "wood",
+      "id": "t_stem_west_1"
+    },
+    {
+      "x": 10.2,
+      "z": 25.0,
+      "w": 0.24,
+      "d": 9.200000000000003,
+      "material": "wood",
+      "id": "t_stem_east_1"
+    },
+    {
+      "x": 8.6,
+      "z": 29.6,
+      "w": 3.1999999999999993,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_stem_south_1"
+    },
+    {
+      "x": 2.95,
+      "z": 17.2,
+      "w": 0.7000000000000002,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_north_1"
+    },
+    {
+      "x": 8.6,
+      "z": 17.2,
+      "w": 6.999999999999999,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_north_2"
+    },
+    {
+      "x": 14.25,
+      "z": 17.2,
+      "w": 0.6999999999999993,
+      "d": 0.24,
+      "material": "wood",
+      "id": "t_north_3"
+    },
+    {
+      "x": 8.6,
+      "z": 8.599999999999998,
+      "w": 11.2,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_north_1"
+    },
+    {
+      "x": 3.9499999999999997,
+      "z": 14.2,
+      "w": 1.8999999999999995,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_1"
+    },
+    {
+      "x": 8.6,
+      "z": 14.2,
+      "w": 3.799999999999998,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_2"
+    },
+    {
+      "x": 13.25,
+      "z": 14.2,
+      "w": 1.9000000000000004,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_3"
+    },
+    {
+      "x": 3.0,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 5.600000000000001,
+      "material": "wood",
+      "id": "outer_west_1"
+    },
+    {
+      "x": 14.2,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 5.600000000000001,
+      "material": "wood",
+      "id": "outer_east_1"
+    },
+    {
+      "x": 8.6,
+      "z": 9.549999999999997,
+      "w": 0.24,
+      "d": 1.9000000000000004,
+      "material": "wood",
+      "id": "partition_c0_1"
+    },
+    {
+      "x": 8.6,
+      "z": 13.25,
+      "w": 0.24,
+      "d": 1.9000000000000004,
+      "material": "wood",
+      "id": "partition_c0_2"
+    }
+  ],
+  "doors": [
+    {
+      "id": "ext_left",
+      "x": 5.8,
+      "z": 14.2,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "좌측 외부 진입",
+      "material": "wood"
+    },
+    {
+      "id": "ext_right",
+      "x": 11.399999999999999,
+      "z": 14.2,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "우측 외부 진입",
+      "material": "wood"
+    },
+    {
+      "id": "inner_h1_0",
+      "x": 8.6,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood"
+    }
+  ],
+  "props": [],
+  "units": [
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "role": "선봉",
+      "x": 8.6,
+      "z": 24.6,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "role": "지원",
+      "x": 8.6,
+      "z": 25.3,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "charlie",
+      "name": "CHARLIE",
+      "role": "돌입",
+      "x": 8.6,
+      "z": 26.0,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "delta",
+      "name": "DELTA",
+      "role": "엄호",
+      "x": 8.6,
+      "z": 26.700000000000003,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 10.399999999999999,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 10.399999999999999,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 10.399999999999999,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e2",
+      "name": "무장 인원",
+      "x": 10.95,
+      "z": 10.399999999999999,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 10.95,
+          "z": 10.399999999999999,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 11.849999999999998,
+          "z": 10.399999999999999,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e3",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 12.399999999999999,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 12.399999999999999,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 12.399999999999999,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e4",
+      "name": "무장 인원",
+      "x": 10.95,
+      "z": 12.399999999999999,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 10.95,
+          "z": 12.399999999999999,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 11.849999999999998,
+          "z": 12.399999999999999,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    }
+  ],
+  "civilians": [],
+  "objectives": [
+    "T자 교차로에서 높낮이 역할을 나누고 L자 방향 전환을 계획하세요.",
+    "모든 방을 정리하고 외부 종료 구역으로 이동하세요."
+  ],
+  "win": [
+    {
+      "type": "rooms_cleared",
+      "room_ids": [
+        "r3",
+        "r4"
+      ]
+    },
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    },
+    {
+      "type": "reach_zone",
+      "zone": [
+        4.2,
+        18.8,
+        1.2,
+        1.2
+      ]
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "stars": [
+    {
+      "id": "course_time",
+      "label": "90초 이내",
+      "stat": "duration",
+      "op": "lte",
+      "value": 90
+    },
+    {
+      "id": "no_hits",
+      "label": "피격 0",
+      "stat": "hits_taken",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "no_civilian_damage",
+      "label": "민간인 피해 0",
+      "stat": "civilian_damage",
+      "op": "eq",
+      "value": 0
+    }
+  ],
+  "briefing": {
+    "difficulty": "훈련",
+    "estimated_minutes": "0.5–1.5",
+    "threat": "반격하지 않는 훈련 표적",
+    "tip": "T자 교차로에서 높낮이 역할을 나누고 L자 방향 전환을 계획하세요."
+  }
+}

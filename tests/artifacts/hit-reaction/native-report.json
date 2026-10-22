@@ -1,0 +1,28 @@
+{
+  "checks": 32,
+  "failures": [
+    "Expired hit direction no longer overrides ordinary movement"
+  ],
+  "scenarios": [
+    {
+      "command_failures": 0,
+      "enemy_hp": 0.0,
+      "first_hit": 0.266666666666667,
+      "hp": 82.0,
+      "return_fire": 0.833333333333333,
+      "scenario": "stationary",
+      "shots": 5,
+      "turned": 0.833333333333333
+    },
+    {
+      "command_failures": 0,
+      "enemy_hp": 28.0,
+      "first_hit": 0.266666666666667,
+      "hp": 82.0,
+      "return_fire": 0.966666666666667,
+      "scenario": "moving",
+      "shots": 2,
+      "turned": 0.966666666666667
+    }
+  ]
+}

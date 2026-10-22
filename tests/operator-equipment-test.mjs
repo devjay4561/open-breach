@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+
+const source=await readFile(new URL('../web/meta.js',import.meta.url),'utf8');
+const metaUrl='data:text/javascript;base64,'+Buffer.from(source).toString('base64');
+const meta=await import(metaUrl);
+const helperSource=(await readFile(new URL('../web/operator-equipment.js',import.meta.url),'utf8')).replace("'./meta.js'",JSON.stringify(metaUrl));
+const equipment=await import('data:text/javascript;base64,'+Buffer.from(helperSource).toString('base64'));
+let checks=0;
+const check=(actual,expected)=>{assert.deepEqual(actual,expected);checks++;};
+const near=(actual,expected)=>{assert.ok(Math.abs(actual-expected)<1e-10,`${actual} != ${expected}`);checks++;};
+const canonical=JSON.parse(await readFile(new URL('../game/data/equipment_catalog.json',import.meta.url),'utf8'));
+check(meta.CATALOG,canonical);
+check(spawnSync(process.execPath,['scripts/sync_equipment_catalog.mjs','--check'],{encoding:'utf8'}).status,0);
+const legacy=equipment.normalizeOperatorLoadout({weapon:'light',equipment:['stun','breach']},{fresh:false});
+check([legacy.weapon,legacy.sidearm,legacy.armor,legacy.helmet],['light','none','none','none']);
+check(legacy.equipment,{stun:1,smoke:0,breach:1,probe_c1:0});
+const fresh=equipment.normalizeOperatorLoadout();
+check([fresh.sidearm,fresh.armor,fresh.helmet],['pico_p1','frame_v2','crown_h1']);
+check(equipment.normalizeOperatorLoadout({equipment:'none'}).equipment,{});
+check(equipment.normalizeOperatorLoadout({equipment:{stun:2,breach:1}}).equipment,{stun:2,breach:1});
+check(equipment.normalizeOperatorLoadout({equipment:{breach:2}}).equipment,{breach:2});
+check(equipment.normalizeOperatorLoadout({weapon:'shotgun',attachments:['scope','suppressor','extended_mag','dot']}).attachments,['dot']);
+check(equipment.normalizeOperatorLoadout({attachments:['scope','dot','dot']}).attachments,['dot']);
+const personal=equipment.normalizeOperatorLoadout({weapon:'light',appearance:{name:'이름',callsign:'NOVA',color:'#AABBCC',patch:'arrow'}});
+check(personal.appearance,{name:'이름',callsign:'NOVA',color:'#aabbcc',patch:'arrow'});
+const preset=equipment.applyOperatorPreset(personal,'marksman');
+check(preset.weapon,'standard');check(preset.attachments,['scope']);check(preset.appearance,personal.appearance);
+const stats=equipment.deriveLoadoutStats({...preset,weapon:'light',attachments:['dot','extended_mag']});
+check(stats.ammo,40);near(stats.reload,1.61);near(stats.accuracy,.96);near(stats.aim_time,.221);near(stats.normal_moving_accuracy,.96*.84);
+check(equipment.weaponStats('suppressed',['suppressor']).sound,3);
+// The comparison panel must expose the same healthy, standing timings that
+// customization_tactics_test verifies against the authoritative simulation.
+const heavy=equipment.deriveLoadoutStats({weapon:'suppressed',sidearm:'pico_p1',armor:'bastion_v4',helmet:'crown_h2'},{trait:'marksman'});
+near(heavy.final_aim_time,.50135456);near(heavy.final_reload_time,2.53792);
+near(heavy.primary_switch_time,.5768);near(heavy.secondary_switch_time,.34608);
+near(heavy.range,12);near(heavy.interval,.675);
+const oldStats=equipment.deriveLoadoutStats({weapon:'standard'});check([oldStats.armor.id,oldStats.helmet.id],['none','none']);
+const profiles=equipment.updateOperatorProfile({},'raven',personal),deployment=equipment.deploymentLoadout([{id:'raven',base_id:'bravo'},{id:'echo',base_id:'alpha'}],profiles,{alpha:{weapon:'shotgun',equipment:{breach:2}}});
+check(deployment.bravo.weapon,'light');check(deployment.bravo.appearance.callsign,'NOVA');check(deployment.alpha.weapon,'shotgun');check(deployment.alpha.equipment,{breach:2});check(deployment.alpha.armor,'none');
+const campaign=meta.newCampaign(),preparation={roster:[{id:'raven',base_id:'alpha'}],loadout:{alpha:personal}};
+const imported=meta.normalizeCampaignPlan({loadout:{alpha:{weapon:'standard'}}},preparation,campaign);
+check(imported.loadout.alpha.appearance,personal.appearance);check(imported.loadout.alpha.armor,'frame_v2');
+check(meta.progressionProblem({map_id:'M01',loadout:{alpha:{weapon:'standard',equipment:{probe_c1:1}}}},meta.progressionState([])),null);
+console.log(`Equipment: ${checks} checks passed`);

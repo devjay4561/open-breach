@@ -1,0 +1,418 @@
+{
+  "built_at": "2026-10-09",
+  "human_reference_height_m": 1.78,
+  "coordinate_convention": "Source Blender Z-up; exported GLB Y-up, forward +X; 1 unit = 1 metre; uniform runtime scale 1.",
+  "accuracy_policy": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+  "sources": [
+    {
+      "author": "Kenney",
+      "url": "https://kenney.nl/assets/nature-kit",
+      "download_url": "https://kenney.nl/media/pages/assets/nature-kit/37ac38a37b-1677698939/kenney_nature-kit.zip",
+      "license": "CC0-1.0",
+      "license_path": "licenses/special-ops-assets-kenney-nature.txt",
+      "archive_path": "assets/source/historical/kenney_nature-kit.zip",
+      "archive_sha256": "fa7974a0d342bfe63c38664ba9f8ec1a4aab8ea25f099bdc56870e33588c4d9d"
+    }
+  ],
+  "assets": {
+    "tanker_ship_hull": {
+      "path": "res://assets/historical/tanker_ship_hull.glb",
+      "title": "Tanker Ship Hull",
+      "dimensions_m": [
+        145.5,
+        14.435,
+        23.7
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {
+        "length": 145.5,
+        "beam": 23.7,
+        "moulded_depth": 13.35,
+        "loaded_draft": 9.7
+      },
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/tanker_ship_hull.blend",
+      "sha256": "6f49138b63a01cbacd00f0b676e0c0b519eb2df60f448ed37e050eb15fd085bb",
+      "triangles": 2213,
+      "bytes": 105944,
+      "author": "CQB project / procedural Blender authoring",
+      "waterline_reference_m": {
+        "deck": 0.2,
+        "keel": -13.15,
+        "water": -3.45,
+        "draft_design": 9.7,
+        "period_report_draft": 9.715,
+        "note": "Waterline is a nominal loaded visualization; loading at the operation is not verified."
+      },
+      "reference_note": "Public ship dimension data for a chemical tanker; reference only, no geometry copied."
+    },
+    "tanker_superstructure": {
+      "path": "res://assets/historical/tanker_superstructure.glb",
+      "title": "Tanker Superstructure",
+      "dimensions_m": [
+        24.175,
+        17.75,
+        20.837
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/tanker_superstructure.blend",
+      "sha256": "5da3d28bb7856fba1c783bb654dcba9340fa39452e0d10c0a2650957a6fab98d",
+      "triangles": 8736,
+      "bytes": 437764,
+      "author": "CQB project / procedural Blender authoring",
+      "cutaway_hide_meshes": [
+        "UpperShell_Cutaway"
+      ],
+      "reference_note": "Public dimension or visual reference data used for proportions only; no source geometry copied. Site and variant details are unverified."
+    },
+    "tanker_deck_pipes": {
+      "path": "res://assets/historical/tanker_deck_pipes.glb",
+      "title": "Tanker Deck Pipes",
+      "dimensions_m": [
+        86.0,
+        0.93,
+        13.68
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/tanker_deck_pipes.blend",
+      "sha256": "83a556bd9bf2ec63dea3a82824b50adf6f2a603efe7522e57f219c9339e7a15a",
+      "triangles": 2792,
+      "bytes": 128092,
+      "author": "CQB project / procedural Blender authoring"
+    },
+    "pine_tree": {
+      "path": "res://assets/historical/pine_tree.glb",
+      "title": "Pine Tree",
+      "dimensions_m": [
+        2.77784,
+        11.0,
+        2.81867
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "source_url": "https://kenney.nl/assets/nature-kit",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Natural object chosen at plausible metre scale; not site-specific measured vegetation.",
+      "source_blend": "assets/source/historical/blender/pine_tree.blend",
+      "sha256": "2421e98b48bc1fb451799f8ea474709189af928f57f4dd40884c57a10b876b69",
+      "triangles": 134,
+      "bytes": 8284,
+      "author": "Kenney (adapted)",
+      "original_source": {
+        "archive": "assets/source/historical/kenney_nature-kit.zip",
+        "archive_member": "Models/GLTF format/tree_pineTallA_detailed.glb",
+        "author": "Kenney"
+      },
+      "processing": "Imported genuine CC0 GLB; baked world transforms; one uniform scale; centred and grounded. Original materials preserved."
+    },
+    "palm_tree": {
+      "path": "res://assets/historical/palm_tree.glb",
+      "title": "Palm Tree",
+      "dimensions_m": [
+        6.53964,
+        9.0,
+        6.53964
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "source_url": "https://kenney.nl/assets/nature-kit",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Natural object chosen at plausible metre scale; not site-specific measured vegetation.",
+      "source_blend": "assets/source/historical/blender/palm_tree.blend",
+      "sha256": "00538dc637209b64ad5de9b75fc91972cc8bd231dd6c9a2da463df3b58a99b47",
+      "triangles": 336,
+      "bytes": 19600,
+      "author": "Kenney (adapted)",
+      "original_source": {
+        "archive": "assets/source/historical/kenney_nature-kit.zip",
+        "archive_member": "Models/GLTF format/tree_palmDetailedTall.glb",
+        "author": "Kenney"
+      },
+      "processing": "Imported genuine CC0 GLB; baked world transforms; one uniform scale; centred and grounded. Original materials preserved."
+    },
+    "bush": {
+      "path": "res://assets/historical/bush.glb",
+      "title": "Bush",
+      "dimensions_m": [
+        1.67182,
+        1.0,
+        1.67182
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "source_url": "https://kenney.nl/assets/nature-kit",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Natural object chosen at plausible metre scale; not site-specific measured vegetation.",
+      "source_blend": "assets/source/historical/blender/bush.blend",
+      "sha256": "915ba486b6415ac37dd120b3ca4562f31490d926841a8167bb8c6e76e9605f92",
+      "triangles": 104,
+      "bytes": 7612,
+      "author": "Kenney (adapted)",
+      "original_source": {
+        "archive": "assets/source/historical/kenney_nature-kit.zip",
+        "archive_member": "Models/GLTF format/plant_bushDetailed.glb",
+        "author": "Kenney"
+      },
+      "processing": "Imported genuine CC0 GLB; baked world transforms; one uniform scale; centred and grounded. Original materials preserved."
+    },
+    "watchtower": {
+      "path": "res://assets/historical/watchtower.glb",
+      "title": "Watchtower",
+      "dimensions_m": [
+        3.56,
+        7.085,
+        3.56
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/watchtower.blend",
+      "sha256": "db81dc00ddf644da4c42e49813829e096d541202ada77481a694d9ac6cd0109c",
+      "triangles": 788,
+      "bytes": 39104,
+      "author": "CQB project / procedural Blender authoring"
+    },
+    "hut": {
+      "path": "res://assets/historical/hut.glb",
+      "title": "Hut",
+      "dimensions_m": [
+        6.28,
+        2.6,
+        4.28
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/hut.blend",
+      "sha256": "3a295b6a7569824054cd24fcdc2a7c2d788d43c38f36af5727bf91f3390f8652",
+      "triangles": 420,
+      "bytes": 25008,
+      "author": "CQB project / procedural Blender authoring"
+    },
+    "utility_vehicle": {
+      "path": "res://assets/historical/utility_vehicle.glb",
+      "title": "Utility Vehicle",
+      "dimensions_m": [
+        3.625,
+        2.19,
+        1.71
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/utility_vehicle.blend",
+      "sha256": "80396d93a67068debc961c90f4c33619a4fd860031316ed5762b3cff66662a22",
+      "triangles": 2136,
+      "bytes": 87088,
+      "author": "CQB project / procedural Blender authoring"
+    },
+    "cargo_truck": {
+      "path": "res://assets/historical/cargo_truck.glb",
+      "title": "Cargo Truck",
+      "dimensions_m": [
+        6.45,
+        2.375,
+        2.46
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/cargo_truck.blend",
+      "sha256": "ca475b964b0062695b995fbcb8314c89819316886b3f5531a42f4346058ef6f2",
+      "triangles": 912,
+      "bytes": 48924,
+      "author": "CQB project / procedural Blender authoring"
+    },
+    "airliner_twinjet": {
+      "path": "res://assets/historical/airliner_twinjet.glb",
+      "title": "Airliner Twinjet",
+      "dimensions_m": [
+        30.53,
+        11.38,
+        28.35
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {
+        "length": 30.53,
+        "wingspan": 28.35,
+        "published_height": 11.38
+      },
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/airliner_twinjet.blend",
+      "sha256": "cb6d226697f6343740a321dcf1c5dd80b9865fd438b406bb9f3250d0dfff209a",
+      "triangles": 14002,
+      "bytes": 718396,
+      "author": "CQB project / procedural Blender authoring",
+      "cutaway_hide_meshes": [
+        "Roof_Cutaway",
+        "CabinSeats_Cutaway"
+      ],
+      "cabin_floor_y_m": 2.022,
+      "cabin_floor_note": "Source model floor surface before scenery placement offset, not ground or landing gear height. Character feet and playable seat props must be placed at the same floor height.",
+      "reference_note": "Public airport-planning dimension data for a narrow-body twinjet; reference only, no geometry copied."
+    },
+    "airliner_reartwin": {
+      "path": "res://assets/historical/airliner_reartwin.glb",
+      "title": "Airliner Reartwin",
+      "dimensions_m": [
+        36.4,
+        8.4,
+        28.4
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {
+        "length": 36.4,
+        "wingspan": 28.4,
+        "published_height": 8.4
+      },
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/airliner_reartwin.blend",
+      "sha256": "2e7ddc08b77a9cd17e6bb411b4290e8565ce2e1fabf587563648b0af20a1db4a",
+      "triangles": 16594,
+      "bytes": 854544,
+      "author": "CQB project / procedural Blender authoring",
+      "cutaway_hide_meshes": [
+        "Roof_Cutaway",
+        "CabinSeats_Cutaway"
+      ],
+      "cabin_floor_y_m": 2.145,
+      "cabin_floor_note": "Source model floor surface before scenery placement offset, not ground or landing gear height. Character feet and playable seat props must be placed at the same floor height.",
+      "reference_note": "Public aviation dimension data for a rear-engine twinjet; reference only, no geometry copied."
+    },
+    "airliner_quadjet": {
+      "path": "res://assets/historical/airliner_quadjet.glb",
+      "title": "Airliner Quadjet",
+      "dimensions_m": [
+        46.61,
+        12.85,
+        43.4
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {
+        "length": 46.61,
+        "wingspan": 43.4,
+        "published_height": 12.85
+      },
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/airliner_quadjet.blend",
+      "sha256": "4b277ac71ae8aa7499b96a2e5f0ee9dee1290035ad1534b63f54aed20a6b39d9",
+      "triangles": 21050,
+      "bytes": 1079032,
+      "author": "CQB project / procedural Blender authoring",
+      "cutaway_hide_meshes": [
+        "Roof_Cutaway",
+        "CabinSeats_Cutaway"
+      ],
+      "cabin_floor_y_m": 2.022,
+      "cabin_floor_note": "Source model floor surface before scenery placement offset, not ground or landing gear height. Character feet and playable seat props must be placed at the same floor height.",
+      "reference_note": "Public airport-planning dimension data for a four-engine airliner; reference only, no geometry copied."
+    },
+    "helicopter_heavy_lift": {
+      "path": "res://assets/historical/helicopter_heavy_lift.glb",
+      "title": "Helicopter Heavy Lift",
+      "dimensions_m": [
+        20.0562,
+        5.51,
+        17.91522
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {
+        "overall_length_HeavyLiftE": 22.25,
+        "rotor_HeavyLiftE": 18.9,
+        "height_HeavyLiftE": 5.51
+      },
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/helicopter_heavy_lift.blend",
+      "sha256": "f42aadd4f3c6705983b4003ff8e168ee7145b7731a57e083840cb5d3920e58ff",
+      "triangles": 3296,
+      "bytes": 112708,
+      "author": "CQB project / procedural Blender authoring",
+      "authored_family_dimensions_m": {
+        "fuselage_length_design": 17.45,
+        "rotor_disc_diameter": 18.9,
+        "height_design": 5.51
+      },
+      "reference_note": "Public museum aircraft dimension data for an amphibious heavy-lift helicopter; reference only, no geometry copied."
+    },
+    "terrace_townhouse": {
+      "path": "res://assets/historical/terrace_townhouse.glb",
+      "title": "Terrace Townhouse",
+      "dimensions_m": [
+        9.8,
+        14.4,
+        22.28
+      ],
+      "forward": "+X",
+      "up": "+Y",
+      "origin": "horizontal centre, floor Y=0 except tanker hull with deck Y=0.2",
+      "floor_offset": 0.2,
+      "license": "CC0-1.0",
+      "verified_dimensions_m": {},
+      "accuracy_note": "Procedural game geometry. Generic public dimension data informed proportions where recorded; interiors, contours and unmeasured details are authored design assumptions, not surveyed plans.",
+      "source_blend": "assets/source/historical/blender/terrace_townhouse.blend",
+      "sha256": "0bca08efc95a9752f0e7cd28978e22fa8d168189c6a2f4dcba30acdcbfea4ea3",
+      "triangles": 600,
+      "bytes": 35920,
+      "author": "CQB project / procedural Blender authoring",
+      "reference_note": "Public dimension or visual reference data used for proportions only; no source geometry copied. Site and variant details are unverified."
+    }
+  },
+  "optimization": "glTF Transform 4.3.0 prune of unused attributes; geometry, PBR and cutaway nodes retained; no decoder dependency"
+}

@@ -1,0 +1,334 @@
+{
+  "acquired": "2026-10-06",
+  "price": 0,
+  "sources": [
+    {
+      "asset": "SWAT model, death animation",
+      "author": "Quaternius",
+      "license": "CC0-1.0",
+      "url": "https://poly.pizza/m/Btfn3G5Xv4"
+    },
+    {
+      "asset": "Assault Rifle",
+      "author": "Quaternius",
+      "license": "CC0-1.0",
+      "url": "https://poly.pizza/m/Bgvuu4CUMV"
+    },
+    {
+      "asset": "SWAT motion and original pose adaptations",
+      "author": "Quaternius",
+      "license": "CC0-1.0",
+      "url": "https://quaternius.com/packs/toonshootergamekit.html"
+    },
+    {
+      "asset": "Throw motion",
+      "author": "Kay Lousberg",
+      "license": "CC0-1.0",
+      "url": "https://kaylousberg.itch.io/kaykit-character-animations"
+    }
+  ],
+  "files": [
+    {
+      "path": ".tools/asset-sources/kaykit/KayKit_Character_Animations_1.1/Animations/gltf/Rig_Medium/Rig_Medium_General.glb",
+      "bytes": 828240,
+      "sha256": "5f725c0f745f36078c7238968cd5c04843cbc6260689eb6e7f5e2bbd7ffdd7ad"
+    },
+    {
+      "path": ".tools/asset-sources/toon-shooter/swat.glb",
+      "bytes": 1560900,
+      "sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    {
+      "path": "game/assets/characters/swat.glb",
+      "bytes": 1560900,
+      "sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    {
+      "path": "game/assets/characters/rifle.glb",
+      "bytes": 133980,
+      "sha256": "a6b90047927c65d0026bb19b5d4625b5ed3270e4ea5e39619cc50f0770aa6259"
+    },
+    {
+      "path": "game/assets/characters/combat-swat.glb",
+      "bytes": 1394328,
+      "sha256": "7c739d3fb8213316dc463623d45aaf6807970f52ba537bc7b410726d87f4cc52"
+    },
+    {
+      "path": "game/assets/characters/combat-swat-gear.glb",
+      "bytes": 1246100,
+      "sha256": "70d2f0efa766feb0f95cb927ab4304ae3c5e9fd0c3b984462c608bc233cd68ec"
+    },
+    {
+      "path": "game/assets/characters/combat-swat.glb.import",
+      "bytes": 1235,
+      "sha256": "06b44fd2e95821c5e8d2e100aee4ac2f6fcee95b0fe906cfadd3621158fa6b8a"
+    }
+  ],
+  "triangles": 7752,
+  "materials": 4,
+  "meshes": 1,
+  "skin_joints": 62,
+  "clips": [
+    {
+      "name": "Death",
+      "seconds": 1.0333333333333334
+    },
+    {
+      "name": "DoorOpenOut",
+      "seconds": 1.2666666666666666
+    },
+    {
+      "name": "RifleFire",
+      "seconds": 0.6666666666666666
+    },
+    {
+      "name": "RifleHit",
+      "seconds": 0.5333333333333333
+    },
+    {
+      "name": "RifleIdle",
+      "seconds": 1.6666666666666667
+    },
+    {
+      "name": "RifleReload",
+      "seconds": 1.6
+    },
+    {
+      "name": "RifleRun",
+      "seconds": 0.8333333333333334
+    },
+    {
+      "name": "RifleRunBack",
+      "seconds": 0.8333333333333334
+    },
+    {
+      "name": "RifleStrafeLeft",
+      "seconds": 0.8
+    },
+    {
+      "name": "RifleStrafeRight",
+      "seconds": 0.8
+    },
+    {
+      "name": "RifleThrow",
+      "seconds": 1.3666666666666667
+    },
+    {
+      "name": "RifleTurnLeft",
+      "seconds": 1
+    },
+    {
+      "name": "RifleTurnRight",
+      "seconds": 1
+    },
+    {
+      "name": "RifleWalk",
+      "seconds": 1.3333333333333333
+    },
+    {
+      "name": "RifleWalkBack",
+      "seconds": 1.3333333333333333
+    }
+  ],
+  "adaptations": [
+    "Direct CC0 Toon Shooter poses with shared rifle upper-body layering.",
+    "KayKit torso and arm rest-space rotation retarget; source-free original support-hand IK and turn shuffles.",
+    "Planar Root/Body motion removed; vertical bob retained.",
+    "Joined skinned meshes with original weights and four materials."
+  ],
+  "reproduce": "blender -b --factory-startup --python scripts/build_cc0_swat_motion.py",
+  "source_distribution": "All embedded animation sources are CC0-1.0; original pose adaptations are authored in the build script.",
+  "validation": {
+    "regression_script": "game/tests/combat_asset_inspect.gd",
+    "preview_script": "game/tests/cc0_motion_preview.gd",
+    "throw_release_normalized_phase": 0.58
+  },
+  "material_surfaces": 4,
+  "motion": {
+    "Death": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Death",
+      "frames": 32,
+      "seconds": 1.0333333333333334,
+      "modifications": [
+        "Original CC0 death retained"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleIdle": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Idle_Gun_Shoot",
+      "frames": 51,
+      "seconds": 1.6666666666666667,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "Forward shooting pose held; authored two-hand grip IK and closed left fingers; source body bob"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleWalk": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Walk",
+      "frames": 41,
+      "seconds": 1.3333333333333333,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Original lower-body cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleWalkBack": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Walk",
+      "frames": 41,
+      "seconds": 1.3333333333333333,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Reversed cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleRun": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Run_Shoot",
+      "frames": 26,
+      "seconds": 0.8333333333333334,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Original lower-body cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleRunBack": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Run_Back",
+      "frames": 26,
+      "seconds": 0.8333333333333334,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Original lower-body cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleStrafeLeft": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Run_Left",
+      "frames": 25,
+      "seconds": 0.8,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Original lower-body cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleStrafeRight": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Run_Right",
+      "frames": 25,
+      "seconds": 0.8,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "RifleIdle upper body layered",
+        "Original lower-body cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleFire": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Idle_Gun_Shoot",
+      "frames": 21,
+      "seconds": 0.6666666666666666,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "Shooting rotation deltas over two-hand authored support pose"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleHit": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|HitRecieve",
+      "frames": 17,
+      "seconds": 0.5333333333333333,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "Torso reaction over rifle grip; runtime support-hand IK"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "DoorOpenOut": {
+      "source_pack": "Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "CharacterArmature|Interact",
+      "frames": 39,
+      "seconds": 1.2666666666666666,
+      "modifications": [
+        "30 fps sampling; planar Root/Body displacement removed",
+        "Right-arm reach only over RifleIdle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleTurnLeft": {
+      "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "Idle_Gun_Shoot + original foot shuffle",
+      "frames": 31,
+      "seconds": 1.0,
+      "modifications": [
+        "Original procedural closed foot shuffle over CC0 aim pose; no baked actor yaw"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleTurnRight": {
+      "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "Idle_Gun_Shoot + original foot shuffle",
+      "frames": 31,
+      "seconds": 1.0,
+      "modifications": [
+        "Original procedural closed foot shuffle over CC0 aim pose; no baked actor yaw"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleReload": {
+      "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+      "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+      "source_clip": "Idle_Gun_Shoot + original reload key poses",
+      "frames": 49,
+      "seconds": 1.6,
+      "modifications": [
+        "Original two-bone IK reload: lower rifle, reach magazine, reach belt, insert, return",
+        "KayKit Ranged_2H_Reload retarget evaluated and rejected: support-hand contact mismatch",
+        "Closed fingers and aim lower body retained; 1.6 second cycle"
+      ],
+      "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+    },
+    "RifleThrow": {
+      "source_pack": "KayKit Character Animations 1.1",
+      "source_file": ".tools/asset-sources/kaykit/KayKit_Character_Animations_1.1/Animations/gltf/Rig_Medium/Rig_Medium_General.glb",
+      "source_clip": "Throw",
+      "frames": 42,
+      "seconds": 1.3666666666666667,
+      "modifications": [
+        "Rest-space torso/arm rotation retarget; target limb lengths retained",
+        "Aim fingers and lower body held; five-frame boundary blends",
+        "Right arm only; left supports rifle"
+      ],
+      "source_sha256": "5f725c0f745f36078c7238968cd5c04843cbc6260689eb6e7f5e2bbd7ffdd7ad"
+    }
+  }
+}

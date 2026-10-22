@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "processed_at": "2026-10-11",
+  "assets": [
+    {
+      "id": "tern_c1",
+      "path": "game/assets/equipment/tern_c1.glb",
+      "triangles": 1930,
+      "bytes": 106288,
+      "sha256": "224707b1aed6b03f54352c484f187d0c2665fce816e7952480b8b377619a4ce3",
+      "source": "rifle",
+      "length": 0.86,
+      "muzzle": [
+        0.6005033254623413,
+        0.10616805404424667,
+        0.00027665021480061114
+      ],
+      "grip": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mica_s2",
+      "path": "game/assets/equipment/mica_s2.glb",
+      "triangles": 1566,
+      "bytes": 82944,
+      "sha256": "5548887bff507ed348786cef2222a32fb275dd953446009f0ba602ab2ba2a4eb",
+      "source": "smg",
+      "length": 0.62,
+      "muzzle": [
+        0.32914018630981445,
+        0.07326367497444153,
+        -0.000496862456202507
+      ],
+      "grip": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "flint_b1",
+      "path": "game/assets/equipment/flint_b1.glb",
+      "triangles": 978,
+      "bytes": 54828,
+      "sha256": "8c2d30a6c9b7b26ed3c0716c39de881d8021f55706a0baddba69ea0ed764d4ed",
+      "source": "shotgun",
+      "length": 1.02,
+      "muzzle": [
+        0.759548544883728,
+        0.03794023394584656,
+        -0.00025310664204880595
+      ],
+      "grip": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pico_p1",
+      "path": "game/assets/equipment/pico_p1.glb",
+      "triangles": 968,
+      "bytes": 54320,
+      "sha256": "7786add0f5a070b8ffb6dfe0ce3be9c8da366459024b442a67eb3411d220732c",
+      "source": "pistol",
+      "length": 0.23,
+      "muzzle": [
+        0.183341845870018,
+        0.06932228058576584,
+        -2.3283064365386963e-08
+      ],
+      "grip": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_h1",
+      "path": "game/assets/equipment/crown_h1.glb",
+      "triangles": 1661,
+      "bytes": 129360,
+      "sha256": "6e4a7bc56eaa993327a9908ec9a1ca934d4a7f89ae94f926d45aa2385b8f18a9"
+    },
+    {
+      "id": "crown_h2",
+      "path": "game/assets/equipment/crown_h2.glb",
+      "triangles": 1793,
+      "bytes": 137820,
+      "sha256": "64052798d3adc70e862499bb596f24d090b1082fae633a54044f80d5f033b7b3"
+    },
+    {
+      "id": "mask_h0",
+      "path": "game/assets/equipment/mask_h0.glb",
+      "triangles": 550,
+      "bytes": 39472,
+      "sha256": "72b04576e7ee0fc4cd8fd4ad24ca27bf6e5c6bd75959e98d04d05e7784c8a2dd"
+    },
+    {
+      "id": "veil_v1",
+      "path": "game/assets/equipment/veil_v1.glb",
+      "triangles": 396,
+      "bytes": 25680,
+      "sha256": "f6a562cb007af34833ab7b10057a6e79778c87c052fce9840ae8e091a8bac8bb"
+    },
+    {
+      "id": "frame_v2",
+      "path": "game/assets/equipment/frame_v2.glb",
+      "triangles": 484,
+      "bytes": 30836,
+      "sha256": "08a91dac1f8530f04d515452102cb6063fa93f4fd906bd538d218e543d0c99e6"
+    },
+    {
+      "id": "swift_v3",
+      "path": "game/assets/equipment/swift_v3.glb",
+      "triangles": 396,
+      "bytes": 25700,
+      "sha256": "790c3edc03cfd46bf3cc78177dcc24a6579b380eb85b8052d2ea1fbaeb97409a"
+    },
+    {
+      "id": "bastion_v4",
+      "path": "game/assets/equipment/bastion_v4.glb",
+      "triangles": 616,
+      "bytes": 37124,
+      "sha256": "ed42d61942f61bcd97fbe11950b44cbddfcb2de914d201db1251746c5feab653"
+    },
+    {
+      "id": "dot",
+      "path": "game/assets/equipment/dot.glb",
+      "triangles": 132,
+      "bytes": 9592,
+      "sha256": "ab9ee7cd5ee5cc151a1a68d8f7f8c73e15736518097166ce4123b17a8632f2eb"
+    },
+    {
+      "id": "scope",
+      "path": "game/assets/equipment/scope.glb",
+      "triangles": 132,
+      "bytes": 7844,
+      "sha256": "b1605e4ac1b8f12205996d4403c2f13159e0153c4ac7a66495f9de78f66562ec"
+    },
+    {
+      "id": "suppressor",
+      "path": "game/assets/equipment/suppressor.glb",
+      "triangles": 88,
+      "bytes": 4528,
+      "sha256": "8110b1bed864b97d87e53b9b6f936204b9d2981bcdc0dbc5456662b4c4e329c6"
+    },
+    {
+      "id": "extended_mag",
+      "path": "game/assets/equipment/extended_mag.glb",
+      "triangles": 44,
+      "bytes": 3680,
+      "sha256": "e4c96d0baab6417af30f9b4630e42a79c4d56ce554ab3e25bc4829aae05edf03"
+    },
+    {
+      "id": "probe_c1",
+      "path": "game/assets/equipment/probe_c1.glb",
+      "triangles": 176,
+      "bytes": 11708,
+      "sha256": "f0abe89ef2921264afc5fe4838b6d1ebceb0d98c8a332c33c13844d4be1f8e56"
+    },
+    {
+      "id": "flare_f1",
+      "path": "game/assets/equipment/flare_f1.glb",
+      "triangles": 88,
+      "bytes": 6412,
+      "sha256": "41cf189a17f4c865b472ea56e5c02ceb05c4a557205fc0e345a6b40814e0d47f"
+    },
+    {
+      "id": "haze_s1",
+      "path": "game/assets/equipment/haze_s1.glb",
+      "triangles": 88,
+      "bytes": 5672,
+      "sha256": "88f89d775ea85178cd3f2547b7d0fa5ed0eb5761c18b9157da682c1dd98f50f9"
+    },
+    {
+      "id": "knock_b1",
+      "path": "game/assets/equipment/knock_b1.glb",
+      "triangles": 44,
+      "bytes": 3672,
+      "sha256": "af6f99a95a60a9b623ab87054ab3425f32ed6b2f179b5407495284e284cb9a36"
+    },
+    {
+      "id": "combat-swat-gear",
+      "path": "game/assets/characters/combat-swat-gear.glb",
+      "bytes": 1246100,
+      "sha256": "70d2f0efa766feb0f95cb927ab4304ae3c5e9fd0c3b984462c608bc233cd68ec",
+      "removed_head_vertices": 2894,
+      "animation_count": 15
+    }
+  ],
+  "source_head_center": [
+    -0.00034377549309283495,
+    1.5872609615325928,
+    0.04308344051241875
+  ],
+  "optimization": "glTF Transform 4.3.0 dedup + prune; no Draco/Meshopt/KTX2 decoder dependency"
+}

@@ -1,0 +1,883 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H02",
+  "revision": 2,
+  "title": "글래스 호라이즌",
+  "title_en": "GLASS HORIZON",
+  "seed": 20261011,
+  "bounds": [
+    78,
+    80
+  ],
+  "focus": [
+    39.0,
+    40.0
+  ],
+  "rooms": [
+    {
+      "id": "apron",
+      "x": 39.0,
+      "z": 76.0,
+      "w": 78,
+      "d": 8.0,
+      "label": "야간 계류장 · 실제 크기 수송기",
+      "indoor": false
+    },
+    {
+      "id": "old_terminal_hall",
+      "x": 40,
+      "z": 47,
+      "w": 52,
+      "d": 26,
+      "label": "구터미널 대합실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_hall",
+      "x": 40,
+      "z": 19,
+      "w": 52,
+      "d": 2,
+      "label": "연결 복도",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_north_0",
+      "x": 20.5,
+      "z": 12.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "수하물",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_north_1",
+      "x": 33.5,
+      "z": 12.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "사무실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_north_2",
+      "x": 46.5,
+      "z": 12.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "통신실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_north_3",
+      "x": 59.5,
+      "z": 12.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "문서실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_south_0",
+      "x": 20.5,
+      "z": 25.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "보안실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_south_1",
+      "x": 33.5,
+      "z": 25.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "직원 휴게실",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_south_2",
+      "x": 46.5,
+      "z": 25.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "의료 구역",
+      "indoor": true
+    },
+    {
+      "id": "terminal_service_south_3",
+      "x": 59.5,
+      "z": 25.5,
+      "w": 13.0,
+      "d": 11.0,
+      "label": "물품창고",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "old_terminal_hall_n_s0",
+      "x": 26.45,
+      "z": 34.0,
+      "w": 24.9,
+      "d": 0.2,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_n_last",
+      "x": 53.55,
+      "z": 34.0,
+      "w": 24.9,
+      "d": 0.2,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_s_s0",
+      "x": 26.45,
+      "z": 60.0,
+      "w": 24.9,
+      "d": 0.2,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_s_last",
+      "x": 53.55,
+      "z": 60.0,
+      "w": 24.9,
+      "d": 0.2,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_w_s0",
+      "x": 14.0,
+      "z": 39.95,
+      "w": 0.2,
+      "d": 11.9,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_w_last",
+      "x": 14.0,
+      "z": 54.05,
+      "w": 0.2,
+      "d": 11.9,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_e_s0",
+      "x": 66.0,
+      "z": 39.95,
+      "w": 0.2,
+      "d": 11.9,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "old_terminal_hall_e_last",
+      "x": 66.0,
+      "z": 54.05,
+      "w": 0.2,
+      "d": 11.9,
+      "height": 3.5,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_n_last",
+      "x": 40.0,
+      "z": 7.0,
+      "w": 52.0,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_s_last",
+      "x": 40.0,
+      "z": 31.0,
+      "w": 52.0,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_w_s0",
+      "x": 14.0,
+      "z": 12.725,
+      "w": 0.2,
+      "d": 11.45,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_w_last",
+      "x": 14.0,
+      "z": 25.275,
+      "w": 0.2,
+      "d": 11.45,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_e_s0",
+      "x": 66.0,
+      "z": 12.725,
+      "w": 0.2,
+      "d": 11.45,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_e_last",
+      "x": 66.0,
+      "z": 25.275,
+      "w": 0.2,
+      "d": 11.45,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_s0",
+      "x": 16.9875,
+      "z": 18.0,
+      "w": 5.975,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_s1",
+      "x": 27.0,
+      "z": 18.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_s2",
+      "x": 40.0,
+      "z": 18.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_s3",
+      "x": 53.0,
+      "z": 18.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_last",
+      "x": 63.0125,
+      "z": 18.0,
+      "w": 5.975,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_partition1",
+      "x": 27.0,
+      "z": 12.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_partition2",
+      "x": 40.0,
+      "z": 12.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_north_partition3",
+      "x": 53.0,
+      "z": 12.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_s0",
+      "x": 16.9875,
+      "z": 20.0,
+      "w": 5.975,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_s1",
+      "x": 27.0,
+      "z": 20.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_s2",
+      "x": 40.0,
+      "z": 20.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_s3",
+      "x": 53.0,
+      "z": 20.0,
+      "w": 11.95,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_last",
+      "x": 63.0125,
+      "z": 20.0,
+      "w": 5.975,
+      "d": 0.2,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_partition1",
+      "x": 27.0,
+      "z": 25.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_partition2",
+      "x": 40.0,
+      "z": 25.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    },
+    {
+      "id": "terminal_service_south_partition3",
+      "x": 53.0,
+      "z": 25.5,
+      "w": 0.2,
+      "d": 11.0,
+      "height": 3.2,
+      "material": "concrete"
+    }
+  ],
+  "doors": [
+    {
+      "id": "old_terminal_hall_n_d0",
+      "x": 40,
+      "z": 34.0,
+      "w": 2.2,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "old_terminal_hall_s_d0",
+      "x": 40,
+      "z": 60.0,
+      "w": 2.2,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "old_terminal_hall_w_d0",
+      "x": 14.0,
+      "z": 47,
+      "w": 0.18,
+      "d": 2.2,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "old_terminal_hall_e_d0",
+      "x": 66.0,
+      "z": 47,
+      "w": 0.18,
+      "d": 2.2,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_w_d0",
+      "x": 14.0,
+      "z": 19,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_e_d0",
+      "x": 66.0,
+      "z": 19,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_north_d0",
+      "x": 20.5,
+      "z": 18.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_north_d1",
+      "x": 33.5,
+      "z": 18.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_north_d2",
+      "x": 46.5,
+      "z": 18.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_north_d3",
+      "x": 59.5,
+      "z": 18.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_south_d0",
+      "x": 20.5,
+      "z": 20.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_south_d1",
+      "x": 33.5,
+      "z": 20.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_south_d2",
+      "x": 46.5,
+      "z": 20.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "terminal_service_south_d3",
+      "x": 59.5,
+      "z": 20.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "terminal_column_1",
+      "type": "pillar",
+      "x": 15,
+      "z": 67,
+      "w": 0.6,
+      "d": 0.6,
+      "solid": true,
+      "rotation": 0,
+      "height": 3.5
+    },
+    {
+      "id": "terminal_column_2",
+      "type": "pillar",
+      "x": 38,
+      "z": 67,
+      "w": 0.6,
+      "d": 0.6,
+      "solid": true,
+      "rotation": 0,
+      "height": 3.5
+    },
+    {
+      "id": "terminal_column_3",
+      "type": "pillar",
+      "x": 62,
+      "z": 67,
+      "w": 0.6,
+      "d": 0.6,
+      "solid": true,
+      "rotation": 0,
+      "height": 3.5
+    },
+    {
+      "id": "terminal_objects_0",
+      "type": "chair",
+      "x": 20,
+      "z": 51,
+      "w": 0.55,
+      "d": 0.55,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "terminal_objects_1",
+      "type": "chair",
+      "x": 24,
+      "z": 51,
+      "w": 0.55,
+      "d": 0.55,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "terminal_objects_2",
+      "type": "sofa",
+      "x": 30,
+      "z": 37,
+      "w": 2.2,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "terminal_objects_3",
+      "type": "desk",
+      "x": 50,
+      "z": 37,
+      "w": 1.6,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "terminal_objects_6",
+      "type": "cabinet",
+      "x": 22,
+      "z": 15,
+      "w": 1.6,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 40,
+      "z": 72,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 40.85,
+      "z": 72,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 40,
+      "z": 72.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 40.85,
+      "z": 72.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 10,
+      "z": 69,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e2",
+      "x": 7,
+      "z": 55,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e3",
+      "x": 27,
+      "z": 47,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e4",
+      "x": 53,
+      "z": 46,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e5",
+      "x": 34,
+      "z": 19,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e6",
+      "x": 59,
+      "z": 13,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e7",
+      "x": 71,
+      "z": 64,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 22,
+      "z": 42,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 31,
+      "z": 55,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 51,
+      "z": 51,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 44,
+      "z": 38,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c5",
+      "x": 46,
+      "z": 25,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c6",
+      "x": 59,
+      "z": 22,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "구터미널 대합실과 직원 구역의 위협을 처리하세요.",
+    "민간인을 확인하고 모두 확보하세요."
+  ],
+  "scenery": [],
+  "historical": {
+    "location": "오르델스크 · 케브란 연맹",
+    "location_en": "Ordelsk · Kevran League",
+    "accuracy_note": "드렐벤 터미널의 대합실과 직원 구역에서 억류 인원을 확보하세요.",
+    "accuracy_note_en": "Secure the captives in Drelven Terminal and its service rooms."
+  },
+  "environment": {
+    "time_of_day": "dim",
+    "lighting": 0.95,
+    "biome": "airport",
+    "ground_color": "#74776b",
+    "water": false,
+    "ground_surface": "concrete"
+  },
+  "description": "드렐벤 터미널의 대합실과 직원 구역에서 억류 인원을 확보하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Secure the captives in Drelven Terminal and its service rooms."
+}

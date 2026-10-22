@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "key": "rifle",
+      "source_url": "https://poly.pizza/m/Bgvuu4CUMV",
+      "download_url": "https://static.poly.pizza/9a0e478c-de82-4773-9b70-a0219bb0057c.glb",
+      "license": "CC0 1.0",
+      "creator": "Quaternius",
+      "title": "Assault Rifle",
+      "original_sha256": "a6b90047927c65d0026bb19b5d4625b5ed3270e4ea5e39619cc50f0770aa6259",
+      "original_bytes": 133980,
+      "source_page_sha256": "8a0392de855a1d89fd28d11fd79611073061542308cb5621575a6cf8054e64b8",
+      "downloaded_at": "2026-10-11"
+    },
+    {
+      "key": "smg",
+      "source_url": "https://poly.pizza/m/nsP3JukU73",
+      "download_url": "https://static.poly.pizza/100fd5db-d5e8-4db7-8ad3-9a96cc217e56.glb",
+      "license": "CC0 1.0",
+      "creator": "Quaternius",
+      "title": "Submachine Gun",
+      "original_sha256": "c71d4c083e296cd8cbbbebb70d7016d399cd551af5aa293617443df765b54c40",
+      "original_bytes": 83140,
+      "source_page_sha256": "467b2b63ad53a6df4ab65adfd6ccd5a6c317607c92c21a2694f037db60a6ad87",
+      "downloaded_at": "2026-10-11"
+    },
+    {
+      "key": "shotgun",
+      "source_url": "https://poly.pizza/m/ZmPTnh7njL",
+      "download_url": "https://static.poly.pizza/f71d6771-f512-4374-bd23-ba00b564db68.glb",
+      "license": "CC0 1.0",
+      "creator": "Quaternius",
+      "title": "Shotgun",
+      "original_sha256": "128a0075192f82582e2e2acc363108cabcb32335086f16b1fa2f5e1186b2ff43",
+      "original_bytes": 55352,
+      "source_page_sha256": "cb4b1b7f66ab042b02b634d15780509d120d6137bdc5ab497a4e2c1a528af76e",
+      "downloaded_at": "2026-10-11"
+    },
+    {
+      "key": "pistol",
+      "source_url": "https://poly.pizza/m/J3i9KDQ3kt",
+      "download_url": "https://static.poly.pizza/f5a88c73-af97-49ca-8650-4bde579d2f80.glb",
+      "license": "CC0 1.0",
+      "creator": "Quaternius",
+      "title": "Pistol",
+      "original_sha256": "4622ab2909aa0f4e88b74a13f52f9e28183a6ff5fca5896fc7e98d44008f2148",
+      "original_bytes": 53776,
+      "source_page_sha256": "006d3f6e86ce4ece98f8eeaa13b615ad25ba88919eec553a54d90bdb55117adb",
+      "downloaded_at": "2026-10-11"
+    },
+    {
+      "key": "swat",
+      "source_url": "https://poly.pizza/m/Btfn3G5Xv4",
+      "download_url": "https://static.poly.pizza/713f6535-f4f3-4367-a4c6-ced126ae0936.glb",
+      "license": "CC0 1.0",
+      "creator": "Quaternius",
+      "title": "SWAT",
+      "original_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec",
+      "original_bytes": 1560900,
+      "source_page_sha256": "dc3b54107c53a1339569964802c1af48bcce6d55c9e2f05f51953eb366301933",
+      "downloaded_at": "2026-10-11"
+    }
+  ]
+}

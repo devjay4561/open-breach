@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111714">
+  <meta id="doc-description" name="description" content="멈추고, 계획하고, 함께 진입하세요. 브라우저에서 플레이하는 분대 전술 게임 OPEN BREACH.">
+  <title id="doc-title">OPEN BREACH — 계획. 진입. 확보.</title>
+  <link rel="preload" href="engine.js" as="script">
+  <link rel="preload" href="engine.wasm" as="fetch" type="application/wasm" crossorigin fetchpriority="high">
+  <link rel="preload" href="engine.pck" as="fetch" crossorigin fetchpriority="high">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas" tabindex="0" data-i18n-aria="canvas.aria" aria-label="전술 지도. 대원 선택은 숫자 1~4, 이동은 우클릭, 실행과 정지는 Space." data-i18n="canvas.fallback">WebGL 2를 지원하는 브라우저가 필요합니다.</canvas>
+  <div id="vignette" aria-hidden="true"></div>
+  <div id="fx-layer" aria-hidden="true"></div>
+  <div id="mode-frame" aria-hidden="true"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><span id="mode-banner" class="mode-banner"></span></div>
+  <div id="cursor-hint" class="cursor-hint" role="note" aria-hidden="true"><span id="cursor-hint-text"></span><kbd id="cursor-hint-key"></kbd></div>
+  <div id="loading" class="loading-screen">
+    <div class="load-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="eyebrow">OPEN BREACH / SYSTEM INITIALIZATION</p>
+    <h1 id="loading-title" data-i18n="loading.title">작전 환경 준비 중</h1>
+    <p id="loading-message" data-i18n="loading.message">전술 지도와 엔진을 불러오고 있습니다.</p>
+    <div class="load-track"><div id="load-progress"></div></div>
+    <div class="load-meta"><span id="load-status">INITIALIZING</span><output id="load-percent">0%</output></div>
+    <button id="load-retry" class="primary" hidden><span data-i18n="loading.retry">다시 불러오기 ↻</span></button>
+    <p class="loading-note" data-i18n="loading.note">설치 없이 플레이 · 로컬 저장 · 외부 서비스 연결 없음</p>
+  </div>
+  <dialog id="transition-loading" aria-labelledby="transition-title" aria-describedby="transition-message" aria-busy="true">
+    <div class="load-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="eyebrow">OPEN BREACH / PREPARING OPERATION</p>
+    <h1 id="transition-title"></h1>
+    <p id="transition-message" role="status" aria-live="polite"></p>
+    <div class="transition-track" aria-hidden="true"><i></i></div>
+    <button id="transition-reload" class="primary" hidden></button>
+  </dialog>
+  <main id="menu" class="menu screen" hidden>
+    <div id="menu-grain" aria-hidden="true"></div>
+
+    <!-- 1. Title: full-screen diorama background, bottom-left logo + vertical nav, bottom status bar. -->
+    <section id="title-screen" class="menu-screen title-screen" aria-label="타이틀">
+      <div class="title-brand"><span class="brand-symbol" aria-hidden="true"></span><h1 class="title-wordmark"><span>OPEN</span>BREACH<span class="title-square" aria-hidden="true"></span></h1></div>
+      <nav id="title-nav" class="title-nav" data-i18n-aria="nav.menu" aria-label="주 메뉴">
+        <button id="title-start" class="title-nav-item focused" data-nav="select" data-nav-index="0"><span data-i18n="nav.start">작전 개시</span><span class="nav-arrow">↗</span></button>
+        <button id="title-campaign" class="title-nav-item" data-nav="campaign" data-nav-index="1"><span data-i18n="nav.campaign">캠페인</span><span class="nav-arrow">↗</span></button>
+        <button id="title-daily" class="title-nav-item" data-nav="daily" data-nav-index="2"><span data-i18n="nav.daily">오늘의 작전</span><span class="nav-arrow">↗</span></button>
+        <button id="title-progression" class="title-nav-item" data-open="progression" data-nav-index="3"><span data-i18n="progress.armory">해금 · 무기고</span><span class="nav-arrow">↗</span></button>
+        <button id="title-editor" class="title-nav-item" data-nav="editor" data-nav-index="4"><span data-i18n="nav.editor">맵 에디터</span><span class="nav-arrow">↗</span></button>
+        <button id="title-library" class="title-nav-item" data-open="library" data-nav-index="5"><span data-i18n="nav.library">기록 보관함</span><span class="nav-arrow">↗</span></button>
+        <button id="title-settings" class="title-nav-item" data-open="settings" data-nav-index="6"><span data-i18n="nav.settings">설정</span><span class="nav-arrow">↗</span></button>
+      </nav>
+      <footer class="title-footer">
+        <span class="title-footer-build">V0.1 / PLAYABLE PREVIEW</span>
+        <span class="title-footer-save"><span class="status-dot"></span> <span id="storage-status">LOCAL SAVE READY</span></span>
+        <button id="title-credits" data-open="credits" data-i18n="nav.credits">크레딧</button>
+      </footer>
+    </section>
+
+    <!-- 2. Operations board: opaque mission index and briefing panel. -->
+    <section id="select-screen" class="menu-screen select-screen" hidden data-i18n-aria="select.aria" aria-label="작전 선택">
+      <header class="screen-header operation-board-header"><button class="back-button" data-nav="title" data-i18n="title.back">← 타이틀</button><div class="board-heading"><p class="eyebrow">OPERATIONS BOARD</p><h1 data-i18n="select.board">작전현황판</h1></div></header>
+      <div class="operation-collections" data-i18n-aria="select.collections" aria-label="작전 모음"><button data-collection="base" data-i18n="select.collection_base" aria-pressed="true">기본 작전</button><button data-collection="history" data-i18n="select.collection_history" aria-pressed="false">특수 작전 12</button><button data-collection="cqb" data-i18n="cqb.collection" aria-pressed="false">CQB 훈련</button><span id="operation-scale-note"></span></div>
+      <div class="progression-strip"><span id="progression-summary"></span><button data-open="progression" data-i18n="progress.rewards">해금 보상 보기 ↗</button></div>
+      <div class="select-body">
+        <section class="mission-index" aria-labelledby="mission-index-title"><div class="board-section-label"><h2 id="mission-index-title" data-i18n="select.index">작전 목록</h2><span>OPERATION INDEX</span></div><div id="mission-grid" class="mission-grid" role="tablist" data-i18n-aria="select.missions" aria-label="임무 선택"></div></section>
+        <aside id="mission-detail" class="mission-detail panel" role="tabpanel" aria-labelledby="tab-T01">
+          <p class="eyebrow">MISSION BRIEF</p>
+          <div class="brief-heading"><h2 id="brief-title">모든 작전의 시작.</h2><span id="mission-complete" class="completed-badge" hidden>✓ 완료</span></div>
+          <p id="brief-description">두 명의 대원과 함께 이동, 시야, 문 열기, 동시 진입을 익히세요. 모든 결정은 정지된 시간에서 시작합니다.</p>
+          <p id="cqb-family-note" class="cqb-family-note note" hidden></p>
+          <div id="select-roe"></div><p id="select-roe-note" class="roe-note"></p>
+          <p id="brief-enemy-strengths" class="note" hidden></p>
+          <p id="historical-map-facts" class="historical-map-facts" hidden></p>
+          <div id="brief-variants" class="brief-variants" data-i18n-aria="select.variants" aria-label="작전 유형 선택"></div>
+          <dl class="brief-stats"><div><dt data-i18n="select.units">투입 대원</dt><dd id="brief-units">02 <small>OPERATORS</small></dd></div><div><dt data-i18n="select.rooms">작전 구역</dt><dd id="brief-rooms">03 <small>ROOMS</small></dd></div><div><dt data-i18n="select.time">예상 소요</dt><dd id="brief-time">3–5 <small>MIN</small></dd></div></dl>
+          <p id="brief-record" class="brief-record"></p><ol id="brief-objectives" class="brief-objectives"><li>대원을 선택하고 이동 경로를 계획하세요.</li><li>문을 열고 구역 내 위협을 처리하세요.</li></ol><div id="brief-stars" class="brief-stars" data-i18n-aria="select.stars" aria-label="별 과제"></div>
+          <p id="mission-unlock-note" class="mission-unlock-note" role="status"></p>
+          <button id="select-to-briefing" class="primary start-button"><span><small>NEXT</small><span data-i18n="select.next">편성으로</span></span><span class="button-arrow">↗</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 3. Briefing / loadout: left map overview, right deployment, bottom cyclers + modifiers + start. -->
+    <section id="briefing-screen" class="menu-screen briefing-screen" hidden data-i18n-aria="briefing.aria" aria-label="브리핑">
+      <header class="screen-header"><button class="back-button" data-nav="select" data-i18n="select.back">← 작전 선택</button><div class="section-label"><span id="briefing-mission-name" data-i18n="briefing.label">편성</span><span>LOADOUT</span></div></header>
+      <div class="briefing-body">
+        <div class="briefing-map">
+          <div class="world-caption" aria-hidden="true"><span class="crosshair">+</span><span>LIVE TACTICAL DIORAMA<br><b id="preview-map">INTRODUCTION / T01</b></span></div>
+        </div>
+        <aside class="briefing-deploy panel">
+          <div class="panel-label"><span>DEPLOYMENT <b id="squad-count-briefing">02</b></span><button id="prepare-squad" data-i18n="briefing.roster">명부 ↗</button></div>
+          <div id="briefing-roe"></div><p id="briefing-roe-note" class="roe-note"></p>
+          <div id="deploy-slots" class="deploy-slots"></div>
+          <p id="preparation-summary" class="note"></p><p id="campaign-summary" class="note" hidden></p>
+          <div id="cqb-share" class="cqb-share" hidden><p id="cqb-shared-seed" class="note"></p><div><button id="cqb-daily-seed" type="button" data-i18n="cqb.daily_seed">오늘의 공유 시드</button><button id="cqb-copy-seed" type="button" data-i18n="cqb.copy_seed">시드 복사</button></div><p class="note" data-i18n="competition.local">로컬 기록 · 보정 시간 = 소요 시간 ÷ max(교범 점수, 0.125), 낮을수록 좋음</p></div>
+          <div class="briefing-utility"><button id="open-lab" data-i18n="briefing.motion">동작 미리보기</button><button id="load-menu-plan" data-i18n="briefing.loadplan">저장된 계획 불러오기</button><button data-open="help"><span data-i18n="briefing.controls">조작법</span> <kbd>?</kbd></button></div>
+        </aside>
+      </div>
+      <footer class="briefing-footer panel">
+        <div class="briefing-options">
+          <div class="cycler-field"><span class="cycler-field-label" data-i18n="briefing.difficulty">난이도</span><div id="difficulty-cycler-slot"></div></div>
+          <div class="cycler-field"><span class="cycler-field-label" data-i18n="briefing.variant">작전 유형</span><div id="variant-cycler-slot"></div></div>
+          <div class="cycler-field"><span class="cycler-field-label" data-i18n="briefing.seed">시드</span><div id="seedmode-cycler-slot"></div></div>
+          <label id="custom-seed-row" class="cycler-field" hidden><span class="cycler-field-label" data-i18n="briefing.seednum">시드 번호</span><input id="custom-seed" type="number" min="1" max="2147483647" step="1" value="1"></label>
+        </div>
+        <p id="difficulty-note" class="difficulty-note"></p>
+        <p id="seed-preview" class="note"></p>
+        <div id="modifier-options" class="modifier-options"></div>
+        <button id="start-mission" class="primary start-button" disabled><span><small>BEGIN OPERATION</small><span data-i18n="briefing.begin">작전 시작</span></span><span class="button-arrow">↗</span></button>
+      </footer>
+    </section>
+
+    <!-- Campaign: reached from the title "캠페인" entry as a screen, not a modal. -->
+    <section id="campaign-screen" class="menu-screen campaign-screen" hidden data-i18n-aria="campaign.aria" aria-label="캠페인">
+      <header class="screen-header"><button class="back-button" data-nav="title" data-i18n="title.back">← 타이틀</button><div class="section-label"><span data-i18n="campaign.aria">캠페인</span><span>M01 → M09</span></div></header>
+      <div id="campaign-body" class="campaign-body panel"></div>
+    </section>
+  </main>
+  <section id="motion-lab" class="screen motion-lab" hidden data-i18n-aria="lab.aria" aria-label="동작 미리보기">
+    <header class="lab-header panel"><div><span class="eyebrow">ASSET MOTION STUDY</span><h2 data-i18n="lab.heading">동작 미리보기</h2><p data-i18n="lab.subtitle">기성 모션의 연결과 물체 접촉을 확인하는 장면입니다.</p></div><button data-action="menu" data-i18n="lab.close">닫기 ×</button></header>
+    <footer class="lab-controls panel">
+      <div class="lab-selectors"><label>동작 <select id="lab-scene"><option value="door">문 열기</option><option value="walk">걷기</option><option value="side">옆걸음</option><option value="back">뒤로 걷기</option><option value="turn">제자리 선회</option><option value="transitions">이동·정지 전환</option><option value="reload">재장전 모션</option></select></label><label>시점 <select id="lab-view"><option value="detail">확대</option><option value="top">위에서</option><option value="side">측면</option></select></label><button id="lab-toggle">일시정지</button></div>
+      <div class="lab-timeline"><output id="lab-time">0.00초</output><input id="lab-seek" type="range" min="0" max="3.99" step="0.01" value="0" aria-label="동작 재생 위치"><span>4.00초</span></div>
+      <p class="note" data-i18n="lab.note">시각 검증용 반복 재생 · 임무 시간과 기록에 영향을 주지 않습니다.</p>
+    </footer>
+  </section>
+  <section id="hud" class="screen hud hud-3col" hidden data-i18n-aria="hud.aria" aria-label="작전 인터페이스">
+    <header class="hud-topbar">
+      <div class="topbar-zone topbar-left">
+        <button class="hud-brand" data-action="menu" aria-label="임무 선택으로"><i class="brand-symbol" aria-hidden="true"></i></button>
+        <div class="header-mission"><span id="hud-code" class="eyebrow">T01 / INTRO</span><strong id="hud-mission">조작 익히기</strong></div>
+        <div class="objectives"><div><span class="objective-symbol">⌖</span><span data-i18n="hud.threat">위협 처리</span><b id="objective-threat">0 / 0</b></div><div id="civilian-objective"><span class="objective-symbol">◇</span><span data-i18n="hud.civilian">민간인 확보</span><b id="objective-civilian">0 / 0</b></div></div>
+      </div>
+      <div class="topbar-zone topbar-center">
+        <span id="mode-pill" class="mode-pill"><span></span><span id="mode-pill-text" data-i18n="hud.planning">계획 중</span></span>
+        <div class="operation-clock"><output id="game-time">00:00.0</output></div>
+      </div>
+      <div class="topbar-zone topbar-right header-actions"><button id="pan-camera" class="camera-pan-button" data-tool="pan" aria-pressed="false" data-i18n="hud.pan" data-i18n-title="hud.pan_hint" title="왼쪽 드래그로 화면 이동 · 휠 버튼 또는 Alt/Option+드래그도 가능">화면 이동</button><button id="reset-camera" class="icon-button" data-i18n-aria="hud.resetcam" data-i18n-title="hud.resetcam" aria-label="카메라 초기화" title="카메라 초기화" data-icon="focus"></button><button data-open="help" class="icon-button" data-i18n-aria="hud.guide" data-i18n-title="hud.guide" aria-label="작전 가이드" title="작전 가이드" data-icon="help"></button><button data-open="settings" class="icon-button" data-i18n-aria="hud.settings" data-i18n-title="hud.settings" aria-label="설정" title="설정" data-icon="settings"></button></div>
+    </header>
+    <div id="world-hint" class="world-hint" role="note" aria-label="현재 지도 조작" hidden><span id="world-hint-icon" aria-hidden="true">⌖</span><span id="world-hint-text">대원을 선택한 후, 우클릭으로 이동 경로를 지정하세요.</span><kbd id="world-hint-key">RMB</kbd></div>
+
+    <aside id="hud-left" class="hud-left" aria-label="대원 상태">
+      <button id="prior-attempt-toggle" type="button" class="prior-attempt-toggle" aria-pressed="false" hidden data-i18n="prior_attempt.title" data-i18n-title="prior_attempt.hint" title="지난 시도에서 기록한 아군 경로와 쓰러진 위치 표시">이전 시도</button>
+      <div id="target-objective" class="historical-objective panel" hidden><div><span>◎ 현장 목표</span><b id="objective-target">0 / 0</b></div><p id="objective-next"></p></div>
+      <aside id="tutorial" class="tutorial panel" hidden aria-label="조작 가이드"><div class="panel-label"><span>FIELD MANUAL <b id="tutorial-number">01 / 06</b></span><button id="tutorial-close" aria-label="조작 가이드 접기">×</button></div><div class="tutorial-progress"><span id="tutorial-progress"></span></div><h2 id="tutorial-title">대원을 선택하세요</h2><p id="tutorial-description">지도 위 대원이나 아래 대원 카드를 선택하세요. 숫자 1·2로도 선택할 수 있습니다.</p><div class="tutorial-footer"><span id="tutorial-key">1 / 2</span><button id="tutorial-next">다음 도움말 →</button></div></aside>
+      <div class="roster-scroll">
+        <div class="roster-label"><span data-i18n="hud.squad">SQUAD STATUS</span><b id="squad-count">02</b></div>
+        <p id="drill-selection-hint" class="drill-selection-hint" data-i18n="drill.select_hint">Shift + 대원 카드로 2~4명을 함께 선택하세요.</p>
+        <div id="unit-cards" class="unit-cards"></div>
+        <div id="operator-settings" class="operator-settings panel" role="group" data-i18n-aria="posture.title" aria-label="선택한 대원 행동">
+          <label><span data-i18n="posture.stance">자세</span><button id="operator-stance" type="button" value="standing" data-posture-cycle="stance" data-i18n-title="posture.cycle"><span data-i18n="posture.standing">서기</span> ↻</button></label>
+          <label><span data-i18n="posture.pace">이동</span><button id="operator-pace" type="button" value="normal" data-posture-cycle="movement_mode" data-i18n-title="posture.cycle"><span data-i18n="posture.normal">보통</span> ↻</button></label>
+          <button id="operator-hold" type="button" aria-pressed="false" data-i18n="posture.hold">위치 유지</button>
+          <small id="operator-awareness"></small>
+        </div>
+      </div>
+    </aside>
+
+    <button id="hud-right-toggle" class="hud-right-toggle panel" aria-expanded="true" aria-controls="hud-right" aria-label="이벤트·명령 패널 접기/펴기" title="이벤트·명령 패널 접기/펴기"><span data-icon="queue"></span></button>
+    <aside id="hud-right" class="hud-right" aria-label="이벤트와 명령">
+      <div id="operation-log" class="operation-log" aria-label="최근 작전 사건"></div>
+      <button id="queue-toggle" class="queue-toggle" hidden aria-expanded="true" aria-controls="queue-panel"><span data-icon="queue"></span> <span data-i18n="hud.commands">명령 목록</span> <b id="queue-count">0</b></button>
+      <aside id="queue-panel" class="queue-panel panel" aria-label="선택한 대원의 명령 목록"><div class="panel-label"><span><b id="queue-name">ALPHA</b> / COMMAND QUEUE</span><button id="queue-close" aria-label="명령 목록 닫기">×</button></div><div id="command-list" class="command-list"></div><footer><span data-i18n="queue.reorder_note">미실행 명령은 순서 변경 가능</span><button id="clear-commands" data-i18n="queue.clear">대기 명령 취소</button></footer></aside>
+    </aside>
+
+    <div id="face-options" class="face-options panel" role="group" aria-label="주시 방식" hidden><button type="button" data-face-mode="normal" aria-pressed="true" data-i18n="face.normal">일반 주시</button><button type="button" data-face-mode="persistent" aria-pressed="false" data-i18n="face.persistent">주시 고정</button></div>
+    <aside id="room-drill-panel" class="room-drill-panel panel" role="dialog" aria-modal="false" aria-labelledby="drill-title" hidden>
+      <header><div><span class="eyebrow" data-i18n="drill.preview">진입 미리보기</span><h2 id="drill-title" data-i18n="drill.title">방 진입 드릴</h2></div><button id="drill-close" type="button" data-i18n-aria="modal.close" aria-label="닫기">×</button></header>
+      <div id="drill-editor-content"></div>
+      <footer><p id="drill-preview-error" role="status" aria-live="polite"></p><button id="drill-commit" type="button" class="primary" data-i18n="drill.apply">진입 계획 추가</button></footer>
+    </aside>
+    <aside id="formation-panel" class="room-drill-panel formation-panel panel" role="dialog" aria-modal="false" aria-labelledby="formation-title" hidden>
+      <header><div><span class="eyebrow" data-i18n="formation.preview">대형 미리보기</span><h2 id="formation-title" data-i18n="formation.title">복도 대형</h2></div><button id="formation-close" type="button" data-i18n-aria="modal.close" aria-label="닫기">×</button></header>
+      <div id="formation-editor-content"></div>
+      <footer><p id="formation-preview-error" role="status" aria-live="polite"></p><button id="formation-commit" type="button" class="primary" data-i18n="formation.apply">대형 계획 추가</button></footer>
+    </aside>
+    <footer class="hud-hotbar">
+      <section id="drill-timeline" class="drill-timeline" data-i18n-aria="drill.timeline" aria-label="분대 진입 타임라인" hidden></section>
+      <div id="hotbar-controls" class="hotbar-controls">
+      <div class="tools" role="toolbar" aria-label="대원 명령">
+        <button data-tool="move" title="이동 위치 지정 · 우클릭/Q"><span class="icon-badge"><span data-icon="move"></span><kbd id="hotbar-key-move">Q</kbd></span><span data-i18n="tool.move">이동</span></button>
+        <button data-tool="face" title="주시 방향 지정 · F"><span class="icon-badge"><span data-icon="face"></span><kbd id="hotbar-key-face">F</kbd></span><span data-i18n="tool.face">주시</span></button>
+        <button id="door-modes" data-tool="door" title="문 처리 방식 선택 · E" aria-haspopup="menu" aria-expanded="false"><span class="icon-badge"><span data-icon="door"></span><kbd id="hotbar-key-door">E</kbd></span><span data-i18n="tool.door">문 처리</span></button>
+        <button id="equipment-modes" title="장비 선택 · G" aria-haspopup="menu" aria-expanded="false"><span class="icon-badge"><span data-icon="stun"></span><kbd id="hotbar-key-equipment">G</kbd></span><span data-i18n="tool.equipment">장비</span></button>
+        <button id="secure-modes" title="확보·호송·체포 · C" aria-haspopup="menu" aria-expanded="false"><span class="icon-badge"><span data-icon="secure"></span><kbd id="hotbar-key-secure">C</kbd></span><span data-i18n="tool.secure">확보</span></button>
+        <button id="wait-command" title="대기 시간 설정 · T"><span class="icon-badge"><span data-icon="wait"></span><kbd id="hotbar-key-wait">T</kbd></span><span data-i18n="tool.wait">대기</span></button>
+        <button id="reload-command" title="탄창 재장전 · R"><span class="icon-badge"><span data-icon="reload"></span><kbd id="hotbar-key-reload">R</kbd></span><span data-i18n="tool.reload">재장전</span></button>
+        <button id="signal-command" title="A / B / C 신호가 올 때까지 대기 · Z"><span class="icon-badge"><span data-icon="signal"></span><kbd id="hotbar-key-signal">Z</kbd></span><span data-i18n="tool.signal">신호 대기</span></button>
+      </div>
+      <div class="hotbar-utility"><button id="save-plan" title="첫 실행 전 초기 명령 계획 저장"><span data-icon="save"></span></button><button id="deck-more" aria-label="계획 가져오기 및 내보내기" title="계획 가져오기 및 내보내기">···</button></div>
+      <div class="hotbar-execute">
+        <div class="signals" aria-label="동기화 신호"><span>GO-CODE</span><button data-signal="A" title="현재 A 신호를 기다리는 대원에게 실행 신호" aria-label="A 신호 보내기">A</button><button data-signal="B" title="현재 B 신호를 기다리는 대원에게 실행 신호" aria-label="B 신호 보내기">B</button><button data-signal="C" title="현재 C 신호를 기다리는 대원에게 실행 신호" aria-label="C 신호 보내기">C</button></div>
+        <button id="toggle-execution" class="primary execution-button"><span data-icon="play"></span><span><strong data-i18n="hud.go">작전 실행</strong><small>SPACE</small></span></button>
+      </div>
+      </div>
+    </footer>
+  </section>
+  <section id="replay-hud" class="screen replay-hud" hidden aria-label="리플레이">
+    <header class="replay-header panel"><div><span class="eyebrow">AAR</span><strong><span data-i18n="replay.title">작전 리플레이</span> <span id="replay-partial" hidden data-i18n="replay.partial">부분 기록</span></strong></div><span id="replay-mission"></span><div><button id="replay-library" class="icon-button" data-open="library" title="보관함" aria-label="보관함" data-icon="queue"></button><button id="export-replay" class="icon-button" title="내보내기" aria-label="내보내기" data-icon="save"></button><button id="replay-hide" class="icon-button" title="H 키로 HUD 표시 또는 숨기기" aria-label="HUD 숨기기" data-icon="focus"></button><button data-action="menu" class="icon-button" aria-label="닫기" title="닫기">×</button></div></header>
+    <footer class="replay-deck panel"><div class="replay-timeline"><output id="replay-time">00:00</output><div class="replay-track"><input type="range" id="replay-seek" min="0" max="1" step="0.05" value="0" aria-label="리플레이 시점"><div id="replay-markers" class="replay-markers" aria-hidden="true"></div></div><output id="replay-duration">00:00</output></div><div class="replay-controls"><div><button id="replay-restart" class="icon-button" title="처음부터" aria-label="처음부터" data-icon="restart"></button><button id="replay-toggle" class="replay-play" aria-label="리플레이 재생" data-icon="play"></button><div id="replay-speeds" aria-label="재생 배속"><button data-speed="0.5">0.5×</button><button data-speed="1" class="active">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></div></div><div><div id="replay-view-group" class="icon-group" role="group" aria-label="시야"><button type="button" class="icon-button" data-reveal="false" title="당시 관측 정보" aria-label="당시 관측 정보" data-icon="face"></button><button type="button" class="icon-button" data-reveal="true" title="전체 상황 복기" aria-label="전체 상황 복기" data-icon="focus"></button></div><label for="replay-follow" class="sr-only">카메라</label><select id="replay-follow"><option value="" data-i18n="replay.free">자유 시점</option></select></div></div></footer>
+  </section>
+  <button id="restore-hud" class="restore-hud panel" hidden><span data-i18n="hud.restore">HUD 표시</span> <kbd>H</kbd></button>
+  <aside id="pause-panel" class="pause-panel panel" hidden data-i18n-aria="pause.aria" aria-label="작전 일시정지">
+    <p class="eyebrow">OPERATION PAUSED</p>
+    <h2 data-i18n="pause.title">작전 일시정지</h2>
+    <p class="note" data-i18n="pause.note">작전 상황은 현재 시점에 멈춰 있습니다. 다음 행동을 생각할 시간입니다.</p>
+    <nav class="pause-menu" aria-label="일시정지 메뉴">
+      <button id="resume-game"><span data-icon="play"></span><span data-i18n="pause.resume">재개</span></button>
+      <button data-open="settings"><span data-icon="settings"></span><span data-i18n="pause.settings">설정</span></button>
+      <button data-open="help"><span data-icon="help"></span><span data-i18n="pause.guide">작전 가이드</span></button>
+      <button id="pause-save-plan"><span data-icon="save"></span><span data-i18n="pause.saveplan">계획 저장</span></button>
+      <button id="pause-retry" data-action="retry"><span data-icon="restart"></span><span data-i18n="pause.retry">재시작</span></button>
+      <button id="pause-menu"><span data-icon="focus"></span><span data-i18n="pause.menu">임무 선택</span></button>
+    </nav>
+    <p class="note" data-i18n="pause.note2">현재 계획은 ‘계획 저장’으로 보관할 수 있습니다. 진행 중인 전투 상태는 저장되지 않습니다.</p>
+  </aside>
+  <section id="result" class="result-overlay" hidden aria-labelledby="result-title"><div class="result-card panel result-card-wide">
+    <p class="eyebrow">OPERATION DEBRIEF / <span id="result-code">T01</span></p>
+    <div class="result-grid">
+      <div class="result-col result-col-rank">
+        <div class="rank-head">
+          <div id="result-symbol" class="result-symbol">S</div>
+          <div class="rank-head-text">
+            <h1 id="result-title">작전 완료</h1>
+            <p id="result-message">모든 임무 목표를 달성했습니다.</p>
+          </div>
+        </div>
+        <div class="result-score"><strong id="result-score">0</strong><span data-i18n-html="result.score">MISSION<br>SCORE / 100</span></div>
+        <div id="result-goals" class="result-goals"></div>
+      </div>
+      <div class="result-col result-col-squad">
+        <p class="panel-label"><span data-i18n="result.operators">DEPLOYED OPERATORS</span></p>
+        <div id="result-operators" class="result-operators"></div>
+      </div>
+      <div class="result-col result-col-replay">
+        <figure id="result-replay-preview" class="result-replay-preview" aria-hidden="true">
+          <span class="replay-preview-glyph">▶</span>
+          <figcaption class="replay-preview-label" data-i18n="result.replay">작전 리플레이</figcaption>
+        </figure>
+        <p id="result-comparison" class="result-comparison"></p>
+        <div id="result-progression" class="result-progression" role="status" aria-live="polite"></div>
+        <p id="result-competition" class="result-competition note" hidden></p>
+        <details class="result-details">
+          <summary><span data-i18n="result.details">상세 기록</span> <span class="chevron" aria-hidden="true">▾</span></summary>
+          <dl id="result-stats" class="result-stats"></dl>
+        </details>
+      </div>
+      <details id="result-doctrine" class="result-doctrine">
+        <summary><span data-i18n="debrief.title">교범 리뷰</span><span class="chevron" aria-hidden="true">▾</span></summary>
+        <p class="note" data-i18n="debrief.source">작전 검토 기준 · 구역 관찰과 진입 절차</p>
+        <div id="result-doctrine-rooms" class="doctrine-rooms"><p class="note" data-i18n="debrief.unavailable">관측한 방의 교범 계측 기록이 없습니다. N/A</p></div>
+      </details>
+    </div>
+    <p id="result-partial" class="note" hidden data-i18n="result.partial">기록 한도에 도달하여 리플레이에는 작전 앞부분만 포함됩니다.</p>
+    <div class="result-actions">
+      <button class="tertiary" data-action="retry" data-i18n="result.retry">다시 도전 ↻</button>
+      <button id="retry-plan" class="tertiary" data-action="retry_plan" data-i18n="result.retryplan">계획 수정</button>
+      <button id="watch-replay" class="secondary"><span data-icon="play"></span> <span data-i18n="result.watch">리플레이</span> <span>↗</span></button>
+      <button id="next-mission" class="primary">주택 임무 시작 →</button>
+      <button class="tertiary" data-action="menu" data-i18n="result.select">임무 선택</button>
+    </div>
+    <p class="note" data-i18n="result.footnote">가상 임무 점수이며 실제 숙련도 지표가 아닙니다. 계획 정지 시간은 평가에 영향을 주지 않습니다. 리플레이는 최근 10개·100MB까지 보관하며 오래된 기록부터 자동 정리됩니다.</p>
+  </div></section>
+  <dialog id="modal" aria-labelledby="modal-title"><header><div><span id="modal-eyebrow" class="eyebrow">OPERATIONS</span><h2 id="modal-title"></h2></div><button id="modal-close" class="icon-button" data-i18n-aria="modal.close" aria-label="닫기">×</button></header><div id="modal-content"></div></dialog>
+  <div id="toasts" class="toasts" role="status" aria-live="polite" aria-atomic="false"></div>
+  <div id="context-popover" class="context-popover panel" role="menu" aria-label="지도 행동" hidden></div>
+  <div id="door-submenu" class="context-popover panel door-submenu" role="menu" data-i18n-aria="door.title" aria-label="문 처리 방식" hidden><button data-door-mode="OPEN_DOOR" role="menuitem"><kbd>1</kbd> <span data-i18n="door.open">조용히 열기</span> <small data-i18n="door.open_sub">소리 반경 2m</small></button><button data-door-mode="KICK_DOOR" role="menuitem"><kbd>2</kbd> <span data-i18n="door.kick">차기</span> <small data-i18n="door.kick_sub">0.4초 · 소리 반경 9m</small></button><button data-door-mode="PEEK_DOOR" role="menuitem"><kbd>3</kbd> <span data-i18n="door.peek">들여다보기</span> <small data-i18n="door.peek_sub">문을 조금 열어 관측</small></button><button data-door-mode="OPEN_AND_FLASH" role="menuitem"><kbd>4</kbd> <span>문 열고 섬광탄 던지기</span> <small>폭발 후 예약 경로 진행</small></button><button data-door-mode="SHOTGUN_BREACH" role="menuitem"><kbd>5</kbd> <span data-i18n="door.shotgun">산탄총 브리칭</span> <small data-i18n="door.shotgun_sub">1.2초 · 소리 반경 14m · 이후 후퇴</small></button><button data-door-mode="KICK_DOOR" data-door-fallback="breach" role="menuitem"><kbd>6</kbd> <span data-i18n="door.kick_breach">차기 · 실패 시 장약</span> <small data-i18n="door.kick_breach_sub">차기가 실패하면 예약한 장약 사용</small></button></div>
+  <div id="equipment-submenu" class="context-popover panel" role="menu" data-i18n-aria="equip.title" aria-label="장비 사용" hidden><button data-tool="stun" role="menuitem"><kbd>1</kbd> <span>섬광탄 투척</span></button><button data-tool="smoke" role="menuitem"><kbd>2</kbd> <span data-i18n="equip.smoke">연막 투척</span></button><button data-tool="breach" role="menuitem"><kbd>3</kbd> <span data-i18n="equip.breach">문 파괴 장약</span></button><button data-tool="camera" role="menuitem"><kbd>4</kbd> <span>정찰 카메라</span></button><button id="switch-weapon" role="menuitem"><kbd>5</kbd> <span>주무기 / 보조무기 전환</span></button><button data-tool="frag" role="menuitem"><kbd>6</kbd> <span data-i18n="equipment.frag">파편 수류탄</span><small data-i18n="equipment.frag_note">얇은 내벽 너머 아군도 피해를 받습니다.</small></button></div>
+  <div id="secure-submenu" class="context-popover panel" role="menu" data-i18n-aria="secure.title" aria-label="확보 명령" hidden><button data-tool="secure" role="menuitem"><kbd>1</kbd> <span data-i18n="secure.civ">민간인 확보</span></button><button data-tool="escort" role="menuitem"><kbd>2</kbd> <span data-i18n="secure.escort">민간인 호송</span></button><button data-tool="arrest" role="menuitem"><kbd>3</kbd> <span data-i18n="secure.arrest">투항 적 체포</span></button></div>
+  <input id="file-import" type="file" accept=".json,application/json" hidden>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

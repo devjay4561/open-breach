@@ -1,0 +1,68 @@
+{
+  "bounds": [
+    14,
+    12
+  ],
+  "civilians": [],
+  "custom": true,
+  "doors": [],
+  "enemies": [
+    {
+      "facing": 0.0,
+      "hold_position": true,
+      "id": "e1",
+      "vision_range": 12.0,
+      "x": 2.0,
+      "z": 6.0
+    }
+  ],
+  "fail": [],
+  "focus": [
+    7,
+    6
+  ],
+  "id": "HIT_REACTION_QA",
+  "objectives": [
+    "Reach the far zone"
+  ],
+  "props": [],
+  "revision": 1,
+  "rooms": [
+    {
+      "d": 12,
+      "id": "room",
+      "w": 14,
+      "x": 7,
+      "z": 6
+    }
+  ],
+  "schema_version": 1,
+  "seed": 71,
+  "stars": [],
+  "title": "Rear-hit reaction",
+  "units": [
+    {
+      "facing": 0.0,
+      "fov": 110.0,
+      "id": "alpha",
+      "name": "Alpha",
+      "role": "Assault",
+      "weapon": "standard",
+      "x": 6.0,
+      "z": 6.0
+    }
+  ],
+  "variant": "normal",
+  "walls": [],
+  "win": [
+    {
+      "type": "reach_zone",
+      "zone": [
+        12,
+        10,
+        0.2,
+        0.2
+      ]
+    }
+  ]
+}

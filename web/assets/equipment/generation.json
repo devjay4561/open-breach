@@ -1,0 +1,147 @@
+{
+  "createdAt": "2026-10-12",
+  "mode": "built-in GPT image generation",
+  "assets": [
+    {
+      "id": "standard",
+      "label": "Tern C1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo, Tern C1 standard rifle. Create one realistic studio catalog photograph of a fictional compact modern tactical carbine, matte graphite black receiver, short olive-gray polymer handguard, adjustable shoulder stock, straight box magazine, simple iron sights, no scope, no suppressor. Single firearm only, precise clean left side profile, stock to left, barrel to right, entire weapon visible, centered with generous 12 percent margin, wide landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting with clearly visible metal and polymer details, soft contact shadow. Crisp premium equipment photography, realistic proportions. No people, no ammunition, no hands, no labels, no letters, no logos, no watermark. This is a fictional game catalog asset.",
+      "path": "assets/equipment/standard.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "light",
+      "label": "Mica S2",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one compact fictional submachine gun, short matte black receiver, olive-gray short fore-end, compact retractable shoulder stock, slender straight box magazine, simple iron sights, no scope, no suppressor; clean left side profile with muzzle pointing right. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/light.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "shotgun",
+      "label": "Flint B1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one fictional tactical pump-action shotgun, long matte black tube barrel and tubular magazine, ribbed pump fore-end, graphite shoulder stock and pistol grip, simple bead sights, no scope, no suppressor; clean left side profile with muzzle pointing right. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/shotgun.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "suppressed",
+      "label": "Tern C1-Q",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one fictional suppressed modern tactical carbine, matte graphite black receiver, olive-gray polymer handguard, adjustable shoulder stock, short box magazine, integrated long cylindrical black suppressor, simple iron sights, no scope; clean left side profile with muzzle pointing right. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/suppressed.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "pico_p1",
+      "label": "Pico P1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one compact fictional modern semiautomatic pistol, graphite-black slide, textured dark gray polymer grip, trigger guard and simple iron sights, no suppressor, no scope; clean left side profile muzzle pointing right. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/pico_p1.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "veil_v1",
+      "label": "Veil V1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one lightweight soft ballistic vest, muted forest green fabric, slim flexible torso panels, broad shoulder straps, Velcro waist closure, no hard plates, no pouches; front three-quarter view of empty vest, no person or mannequin. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/veil_v1.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "frame_v2",
+      "label": "Frame V2",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one balanced modern plate carrier, charcoal blue-gray fabric, structured rectangular front and rear plate bags, side armor cummerbund, MOLLE webbing, two modest chest pouches, adjustable shoulders; front three-quarter view of empty vest, no person or mannequin. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/frame_v2.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "swift_v3",
+      "label": "Swift V3",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one lightweight compact modern plate carrier, muted khaki tan nylon, compact hard front and rear plate bags, slim open skeleton side straps, low-profile shoulder straps, minimal pouch layout; front three-quarter view of empty vest, no person or mannequin. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/swift_v3.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "bastion_v4",
+      "label": "Bastion V4",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one heavy tactical armor plate carrier, olive green nylon, broad thick front and rear ballistic panels, wide padded armored side cummerbund, padded shoulders, MOLLE webbing and three sturdy magazine pouches; front three-quarter view of empty vest, no person or mannequin. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/bastion_v4.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "crown_h1",
+      "label": "Crown H1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one lightweight high-cut modern ballistic helmet, matte charcoal blue-gray shell, simple side accessory rails and small front mounting bracket, black chin straps, no visor, no night vision; front three-quarter view, no person or head. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/crown_h1.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "crown_h2",
+      "label": "Crown H2",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one heavier full-cut modern ballistic helmet, matte olive green shell with thick protective lower sides, padded rim, stout black chin straps, small front mounting bracket, no visor, no night vision; front three-quarter view, no person or head. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/crown_h2.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "dot",
+      "label": "Point D1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one compact black reflex red dot optic for a tactical carbine, small rectangular housing, visible slightly amber-tinted lens, short rail mounting base, brightness adjustment dial; three-quarter product view, optic only without firearm. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/dot.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "scope",
+      "label": "Focus O2",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one compact matte black telescopic rifle scope, cylindrical tube, small front objective lens, adjustment turrets, low rail mount, faint amber lens coating; three-quarter side product view, scope only without firearm. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/scope.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "suppressor",
+      "label": "Quiet Q1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one matte graphite-black cylindrical firearm suppressor, machined subtle circular ribs, one visible central muzzle aperture and threaded rear mount; horizontal three-quarter side product view, suppressor only without firearm. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/suppressor.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "extended_mag",
+      "label": "Reserve M1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one extended capacity dark graphite rifle box magazine, gently curved elongated polymer body, molded grip ribs and a thick base plate, no visible ammunition; upright three-quarter product view, magazine only without firearm. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/extended_mag.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "stun",
+      "label": "Flare F1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one fictional tactical flashbang grenade, short silver-gray cylindrical metal body with perforated black top cap, olive safety lever and silver pull ring, subtle orange safety stripe; upright three-quarter product view, intact inert catalog prop, no explosion. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/stun.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "smoke",
+      "label": "Haze S1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one fictional smoke grenade canister, olive-gray smooth cylindrical body, dark top with safety lever and silver pull ring, subtle broad off-white band around body; upright three-quarter product view, intact inert catalog prop, no smoke. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/smoke.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "breach",
+      "label": "Knock B1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one fictional game door-entry charge equipment pack, flat rectangular olive-gray canvas padded pouch with black securing straps, a small rugged controller attached by a short cable; three-quarter product view of closed exterior prop only, no internal components or diagrams. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/breach.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "probe_c1",
+      "label": "Probe C1",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one handheld tactical inspection camera, compact rugged olive and graphite handheld unit with small illuminated blue-gray display, attached short flexible black gooseneck ending in a tiny camera head; three-quarter product view, entire camera and cable visible. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/probe_c1.jpg",
+      "generator": "built-in GPT image generation"
+    },
+    {
+      "id": "frag",
+      "label": "Fragmentation grenade",
+      "prompt": "Use case: product-mockup. Asset type: OPEN BREACH game equipment inventory photo. Create one realistic premium studio catalog photograph. Subject: one intact fictional fragmentation grenade catalog prop, compact egg-shaped dark olive body with a subtle segmented surface, black safety lever and silver pull ring; upright three-quarter product view, no explosion. Single item only, entire item visible, centered with generous margins, landscape 3:2 composition. Seamless light warm-gray studio background, bright large softbox lighting, clear material details and soft contact shadow. Realistic proportions and crisp edges. No people, no hands, no ammunition, no labels, no letters, no logos, no watermark. Fictional game equipment asset.",
+      "path": "assets/equipment/frag.jpg",
+      "generator": "built-in GPT image generation"
+    }
+  ],
+  "provenance_note": "Generated on 2026-10-12 before the public rename. Only the project title in the recorded prompts was updated to OPEN BREACH for release; all other prompt instructions and the original generated photos are unchanged."
+}

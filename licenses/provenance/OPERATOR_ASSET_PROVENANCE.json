@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-11",
+  "assets": [
+    {
+      "asset_id": "operator-quaternius-weapons",
+      "creator": "Quaternius",
+      "pack": "Assault Rifle / Submachine Gun / Shotgun / Pistol",
+      "source_url": "https://poly.pizza/m/Bgvuu4CUMV",
+      "source_urls": [
+        "https://poly.pizza/m/Bgvuu4CUMV",
+        "https://poly.pizza/m/nsP3JukU73",
+        "https://poly.pizza/m/ZmPTnh7njL",
+        "https://poly.pizza/m/J3i9KDQ3kt"
+      ],
+      "downloaded_at": "2026-10-11",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "source_receipts": "licenses/provenance/model-source-receipts.json",
+      "processing": [
+        "Unbranded CC0 public model GLBs verified against each individual model page.",
+        "Normalize units to meters and place stable grip pivot; derive actual barrel sockets from front-ring vertices.",
+        "Fictional display names; matte materials; glTF Transform 4.3.0 dedup and prune; no runtime compression decoder."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/tern_c1.glb",
+          "sha256": "224707b1aed6b03f54352c484f187d0c2665fce816e7952480b8b377619a4ce3",
+          "bytes": 106288,
+          "triangles": 1930
+        },
+        {
+          "path": "game/assets/equipment/mica_s2.glb",
+          "sha256": "5548887bff507ed348786cef2222a32fb275dd953446009f0ba602ab2ba2a4eb",
+          "bytes": 82944,
+          "triangles": 1566
+        },
+        {
+          "path": "game/assets/equipment/flint_b1.glb",
+          "sha256": "8c2d30a6c9b7b26ed3c0716c39de881d8021f55706a0baddba69ea0ed764d4ed",
+          "bytes": 54828,
+          "triangles": 978
+        },
+        {
+          "path": "game/assets/equipment/pico_p1.glb",
+          "sha256": "7786add0f5a070b8ffb6dfe0ce3be9c8da366459024b442a67eb3411d220732c",
+          "bytes": 54320,
+          "triangles": 968
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "operator-detachable-headgear",
+      "creator": "Quaternius / OPEN BREACH modifications",
+      "pack": "CC0 SWAT detachable head unit and original helmet guards/skull",
+      "source_url": "https://poly.pizza/m/Btfn3G5Xv4",
+      "downloaded_at": "2026-10-11",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "source_receipts": "licenses/provenance/model-source-receipts.json",
+      "processing": [
+        "Detach source head geometry as non-skinned gear tied to Head bone rest transform.",
+        "Reduce original head unit to 1661 triangles; add original guards to heavy helmet.",
+        "Explicit no-helmet model retains CC0 goggles/cloth-mask details and uses original unarmored skull.",
+        "glTF Transform 4.3.0 dedup and prune; no borrowed textures/logos."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/crown_h1.glb",
+          "sha256": "6e4a7bc56eaa993327a9908ec9a1ca934d4a7f89ae94f926d45aa2385b8f18a9",
+          "bytes": 129360,
+          "triangles": 1661
+        },
+        {
+          "path": "game/assets/equipment/crown_h2.glb",
+          "sha256": "64052798d3adc70e862499bb596f24d090b1082fae633a54044f80d5f033b7b3",
+          "bytes": 137820,
+          "triangles": 1793
+        },
+        {
+          "path": "game/assets/equipment/mask_h0.glb",
+          "sha256": "72b04576e7ee0fc4cd8fd4ad24ca27bf6e5c6bd75959e98d04d05e7784c8a2dd",
+          "bytes": 39472,
+          "triangles": 550
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "operator-original-equipment",
+      "creator": "OPEN BREACH",
+      "pack": "Four plate carriers, four weapon attachments, four tactical tools",
+      "source_url": null,
+      "source_file": "scripts/import_operator_assets.py",
+      "downloaded_at": null,
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Original-Assets.txt",
+      "processing": [
+        "Original low-poly fitting around existing CC0 SWAT uniform; front/back panels, shoulder straps, pouches and variant side/lower guards.",
+        "Original unbranded dot sight, scope, suppressor, extended magazine, camera, flashbang, smoke canister and entry tool.",
+        "Shared small matte materials, no textures; glTF Transform 4.3.0 dedup and prune.",
+        "Join fitted static parts per model before export; one mesh instance and at most three shared material surfaces per carrier/tool."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/veil_v1.glb",
+          "sha256": "f6a562cb007af34833ab7b10057a6e79778c87c052fce9840ae8e091a8bac8bb",
+          "bytes": 25680,
+          "triangles": 396
+        },
+        {
+          "path": "game/assets/equipment/frame_v2.glb",
+          "sha256": "08a91dac1f8530f04d515452102cb6063fa93f4fd906bd538d218e543d0c99e6",
+          "bytes": 30836,
+          "triangles": 484
+        },
+        {
+          "path": "game/assets/equipment/swift_v3.glb",
+          "sha256": "790c3edc03cfd46bf3cc78177dcc24a6579b380eb85b8052d2ea1fbaeb97409a",
+          "bytes": 25700,
+          "triangles": 396
+        },
+        {
+          "path": "game/assets/equipment/bastion_v4.glb",
+          "sha256": "ed42d61942f61bcd97fbe11950b44cbddfcb2de914d201db1251746c5feab653",
+          "bytes": 37124,
+          "triangles": 616
+        },
+        {
+          "path": "game/assets/equipment/dot.glb",
+          "sha256": "ab9ee7cd5ee5cc151a1a68d8f7f8c73e15736518097166ce4123b17a8632f2eb",
+          "bytes": 9592,
+          "triangles": 132
+        },
+        {
+          "path": "game/assets/equipment/scope.glb",
+          "sha256": "b1605e4ac1b8f12205996d4403c2f13159e0153c4ac7a66495f9de78f66562ec",
+          "bytes": 7844,
+          "triangles": 132
+        },
+        {
+          "path": "game/assets/equipment/suppressor.glb",
+          "sha256": "8110b1bed864b97d87e53b9b6f936204b9d2981bcdc0dbc5456662b4c4e329c6",
+          "bytes": 4528,
+          "triangles": 88
+        },
+        {
+          "path": "game/assets/equipment/extended_mag.glb",
+          "sha256": "e4c96d0baab6417af30f9b4630e42a79c4d56ce554ab3e25bc4829aae05edf03",
+          "bytes": 3680,
+          "triangles": 44
+        },
+        {
+          "path": "game/assets/equipment/probe_c1.glb",
+          "sha256": "f0abe89ef2921264afc5fe4838b6d1ebceb0d98c8a332c33c13844d4be1f8e56",
+          "bytes": 11708,
+          "triangles": 176
+        },
+        {
+          "path": "game/assets/equipment/flare_f1.glb",
+          "sha256": "41cf189a17f4c865b472ea56e5c02ceb05c4a557205fc0e345a6b40814e0d47f",
+          "bytes": 6412,
+          "triangles": 88
+        },
+        {
+          "path": "game/assets/equipment/haze_s1.glb",
+          "sha256": "88f89d775ea85178cd3f2547b7d0fa5ed0eb5761c18b9157da682c1dd98f50f9",
+          "bytes": 5672,
+          "triangles": 88
+        },
+        {
+          "path": "game/assets/equipment/knock_b1.glb",
+          "sha256": "af6f99a95a60a9b623ab87054ab3425f32ed6b2f179b5407495284e284cb9a36",
+          "bytes": 3672,
+          "triangles": 44
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "operator-gear-ready-combat-character",
+      "creator": "Quaternius / Kay Lousberg / OPEN BREACH processing",
+      "pack": "Gear-ready SWAT with CC0 combat motion",
+      "source_url": "https://poly.pizza/m/Btfn3G5Xv4",
+      "source_file": "game/assets/characters/combat-swat.glb",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "license_evidence_files": [
+        "licenses/Quaternius-Toon-Shooter.txt",
+        "licenses/KayKit-Character-Animations.txt",
+        "licenses/Operator-Equipment-CC0.txt",
+        "licenses/Original-Assets.txt"
+      ],
+      "processing": [
+        "Remove rigid original head unit; retain original skin/skeleton and all 15 CC0 combat clips.",
+        "Motion rebuilt with scripts/build_cc0_swat_motion.py from Toon Shooter, KayKit Character Animations 1.1 and original procedural poses.",
+        "Preserve gameplay barrel dimensions and use clip-relative runtime timing."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/characters/combat-swat-gear.glb",
+          "sha256": "70d2f0efa766feb0f95cb927ab4304ae3c5e9fd0c3b984462c608bc233cd68ec",
+          "bytes": 1246100
+        }
+      ],
+      "import_status": "VERIFIED"
+    }
+  ],
+  "visual_verification": "tests/artifacts/operator-customization/gear-preview.png",
+  "geometry_report": "licenses/provenance/imported-geometry.json"
+}

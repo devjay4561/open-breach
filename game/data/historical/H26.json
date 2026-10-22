@@ -1,0 +1,768 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H26",
+  "revision": 2,
+  "title": "스톤 에코",
+  "title_en": "STONE ECHO",
+  "seed": 20261035,
+  "bounds": [
+    70,
+    68
+  ],
+  "focus": [
+    35.0,
+    34.0
+  ],
+  "rooms": [
+    {
+      "id": "garden",
+      "x": 29,
+      "z": 43,
+      "w": 45,
+      "d": 20,
+      "label": "본부 앞 정원",
+      "indoor": false
+    },
+    {
+      "id": "vehicle_yard",
+      "x": 55,
+      "z": 42,
+      "w": 20,
+      "d": 22,
+      "label": "차량 마당",
+      "indoor": false
+    },
+    {
+      "id": "hq_corridor",
+      "x": 36,
+      "z": 16,
+      "w": 4.2,
+      "d": 19,
+      "label": "본부 현관과 통로",
+      "indoor": true,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "hq_w0",
+      "x": 30.9,
+      "z": 9.5,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 서측실",
+      "indoor": true
+    },
+    {
+      "id": "hq_e0",
+      "x": 41.1,
+      "z": 9.5,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 동측실",
+      "indoor": true
+    },
+    {
+      "id": "hq_w1",
+      "x": 30.9,
+      "z": 16,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 서측실",
+      "indoor": true
+    },
+    {
+      "id": "hq_e1",
+      "x": 41.1,
+      "z": 16,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 동측실",
+      "indoor": true
+    },
+    {
+      "id": "hq_w2",
+      "x": 30.9,
+      "z": 22.5,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 서측실",
+      "indoor": true
+    },
+    {
+      "id": "hq_e2",
+      "x": 41.1,
+      "z": 22.5,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "본부 지상층 동측실",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "garden_west",
+      "x": 5,
+      "z": 30,
+      "w": 0.22,
+      "d": 27,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "garden_east",
+      "x": 63,
+      "z": 29,
+      "w": 0.22,
+      "d": 35,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "garden_south_left",
+      "x": 15,
+      "z": 54,
+      "w": 20,
+      "d": 0.22,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "garden_south_right",
+      "x": 49,
+      "z": 54,
+      "w": 28,
+      "d": 0.22,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "hq_w0_north",
+      "x": 30.9,
+      "z": 6.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w0_south",
+      "x": 30.9,
+      "z": 12.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w0_west",
+      "x": 27.9,
+      "z": 9.5,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w0_east_0",
+      "x": 33.9,
+      "z": 7.7625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w0_east_1",
+      "x": 33.9,
+      "z": 11.2375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e0_north",
+      "x": 41.1,
+      "z": 6.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e0_south",
+      "x": 41.1,
+      "z": 12.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e0_west_0",
+      "x": 38.1,
+      "z": 7.7625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e0_west_1",
+      "x": 38.1,
+      "z": 11.2375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e0_east",
+      "x": 44.1,
+      "z": 9.5,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w1_north",
+      "x": 30.9,
+      "z": 13.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w1_south",
+      "x": 30.9,
+      "z": 19.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w1_west",
+      "x": 27.9,
+      "z": 16,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w1_east_0",
+      "x": 33.9,
+      "z": 14.2625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w1_east_1",
+      "x": 33.9,
+      "z": 17.7375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e1_north",
+      "x": 41.1,
+      "z": 13.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e1_south",
+      "x": 41.1,
+      "z": 19.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e1_west_0",
+      "x": 38.1,
+      "z": 14.2625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e1_west_1",
+      "x": 38.1,
+      "z": 17.7375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e1_east",
+      "x": 44.1,
+      "z": 16,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w2_north",
+      "x": 30.9,
+      "z": 19.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w2_south",
+      "x": 30.9,
+      "z": 25.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w2_west",
+      "x": 27.9,
+      "z": 22.5,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w2_east_0",
+      "x": 33.9,
+      "z": 20.7625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_w2_east_1",
+      "x": 33.9,
+      "z": 24.2375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e2_north",
+      "x": 41.1,
+      "z": 19.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e2_south",
+      "x": 41.1,
+      "z": 25.5,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e2_west_0",
+      "x": 38.1,
+      "z": 20.7625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e2_west_1",
+      "x": 38.1,
+      "z": 24.2375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "hq_e2_east",
+      "x": 44.1,
+      "z": 22.5,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "plaster"
+    },
+    {
+      "id": "corridor_north",
+      "x": 36,
+      "z": 6.5,
+      "w": 4.2,
+      "d": 0.18,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "vestibule_left",
+      "x": 34.71,
+      "z": 25.5,
+      "w": 1.625,
+      "d": 0.18,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "vestibule_right",
+      "x": 37.29,
+      "z": 25.5,
+      "w": 1.625,
+      "d": 0.18,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "utility_vehicle_collision",
+      "x": 55,
+      "z": 37,
+      "w": 3.625,
+      "d": 1.71,
+      "height": 1.3,
+      "material": "metal",
+      "render": false
+    }
+  ],
+  "doors": [
+    {
+      "id": "hq_w0_door",
+      "x": 33.9,
+      "z": 9.5,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_e0_door",
+      "x": 38.1,
+      "z": 9.5,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_w1_door",
+      "x": 33.9,
+      "z": 16,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_e1_door",
+      "x": 38.1,
+      "z": 16,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_w2_door",
+      "x": 33.9,
+      "z": 22.5,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_e2_door",
+      "x": 38.1,
+      "z": 22.5,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "hq_front_door",
+      "x": 36,
+      "z": 25.5,
+      "w": 0.95,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "hq_desk0",
+      "type": "desk",
+      "x": 29,
+      "z": 7.8,
+      "w": 1.3,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.8
+    },
+    {
+      "id": "hq_desk1",
+      "type": "desk",
+      "x": 29,
+      "z": 14.3,
+      "w": 1.3,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.8
+    },
+    {
+      "id": "hq_desk2",
+      "type": "desk",
+      "x": 29,
+      "z": 20.8,
+      "w": 1.3,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.8
+    },
+    {
+      "id": "tree_trunk",
+      "type": "pillar",
+      "x": 16,
+      "z": 34,
+      "w": 0.35,
+      "d": 0.35,
+      "solid": true,
+      "rotation": 0,
+      "material": "wood",
+      "height": 4
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 30,
+      "z": 60,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 30.85,
+      "z": 60,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 30,
+      "z": 60.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 30.85,
+      "z": 60.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 41.1,
+      "z": 9.5,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "medium"
+    },
+    {
+      "id": "e2",
+      "x": 53,
+      "z": 45,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "strong"
+    },
+    {
+      "id": "e3",
+      "x": 30.9,
+      "z": 22.5,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "strong"
+    }
+  ],
+  "civilians": [],
+  "objectives": [
+    "본부의 지상층을 확인하고 문서를 회수하세요.",
+    "지휘 인원의 부재와 정보 오류를 확인한 뒤 와디로 복귀하세요."
+  ],
+  "scenery": [
+    {
+      "id": "period_utility_vehicle",
+      "asset": "utility_vehicle",
+      "x": 55,
+      "z": 37,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "rough_garden_tree",
+      "asset": "pine_tree",
+      "x": 16,
+      "z": 34,
+      "rotation": 0,
+      "scale": 0.55,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "드렐바스크 협곡 · 케브란 연맹",
+    "location_en": "Drelvask Ravine · Kevran League",
+    "accuracy_note": "오르브렌 본부에서 문서를 회수하고 정보 오류를 확인한 뒤 복귀하세요.",
+    "accuracy_note_en": "Recover documents at Orvren Headquarters, verify the intelligence error and return."
+  },
+  "environment": {
+    "time_of_day": "night",
+    "lighting": 0.66,
+    "biome": "dry_ravine",
+    "ground_color": "#777063",
+    "water": false,
+    "ground_surface": "gravel"
+  },
+  "description": "오르브렌 본부에서 문서를 회수하고 정보 오류를 확인한 뒤 복귀하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "interactive_targets": [
+    {
+      "id": "headquarters_documents",
+      "x": 41.1,
+      "z": 16,
+      "w": 2,
+      "d": 2,
+      "label": "본부 문서 확인 · 정보 오류",
+      "action": "recover",
+      "duration": 5
+    },
+    {
+      "id": "return_wadi",
+      "x": 30,
+      "z": 61,
+      "w": 2,
+      "d": 2,
+      "label": "와디 철수 지점 확인",
+      "action": "inspect",
+      "duration": 3
+    }
+  ],
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "targets_complete",
+      "targets": [
+        "headquarters_documents",
+        "return_wadi"
+      ]
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Recover documents at Orvren Headquarters, verify the intelligence error and return."
+}

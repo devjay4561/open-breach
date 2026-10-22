@@ -1,0 +1,1208 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H01",
+  "revision": 2,
+  "title": "솔트 메리디언",
+  "title_en": "SALT MERIDIAN",
+  "seed": 20261010,
+  "bounds": [
+    157,
+    37
+  ],
+  "focus": [
+    78.5,
+    18.5
+  ],
+  "rooms": [
+    {
+      "id": "main_deck",
+      "x": 78,
+      "z": 18,
+      "w": 145.5,
+      "d": 23.7,
+      "label": "145.5m 화학탱커 · 녹색 주갑판",
+      "indoor": false,
+      "color": "#326854"
+    },
+    {
+      "id": "aft_accommodation_hall",
+      "x": 23,
+      "z": 18,
+      "w": 25,
+      "d": 1.6,
+      "label": "연결 복도",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_north_0",
+      "x": 13.625,
+      "z": 12.475,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "선원 식당",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_north_1",
+      "x": 19.875,
+      "z": 12.475,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "휴게실",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_north_2",
+      "x": 26.125,
+      "z": 12.475,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "비품실",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_north_3",
+      "x": 32.375,
+      "z": 12.475,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "작업 사무실",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_south_0",
+      "x": 13.625,
+      "z": 23.525,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "승무원 거실",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_south_1",
+      "x": 19.875,
+      "z": 23.525,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "승무원 거실",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_south_2",
+      "x": 26.125,
+      "z": 23.525,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "의무 구역",
+      "indoor": true
+    },
+    {
+      "id": "aft_accommodation_south_3",
+      "x": 32.375,
+      "z": 23.525,
+      "w": 6.25,
+      "d": 9.45,
+      "label": "생활실",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "aft_accommodation_n_last",
+      "x": 23.0,
+      "z": 7.75,
+      "w": 25.0,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_s_last",
+      "x": 23.0,
+      "z": 28.25,
+      "w": 25.0,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_w_s0",
+      "x": 10.5,
+      "z": 12.6,
+      "w": 0.2,
+      "d": 9.7,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_w_last",
+      "x": 10.5,
+      "z": 23.4,
+      "w": 0.2,
+      "d": 9.7,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_e_s0",
+      "x": 35.5,
+      "z": 12.6,
+      "w": 0.2,
+      "d": 9.7,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_e_last",
+      "x": 35.5,
+      "z": 23.4,
+      "w": 0.2,
+      "d": 9.7,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_s0",
+      "x": 11.8,
+      "z": 17.2,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_s1",
+      "x": 16.75,
+      "z": 17.2,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_s2",
+      "x": 23.0,
+      "z": 17.2,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_s3",
+      "x": 29.25,
+      "z": 17.2,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_last",
+      "x": 34.2,
+      "z": 17.2,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_partition1",
+      "x": 16.75,
+      "z": 12.475,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_partition2",
+      "x": 23.0,
+      "z": 12.475,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_north_partition3",
+      "x": 29.25,
+      "z": 12.475,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_s0",
+      "x": 11.8,
+      "z": 18.8,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_s1",
+      "x": 16.75,
+      "z": 18.8,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_s2",
+      "x": 23.0,
+      "z": 18.8,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_s3",
+      "x": 29.25,
+      "z": 18.8,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_last",
+      "x": 34.2,
+      "z": 18.8,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_partition1",
+      "x": 16.75,
+      "z": 23.525,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_partition2",
+      "x": 23.0,
+      "z": 23.525,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_accommodation_south_partition3",
+      "x": 29.25,
+      "z": 23.525,
+      "w": 0.2,
+      "d": 9.45,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_north_inner_s0",
+      "x": 11.8,
+      "z": 12.475,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_north_inner_s1",
+      "x": 16.75,
+      "z": 12.475,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_north_inner_s2",
+      "x": 23.0,
+      "z": 12.475,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_north_inner_s3",
+      "x": 29.25,
+      "z": 12.475,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_north_inner_last",
+      "x": 34.2,
+      "z": 12.475,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_south_inner_s0",
+      "x": 11.8,
+      "z": 23.525,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_south_inner_s1",
+      "x": 16.75,
+      "z": 23.525,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_south_inner_s2",
+      "x": 23.0,
+      "z": 23.525,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_south_inner_s3",
+      "x": 29.25,
+      "z": 23.525,
+      "w": 5.2,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "aft_south_inner_last",
+      "x": 34.2,
+      "z": 23.525,
+      "w": 2.6,
+      "d": 0.2,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "pipeline_proxy_0",
+      "x": 46,
+      "z": 18,
+      "w": 10,
+      "d": 3.2,
+      "height": 0.95,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "pipeline_proxy_1",
+      "x": 65,
+      "z": 18,
+      "w": 15,
+      "d": 3.2,
+      "height": 0.95,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "pipeline_proxy_2",
+      "x": 88,
+      "z": 18,
+      "w": 17,
+      "d": 3.2,
+      "height": 0.95,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "pipeline_proxy_3",
+      "x": 113,
+      "z": 18,
+      "w": 18,
+      "d": 3.2,
+      "height": 0.95,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "pipeline_proxy_4",
+      "x": 136,
+      "z": 18,
+      "w": 8,
+      "d": 3.2,
+      "height": 0.95,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "port_rail",
+      "x": 78,
+      "z": 6.65,
+      "w": 145.5,
+      "d": 0.16,
+      "height": 1.05,
+      "material": "metal",
+      "render": false
+    },
+    {
+      "id": "starboard_rail",
+      "x": 78,
+      "z": 29.35,
+      "w": 145.5,
+      "d": 0.16,
+      "height": 1.05,
+      "material": "metal",
+      "render": false
+    }
+  ],
+  "doors": [
+    {
+      "id": "aft_accommodation_w_d0",
+      "x": 10.5,
+      "z": 18,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_e_d0",
+      "x": 35.5,
+      "z": 18,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_north_d0",
+      "x": 13.625,
+      "z": 17.2,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_north_d1",
+      "x": 19.875,
+      "z": 17.2,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_north_d2",
+      "x": 26.125,
+      "z": 17.2,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_north_d3",
+      "x": 32.375,
+      "z": 17.2,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_south_d0",
+      "x": 13.625,
+      "z": 18.8,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_south_d1",
+      "x": 19.875,
+      "z": 18.8,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_south_d2",
+      "x": 26.125,
+      "z": 18.8,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_accommodation_south_d3",
+      "x": 32.375,
+      "z": 18.8,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_north_inner_d0",
+      "x": 13.625,
+      "z": 12.475,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_north_inner_d1",
+      "x": 19.875,
+      "z": 12.475,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_north_inner_d2",
+      "x": 26.125,
+      "z": 12.475,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_north_inner_d3",
+      "x": 32.375,
+      "z": 12.475,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_south_inner_d0",
+      "x": 13.625,
+      "z": 23.525,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_south_inner_d1",
+      "x": 19.875,
+      "z": 23.525,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_south_inner_d2",
+      "x": 26.125,
+      "z": 23.525,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "aft_south_inner_d3",
+      "x": 32.375,
+      "z": 23.525,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "pump_cabinet_0",
+      "type": "cabinet",
+      "x": 48,
+      "z": 24,
+      "w": 1.3,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.45,
+      "cover": "full"
+    },
+    {
+      "id": "pump_cabinet_1",
+      "type": "cabinet",
+      "x": 80,
+      "z": 24,
+      "w": 1.3,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.45,
+      "cover": "full"
+    },
+    {
+      "id": "pump_cabinet_2",
+      "type": "cabinet",
+      "x": 106,
+      "z": 24,
+      "w": 1.3,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.45,
+      "cover": "full"
+    },
+    {
+      "id": "pump_cabinet_3",
+      "type": "cabinet",
+      "x": 130,
+      "z": 24,
+      "w": 1.3,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.45,
+      "cover": "full"
+    },
+    {
+      "id": "crew_furniture_0",
+      "type": "table",
+      "x": 14,
+      "z": 9.5,
+      "w": 2.2,
+      "d": 0.85,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "crew_furniture_1",
+      "type": "sofa",
+      "x": 24,
+      "z": 10.5,
+      "w": 2.2,
+      "d": 0.9,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "crew_furniture_2",
+      "type": "cabinet",
+      "x": 32,
+      "z": 10.4,
+      "w": 1.6,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "crew_furniture_3",
+      "type": "bed",
+      "x": 14,
+      "z": 25.8,
+      "w": 1,
+      "d": 2.0,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "crew_furniture_4",
+      "type": "desk",
+      "x": 25,
+      "z": 21.3,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "crew_furniture_5",
+      "type": "bed",
+      "x": 31,
+      "z": 25.8,
+      "w": 1,
+      "d": 2.0,
+      "solid": true,
+      "rotation": 0
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 132,
+      "z": 23.5,
+      "facing": 0,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 132.85,
+      "z": 23.5,
+      "facing": 0,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 132,
+      "z": 24.35,
+      "facing": 0,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 132.85,
+      "z": 24.35,
+      "facing": 0,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 126,
+      "z": 12,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e2",
+      "x": 103,
+      "z": 22,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e3",
+      "x": 71,
+      "z": 12,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e4",
+      "x": 49,
+      "z": 22,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e5",
+      "x": 28,
+      "z": 18,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e6",
+      "x": 31,
+      "z": 21,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 13.5,
+      "z": 14.8,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 21.5,
+      "z": 21,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 31.5,
+      "z": 15,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 14,
+      "z": 20.3,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c5",
+      "x": 22.5,
+      "z": 13.5,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "실제 길이의 주갑판과 배관 통로를 확보하세요.",
+    "후방 거주구의 승무원을 확인하고 보호하세요."
+  ],
+  "scenery": [
+    {
+      "id": "tanker_hull",
+      "asset": "tanker_ship_hull",
+      "x": 78,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "white_aft_superstructure",
+      "asset": "tanker_superstructure",
+      "x": 24,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "process_pipe_bundle",
+      "asset": "tanker_deck_pipes",
+      "x": 83,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "네르바스크 해협 · 울드렌 자유구",
+    "location_en": "Nervask Strait · Uldren Free Zone",
+    "accuracy_note": "크렐바스크 스레드호의 승무원을 구출하고 관로 갑판을 확보하세요.",
+    "accuracy_note_en": "Rescue the crew of M/V Krelvask Thread and secure the pipe deck."
+  },
+  "environment": {
+    "time_of_day": "dim",
+    "lighting": 0.95,
+    "biome": "ocean",
+    "ground_color": "#123c51",
+    "water": true,
+    "ground_surface": "ship_deck",
+    "water_level": -3.45
+  },
+  "description": "크렐바스크 스레드호의 승무원을 구출하고 관로 갑판을 확보하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "walkable_areas": [
+    {
+      "id": "working_deck",
+      "x": 70.725,
+      "z": 18,
+      "w": 101.87,
+      "d": 22.5
+    },
+    {
+      "id": "aft_flare_0",
+      "x": 6.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 21.504
+    },
+    {
+      "id": "aft_flare_1",
+      "x": 8.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 21.764619
+    },
+    {
+      "id": "aft_flare_2",
+      "x": 10.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 22.025237
+    },
+    {
+      "id": "aft_flare_3",
+      "x": 12.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 22.285856
+    },
+    {
+      "id": "aft_flare_4",
+      "x": 14.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 22.546474
+    },
+    {
+      "id": "aft_flare_5",
+      "x": 16.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 22.807093
+    },
+    {
+      "id": "aft_flare_6",
+      "x": 18.25,
+      "z": 18,
+      "w": 2.02,
+      "d": 23.067711
+    },
+    {
+      "id": "aft_flare_7",
+      "x": 19.525,
+      "z": 18,
+      "w": 0.57,
+      "d": 23.32833
+    },
+    {
+      "id": "forward_taper_0",
+      "x": 122.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 22.497859
+    },
+    {
+      "id": "forward_taper_1",
+      "x": 124.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 21.595718
+    },
+    {
+      "id": "forward_taper_2",
+      "x": 126.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 20.693577
+    },
+    {
+      "id": "forward_taper_3",
+      "x": 128.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 19.791435
+    },
+    {
+      "id": "forward_taper_4",
+      "x": 130.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 18.889294
+    },
+    {
+      "id": "forward_taper_5",
+      "x": 132.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 17.987153
+    },
+    {
+      "id": "forward_taper_6",
+      "x": 134.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 17.085012
+    },
+    {
+      "id": "forward_taper_7",
+      "x": 136.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 16.182871
+    },
+    {
+      "id": "forward_taper_8",
+      "x": 138.65,
+      "z": 18,
+      "w": 2.02,
+      "d": 15.28073
+    },
+    {
+      "id": "forward_taper_9",
+      "x": 140.1075,
+      "z": 18,
+      "w": 0.935,
+      "d": 14.868
+    },
+    {
+      "id": "bow_taper_0",
+      "x": 141.565,
+      "z": 18,
+      "w": 2.02,
+      "d": 11.889502
+    },
+    {
+      "id": "bow_taper_1",
+      "x": 143.565,
+      "z": 18,
+      "w": 2.02,
+      "d": 8.911004
+    },
+    {
+      "id": "bow_taper_2",
+      "x": 145.565,
+      "z": 18,
+      "w": 2.02,
+      "d": 5.932507
+    },
+    {
+      "id": "bow_taper_3",
+      "x": 147.565,
+      "z": 18,
+      "w": 2.02,
+      "d": 2.954009
+    }
+  ],
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Rescue the crew of M/V Krelvask Thread and secure the pipe deck."
+}

@@ -1,0 +1,44 @@
+OPEN BREACH — operator equipment model sources and modifications
+Verified/downloaded: 2026-10-11
+
+Third-party geometry author: Quaternius
+License: Creative Commons Zero 1.0 Universal (CC0).
+Full license: CC0-1.0.txt
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Unbranded weapon models from the individual public-domain model pages:
+Assault Rifle: https://poly.pizza/m/Bgvuu4CUMV
+Submachine Gun: https://poly.pizza/m/nsP3JukU73
+Shotgun: https://poly.pizza/m/ZmPTnh7njL
+Pistol: https://poly.pizza/m/J3i9KDQ3kt
+Each source page identifies Quaternius as creator and CC0 1.0 as license.
+Modifications: meter-scale normalization, grip pivots, material roughness,
+barrel socket measurements, glTF pruning and deduplication. Display names
+(Tern C1, Mica S2, Flint B1 and Pico P1) are original fictional identifiers.
+
+Helmet, goggles, cloth mask and actor geometry derive from Quaternius SWAT:
+https://poly.pizza/m/Btfn3G5Xv4
+https://quaternius.com/packs/ultimatemodularcharacters.html
+Modifications: detachable head unit, reduced geometry, two helmet variants,
+original heavier side/rear guards, original unarmored skull, and equipment
+mounts. No external armor or helmet model under CC BY was included.
+
+Original geometry author: OPEN BREACH
+License: CC0 1.0 Universal, as recorded in Original-Assets.txt.
+Includes four fitted plate carriers (Veil V1, Frame V2, Swift V3, Bastion V4),
+Dot/Scope/Suppressor/Extended Magazine attachments, Probe C1 observation
+camera, Flare F1 flashbang, Haze S1 smoke canister, Knock B1 entry tool,
+and original identification patch geometry. No real manufacturer markings,
+borrowed game icons, textures, sound recordings or trademark logos included.
+
+ANIMATION SOURCES (updated 2026-10-22):
+combat-swat-gear.glb carries the same CC0 motion as combat-swat.glb: Quaternius Toon Shooter clips (copied on the same skeleton, with upper/lower-body layering and IK shoulder posing), the KayKit Character Animations 1.1 Throw clip (retargeted; RifleThrow only) and project-authored procedural keys (RifleReload, RifleTurnLeft/Right foot shuffle). All CC0; see the matching files in licenses/. The Quaternius Universal Animation Library is not used in the shipped GLBs. Adobe Mixamo motion is no longer used.
+Standalone original animation archives are not included in distribution.
+
+Reproduction:
+python3 scripts/fetch_operator_asset_sources.py
+blender -b --factory-startup --python scripts/import_operator_assets.py
+python3 scripts/optimize_operator_assets.py
+Source cache and page receipts: .tools/asset-sources/operator-customization
+Final source URLs, source hashes, shipped file hashes, geometry budgets and
+processing details: licenses/provenance/OPERATOR_ASSET_PROVENANCE.json and asset-manifest.json.

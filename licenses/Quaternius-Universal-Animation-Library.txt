@@ -1,0 +1,14 @@
+Quaternius — Universal Animation Library (1 and 2, Standard)
+Author: Quaternius
+License: CC0 1.0 Universal (full text: licenses/CC0-1.0.txt)
+Source: https://quaternius.com/packs/universalanimationlibrary.html
+
+Pack license file (verbatim excerpt):
+  License:
+  CC0 1.0 Universal (CC0 1.0)
+  Public Domain Dedication
+  https://creativecommons.org/publicdomain/zero/1.0/
+  Models by @Quaternius
+
+Use in OPEN BREACH: NOT used in the shipped combat-swat.glb / combat-swat-gear.glb.
+It is the source only of game/assets/characters/reload.tres (made by game/tests/retarget_reload.gd from UAL Pistol_Reload), which is excluded from the web export.

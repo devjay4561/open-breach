@@ -1,0 +1,444 @@
+{
+  "schema_version": 6,
+  "id": "SH02",
+  "revision": 1,
+  "title": "킬하우스 02 · 짧은 연결 방",
+  "title_en": "Shoot house 02 · Short connected rooms",
+  "subtitle": "CQB DOCTRINE",
+  "description": "짧은 방에서는 두 명이 진입하고 나머지는 연결 문을 경계하세요.",
+  "description_en": "Use two entrants in short rooms while the rest cover connecting doors.",
+  "seed": 9002,
+  "default_seed": 9002,
+  "bounds": [
+    17.2,
+    18.5
+  ],
+  "focus": [
+    8.6,
+    7.0
+  ],
+  "roe": "precision",
+  "noise_discipline": "verbal",
+  "variant": "normal",
+  "modifiers": [],
+  "rooms": [
+    {
+      "id": "r1",
+      "label": "01",
+      "x": 5.8,
+      "z": 4.2,
+      "w": 5.6,
+      "d": 2.4,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r2",
+      "label": "02",
+      "x": 11.399999999999999,
+      "z": 4.2,
+      "w": 5.6,
+      "d": 2.4,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r3",
+      "label": "03",
+      "x": 5.8,
+      "z": 8.2,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r4",
+      "label": "04",
+      "x": 11.399999999999999,
+      "z": 8.2,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "prep",
+      "label": "PREP",
+      "x": 8.6,
+      "z": 14.25,
+      "w": 15.2,
+      "d": 6.5,
+      "indoor": false,
+      "color": "#555d54"
+    }
+  ],
+  "walls": [
+    {
+      "x": 8.6,
+      "z": 3.0,
+      "w": 11.2,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_north_1"
+    },
+    {
+      "x": 3.9499999999999997,
+      "z": 11.0,
+      "w": 1.8999999999999995,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_1"
+    },
+    {
+      "x": 8.6,
+      "z": 11.0,
+      "w": 3.799999999999998,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_2"
+    },
+    {
+      "x": 13.25,
+      "z": 11.0,
+      "w": 1.9000000000000004,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_3"
+    },
+    {
+      "x": 3.0,
+      "z": 7.0,
+      "w": 0.24,
+      "d": 8.0,
+      "material": "wood",
+      "id": "outer_west_1"
+    },
+    {
+      "x": 14.2,
+      "z": 7.0,
+      "w": 0.24,
+      "d": 8.0,
+      "material": "wood",
+      "id": "outer_east_1"
+    },
+    {
+      "x": 3.9499999999999997,
+      "z": 5.4,
+      "w": 1.8999999999999995,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_1"
+    },
+    {
+      "x": 8.6,
+      "z": 5.4,
+      "w": 3.799999999999998,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_2"
+    },
+    {
+      "x": 13.25,
+      "z": 5.4,
+      "w": 1.9000000000000004,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_3"
+    },
+    {
+      "x": 8.6,
+      "z": 5.1499999999999995,
+      "w": 0.24,
+      "d": 4.299999999999999,
+      "material": "wood",
+      "id": "partition_c0_1"
+    },
+    {
+      "x": 8.6,
+      "z": 10.05,
+      "w": 0.24,
+      "d": 1.9000000000000004,
+      "material": "wood",
+      "id": "partition_c0_2"
+    }
+  ],
+  "doors": [
+    {
+      "id": "ext_left",
+      "x": 5.8,
+      "z": 11.0,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "좌측 외부 진입",
+      "material": "wood"
+    },
+    {
+      "id": "ext_right",
+      "x": 11.399999999999999,
+      "z": 11.0,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "우측 외부 진입",
+      "material": "wood"
+    },
+    {
+      "id": "inner_h1_0",
+      "x": 8.6,
+      "z": 8.2,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood"
+    },
+    {
+      "id": "inner_v0",
+      "x": 5.8,
+      "z": 5.4,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "상층 연결",
+      "material": "wood"
+    },
+    {
+      "id": "inner_v1",
+      "x": 11.399999999999999,
+      "z": 5.4,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "label": "내부 우회",
+      "material": "wood"
+    }
+  ],
+  "props": [],
+  "units": [
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "role": "선봉",
+      "x": 7.1,
+      "z": 12.5,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "role": "지원",
+      "x": 4.5,
+      "z": 12.5,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "charlie",
+      "name": "CHARLIE",
+      "role": "돌입",
+      "x": 7.1,
+      "z": 13.2,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "delta",
+      "name": "DELTA",
+      "role": "엄호",
+      "x": 4.5,
+      "z": 13.2,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 3.9000000000000004,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 3.9000000000000004,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 3.9000000000000004,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e2",
+      "name": "무장 인원",
+      "x": 10.95,
+      "z": 3.9000000000000004,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 10.95,
+          "z": 3.9000000000000004,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 11.849999999999998,
+          "z": 3.9000000000000004,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e3",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 7.8999999999999995,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 7.8999999999999995,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 7.8999999999999995,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    },
+    {
+      "id": "e4",
+      "name": "무장 인원",
+      "x": 10.95,
+      "z": 7.8999999999999995,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 10.95,
+          "z": 7.8999999999999995,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 11.849999999999998,
+          "z": 7.8999999999999995,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "target": true,
+      "passive": true,
+      "training": true,
+      "ammo": 0
+    }
+  ],
+  "civilians": [],
+  "objectives": [
+    "짧은 방에서는 두 명이 진입하고 나머지는 연결 문을 경계하세요.",
+    "모든 방을 정리하고 외부 종료 구역으로 이동하세요."
+  ],
+  "win": [
+    {
+      "type": "rooms_cleared",
+      "room_ids": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    },
+    {
+      "type": "reach_zone",
+      "zone": [
+        11.399999999999999,
+        14.7,
+        2.8,
+        1.8
+      ]
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "stars": [
+    {
+      "id": "course_time",
+      "label": "90초 이내",
+      "stat": "duration",
+      "op": "lte",
+      "value": 90
+    },
+    {
+      "id": "no_hits",
+      "label": "피격 0",
+      "stat": "hits_taken",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "no_civilian_damage",
+      "label": "민간인 피해 0",
+      "stat": "civilian_damage",
+      "op": "eq",
+      "value": 0
+    }
+  ],
+  "briefing": {
+    "difficulty": "훈련",
+    "estimated_minutes": "0.5–1.5",
+    "threat": "반격하지 않는 훈련 표적",
+    "tip": "짧은 방에서는 두 명이 진입하고 나머지는 연결 문을 경계하세요."
+  }
+}

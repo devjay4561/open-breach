@@ -1,0 +1,26 @@
+OPEN BREACH original assets
+Copyright holder: ijaehyeon (2026)
+
+To the extent possible under law, the copyright holder above waives all copyright and related
+or neighboring rights held in the following project-authored assets under
+CC0 1.0 Universal:
+- Original map and mission JSON data in game/data/.
+- Original procedural/Godot/Blender-authored geometry, models and pose keys,
+  including original modifications to CC0 sources and assets/source/ originals.
+- Offline-generated interface and ambient PCM sounds in web/assets/audio/.
+- Project-authored README screenshots and documentation text and images.
+- The 20 generated equipment photos, to the extent any copyright exists;
+  licenses/Equipment-Images.txt retains their generation provenance.
+
+Third-party models, animation, recordings, fonts and engine components retain
+their own licenses and notices. This dedication applies only to rights held
+by the copyright holder above; it does not relicense third-party material or source quotations.
+See ASSETS-LICENSE.md and asset-manifest.json for path mappings and provenance.
+The project code is licensed separately under MIT in the root LICENSE.
+
+CC0 does not grant trademark, patent, privacy or publicity rights. Equipment
+identifiers and patches are fictional. All operations, places, organizations and characters are fictional.
+Any resemblance to real events is coincidental.
+
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+The full legal text is preserved in CC0-1.0.txt.

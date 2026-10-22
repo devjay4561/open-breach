@@ -1,0 +1,1544 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H29",
+  "revision": 2,
+  "title": "와이드 퍼로우",
+  "title_en": "WIDE FURROW",
+  "seed": 20261038,
+  "bounds": [
+    130,
+    105
+  ],
+  "focus": [
+    65.0,
+    52.5
+  ],
+  "rooms": [
+    {
+      "id": "rice_fields",
+      "x": 6.0,
+      "z": 52.5,
+      "w": 12.0,
+      "d": 105,
+      "label": "수용소 밖 논과 접근 둑",
+      "indoor": false
+    },
+    {
+      "id": "north_road",
+      "x": 74.5,
+      "z": 0.25,
+      "w": 111.0,
+      "d": 0.5,
+      "label": "수용소 북쪽 도로",
+      "indoor": false
+    },
+    {
+      "id": "camp_yard",
+      "x": 73,
+      "z": 50,
+      "w": 96,
+      "d": 84,
+      "label": "포로수용소 마당",
+      "indoor": false
+    },
+    {
+      "id": "gate_passage",
+      "x": 25,
+      "z": 76,
+      "w": 8,
+      "d": 6,
+      "label": "목재 정문",
+      "indoor": false
+    },
+    {
+      "id": "barrack0_0",
+      "x": 44,
+      "z": 34,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack0_1",
+      "x": 44,
+      "z": 42,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack0_2",
+      "x": 44,
+      "z": 50,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack1_0",
+      "x": 61,
+      "z": 34,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack1_1",
+      "x": 61,
+      "z": 42,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack1_2",
+      "x": 61,
+      "z": 50,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack2_0",
+      "x": 83,
+      "z": 34,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack2_1",
+      "x": 83,
+      "z": 42,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack2_2",
+      "x": 83,
+      "z": 50,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "포로 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack3_0",
+      "x": 100,
+      "z": 34,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "경비 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack3_1",
+      "x": 100,
+      "z": 42,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "경비 막사",
+      "indoor": true
+    },
+    {
+      "id": "barrack3_2",
+      "x": 100,
+      "z": 50,
+      "w": 6.82,
+      "d": 6.32,
+      "label": "경비 막사",
+      "indoor": true
+    },
+    {
+      "id": "guard_house",
+      "x": 31,
+      "z": 64,
+      "w": 5.82,
+      "d": 5.82,
+      "label": "정문 경비실",
+      "indoor": true
+    },
+    {
+      "id": "camp_records_room",
+      "x": 110,
+      "z": 20,
+      "w": 6.82,
+      "d": 5.82,
+      "label": "수용소 기록실",
+      "indoor": true
+    },
+    {
+      "id": "farm_safehouse",
+      "x": 11,
+      "z": 83,
+      "w": 7.82,
+      "d": 6.82,
+      "label": "협력 협력 주민 집결지",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "camp_north",
+      "x": 73,
+      "z": 7,
+      "w": 100,
+      "d": 0.22,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "camp_east",
+      "x": 123,
+      "z": 51,
+      "w": 0.22,
+      "d": 88,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "camp_south",
+      "x": 73,
+      "z": 95,
+      "w": 100,
+      "d": 0.22,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "camp_west_top",
+      "x": 23,
+      "z": 40,
+      "w": 0.22,
+      "d": 66,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "camp_west_bottom",
+      "x": 23,
+      "z": 87,
+      "w": 0.22,
+      "d": 16,
+      "height": 1.5,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_0_north",
+      "x": 44,
+      "z": 30.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_0_south",
+      "x": 44,
+      "z": 37.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_0_west_0",
+      "x": 40.5,
+      "z": 32.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_0_west_1",
+      "x": 40.5,
+      "z": 35.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_0_east",
+      "x": 47.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_1_north",
+      "x": 44,
+      "z": 38.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_1_south",
+      "x": 44,
+      "z": 45.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_1_west_0",
+      "x": 40.5,
+      "z": 40.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_1_west_1",
+      "x": 40.5,
+      "z": 43.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_1_east",
+      "x": 47.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_2_north",
+      "x": 44,
+      "z": 46.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_2_south",
+      "x": 44,
+      "z": 53.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_2_west_0",
+      "x": 40.5,
+      "z": 48.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_2_west_1",
+      "x": 40.5,
+      "z": 51.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack0_2_east",
+      "x": 47.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_0_north",
+      "x": 61,
+      "z": 30.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_0_south",
+      "x": 61,
+      "z": 37.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_0_west_0",
+      "x": 57.5,
+      "z": 32.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_0_west_1",
+      "x": 57.5,
+      "z": 35.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_0_east",
+      "x": 64.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_1_north",
+      "x": 61,
+      "z": 38.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_1_south",
+      "x": 61,
+      "z": 45.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_1_west_0",
+      "x": 57.5,
+      "z": 40.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_1_west_1",
+      "x": 57.5,
+      "z": 43.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_1_east",
+      "x": 64.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_2_north",
+      "x": 61,
+      "z": 46.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_2_south",
+      "x": 61,
+      "z": 53.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_2_west_0",
+      "x": 57.5,
+      "z": 48.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_2_west_1",
+      "x": 57.5,
+      "z": 51.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack1_2_east",
+      "x": 64.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_0_north",
+      "x": 83,
+      "z": 30.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_0_south",
+      "x": 83,
+      "z": 37.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_0_west_0",
+      "x": 79.5,
+      "z": 32.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_0_west_1",
+      "x": 79.5,
+      "z": 35.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_0_east",
+      "x": 86.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_1_north",
+      "x": 83,
+      "z": 38.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_1_south",
+      "x": 83,
+      "z": 45.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_1_west_0",
+      "x": 79.5,
+      "z": 40.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_1_west_1",
+      "x": 79.5,
+      "z": 43.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_1_east",
+      "x": 86.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_2_north",
+      "x": 83,
+      "z": 46.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_2_south",
+      "x": 83,
+      "z": 53.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_2_west_0",
+      "x": 79.5,
+      "z": 48.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_2_west_1",
+      "x": 79.5,
+      "z": 51.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack2_2_east",
+      "x": 86.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_0_north",
+      "x": 100,
+      "z": 30.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_0_south",
+      "x": 100,
+      "z": 37.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_0_west_0",
+      "x": 96.5,
+      "z": 32.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_0_west_1",
+      "x": 96.5,
+      "z": 35.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_0_east",
+      "x": 103.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_1_north",
+      "x": 100,
+      "z": 38.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_1_south",
+      "x": 100,
+      "z": 45.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_1_west_0",
+      "x": 96.5,
+      "z": 40.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_1_west_1",
+      "x": 96.5,
+      "z": 43.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_1_east",
+      "x": 103.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_2_north",
+      "x": 100,
+      "z": 46.75,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_2_south",
+      "x": 100,
+      "z": 53.25,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_2_west_0",
+      "x": 96.5,
+      "z": 48.1375,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_2_west_1",
+      "x": 96.5,
+      "z": 51.8625,
+      "w": 0.18,
+      "d": 2.775,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "barrack3_2_east",
+      "x": 103.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 6.5,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "guard_house_north",
+      "x": 31,
+      "z": 61.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "guard_house_south",
+      "x": 31,
+      "z": 67.0,
+      "w": 6,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "guard_house_west_0",
+      "x": 28.0,
+      "z": 62.2625,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "guard_house_west_1",
+      "x": 28.0,
+      "z": 65.7375,
+      "w": 0.18,
+      "d": 2.525,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "guard_house_east",
+      "x": 34.0,
+      "z": 64,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "camp_records_room_north",
+      "x": 110,
+      "z": 17.0,
+      "w": 7,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "camp_records_room_south_0",
+      "x": 108.0125,
+      "z": 23.0,
+      "w": 3.025,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "camp_records_room_south_1",
+      "x": 111.9875,
+      "z": 23.0,
+      "w": 3.025,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "camp_records_room_west",
+      "x": 106.5,
+      "z": 20,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "camp_records_room_east",
+      "x": 113.5,
+      "z": 20,
+      "w": 0.18,
+      "d": 6,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "farm_safehouse_north",
+      "x": 11,
+      "z": 79.5,
+      "w": 8,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "farm_safehouse_south",
+      "x": 11,
+      "z": 86.5,
+      "w": 8,
+      "d": 0.18,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "farm_safehouse_west",
+      "x": 7.0,
+      "z": 83,
+      "w": 0.18,
+      "d": 7,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "farm_safehouse_east_0",
+      "x": 15.0,
+      "z": 81.0125,
+      "w": 0.18,
+      "d": 3.025,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "farm_safehouse_east_1",
+      "x": 15.0,
+      "z": 84.9875,
+      "w": 0.18,
+      "d": 3.025,
+      "height": 3.0,
+      "material": "wood"
+    },
+    {
+      "id": "watchtower_support0",
+      "x": 112.4,
+      "z": 8.4,
+      "w": 0.18,
+      "d": 0.18,
+      "height": 6,
+      "material": "wood",
+      "render": false
+    },
+    {
+      "id": "watchtower_support1",
+      "x": 112.4,
+      "z": 11.6,
+      "w": 0.18,
+      "d": 0.18,
+      "height": 6,
+      "material": "wood",
+      "render": false
+    },
+    {
+      "id": "watchtower_support2",
+      "x": 115.6,
+      "z": 8.4,
+      "w": 0.18,
+      "d": 0.18,
+      "height": 6,
+      "material": "wood",
+      "render": false
+    },
+    {
+      "id": "watchtower_support3",
+      "x": 115.6,
+      "z": 11.6,
+      "w": 0.18,
+      "d": 0.18,
+      "height": 6,
+      "material": "wood",
+      "render": false
+    },
+    {
+      "id": "truck_solid",
+      "x": 114,
+      "z": 81,
+      "w": 6.45,
+      "d": 2.46,
+      "height": 2.2,
+      "material": "metal",
+      "render": false
+    }
+  ],
+  "doors": [
+    {
+      "id": "barrack0_0_door",
+      "x": 40.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack0_1_door",
+      "x": 40.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack0_2_door",
+      "x": 40.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack1_0_door",
+      "x": 57.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack1_1_door",
+      "x": 57.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack1_2_door",
+      "x": 57.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack2_0_door",
+      "x": 79.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack2_1_door",
+      "x": 79.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack2_2_door",
+      "x": 79.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack3_0_door",
+      "x": 96.5,
+      "z": 34,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack3_1_door",
+      "x": 96.5,
+      "z": 42,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "barrack3_2_door",
+      "x": 96.5,
+      "z": 50,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "guard_house_door",
+      "x": 28.0,
+      "z": 64,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "camp_records_room_door",
+      "x": 110,
+      "z": 23.0,
+      "w": 0.95,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "farm_safehouse_door",
+      "x": 15.0,
+      "z": 83,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "bunk0_0",
+      "type": "bed",
+      "x": 45.8,
+      "z": 32.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk0_1",
+      "type": "bed",
+      "x": 45.8,
+      "z": 40.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk0_2",
+      "type": "bed",
+      "x": 45.8,
+      "z": 48.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk1_0",
+      "type": "bed",
+      "x": 62.8,
+      "z": 32.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk1_1",
+      "type": "bed",
+      "x": 62.8,
+      "z": 40.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk1_2",
+      "type": "bed",
+      "x": 62.8,
+      "z": 48.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk2_0",
+      "type": "bed",
+      "x": 84.8,
+      "z": 32.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk2_1",
+      "type": "bed",
+      "x": 84.8,
+      "z": 40.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk2_2",
+      "type": "bed",
+      "x": 84.8,
+      "z": 48.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk3_0",
+      "type": "bed",
+      "x": 101.8,
+      "z": 32.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk3_1",
+      "type": "bed",
+      "x": 101.8,
+      "z": 40.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    },
+    {
+      "id": "bunk3_2",
+      "type": "bed",
+      "x": 101.8,
+      "z": 48.4,
+      "w": 0.9,
+      "d": 2,
+      "solid": true,
+      "rotation": 0,
+      "height": 0.55
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 5,
+      "z": 75,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 5.85,
+      "z": 75,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 5,
+      "z": 75.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 5.85,
+      "z": 75.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 31,
+      "z": 64,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "medium"
+    },
+    {
+      "id": "e2",
+      "x": 100,
+      "z": 42,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "strong"
+    },
+    {
+      "id": "e3",
+      "x": 110,
+      "z": 89,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "hold_position": true,
+      "strength": "strong"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 44,
+      "z": 34,
+      "name": "구출 포로 1",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 45,
+      "z": 35,
+      "name": "구출 포로 2",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 61,
+      "z": 42,
+      "name": "구출 포로 3",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 62,
+      "z": 43,
+      "name": "구출 포로 4",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c5",
+      "x": 83,
+      "z": 34,
+      "name": "구출 포로 5",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c6",
+      "x": 84,
+      "z": 35,
+      "name": "구출 포로 6",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c7",
+      "x": 83,
+      "z": 50,
+      "name": "구출 포로 7",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c8",
+      "x": 84,
+      "z": 51,
+      "name": "구출 포로 8",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "수용소 경비를 제압하고 포로를 확보하세요.",
+    "기록을 회수하고 협력 협력 인원이 있는 서쪽 집결지로 호송하세요."
+  ],
+  "scenery": [
+    {
+      "id": "north_watchtower",
+      "asset": "watchtower",
+      "x": 114,
+      "z": 10,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    },
+    {
+      "id": "camp_truck",
+      "asset": "cargo_truck",
+      "x": 114,
+      "z": 81,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "울드라스크 평야 · 울드렌 자유구",
+    "location_en": "Uldrask Plain · Uldren Free Zone",
+    "accuracy_note": "브렐케스 수용소의 포로를 확보하고 협력 인원의 집결지로 호송하세요.",
+    "accuracy_note_en": "Free the prisoners of Vrelketh Camp and escort them to the allied muster point."
+  },
+  "environment": {
+    "time_of_day": "night",
+    "lighting": 0.66,
+    "biome": "tropical_farmland",
+    "ground_color": "#797c57",
+    "water": false,
+    "ground_surface": "gravel"
+  },
+  "description": "브렐케스 수용소의 포로를 확보하고 협력 인원의 집결지로 호송하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "interactive_targets": [
+    {
+      "id": "camp_roster",
+      "x": 110,
+      "z": 20,
+      "w": 2,
+      "d": 2,
+      "label": "포로 기록 회수",
+      "action": "recover",
+      "duration": 5
+    },
+    {
+      "id": "guerrilla_meeting",
+      "x": 11,
+      "z": 83,
+      "w": 2,
+      "d": 2,
+      "label": "협력 협력 인원과 철수 확인",
+      "action": "inspect",
+      "duration": 4
+    }
+  ],
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    },
+    {
+      "type": "targets_complete",
+      "targets": [
+        "camp_roster",
+        "guerrilla_meeting"
+      ]
+    },
+    {
+      "type": "escort_to_zone",
+      "zone": [
+        11,
+        83,
+        22,
+        14
+      ]
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Free the prisoners of Vrelketh Camp and escort them to the allied muster point."
+}

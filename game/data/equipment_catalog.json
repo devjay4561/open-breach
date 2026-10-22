@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "defaults": {
+    "weapon": "standard",
+    "equipment": {
+      "stun": 1
+    },
+    "sidearm": "pico_p1",
+    "armor": "frame_v2",
+    "helmet": "crown_h1",
+    "attachments": [],
+    "appearance": {
+      "name": "",
+      "callsign": "",
+      "color": "#2e5146",
+      "patch": "breach"
+    },
+    "preset": "custom"
+  },
+  "weapons": [
+    {
+      "id": "standard",
+      "label": "테른 C1",
+      "label_en": "Tern C1",
+      "stars": 0,
+      "stats": {
+        "ammo": 24,
+        "damage": 44,
+        "interval": 0.45,
+        "accuracy": 0.97,
+        "reload": 1.8,
+        "range": 10,
+        "sound": 10,
+        "length": 0.86,
+        "aim_time": 0.35,
+        "switch_time": 0.45,
+        "penetration": 22
+      },
+      "note": "균형 잡힌 소총 · 사거리 10m · 탄창 24발",
+      "note_en": "Balanced rifle · 10m range · 24-round magazine",
+      "model": "res://assets/equipment/tern_c1.glb",
+      "weight": 2.8
+    },
+    {
+      "id": "light",
+      "label": "미카 S2",
+      "label_en": "Mica S2",
+      "stars": 0,
+      "stats": {
+        "ammo": 32,
+        "damage": 32,
+        "interval": 0.3,
+        "accuracy": 0.95,
+        "reload": 1.4,
+        "range": 8.5,
+        "sound": 8,
+        "length": 0.62,
+        "aim_time": 0.26,
+        "switch_time": 0.35,
+        "penetration": 14
+      },
+      "note": "짧은 기관단총 · 빠른 조준과 연사 · 관통력 낮음",
+      "note_en": "Compact SMG · fast aiming and fire · lower penetration",
+      "model": "res://assets/equipment/mica_s2.glb",
+      "weight": 2.1
+    },
+    {
+      "id": "shotgun",
+      "label": "플린트 B1",
+      "label_en": "Flint B1",
+      "stars": 4,
+      "stats": {
+        "ammo": 8,
+        "damage": 84,
+        "interval": 0.9,
+        "accuracy": 0.97,
+        "reload": 2.4,
+        "range": 5,
+        "sound": 14,
+        "length": 1.02,
+        "aim_time": 0.43,
+        "switch_time": 0.55,
+        "penetration": 12
+      },
+      "note": "근거리 고피해 · 사거리 5m · 탄창 8발",
+      "note_en": "High close-range damage · 5m range · 8-round magazine",
+      "model": "res://assets/equipment/flint_b1.glb",
+      "weight": 3.4
+    },
+    {
+      "id": "suppressed",
+      "label": "테른 C1-Q",
+      "label_en": "Tern C1-Q",
+      "stars": 8,
+      "stats": {
+        "ammo": 18,
+        "damage": 44,
+        "interval": 0.45,
+        "accuracy": 0.97,
+        "reload": 2.2,
+        "range": 10,
+        "sound": 3,
+        "length": 1.06,
+        "aim_time": 0.41,
+        "switch_time": 0.5,
+        "penetration": 22
+      },
+      "note": "내장 소음기 · 소리 반경 3m · 작은 탄창과 긴 재장전",
+      "note_en": "Built-in suppressor · 3m sound radius · smaller magazine and longer reload",
+      "model": "res://assets/equipment/tern_c1.glb",
+      "weight": 3.1
+    }
+  ],
+  "sidearms": [
+    {
+      "id": "pico_p1",
+      "label": "피코 P1",
+      "label_en": "Pico P1",
+      "stars": 0,
+      "weight": 0.75,
+      "model": "res://assets/equipment/pico_p1.glb",
+      "stats": {
+        "ammo": 12,
+        "damage": 26,
+        "interval": 0.36,
+        "accuracy": 0.94,
+        "reload": 1.2,
+        "range": 6,
+        "sound": 6,
+        "length": 0.23,
+        "aim_time": 0.2,
+        "switch_time": 0.3,
+        "penetration": 12
+      },
+      "note": "짧은 보조권총 · 별도 탄창 12발 · 전환 0.3초",
+      "note_en": "Compact sidearm · separate 12-round magazine · 0.3s switch"
+    }
+  ],
+  "armor": [
+    {
+      "id": "veil_v1",
+      "label": "베일 V1",
+      "label_en": "Veil V1",
+      "stars": 0,
+      "weight": 1.6,
+      "movement_multiplier": 1,
+      "action_multiplier": 1,
+      "panels": [
+        {
+          "panel": "soft",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -180,
+            180
+          ],
+          "resistance": 15,
+          "reduction": 0.42
+        }
+      ],
+      "color": "#405947",
+      "note": "가벼운 연질 방호 · 몸통 전 방향 · 소총 관통에 취약",
+      "note_en": "Light soft armor; covers torso all around, limited protection against rifles.",
+      "model": "res://assets/equipment/veil_v1.glb"
+    },
+    {
+      "id": "frame_v2",
+      "label": "프레임 V2",
+      "label_en": "Frame V2",
+      "stars": 0,
+      "weight": 4,
+      "movement_multiplier": 0.94,
+      "action_multiplier": 1.04,
+      "panels": [
+        {
+          "panel": "front",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -65,
+            65
+          ],
+          "resistance": 32,
+          "reduction": 0.62
+        },
+        {
+          "panel": "back",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            115,
+            245
+          ],
+          "resistance": 32,
+          "reduction": 0.62
+        },
+        {
+          "panel": "side",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -180,
+            180
+          ],
+          "resistance": 20,
+          "reduction": 0.38
+        }
+      ],
+      "color": "#35414b",
+      "note": "앞·뒤·측면 방호 · 이동과 보호의 균형",
+      "note_en": "Front, back and side plates; balanced protection and movement.",
+      "model": "res://assets/equipment/frame_v2.glb"
+    },
+    {
+      "id": "swift_v3",
+      "label": "스위프트 V3",
+      "label_en": "Swift V3",
+      "stars": 0,
+      "weight": 2.8,
+      "movement_multiplier": 0.98,
+      "action_multiplier": 1.01,
+      "panels": [
+        {
+          "panel": "front",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -60,
+            60
+          ],
+          "resistance": 34,
+          "reduction": 0.66
+        },
+        {
+          "panel": "back",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            120,
+            240
+          ],
+          "resistance": 34,
+          "reduction": 0.66
+        }
+      ],
+      "color": "#a58b65",
+      "note": "앞·뒤 강화판 · 측면 노출 · 가벼운 이동 부담",
+      "note_en": "Strong front and back plates; exposed sides, less movement cost.",
+      "model": "res://assets/equipment/swift_v3.glb"
+    },
+    {
+      "id": "bastion_v4",
+      "label": "바스천 V4",
+      "label_en": "Bastion V4",
+      "stars": 0,
+      "weight": 6,
+      "movement_multiplier": 0.86,
+      "action_multiplier": 1.12,
+      "panels": [
+        {
+          "panel": "front",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -80,
+            80
+          ],
+          "resistance": 42,
+          "reduction": 0.74
+        },
+        {
+          "panel": "back",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            100,
+            260
+          ],
+          "resistance": 42,
+          "reduction": 0.74
+        },
+        {
+          "panel": "side",
+          "regions": [
+            "torso"
+          ],
+          "arc": [
+            -180,
+            180
+          ],
+          "resistance": 30,
+          "reduction": 0.55
+        }
+      ],
+      "color": "#4f573c",
+      "note": "넓은 방탄판과 강한 방호 · 이동·조작 느림",
+      "note_en": "Wide plate coverage and high resistance; slower movement and actions.",
+      "model": "res://assets/equipment/bastion_v4.glb"
+    }
+  ],
+  "helmets": [
+    {
+      "id": "crown_h1",
+      "label": "크라운 H1",
+      "label_en": "Crown H1",
+      "stars": 0,
+      "weight": 0.8,
+      "color": "#35414b",
+      "resistance": 18,
+      "reduction": 0.42,
+      "regions": [
+        "head"
+      ],
+      "note": "가벼운 머리 방호 · 소총 탄환에는 제한적",
+      "note_en": "Light head protection; limited against rifle rounds.",
+      "model": "res://assets/equipment/crown_h1.glb"
+    },
+    {
+      "id": "crown_h2",
+      "label": "크라운 H2",
+      "label_en": "Crown H2",
+      "stars": 0,
+      "weight": 1.4,
+      "color": "#4f573c",
+      "resistance": 28,
+      "reduction": 0.58,
+      "regions": [
+        "head"
+      ],
+      "action_multiplier": 1.03,
+      "movement_multiplier": 0.98,
+      "note": "강한 머리 방호 · 무게와 조작 부담 증가",
+      "note_en": "Stronger head protection; heavier and slightly slower actions.",
+      "model": "res://assets/equipment/crown_h2.glb"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "dot",
+      "label": "포인트 D1 도트",
+      "label_en": "Point D1 dot sight",
+      "slot": "optic",
+      "stars": 0,
+      "weight": 0.15,
+      "weapons": [
+        "standard",
+        "light",
+        "shotgun",
+        "suppressed"
+      ],
+      "modifiers": {
+        "accuracy_add": 0.01,
+        "aim_time_multiplier": 0.85
+      },
+      "note": "조준 준비 15% 단축 · 정확도 +1%p",
+      "note_en": "15% faster aiming · accuracy +1 percentage point",
+      "model": "res://assets/equipment/dot.glb"
+    },
+    {
+      "id": "scope",
+      "label": "포커스 O2 조준경",
+      "label_en": "Focus O2 scope",
+      "slot": "optic",
+      "stars": 0,
+      "weight": 0.35,
+      "weapons": [
+        "standard",
+        "suppressed"
+      ],
+      "modifiers": {
+        "range_add": 2,
+        "aim_time_multiplier": 1.15
+      },
+      "note": "사거리 +2m · 조준 준비 15% 증가",
+      "note_en": "Range +2m · 15% longer aiming",
+      "model": "res://assets/equipment/scope.glb"
+    },
+    {
+      "id": "suppressor",
+      "label": "콰이어트 Q1 소음기",
+      "label_en": "Quiet Q1 suppressor",
+      "slot": "muzzle",
+      "stars": 0,
+      "weight": 0.3,
+      "weapons": [
+        "standard",
+        "light"
+      ],
+      "modifiers": {
+        "sound_multiplier": 0.4,
+        "length_add": 0.2,
+        "aim_time_multiplier": 1.06
+      },
+      "note": "소음 반경 60% 감소 · 총 길이 +20cm",
+      "note_en": "60% smaller sound radius · weapon length +20cm",
+      "model": "res://assets/equipment/suppressor.glb"
+    },
+    {
+      "id": "extended_mag",
+      "label": "리저브 M1 탄창",
+      "label_en": "Reserve M1 magazine",
+      "slot": "magazine",
+      "stars": 0,
+      "weight": 0.3,
+      "weapons": [
+        "standard",
+        "light",
+        "suppressed"
+      ],
+      "modifiers": {
+        "ammo_add": 8,
+        "reload_multiplier": 1.15
+      },
+      "note": "장탄 +8발 · 재장전 15% 증가",
+      "note_en": "8 extra rounds · 15% longer reload",
+      "model": "res://assets/equipment/extended_mag.glb"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "stun",
+      "label": "플레어 F1 섬광탄",
+      "label_en": "Flare F1 flashbang",
+      "stars": 0,
+      "slot": "small",
+      "weight": 0.2,
+      "note": "적·민간인 약 2초 기절 · 아군 면역 · 체력 피해 없음",
+      "note_en": "Stuns enemies and civilians for about 2s · allies immune · no health damage"
+    },
+    {
+      "id": "smoke",
+      "label": "헤이즈 S1 연막",
+      "label_en": "Haze S1 smoke",
+      "stars": 3,
+      "slot": "small",
+      "weight": 0.3,
+      "note": "4초간 양쪽의 시야 차단",
+      "note_en": "Blocks sightlines both ways for 4 seconds"
+    },
+    {
+      "id": "breach",
+      "label": "노크 B1 진입 장약",
+      "label_en": "Knock B1 breach charge",
+      "stars": 6,
+      "slot": "large",
+      "weight": 1,
+      "note": "문을 빠르게 개방 · 큰 소음 발생",
+      "note_en": "Rapid door opening · loud blast"
+    },
+    {
+      "id": "probe_c1",
+      "label": "프로브 C1 카메라",
+      "label_en": "Probe C1 camera",
+      "stars": 0,
+      "slot": "small",
+      "weight": 0.3,
+      "note": "관측한 문 너머 정찰 · 과거 정보는 관측 시각 표시",
+      "note_en": "Scout beyond an observed door · remembered contacts carry timestamps",
+      "model": "res://assets/equipment/probe_c1.glb"
+    },
+    {
+      "id": "frag",
+      "label": "파편 수류탄",
+      "label_en": "Fragmentation grenade",
+      "stars": 0,
+      "slot": "small",
+      "weight": 0.4,
+      "note": "고강도 작전 전용 · 파편은 석고 내벽을 관통하며 아군도 피해를 입음",
+      "note_en": "High intensity operations only · fragments penetrate plaster walls and can injure operators"
+    }
+  ],
+  "presets": [
+    {
+      "id": "assault",
+      "label": "균형 진입",
+      "label_en": "Balanced entry",
+      "loadout": {
+        "weapon": "standard",
+        "sidearm": "pico_p1",
+        "armor": "frame_v2",
+        "helmet": "crown_h1",
+        "attachments": [
+          "dot"
+        ],
+        "equipment": {
+          "stun": 2
+        }
+      }
+    },
+    {
+      "id": "breacher",
+      "label": "근거리 돌파",
+      "label_en": "Close entry",
+      "loadout": {
+        "weapon": "light",
+        "sidearm": "pico_p1",
+        "armor": "bastion_v4",
+        "helmet": "crown_h2",
+        "attachments": [
+          "dot"
+        ],
+        "equipment": {
+          "stun": 1,
+          "probe_c1": 1
+        }
+      }
+    },
+    {
+      "id": "scout",
+      "label": "조용한 정찰",
+      "label_en": "Quiet scout",
+      "loadout": {
+        "weapon": "light",
+        "sidearm": "pico_p1",
+        "armor": "veil_v1",
+        "helmet": "crown_h1",
+        "attachments": [
+          "suppressor"
+        ],
+        "equipment": {
+          "probe_c1": 1,
+          "stun": 1
+        }
+      }
+    },
+    {
+      "id": "marksman",
+      "label": "거리 엄호",
+      "label_en": "Range support",
+      "loadout": {
+        "weapon": "standard",
+        "sidearm": "pico_p1",
+        "armor": "swift_v3",
+        "helmet": "crown_h1",
+        "attachments": [
+          "scope"
+        ],
+        "equipment": {
+          "stun": 1
+        }
+      }
+    }
+  ],
+  "appearance": {
+    "colors": [
+      "#2e5146",
+      "#40516c",
+      "#746047",
+      "#663e48",
+      "#555b61"
+    ],
+    "patches": [
+      "breach",
+      "raven",
+      "arrow",
+      "shield"
+    ]
+  },
+  "slots": {
+    "small": 2,
+    "large": 1,
+    "legacy_total": 2
+  },
+  "friendly_movement_accuracy": {
+    "careful": 0.94,
+    "normal": 0.84,
+    "fast": 0.68
+  },
+  "handling": {
+    "reference_length": 0.86,
+    "length_aim_penalty": 0.30
+  },
+  "traits": {
+    "marksman": {
+      "range_add": 2.0,
+      "interval_multiplier": 1.5
+    }
+  }
+}

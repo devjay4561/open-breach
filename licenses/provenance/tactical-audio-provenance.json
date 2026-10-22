@@ -1,0 +1,274 @@
+{
+  "free_only": true,
+  "sources": [
+    {
+      "id": "free-firearm-library",
+      "url": "https://opengameart.org/content/the-free-firearm-sound-library",
+      "creators": [
+        "Ben Jaszczak",
+        "Brian Nelson",
+        "Kevin Heras",
+        "Matthew Nanney"
+      ],
+      "license": "CC0-1.0",
+      "archive_sha256": "cc1ab5a99a0a365105c7c5dd783f4b0b1fe90938114d3ceec53856bfe005f7d6",
+      "license_evidence": "licenses/Free-Firearm-Library.txt",
+      "notes": "Recorded single rifle shots. Archive contains no separate reload or weapon-handling recordings."
+    },
+    {
+      "id": "kenney-impact-sounds",
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "creators": [
+        "Kenney"
+      ],
+      "license": "CC0-1.0",
+      "archive_sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "license_evidence": "licenses/Kenney-Impact-Sounds.txt",
+      "notes": "Prepared concrete/wood footsteps plus generic soft/wood contacts. Light wood contacts accompany the start of a moving door, medium contacts its completed opening. Door contacts are not advertised as dedicated hinge recordings or real ballistic recordings."
+    }
+  ],
+  "files": [
+    {
+      "path": "web/assets/audio/shot.wav",
+      "pack": "free-firearm-library",
+      "source_member": "Prepared SFX Library/AR-15/D_24P.wav",
+      "source_sha256": "4c6a54ca0583150bbb32b7f658bc64da9ad9ba42fd3aca769c6120b44af8d3f0",
+      "sha256": "de74d90605086cb145d1f0cea7963c41ec279dae631b1b6e466fc0bae2ae86de",
+      "start_seconds": 0.545875,
+      "duration_seconds": 1.2,
+      "processing": "highpass=f=65,volume=0.80002441,afade=t=out:st=0.96:d=0.24,alimiter=limit=0.9:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/shot_alt.wav",
+      "pack": "free-firearm-library",
+      "source_member": "Prepared SFX Library/AR-15/D_24P.wav",
+      "source_sha256": "4c6a54ca0583150bbb32b7f658bc64da9ad9ba42fd3aca769c6120b44af8d3f0",
+      "sha256": "952b17a83e864d4eb36a39a2e8ba2b1b89d88f68fdc755fdd6e7fd48971f787e",
+      "start_seconds": 3.90734375,
+      "duration_seconds": 1.2,
+      "processing": "highpass=f=65,volume=0.80000000,afade=t=out:st=0.96:d=0.24,alimiter=limit=0.9:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/shot_close.wav",
+      "pack": "free-firearm-library",
+      "source_member": "Prepared SFX Library/AR-15/D_32P.wav",
+      "source_sha256": "acee9d2106b68fe5956225a19d7aedf943d97793817f9bda9d486a2b74b0a812",
+      "sha256": "e97c7248b4a33b22794d316d3050b07f5a71368cfb94bf983c9c51cf2d82ed4d",
+      "start_seconds": 0.70071875,
+      "duration_seconds": 1.2,
+      "processing": "highpass=f=65,volume=0.82807594,afade=t=out:st=0.96:d=0.24,alimiter=limit=0.9:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/shot_close_alt.wav",
+      "pack": "free-firearm-library",
+      "source_member": "Prepared SFX Library/AR-15/D_32P.wav",
+      "source_sha256": "acee9d2106b68fe5956225a19d7aedf943d97793817f9bda9d486a2b74b0a812",
+      "sha256": "7362d50a4ac2c8e189281654851eb50f5f1ed635d0d4408b1ef2f25f735c1777",
+      "start_seconds": 5.6444375,
+      "duration_seconds": 1.2,
+      "processing": "highpass=f=65,volume=0.87979595,afade=t=out:st=0.96:d=0.24,alimiter=limit=0.9:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/hit.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactSoft_medium_000.ogg",
+      "source_sha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3",
+      "sha256": "066c847c421107690086ed5c46cfa2a245c4ce38ca15cdf4c681c679f699747f",
+      "start_seconds": 0,
+      "duration_seconds": 0.115125,
+      "processing": "highpass=f=80,volume=0.65,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/hit_alt.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactSoft_medium_001.ogg",
+      "source_sha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "sha256": "dd26661c4dc0cd911670f9b2995f8b9cb7d63084d0080e2cd622b1fe38317de7",
+      "start_seconds": 0,
+      "duration_seconds": 0.18040625,
+      "processing": "highpass=f=80,volume=0.65,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_medium_000.ogg",
+      "source_sha256": "1723a9fd25103ed41af06054814e84e65f4a772bac86ab2reartwin27da93d9592ff5",
+      "sha256": "46b56d6b5f6daf0ea7fb67cfc4ff5ce4155ef81fff1371e03a59b0f5494220e4",
+      "start_seconds": 0,
+      "duration_seconds": 0.32978125,
+      "processing": "highpass=f=80,volume=0.6,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door_alt.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_medium_001.ogg",
+      "source_sha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+      "sha256": "75cbf72f63e1c41be2d39ceb8a5999101042fd2ab2651feee146f57e67a01328",
+      "start_seconds": 0,
+      "duration_seconds": 0.32978125,
+      "processing": "highpass=f=80,volume=0.6,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door_alt2.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_medium_002.ogg",
+      "source_sha256": "3f3f1917428b828f733a963167833c707bf88296ff158e1559c57c5cb813d799",
+      "sha256": "6205e5a616d93e311d1dc4c3dbd13a59d3f7fdece18f1570d09ba569d7b70b17",
+      "start_seconds": 0,
+      "duration_seconds": 0.32978125,
+      "processing": "highpass=f=80,volume=0.6,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door_latch.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_light_000.ogg",
+      "source_sha256": "eb45e35b4bed784d3f120de4afec4b0d6ac09d9e143cce8cfcb7d739e1b1f3c3",
+      "sha256": "1ffe15ab7f5e4e5a57b462b904f5fabb99f220f61e36ab8c555b058a1706754d",
+      "start_seconds": 0,
+      "duration_seconds": 0.26271875,
+      "processing": "highpass=f=80,volume=0.5,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door_latch_alt.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_light_001.ogg",
+      "source_sha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+      "sha256": "8e919b928623cc3af467f8189a40a68e3c08d077ca66b8f3aa83218ba5a2aecd",
+      "start_seconds": 0,
+      "duration_seconds": 0.26271875,
+      "processing": "highpass=f=80,volume=0.5,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/door_latch_alt2.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/impactWood_light_002.ogg",
+      "source_sha256": "b183cf7a5bd783817e0e4b82af34ac6658fa1927049089dadc8b15c2ecc771dc",
+      "sha256": "9f4232e3a8f08059fb8bb44dfd576ee501a1515e7860cbe3a1cafbfa67f3b8e3",
+      "start_seconds": 0,
+      "duration_seconds": 0.26271875,
+      "processing": "highpass=f=80,volume=0.5,alimiter=limit=0.8:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_concrete_000.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_concrete_000.ogg",
+      "source_sha256": "d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe",
+      "sha256": "3343bb443c99a8a9a50f224b108a031fa818ff64a3e43bef9818714475018282",
+      "start_seconds": 0,
+      "duration_seconds": 0.1030625,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.64514885,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_concrete_001.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_concrete_001.ogg",
+      "source_sha256": "507a75eb19b897087855a3be3cf11a12d7fa37d143ad535eeebe0b8031c7325d",
+      "sha256": "6d394fe01e4e1354cb63d40d9625ffac864d28f848ebf594308049853669ab94",
+      "start_seconds": 0,
+      "duration_seconds": 0.10478125,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.66378318,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_concrete_002.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_concrete_002.ogg",
+      "source_sha256": "b21fa546d74941196b25da8a20b7010abd8c05c4fcf93545d1f344e66a664e13",
+      "sha256": "ff6fe73468450821ef6d9ad3d674d3641fd7bc939fa8ddb0a0943996df2f5ef0",
+      "start_seconds": 0,
+      "duration_seconds": 0.1099375,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.65024771,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_concrete_003.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_concrete_003.ogg",
+      "source_sha256": "8b513c2f0316324060b9174b8f28df6c2147418c506e6a53b77f18e149a5547b",
+      "sha256": "996dc8695a02f7b3244d74fc5ec44d1d942e83fda4a5d8d3274f360df12318c4",
+      "start_seconds": 0,
+      "duration_seconds": 0.107625,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.65906440,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_concrete_004.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_concrete_004.ogg",
+      "source_sha256": "24dd8db2413e5b81ad181e1205c12a1c7801da5f85715d471b92a4b2f632e45e",
+      "sha256": "44d658bd4c2ae476d7744e62f50c810f3bb0602811d2768ae4793243a4c52248",
+      "start_seconds": 0,
+      "duration_seconds": 0.1115,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.65018097,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_wood_000.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_wood_000.ogg",
+      "source_sha256": "5f1c252942a220d658121bd9417448cd19649ded9fff2ff15f6e50899373ce8e",
+      "sha256": "1110d501687680bea06e90c88924ee7370ea5f2b24a2cb3c334ed270ac0fcf89",
+      "start_seconds": 0,
+      "duration_seconds": 0.27140625,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.64514885,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_wood_001.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_wood_001.ogg",
+      "source_sha256": "e4f68e1c9fd55b4dc8ca89ed2bbab6f200171bc54bdc18aa96b80d8e7336f462",
+      "sha256": "0f259902f2d61d0c7dcbb59f143e6ae85336391ff004d48e341e26c24e77b3b7",
+      "start_seconds": 0,
+      "duration_seconds": 0.2486875,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.65035896,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_wood_002.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_wood_002.ogg",
+      "source_sha256": "9ff095b05cee5eec40b081defe3f0eef7232bb16d4865ce03b9f6dbab875cfdd",
+      "sha256": "7ef328226bcb50d019042dd9f35374873d9249ac25cd44b47c66a5ac56df8412",
+      "start_seconds": 0,
+      "duration_seconds": 0.24853125,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.64370669,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_wood_003.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_wood_003.ogg",
+      "source_sha256": "2a68a083daa9eda08fed0ea5da5280dfbe0de226196c576be02f95259dd139d9",
+      "sha256": "61e18815c8112b005cb0b6a842b4db5d6c038e4ffc157c4e607e89da04e72fb8",
+      "start_seconds": 0,
+      "duration_seconds": 0.24865625,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.65692302,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    },
+    {
+      "path": "web/assets/audio/footstep_wood_004.wav",
+      "pack": "kenney-impact-sounds",
+      "source_member": "Audio/footstep_wood_004.ogg",
+      "source_sha256": "b33e0854e2b3f6b6492e25c25ef8f90447a332f7c6bb25dd02edced9581d3441",
+      "sha256": "5852d7629ea102898dd3394750930ba994e3d732b508450c660b0716600119d1",
+      "start_seconds": 0,
+      "duration_seconds": 0.2450625,
+      "processing": "silenceremove=start_periods=1:start_duration=0:start_threshold=-48dB:start_silence=0.004,highpass=f=95,volume=0.64778759,alimiter=limit=0.65:level=false:latency=true",
+      "format": "mono 32000 Hz signed 16-bit PCM"
+    }
+  ]
+}

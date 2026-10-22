@@ -1,0 +1,8 @@
+{
+  "source": "https://kenney.nl/assets/furniture-kit",
+  "archive_member": "Models/GLTF format/doorway.glb",
+  "license": "CC0-1.0",
+  "output": "game/assets/environment/doorLeaf.glb",
+  "sha256": "06172e17a76eefba66f913bcb38d4cd743ec86f5cc694cdd4486493f22a1d27e",
+  "processing": "Extract original door leaf with handle/materials, normalize width1 and full height1.95; cut away above1.14 for overhead view. Runtime stretches width to map opening; no new geometry authored."
+}

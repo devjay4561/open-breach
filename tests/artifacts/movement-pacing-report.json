@@ -1,0 +1,326 @@
+{
+  "candidate_change": {
+    "enemy_patrol_mps": [
+      0.7,
+      0.84
+    ],
+    "light_mps": [
+      2.0,
+      2.4
+    ],
+    "simulation_step_seconds": 0.0333333333333333,
+    "standard_mps": [
+      1.8,
+      2.16
+    ],
+    "timers_and_combat": "unchanged"
+  },
+  "checks": 331,
+  "failures": [],
+  "production_simulation_sha256": "dfa928ec4e65c19f5070a45ed709c48aa5aa6da8254dad07e1578a22d30c9800",
+  "variants": {
+    "baseline": {
+      "missions": {
+        "M01_squad": {
+          "civilians_total": 2,
+          "command_failures": 0,
+          "duration": 43.7333333333334,
+          "enemies_total": 6,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0,
+            "charlie": 100.0,
+            "delta": 100.0
+          },
+          "losses": 0,
+          "neutralized": 6,
+          "plan_revisions": 48,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 2,
+          "score": 100,
+          "seed": 1049.0,
+          "shots_fired": 15,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 4,
+          "time": 43.7333333333334,
+          "title": "작전 완료",
+          "total_health": 400.0,
+          "units_total": 4
+        },
+        "T01_single_operator": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 15.9666666666666,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 8,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 15.9666666666666,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        },
+        "T01_squad": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 16.0,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 19,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 16.0,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        }
+      },
+      "ten_metre": {
+        "enemy_patrol": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 0.700005016316382,
+          "seconds": 14.2856119126442
+        },
+        "light": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 1.99999809265137,
+          "seconds": 5.00000476837612
+        },
+        "standard": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 1.80000400541303,
+          "seconds": 5.55554319319716
+        }
+      }
+    },
+    "plus20": {
+      "missions": {
+        "M01_squad": {
+          "civilians_total": 2,
+          "command_failures": 0,
+          "duration": 43.6333333333334,
+          "enemies_total": 6,
+          "health": {
+            "alpha": 87.0,
+            "bravo": 100.0,
+            "charlie": 100.0,
+            "delta": 100.0
+          },
+          "losses": 0,
+          "neutralized": 6,
+          "plan_revisions": 48,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 2,
+          "score": 99,
+          "seed": 1049.0,
+          "shots_fired": 16,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 4,
+          "time": 43.6333333333334,
+          "title": "작전 완료",
+          "total_health": 387.0,
+          "units_total": 4
+        },
+        "T01_single_operator": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 15.7666666666666,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 8,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 15.7666666666666,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        },
+        "T01_squad": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 15.8,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 19,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 15.8,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        }
+      },
+      "ten_metre": {
+        "enemy_patrol": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 0.839997779842383,
+          "seconds": 11.9047933696639
+        },
+        "light": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 2.39999771118164,
+          "seconds": 4.16667064031344
+        },
+        "standard": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 2.15999514768565,
+          "seconds": 4.62964002984665
+        }
+      }
+    },
+    "plus20_operators": {
+      "missions": {
+        "M01_squad": {
+          "civilians_total": 2,
+          "command_failures": 0,
+          "duration": 43.6333333333334,
+          "enemies_total": 6,
+          "health": {
+            "alpha": 87.0,
+            "bravo": 100.0,
+            "charlie": 100.0,
+            "delta": 100.0
+          },
+          "losses": 0,
+          "neutralized": 6,
+          "plan_revisions": 48,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 2,
+          "score": 99,
+          "seed": 1049.0,
+          "shots_fired": 16,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 4,
+          "time": 43.6333333333334,
+          "title": "작전 완료",
+          "total_health": 387.0,
+          "units_total": 4
+        },
+        "T01_single_operator": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 15.7666666666666,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 8,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 15.7666666666666,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        },
+        "T01_squad": {
+          "civilians_total": 0,
+          "command_failures": 0,
+          "duration": 15.8,
+          "enemies_total": 3,
+          "health": {
+            "alpha": 100.0,
+            "bravo": 100.0
+          },
+          "losses": 0,
+          "neutralized": 3,
+          "plan_revisions": 19,
+          "rank": "S",
+          "reason": "모든 목표를 달성했습니다",
+          "rescued": 0,
+          "score": 100,
+          "seed": 42.0,
+          "shots_fired": 6,
+          "status": "SUCCESS",
+          "success": true,
+          "survivors": 2,
+          "time": 15.8,
+          "title": "작전 완료",
+          "total_health": 200.0,
+          "units_total": 2
+        }
+      },
+      "ten_metre": {
+        "enemy_patrol": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 0.700005016316382,
+          "seconds": 14.2856119126442
+        },
+        "light": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 2.39999771118164,
+          "seconds": 4.16667064031344
+        },
+        "standard": {
+          "definition": "Start x=2 to first interpolated x=12 crossing; destination x=12.3 avoids command arrival tolerance.",
+          "measured_speed_mps": 2.15999514768565,
+          "seconds": 4.62964002984665
+        }
+      }
+    }
+  }
+}

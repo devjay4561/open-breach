@@ -1,0 +1,21 @@
+OPEN BREACH equipment catalog photographs
+
+Created on 2026-10-12 with the built-in GPT image generator for this project.
+All 20 photos depict fictional equipment. No downloaded product photographs
+or third-party logos were used. The photographs are visual catalog references;
+the existing game models and gameplay data are separate assets.
+
+Generation prompts: web/assets/equipment/generation.json
+Only the project title in the recorded prompts was updated for the public
+rename; all other prompt instructions and the generated photos are unchanged.
+Shipped photos: web/assets/equipment/*.jpg
+Generation mode: built-in GPT image generation, one call per equipment item.
+Export: JPEG, 1200 px wide. Original generated PNGs remain in the local
+Codex generated_images directory and are not needed to run the game.
+
+To the extent any copyright or related rights exist and are held by the project copyright holder,
+the project copyright holder dedicates all 20 generated equipment photographs to the public domain
+under CC0 1.0 Universal, waiving those rights to the extent possible under law.
+This dedication does not grant trademark, privacy or publicity rights.
+Full legal text: licenses/CC0-1.0.txt
+https://creativecommons.org/publicdomain/zero/1.0/

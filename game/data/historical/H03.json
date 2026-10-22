@@ -1,0 +1,1090 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H03",
+  "revision": 2,
+  "title": "콰이어트 랜턴",
+  "title_en": "QUIET LANTERN",
+  "seed": 20261012,
+  "bounds": [
+    42,
+    40
+  ],
+  "focus": [
+    21,
+    21
+  ],
+  "rooms": [
+    {
+      "id": "consulate_lane",
+      "x": 21,
+      "z": 36.5,
+      "w": 42,
+      "d": 7,
+      "label": "Consulate Lane 도로",
+      "indoor": false
+    },
+    {
+      "id": "front_pavement",
+      "x": 21,
+      "z": 32,
+      "w": 42,
+      "d": 2,
+      "label": "진입 대기 인도",
+      "indoor": false
+    },
+    {
+      "id": "front_forecourt",
+      "x": 21,
+      "z": 30,
+      "w": 10.4,
+      "d": 2,
+      "label": "전면 출입 공간",
+      "indoor": false
+    },
+    {
+      "id": "rear_garden",
+      "x": 21,
+      "z": 4.5,
+      "w": 9.6,
+      "d": 5,
+      "label": "후면 정원",
+      "indoor": false
+    },
+    {
+      "id": "side_passage",
+      "x": 27.4,
+      "z": 16.5,
+      "w": 2.8,
+      "d": 29,
+      "label": "동쪽 후문 연결 통로",
+      "indoor": false
+    },
+    {
+      "id": "embassy_hall",
+      "x": 21,
+      "z": 16.5,
+      "w": 1.8,
+      "d": 19,
+      "label": "중앙 복도 · 폭 1.8m",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_vestibule",
+      "x": 21,
+      "z": 27.5,
+      "w": 1.8,
+      "d": 3,
+      "label": "현관 전실",
+      "indoor": true,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "embassy_store",
+      "x": 18.15,
+      "z": 8.5,
+      "w": 3.9,
+      "d": 3,
+      "label": "비품·수납실",
+      "indoor": true,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "embassy_washroom",
+      "x": 18.15,
+      "z": 11.75,
+      "w": 3.9,
+      "d": 3.5,
+      "label": "세면·설비실",
+      "indoor": true,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "embassy_west_1",
+      "x": 18.15,
+      "z": 16.25,
+      "w": 3.9,
+      "d": 5.5,
+      "label": "직원 휴게실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_west_2",
+      "x": 18.15,
+      "z": 21.25,
+      "w": 3.9,
+      "d": 4.5,
+      "label": "비자 사무실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_west_3",
+      "x": 18.15,
+      "z": 26.25,
+      "w": 3.9,
+      "d": 5.5,
+      "label": "접수실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_east_0",
+      "x": 23.85,
+      "z": 10.25,
+      "w": 3.9,
+      "d": 6.5,
+      "label": "후면 업무실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_east_1",
+      "x": 23.85,
+      "z": 16.25,
+      "w": 3.9,
+      "d": 5.5,
+      "label": "소회의실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_east_2",
+      "x": 23.85,
+      "z": 21.25,
+      "w": 3.9,
+      "d": 4.5,
+      "label": "자료실",
+      "indoor": true,
+      "floor_surface": "wood"
+    },
+    {
+      "id": "embassy_east_3",
+      "x": 23.85,
+      "z": 26.25,
+      "w": 3.9,
+      "d": 5.5,
+      "label": "방문객 대기실",
+      "indoor": true,
+      "floor_surface": "wood"
+    }
+  ],
+  "walls": [
+    {
+      "id": "embassy_n_s0",
+      "x": 18.3375,
+      "z": 7.0,
+      "w": 4.275000000000002,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "embassy_n_last",
+      "x": 23.6625,
+      "z": 7.0,
+      "w": 4.275000000000002,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "embassy_s_s0",
+      "x": 18.3375,
+      "z": 29.0,
+      "w": 4.275000000000002,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "embassy_s_last",
+      "x": 23.6625,
+      "z": 29.0,
+      "w": 4.275000000000002,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "embassy_w_last",
+      "x": 16.2,
+      "z": 18.0,
+      "w": 0.2,
+      "d": 22.0,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "embassy_e_last",
+      "x": 25.8,
+      "z": 18.0,
+      "w": 0.2,
+      "d": 22.0,
+      "height": 3.1,
+      "material": "masonry"
+    },
+    {
+      "id": "hall_west_s0",
+      "x": 20.1,
+      "z": 7.5125,
+      "w": 0.2,
+      "d": 1.0250000000000004,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_west_s1",
+      "x": 20.1,
+      "z": 10.125,
+      "w": 0.2,
+      "d": 2.3000000000000007,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_west_s2",
+      "x": 20.1,
+      "z": 14.0,
+      "w": 0.2,
+      "d": 3.5500000000000007,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_west_s3",
+      "x": 20.1,
+      "z": 18.75,
+      "w": 0.2,
+      "d": 4.049999999999997,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_west_s4",
+      "x": 20.1,
+      "z": 24.275,
+      "w": 0.2,
+      "d": 5.099999999999998,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_west_last",
+      "x": 20.1,
+      "z": 28.387500000000003,
+      "w": 0.2,
+      "d": 1.2249999999999979,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "west_service_partition",
+      "x": 18.15,
+      "z": 10,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "west_partition_1",
+      "x": 18.15,
+      "z": 13.5,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "west_partition_2",
+      "x": 18.15,
+      "z": 19,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "west_partition_3",
+      "x": 18.15,
+      "z": 23.5,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "hall_east_s0",
+      "x": 21.9,
+      "z": 8.3875,
+      "w": 0.2,
+      "d": 2.7750000000000004,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_east_s1",
+      "x": 21.9,
+      "z": 13.25,
+      "w": 0.2,
+      "d": 5.050000000000001,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_east_s2",
+      "x": 21.9,
+      "z": 18.75,
+      "w": 0.2,
+      "d": 4.049999999999997,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_east_s3",
+      "x": 21.9,
+      "z": 24.275,
+      "w": 0.2,
+      "d": 5.099999999999998,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "hall_east_last",
+      "x": 21.9,
+      "z": 28.387500000000003,
+      "w": 0.2,
+      "d": 1.2249999999999979,
+      "height": 3.0,
+      "material": "concrete"
+    },
+    {
+      "id": "east_partition_1",
+      "x": 23.85,
+      "z": 13.5,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "east_partition_2",
+      "x": 23.85,
+      "z": 19,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "east_partition_3",
+      "x": 23.85,
+      "z": 23.5,
+      "w": 3.9,
+      "d": 0.2,
+      "height": 3,
+      "material": "plaster"
+    },
+    {
+      "id": "adjoining_terrace_0_collision",
+      "x": 11.2,
+      "z": 18,
+      "w": 9.8,
+      "d": 22.2,
+      "height": 14.4,
+      "material": "concrete",
+      "render": false
+    },
+    {
+      "id": "adjoining_terrace_1_collision",
+      "x": 33.8,
+      "z": 18,
+      "w": 9.8,
+      "d": 22.2,
+      "height": 14.4,
+      "material": "concrete",
+      "render": false
+    },
+    {
+      "id": "front_railing_s0",
+      "x": 18.1,
+      "z": 31,
+      "w": 4.599999999999998,
+      "d": 0.2,
+      "height": 1.05,
+      "material": "metal"
+    },
+    {
+      "id": "front_railing_last",
+      "x": 23.9,
+      "z": 31,
+      "w": 4.599999999999998,
+      "d": 0.2,
+      "height": 1.05,
+      "material": "metal"
+    }
+  ],
+  "doors": [
+    {
+      "id": "embassy_n_d0",
+      "x": 21,
+      "z": 7.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "후문"
+    },
+    {
+      "id": "embassy_s_d0",
+      "x": 21,
+      "z": 29.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "현관"
+    },
+    {
+      "id": "hall_west_d0",
+      "x": 20.1,
+      "z": 8.5,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "비품실"
+    },
+    {
+      "id": "hall_west_d1",
+      "x": 20.1,
+      "z": 11.75,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "세면실"
+    },
+    {
+      "id": "hall_west_d2",
+      "x": 20.1,
+      "z": 16.25,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "휴게실"
+    },
+    {
+      "id": "hall_west_d3",
+      "x": 20.1,
+      "z": 21.25,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "비자실"
+    },
+    {
+      "id": "hall_west_d4",
+      "x": 20.1,
+      "z": 27.3,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "접수실"
+    },
+    {
+      "id": "hall_east_d0",
+      "x": 21.9,
+      "z": 10.25,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "label": "후면 업무실"
+    },
+    {
+      "id": "hall_east_d1",
+      "x": 21.9,
+      "z": 16.25,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "label": "회의실"
+    },
+    {
+      "id": "hall_east_d2",
+      "x": 21.9,
+      "z": 21.25,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "label": "자료실"
+    },
+    {
+      "id": "hall_east_d3",
+      "x": 21.9,
+      "z": 27.3,
+      "w": 0.18,
+      "d": 0.95,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "label": "대기실"
+    },
+    {
+      "id": "front_railing_d0",
+      "x": 21,
+      "z": 31,
+      "w": 1.2,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "label": "철문"
+    }
+  ],
+  "props": [
+    {
+      "id": "embassy_objects_0",
+      "type": "desk",
+      "x": 17.4,
+      "z": 25.1,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_1",
+      "type": "chair",
+      "x": 17.4,
+      "z": 24.3,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_2",
+      "type": "cabinet",
+      "x": 16.8,
+      "z": 28,
+      "w": 0.5,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_3",
+      "type": "sofa",
+      "x": 24.8,
+      "z": 25.2,
+      "w": 0.85,
+      "d": 2.1,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_4",
+      "type": "table",
+      "x": 23.4,
+      "z": 24.4,
+      "w": 1.1,
+      "d": 0.6,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_5",
+      "type": "chair",
+      "x": 23.2,
+      "z": 28.1,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_6",
+      "type": "desk",
+      "x": 17.3,
+      "z": 20.2,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_7",
+      "type": "chair",
+      "x": 17.3,
+      "z": 21,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_8",
+      "type": "bookshelf",
+      "x": 16.7,
+      "z": 22.4,
+      "w": 0.4,
+      "d": 1.2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_9",
+      "type": "cabinet",
+      "x": 25.2,
+      "z": 20.1,
+      "w": 0.5,
+      "d": 1.2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_10",
+      "type": "bookshelf",
+      "x": 23,
+      "z": 19.5,
+      "w": 1.2,
+      "d": 0.4,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_11",
+      "type": "desk",
+      "x": 23,
+      "z": 22.7,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_12",
+      "type": "sofa",
+      "x": 16.9,
+      "z": 15.7,
+      "w": 0.85,
+      "d": 2.1,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_13",
+      "type": "table",
+      "x": 18,
+      "z": 14.4,
+      "w": 1.2,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_14",
+      "type": "cabinet",
+      "x": 16.8,
+      "z": 18.1,
+      "w": 1.1,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_15",
+      "type": "table",
+      "x": 23.8,
+      "z": 16.2,
+      "w": 1.8,
+      "d": 0.85,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_16",
+      "type": "chair",
+      "x": 23,
+      "z": 15.2,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_17",
+      "type": "chair",
+      "x": 24.6,
+      "z": 17.2,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_18",
+      "type": "cabinet",
+      "x": 25.2,
+      "z": 18,
+      "w": 0.5,
+      "d": 1.1,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_19",
+      "type": "cabinet",
+      "x": 16.8,
+      "z": 8.4,
+      "w": 0.5,
+      "d": 1.2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_20",
+      "type": "bookshelf",
+      "x": 18.3,
+      "z": 7.6,
+      "w": 1.2,
+      "d": 0.4,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_21",
+      "type": "cabinet",
+      "x": 17.2,
+      "z": 12.6,
+      "w": 1.1,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_22",
+      "type": "desk",
+      "x": 23.8,
+      "z": 8.2,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_23",
+      "type": "chair",
+      "x": 23.8,
+      "z": 9,
+      "w": 0.5,
+      "d": 0.5,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_24",
+      "type": "bookshelf",
+      "x": 25.2,
+      "z": 12.2,
+      "w": 0.4,
+      "d": 1.2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "embassy_objects_25",
+      "type": "plant",
+      "x": 25.1,
+      "z": 28.1,
+      "w": 0.45,
+      "d": 0.45,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "police_vehicle",
+      "type": "vehicle",
+      "x": 8,
+      "z": 36.2,
+      "w": 4.4,
+      "d": 1.8,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.5,
+      "cover": "full"
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 20.1,
+      "z": 33.8,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 20.950000000000003,
+      "z": 33.8,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 20.1,
+      "z": 34.65,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 20.950000000000003,
+      "z": 34.65,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 18.8,
+      "z": 26.8,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e2",
+      "x": 23.2,
+      "z": 20.9,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "weak"
+    },
+    {
+      "id": "e3",
+      "x": 18.6,
+      "z": 17.7,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e4",
+      "x": 23.5,
+      "z": 11.3,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e5",
+      "x": 21,
+      "z": 14.4,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 23.1,
+      "z": 26.5,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 18.8,
+      "z": 22.4,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 23.9,
+      "z": 18.1,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 18.8,
+      "z": 8.5,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "전면 현관 또는 동쪽 통로의 후문으로 대사관 지상층을 확인하세요.",
+    "모든 위협을 처리하고 민간인 4명을 확보하세요."
+  ],
+  "scenery": [
+    {
+      "id": "adjoining_terrace_0",
+      "asset": "terrace_townhouse",
+      "x": 11.2,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0,
+      "cutaway": false
+    },
+    {
+      "id": "adjoining_terrace_1",
+      "asset": "terrace_townhouse",
+      "x": 33.8,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0,
+      "cutaway": false
+    },
+    {
+      "id": "embassy_upper_floors",
+      "asset": "terrace_townhouse",
+      "x": 21,
+      "z": 18,
+      "rotation": 0,
+      "scale": 1,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "벨드라스크 · 울드렌 자유구",
+    "location_en": "Veldrask · Uldren Free Zone",
+    "accuracy_note": "오르베스 영사관의 전면과 후면 출입구를 통해 민간인을 구출하세요.",
+    "accuracy_note_en": "Rescue civilians through the front and rear entrances of Orveth Consulate."
+  },
+  "environment": {
+    "time_of_day": "day",
+    "lighting": 0.95,
+    "biome": "urban",
+    "ground_color": "#686765",
+    "water": false,
+    "ground_surface": "concrete"
+  },
+  "description": "오르베스 영사관의 전면과 후면 출입구를 통해 민간인을 구출하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–6",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "전면 출입문과 동쪽 통로의 후문이 연결됩니다. 좁은 복도에서는 한 명씩 통과시키고 방 안의 민간인을 확보하세요."
+  },
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Rescue civilians through the front and rear entrances of Orveth Consulate."
+}

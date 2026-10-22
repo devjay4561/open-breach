@@ -1,0 +1,1066 @@
+{
+  "schema_version": 1,
+  "id": "M07",
+  "revision": 1,
+  "title": "지하주차장",
+  "title_en": "Underground Garage",
+  "subtitle": "UNDERGROUND GARAGE",
+  "description": "차량과 기둥으로 나뉜 주차 구역 및 관리실의 위협을 처리하고 민간인 2명을 확보하세요. 남쪽 두 출입구와 서쪽 서비스문이 연결됩니다.",
+  "description_en": "Clear the parking lanes and service rooms, then secure both civilians. Two southern entrances and a western service door link through the open garage.",
+  "seed": 7147,
+  "default_seed": 7147,
+  "bounds": [
+    32,
+    32
+  ],
+  "focus": [
+    16,
+    15
+  ],
+  "rooms": [
+    {
+      "id": "M07_r1",
+      "label": "01 / STAIR LOBBY",
+      "x": 5.5,
+      "z": 5.0,
+      "w": 7,
+      "d": 6,
+      "color": "#74766d",
+      "indoor": true,
+      "lighting": 0.85,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "M07_r2",
+      "label": "02 / SECURITY",
+      "x": 13.5,
+      "z": 5.0,
+      "w": 9,
+      "d": 6,
+      "color": "#65756c",
+      "indoor": true,
+      "lighting": 1,
+      "floor_surface": "tile"
+    },
+    {
+      "id": "M07_r3",
+      "label": "03 / MAINTENANCE",
+      "x": 24.0,
+      "z": 5.0,
+      "w": 12,
+      "d": 6,
+      "color": "#82796c",
+      "indoor": true,
+      "lighting": 0.9,
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "M07_r4",
+      "label": "04 / WEST PARKING",
+      "x": 9.0,
+      "z": 15.0,
+      "w": 14,
+      "d": 14,
+      "color": "#74766d",
+      "indoor": true,
+      "lighting": 0.75,
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "M07_r5",
+      "label": "05 / EAST PARKING",
+      "x": 23.0,
+      "z": 15.0,
+      "w": 14,
+      "d": 14,
+      "color": "#65756c",
+      "indoor": true,
+      "lighting": 0.85,
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "M07_r6",
+      "label": "06 / WEST RAMP",
+      "x": 9.0,
+      "z": 24.5,
+      "w": 14,
+      "d": 5,
+      "color": "#82796c",
+      "indoor": true,
+      "lighting": 0.95,
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "M07_r7",
+      "label": "07 / EAST RAMP",
+      "x": 23.0,
+      "z": 24.5,
+      "w": 14,
+      "d": 5,
+      "color": "#74766d",
+      "indoor": true,
+      "lighting": 0.95,
+      "floor_surface": "concrete"
+    }
+  ],
+  "walls": [
+    {
+      "id": "M07_w1",
+      "x": 5.5,
+      "z": 2,
+      "w": 7,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w2",
+      "x": 13.5,
+      "z": 2,
+      "w": 9,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w3",
+      "x": 24.0,
+      "z": 2,
+      "w": 12,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w4",
+      "x": 3.3,
+      "z": 8,
+      "w": 2.6,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w5",
+      "x": 7.7,
+      "z": 8,
+      "w": 2.6,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w6",
+      "x": 10.8,
+      "z": 8,
+      "w": 3.6,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w7",
+      "x": 15.2,
+      "z": 8,
+      "w": 1.6,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w8",
+      "x": 17.0,
+      "z": 8,
+      "w": 2,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w9",
+      "x": 20.55,
+      "z": 8,
+      "w": 5.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w10",
+      "x": 27.45,
+      "z": 8,
+      "w": 5.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w11",
+      "x": 2,
+      "z": 5.0,
+      "w": 0.24,
+      "d": 6,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w12",
+      "x": 2,
+      "z": 11.05,
+      "w": 0.24,
+      "d": 6.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w13",
+      "x": 2,
+      "z": 18.95,
+      "w": 0.24,
+      "d": 6.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w14",
+      "x": 2,
+      "z": 24.5,
+      "w": 0.24,
+      "d": 5,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w15",
+      "x": 9,
+      "z": 3.05,
+      "w": 0.24,
+      "d": 2.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w16",
+      "x": 9,
+      "z": 6.95,
+      "w": 0.24,
+      "d": 2.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w17",
+      "x": 18,
+      "z": 3.05,
+      "w": 0.24,
+      "d": 2.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w18",
+      "x": 18,
+      "z": 6.95,
+      "w": 0.24,
+      "d": 2.1,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w19",
+      "x": 30,
+      "z": 5.0,
+      "w": 0.24,
+      "d": 6,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w20",
+      "x": 30,
+      "z": 15.0,
+      "w": 0.24,
+      "d": 14,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w21",
+      "x": 30,
+      "z": 24.5,
+      "w": 0.24,
+      "d": 5,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w22",
+      "x": 4.55,
+      "z": 27,
+      "w": 5.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w23",
+      "x": 12.45,
+      "z": 27,
+      "w": 7.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w24",
+      "x": 20.05,
+      "z": 27,
+      "w": 8.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "M07_w25",
+      "x": 27.95,
+      "z": 27,
+      "w": 4.1,
+      "d": 0.24,
+      "height": 2.8,
+      "material": "concrete"
+    }
+  ],
+  "doors": [
+    {
+      "id": "M07_d1",
+      "x": 5.5,
+      "z": 8,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D01",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood",
+      "initial_states": [
+        "CLOSED",
+        "OPEN"
+      ]
+    },
+    {
+      "id": "M07_d2",
+      "x": 13.5,
+      "z": 8,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D02",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood",
+      "initial_states": [
+        "CLOSED",
+        "OPEN"
+      ]
+    },
+    {
+      "id": "M07_d3",
+      "x": 24,
+      "z": 8,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D03",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": true,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "M07_d4",
+      "x": 9,
+      "z": 5,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "state": "CLOSED",
+      "label": "D04",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood",
+      "initial_states": [
+        "CLOSED",
+        "OPEN"
+      ]
+    },
+    {
+      "id": "M07_d5",
+      "x": 18,
+      "z": 5,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "state": "CLOSED",
+      "label": "D05",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood",
+      "initial_states": [
+        "CLOSED",
+        "OPEN"
+      ]
+    },
+    {
+      "id": "M07_d6",
+      "x": 8,
+      "z": 27,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D06",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "M07_d7",
+      "x": 25,
+      "z": 27,
+      "w": 1.8,
+      "d": 0.24,
+      "axis": "x",
+      "state": "CLOSED",
+      "label": "D07",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    },
+    {
+      "id": "M07_d8",
+      "x": 2,
+      "z": 15,
+      "w": 0.24,
+      "d": 1.8,
+      "axis": "z",
+      "state": "CLOSED",
+      "label": "D08",
+      "hinge_side": -1.0,
+      "swing_sign": -1.0,
+      "locked": false,
+      "hp": 100,
+      "destroyed": false,
+      "height": 2.1,
+      "material": "wood"
+    }
+  ],
+  "props": [
+    {
+      "id": "M07_p1",
+      "type": "vehicle",
+      "x": 6,
+      "z": 13,
+      "w": 2,
+      "d": 4.2,
+      "rotation": 0,
+      "height": 1.65,
+      "material": "metal",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p2",
+      "type": "vehicle",
+      "x": 6,
+      "z": 19,
+      "w": 2,
+      "d": 4.2,
+      "rotation": 0,
+      "height": 1.65,
+      "material": "metal",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p3",
+      "type": "vehicle",
+      "x": 15,
+      "z": 12,
+      "w": 2,
+      "d": 4.2,
+      "rotation": 0,
+      "height": 1.65,
+      "material": "metal",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p4",
+      "type": "vehicle",
+      "x": 15,
+      "z": 19,
+      "w": 2,
+      "d": 4.2,
+      "rotation": 0,
+      "height": 1.65,
+      "material": "metal",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p5",
+      "type": "vehicle",
+      "x": 24,
+      "z": 13,
+      "w": 2,
+      "d": 4.2,
+      "rotation": 0,
+      "height": 1.65,
+      "material": "metal",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p6",
+      "type": "pillar",
+      "x": 9,
+      "z": 15.5,
+      "w": 0.8,
+      "d": 0.8,
+      "rotation": 0,
+      "height": 2.8,
+      "material": "concrete",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p7",
+      "type": "pillar",
+      "x": 18,
+      "z": 15.5,
+      "w": 0.8,
+      "d": 0.8,
+      "rotation": 0,
+      "height": 2.8,
+      "material": "concrete",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p8",
+      "type": "pillar",
+      "x": 27,
+      "z": 15.5,
+      "w": 0.8,
+      "d": 0.8,
+      "rotation": 0,
+      "height": 2.8,
+      "material": "concrete",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p9",
+      "type": "desk",
+      "x": 12,
+      "z": 3.5,
+      "w": 2,
+      "d": 1,
+      "rotation": 0,
+      "height": 0.74,
+      "material": "wood",
+      "cover": "low"
+    },
+    {
+      "id": "M07_p10",
+      "type": "cabinet",
+      "x": 17,
+      "z": 3.5,
+      "w": 1,
+      "d": 1,
+      "rotation": 0,
+      "height": 1.3,
+      "material": "wood",
+      "cover": "full"
+    },
+    {
+      "id": "M07_p11",
+      "type": "crate",
+      "x": 21,
+      "z": 3.5,
+      "w": 2,
+      "d": 1,
+      "rotation": 0,
+      "height": 0.68,
+      "material": "wood",
+      "cover": "low"
+    },
+    {
+      "id": "M07_p12",
+      "type": "table",
+      "x": 26,
+      "z": 6.5,
+      "w": 2,
+      "d": 1,
+      "rotation": 0,
+      "height": 0.74,
+      "material": "wood",
+      "cover": "low"
+    }
+  ],
+  "units": [
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "role": "operator",
+      "x": 13.5,
+      "z": 29,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "reserve_ammo": 72,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "stuns": 2,
+      "smokes": 1,
+      "breaches": 1
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "role": "operator",
+      "x": 15,
+      "z": 29,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "stuns": 2,
+      "smokes": 1,
+      "breaches": 1
+    },
+    {
+      "id": "charlie",
+      "name": "CHARLIE",
+      "role": "operator",
+      "x": 16.5,
+      "z": 29,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "reserve_ammo": 72,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "stuns": 2,
+      "smokes": 1,
+      "breaches": 1
+    },
+    {
+      "id": "delta",
+      "name": "DELTA",
+      "role": "operator",
+      "x": 18,
+      "z": 29,
+      "facing": -1.5707963267948966,
+      "weapon": "shotgun",
+      "reserve_ammo": 24,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "stuns": 2,
+      "smokes": 1,
+      "breaches": 1
+    }
+  ],
+  "enemies": [
+    {
+      "id": "M07_e1",
+      "name": "경비",
+      "x": 5,
+      "z": 5,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "guard",
+      "spawns": [
+        {
+          "x": 5,
+          "z": 5,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 6.5,
+          "z": 5,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "medium"
+    },
+    {
+      "id": "M07_e2",
+      "name": "지원 인원",
+      "x": 14,
+      "z": 5,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "reserve",
+      "spawns": [
+        {
+          "x": 14,
+          "z": 5,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 15.5,
+          "z": 5,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "medium"
+    },
+    {
+      "id": "M07_e3",
+      "name": "경비",
+      "x": 23,
+      "z": 5,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "guard",
+      "spawns": [
+        {
+          "x": 23,
+          "z": 5,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 25,
+          "z": 5,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "medium"
+    },
+    {
+      "id": "M07_e4",
+      "name": "경비",
+      "x": 11,
+      "z": 12,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "guard",
+      "spawns": [
+        {
+          "x": 11,
+          "z": 12,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 12,
+          "z": 12,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "M07_e5",
+      "name": "순찰 인원",
+      "x": 20,
+      "z": 12,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "patrol",
+      "patrol": [
+        [
+          20,
+          12
+        ],
+        [
+          20,
+          18
+        ],
+        [
+          26,
+          18
+        ]
+      ],
+      "spawns": [
+        {
+          "x": 20,
+          "z": 12,
+          "facing": 1.5707963267948966,
+          "patrol": [
+            [
+              20,
+              12
+            ],
+            [
+              20,
+              18
+            ],
+            [
+              26,
+              18
+            ]
+          ]
+        },
+        {
+          "x": 20,
+          "z": 13,
+          "facing": 0,
+          "patrol": [
+            [
+              20,
+              12
+            ],
+            [
+              20,
+              18
+            ],
+            [
+              26,
+              18
+            ]
+          ]
+        }
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "M07_e6",
+      "name": "지원 인원",
+      "x": 11,
+      "z": 19,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "reserve",
+      "spawns": [
+        {
+          "x": 11,
+          "z": 19,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 12,
+          "z": 19,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "M07_e7",
+      "name": "경비",
+      "x": 26,
+      "z": 12,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "guard",
+      "spawns": [
+        {
+          "x": 26,
+          "z": 12,
+          "facing": 1.5707963267948966,
+          "patrol": []
+        },
+        {
+          "x": 27,
+          "z": 12,
+          "facing": 0,
+          "patrol": []
+        }
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "M07_e8",
+      "name": "순찰 인원",
+      "x": 18,
+      "z": 24,
+      "facing": 1.5707963267948966,
+      "weapon": "light",
+      "reserve_ammo": 96,
+      "stance": "standing",
+      "movement_mode": "normal",
+      "enemy_type": "normal",
+      "response_role": "patrol",
+      "patrol": [
+        [
+          18,
+          24
+        ],
+        [
+          25,
+          24
+        ],
+        [
+          25,
+          18
+        ]
+      ],
+      "spawns": [
+        {
+          "x": 18,
+          "z": 24,
+          "facing": 1.5707963267948966,
+          "patrol": [
+            [
+              18,
+              24
+            ],
+            [
+              25,
+              24
+            ],
+            [
+              25,
+              18
+            ]
+          ]
+        },
+        {
+          "x": 20,
+          "z": 24,
+          "facing": 0,
+          "patrol": [
+            [
+              18,
+              24
+            ],
+            [
+              25,
+              24
+            ],
+            [
+              25,
+              18
+            ]
+          ]
+        }
+      ],
+      "strength": "strong"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "M07_c1",
+      "name": "민간인",
+      "x": 4,
+      "z": 3.5
+    },
+    {
+      "id": "M07_c2",
+      "name": "민간인",
+      "x": 28,
+      "z": 4
+    }
+  ],
+  "objectives": [
+    "차량과 기둥으로 나뉜 주차 구역 및 관리실의 위협을 처리하고 민간인 2명을 확보하세요. 남쪽 두 출입구와 서쪽 서비스문이 연결됩니다."
+  ],
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "variant": "normal",
+  "modifiers": [],
+  "environment": {
+    "time_of_day": "dim",
+    "lighting": 0.75
+  },
+  "briefing": {
+    "difficulty": "보통",
+    "estimated_minutes": "5–12",
+    "threat": "분산 경비 · 순찰 · 지원",
+    "tip": "차량 사이와 관리실은 서로 다른 시야 구조입니다. 잠긴 정비실 문에는 관리실을 통한 우회 연결도 있습니다."
+  },
+  "stars": [
+    {
+      "id": "complete",
+      "label": "임무 완료",
+      "stat": "command_failures",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "survival",
+      "label": "전원 생존",
+      "stat": "losses",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "par_time",
+      "label": "240초 이내",
+      "stat": "time",
+      "op": "lte",
+      "value": 240
+    }
+  ]
+}

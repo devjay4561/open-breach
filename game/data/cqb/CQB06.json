@@ -1,0 +1,777 @@
+{
+  "schema_version": 6,
+  "id": "CQB06",
+  "revision": 1,
+  "title": "좁은 연결 통로",
+  "title_en": "Narrow Connecting Lanes",
+  "subtitle": "CQB DOCTRINE",
+  "description": "가운데 연결 통로의 벽 표면 간 폭은 1.76m입니다. 서펜타인으로 앞·좌·우·뒤를 나누어 경계하고, 넓은 양끝 방에서 진입 대형을 다시 정하세요.",
+  "description_en": "The middle lanes have 1.76 metres between wall surfaces. Use serpentine cover for front, left, right and rear, then reset the entry formation in the wider end rooms.",
+  "seed": 10006,
+  "default_seed": 10006,
+  "bounds": [
+    24.799999999999997,
+    21.7
+  ],
+  "focus": [
+    12.399999999999999,
+    8.6
+  ],
+  "roe": "precision",
+  "noise_discipline": "verbal",
+  "variant": "normal",
+  "modifiers": [],
+  "rooms": [
+    {
+      "id": "r1",
+      "label": "01",
+      "x": 5.8,
+      "z": 5.8,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r2",
+      "label": "02",
+      "x": 9.6,
+      "z": 5.8,
+      "w": 2.0,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r3",
+      "label": "03",
+      "x": 13.399999999999999,
+      "z": 5.8,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r4",
+      "label": "04",
+      "x": 19.0,
+      "z": 5.8,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r5",
+      "label": "05",
+      "x": 5.8,
+      "z": 11.399999999999999,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r6",
+      "label": "06",
+      "x": 9.6,
+      "z": 11.399999999999999,
+      "w": 2.0,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r7",
+      "label": "07",
+      "x": 13.399999999999999,
+      "z": 11.399999999999999,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "r8",
+      "label": "08",
+      "x": 19.0,
+      "z": 11.399999999999999,
+      "w": 5.6,
+      "d": 5.6,
+      "indoor": true,
+      "color": "#697065",
+      "floor_surface": "concrete"
+    },
+    {
+      "id": "prep",
+      "label": "PREP",
+      "x": 12.399999999999999,
+      "z": 17.45,
+      "w": 22.799999999999997,
+      "d": 6.5,
+      "indoor": false,
+      "color": "#555d54"
+    }
+  ],
+  "walls": [
+    {
+      "x": 12.399999999999999,
+      "z": 3.0,
+      "w": 18.799999999999997,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_north_1",
+      "height": 3.0
+    },
+    {
+      "x": 4.05,
+      "z": 14.2,
+      "w": 2.0999999999999996,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_1",
+      "height": 3.0
+    },
+    {
+      "x": 12.4,
+      "z": 14.2,
+      "w": 11.8,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_2",
+      "height": 3.0
+    },
+    {
+      "x": 20.75,
+      "z": 14.2,
+      "w": 2.099999999999998,
+      "d": 0.24,
+      "material": "wood",
+      "id": "outer_south_3",
+      "height": 3.0
+    },
+    {
+      "x": 3.0,
+      "z": 8.6,
+      "w": 0.24,
+      "d": 11.2,
+      "material": "wood",
+      "id": "outer_west_1",
+      "height": 3.0
+    },
+    {
+      "x": 21.799999999999997,
+      "z": 8.6,
+      "w": 0.24,
+      "d": 11.2,
+      "material": "wood",
+      "id": "outer_east_1",
+      "height": 3.0
+    },
+    {
+      "x": 8.6,
+      "z": 4.05,
+      "w": 0.24,
+      "d": 2.0999999999999996,
+      "material": "wood",
+      "id": "partition_c0_1",
+      "height": 3.0
+    },
+    {
+      "x": 8.6,
+      "z": 8.6,
+      "w": 0.24,
+      "d": 4.199999999999999,
+      "material": "wood",
+      "id": "partition_c0_2",
+      "height": 3.0
+    },
+    {
+      "x": 8.6,
+      "z": 13.149999999999999,
+      "w": 0.24,
+      "d": 2.1000000000000014,
+      "material": "wood",
+      "id": "partition_c0_3",
+      "height": 3.0
+    },
+    {
+      "x": 10.6,
+      "z": 4.05,
+      "w": 0.24,
+      "d": 2.0999999999999996,
+      "material": "wood",
+      "id": "partition_c1_1",
+      "height": 3.0
+    },
+    {
+      "x": 10.6,
+      "z": 8.6,
+      "w": 0.24,
+      "d": 4.199999999999999,
+      "material": "wood",
+      "id": "partition_c1_2",
+      "height": 3.0
+    },
+    {
+      "x": 10.6,
+      "z": 13.149999999999999,
+      "w": 0.24,
+      "d": 2.1000000000000014,
+      "material": "wood",
+      "id": "partition_c1_3",
+      "height": 3.0
+    },
+    {
+      "x": 16.2,
+      "z": 4.05,
+      "w": 0.24,
+      "d": 2.0999999999999996,
+      "material": "wood",
+      "id": "partition_c2_1",
+      "height": 3.0
+    },
+    {
+      "x": 16.2,
+      "z": 8.6,
+      "w": 0.24,
+      "d": 4.199999999999999,
+      "material": "wood",
+      "id": "partition_c2_2",
+      "height": 3.0
+    },
+    {
+      "x": 16.2,
+      "z": 13.149999999999999,
+      "w": 0.24,
+      "d": 2.1000000000000014,
+      "material": "wood",
+      "id": "partition_c2_3",
+      "height": 3.0
+    },
+    {
+      "x": 4.05,
+      "z": 8.6,
+      "w": 2.0999999999999996,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_1",
+      "height": 3.0
+    },
+    {
+      "x": 12.4,
+      "z": 8.6,
+      "w": 11.8,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_2",
+      "height": 3.0
+    },
+    {
+      "x": 20.75,
+      "z": 8.6,
+      "w": 2.099999999999998,
+      "d": 0.24,
+      "material": "wood",
+      "id": "partition_rows_3",
+      "height": 3.0
+    }
+  ],
+  "doors": [
+    {
+      "id": "ext_left",
+      "x": 5.8,
+      "z": 14.2,
+      "w": 1.4,
+      "d": 0.24,
+      "axis": "x",
+      "label": "좌측 외부 진입",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    },
+    {
+      "id": "ext_right",
+      "x": 19.0,
+      "z": 14.2,
+      "w": 1.4,
+      "d": 0.24,
+      "axis": "x",
+      "label": "우측 외부 진입",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    },
+    {
+      "id": "inner_h0_0",
+      "x": 8.6,
+      "z": 5.8,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1
+    },
+    {
+      "id": "inner_h1_0",
+      "x": 8.6,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "swing_sign": -1,
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1
+    },
+    {
+      "id": "inner_h0_1",
+      "x": 10.6,
+      "z": 5.8,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1
+    },
+    {
+      "id": "inner_h1_1",
+      "x": 10.6,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "swing_sign": 1,
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1
+    },
+    {
+      "id": "inner_h0_2",
+      "x": 16.2,
+      "z": 5.8,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    },
+    {
+      "id": "inner_h1_2",
+      "x": 16.2,
+      "z": 11.399999999999999,
+      "w": 0.24,
+      "d": 1.4,
+      "axis": "z",
+      "label": "연결 방",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    },
+    {
+      "id": "inner_v0",
+      "x": 5.8,
+      "z": 8.6,
+      "w": 1.4,
+      "d": 0.24,
+      "axis": "x",
+      "label": "상층 연결",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    },
+    {
+      "id": "inner_v3",
+      "x": 19.0,
+      "z": 8.6,
+      "w": 1.4,
+      "d": 0.24,
+      "axis": "x",
+      "label": "내부 우회",
+      "material": "wood",
+      "state": "CLOSED",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1
+    }
+  ],
+  "props": [],
+  "units": [
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "role": "선봉",
+      "x": 4.5,
+      "z": 15.7,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "role": "지원",
+      "x": 7.1,
+      "z": 15.7,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "charlie",
+      "name": "CHARLIE",
+      "role": "돌입",
+      "x": 4.5,
+      "z": 16.4,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    },
+    {
+      "id": "delta",
+      "name": "DELTA",
+      "role": "엄호",
+      "x": 7.1,
+      "z": 16.4,
+      "facing": -1.5707963267948966,
+      "weapon": "light",
+      "equipment": {
+        "stun": 2,
+        "breach": 1
+      },
+      "reserve_ammo": 90
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 5.5,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "weak"
+    },
+    {
+      "id": "e2",
+      "name": "무장 인원",
+      "x": 9.15,
+      "z": 5.5,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 9.15,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 10.049999999999999,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "weak"
+    },
+    {
+      "id": "e3",
+      "name": "무장 인원",
+      "x": 12.95,
+      "z": 5.5,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 12.95,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 13.849999999999998,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "medium"
+    },
+    {
+      "id": "e4",
+      "name": "무장 인원",
+      "x": 18.55,
+      "z": 5.5,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 18.55,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 19.45,
+          "z": 5.5,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "reserve",
+      "strength": "medium"
+    },
+    {
+      "id": "e5",
+      "name": "무장 인원",
+      "x": 5.35,
+      "z": 11.099999999999998,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 5.35,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 6.25,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "medium"
+    },
+    {
+      "id": "e6",
+      "name": "무장 인원",
+      "x": 9.15,
+      "z": 11.099999999999998,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 9.15,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966,
+          "patrol": [
+            [
+              9.15,
+              11.099999999999998
+            ],
+            [
+              9.6,
+              11.399999999999999
+            ],
+            [
+              13.399999999999999,
+              11.399999999999999
+            ],
+            [
+              9.6,
+              11.399999999999999
+            ]
+          ]
+        },
+        {
+          "x": 10.049999999999999,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966,
+          "patrol": [
+            [
+              10.049999999999999,
+              11.099999999999998
+            ],
+            [
+              9.6,
+              11.399999999999999
+            ],
+            [
+              13.399999999999999,
+              11.399999999999999
+            ],
+            [
+              9.6,
+              11.399999999999999
+            ]
+          ]
+        }
+      ],
+      "response_role": "patrol",
+      "patrol": [
+        [
+          9.15,
+          11.099999999999998
+        ],
+        [
+          9.6,
+          11.399999999999999
+        ],
+        [
+          13.399999999999999,
+          11.399999999999999
+        ],
+        [
+          9.6,
+          11.399999999999999
+        ]
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "e7",
+      "name": "무장 인원",
+      "x": 12.95,
+      "z": 11.099999999999998,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 12.95,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 13.849999999999998,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "strong"
+    },
+    {
+      "id": "e8",
+      "name": "무장 인원",
+      "x": 18.55,
+      "z": 11.099999999999998,
+      "facing": 1.5707963267948966,
+      "enemy_type": "normal",
+      "spawns": [
+        {
+          "x": 18.55,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        },
+        {
+          "x": 19.45,
+          "z": 11.099999999999998,
+          "facing": 1.5707963267948966
+        }
+      ],
+      "response_role": "guard",
+      "strength": "strong"
+    }
+  ],
+  "civilians": [],
+  "objectives": [
+    "가운데 연결 통로의 벽 표면 간 폭은 1.76m입니다. 서펜타인으로 앞·좌·우·뒤를 나누어 경계하고, 넓은 양끝 방에서 진입 대형을 다시 정하세요.",
+    "모든 방을 정리하고 외부 종료 구역으로 이동하세요."
+  ],
+  "win": [
+    {
+      "type": "rooms_cleared",
+      "room_ids": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8"
+      ]
+    },
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    },
+    {
+      "type": "reach_zone",
+      "zone": [
+        19.0,
+        16.7,
+        2.8,
+        1.8
+      ]
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "stars": [
+    {
+      "id": "no_hits",
+      "label": "피격 0",
+      "stat": "hits_taken",
+      "op": "eq",
+      "value": 0
+    },
+    {
+      "id": "no_civilian_damage",
+      "label": "민간인 피해 0",
+      "stat": "civilian_damage",
+      "op": "eq",
+      "value": 0
+    }
+  ]
+}

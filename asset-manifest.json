@@ -1,0 +1,1360 @@
+{
+  "schema_version": 1,
+  "catalog_id": "open-breach-assets-v1",
+  "verified_at": "2026-10-12",
+  "policy": "Free assets only: Quaternius CC0 models/motion, KayKit CC0 motion, original pose adaptations, Kenney CC0 furniture/particles/contacts, Free Firearm CC0 recordings. Original map geometry and UI sounds; OFL font and MIT Godot. All assets self-hosted. Operator equipment uses asset-specific commercial licenses and original derived meshes; see operator provenance and included notices. Equipment catalog photographs are GPT-generated fictional visuals; generation prompts and provenance are included.",
+  "assets": [
+    {
+      "asset_id": "font-noto-sans-kr",
+      "creator": "Adobe / Noto Project",
+      "pack": "Noto Sans KR variable font",
+      "source_url": "https://github.com/google/fonts/tree/4efc2774c63917927efe769ca845def6bd6debae/ofl/notosanskr",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/4efc2774c63917927efe769ca845def6bd6debae/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
+      "downloaded_at": "2026-10-06",
+      "archive_sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "license_id": "OFL-1.1",
+      "license_evidence": "licenses/NotoSansKR-OFL.txt",
+      "processing": [
+        "Subset to runtime UI/scripts/map text; retain previously supported user-input glyphs plus Latin, Hangul jamo, punctuation and arrows.",
+        "Keep variable weights 100–900; produce TTF for Godot and WOFF2 for the offline web UI.",
+        "Rebuild with scripts/subset_fonts.py; source font is cached under .tools and excluded from the game."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/fonts/NotoSansKR.ttf",
+          "sha256": "8946c926e8a764b82030be2708830ae07bb01e3367dd77523a38025996e9826b",
+          "bytes": 330916
+        },
+        {
+          "path": "web/assets/fonts/NotoSansKR.woff2",
+          "sha256": "e1bffc75db440471c9cb838c8187b87d51f847f58b4ea4665f008ca5fc48d867",
+          "bytes": 139028
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "font-oswald",
+      "creator": "The Oswald Project Authors (Vernon Adams, Kalapi Gajjar, Cyreal)",
+      "pack": "Oswald condensed display variable font",
+      "source_url": "https://github.com/google/fonts/tree/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/oswald",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/oswald/Oswald%5Bwght%5D.ttf",
+      "downloaded_at": "2026-10-07",
+      "archive_sha256": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817",
+      "license_id": "OFL-1.1",
+      "license_evidence": "licenses/Oswald-OFL.txt",
+      "processing": [
+        "Instanced to a static weight 700 (condensed bold) for logo, mode banners and result ranks.",
+        "Subset to Latin, digits, punctuation and arrows used in UI strings; no Hangul glyphs required.",
+        "Rebuild with scripts/subset_fonts.py; source font is cached under .tools and excluded from the game."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/fonts/Oswald-700.ttf",
+          "sha256": "debd56f064e550771ec2e816809099d224fc95aaad8aefcbfde7d611cac01acc",
+          "bytes": 23828
+        },
+        {
+          "path": "web/assets/fonts/Oswald-700.woff2",
+          "sha256": "867e76b7d1c7536c7d08e3e9ff0b4b502a563c0a82df4f52f2dd2545d0281ba9",
+          "bytes": 11188
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "font-jetbrains-mono",
+      "creator": "JetBrains / Philipp Nurullin, Konstantin Bulenkov",
+      "pack": "JetBrains Mono variable font",
+      "source_url": "https://github.com/google/fonts/tree/6e4b84c976cadb3c49a40fd9a1c203e4f7fcf2da/ofl/jetbrainsmono",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/6e4b84c976cadb3c49a40fd9a1c203e4f7fcf2da/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf",
+      "downloaded_at": "2026-10-07",
+      "archive_sha256": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda",
+      "license_id": "OFL-1.1",
+      "license_evidence": "licenses/JetBrainsMono-OFL.txt",
+      "processing": [
+        "Instanced to a static weight 500 for numerals, codes and the operation clock (tabular-nums).",
+        "Subset to Latin, digits, punctuation and arrows used in UI strings; no Hangul glyphs required.",
+        "Rebuild with scripts/subset_fonts.py; source font is cached under .tools and excluded from the game."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/fonts/JetBrainsMono-500.ttf",
+          "sha256": "6db215fdd71b886fddb24a86c54842a6e6b6585b0a96cb739eb23cb7f748e483",
+          "bytes": 52548
+        },
+        {
+          "path": "web/assets/fonts/JetBrainsMono-500.woff2",
+          "sha256": "e7d86cf8c609f4060e2c7e6ba6524d6f2e5d74b0d3f6fa2d7bc4088eed8524d0",
+          "bytes": 20236
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "original-audio",
+      "creator": "OPEN BREACH",
+      "pack": "Original interface and tactical effects",
+      "source_url": null,
+      "source_file": "scripts/generate_audio.py",
+      "downloaded_at": null,
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Original-Assets.txt",
+      "processing": [
+        "Deterministic waveform and noise generation performed offline.",
+        "Mono signed 16-bit PCM at 22050 Hz; intentional soft peak levels; no game audio extracted from other works."
+      ],
+      "selected_files": [
+        {
+          "path": "web/assets/audio/ambient.wav",
+          "sha256": "970d9edd479fd70b6cebe29ec60cec31e4ec6fef30d10ad2ad6ee9849eb9a139",
+          "bytes": 352844
+        },
+        {
+          "path": "web/assets/audio/fail.wav",
+          "sha256": "8d95d22d953637508fb2566fefd5b24ae1d38db408018e33df0bb9467fb7aa00",
+          "bytes": 48554
+        },
+        {
+          "path": "web/assets/audio/order.wav",
+          "sha256": "756c9d67662316f690f01c454e78d2524f392ffa56e42f54796fb1138a02102c",
+          "bytes": 9746
+        },
+        {
+          "path": "web/assets/audio/select.wav",
+          "sha256": "bc38a2285e16ca74970ece4377c2e8aa9a10b6ee127b8679e8f579a8a7d24d8c",
+          "bytes": 4454
+        },
+        {
+          "path": "web/assets/audio/stun.wav",
+          "sha256": "1ca3df6e057c33fac70d2d628dbc387358ef367c47687e9acc312f6be1abf221",
+          "bytes": 30914
+        },
+        {
+          "path": "web/assets/audio/win.wav",
+          "sha256": "ff2db96bbab6493901857fb0a4be951a373fd7033c82473b2054043aea96edc9",
+          "bytes": 48554
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "original-maps",
+      "creator": "OPEN BREACH",
+      "pack": "First Entry / Still House / Archive / Depot",
+      "source_url": null,
+      "source_file": "scripts/create_maps.py + scripts/create_extra_maps.py + scripts/create_challenge_maps.py",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Original-Assets.txt",
+      "processing": [
+        "Original fictional layouts authored from center-based rectangles.",
+        "Map data drives rendering, navigation and line-of-sight geometry."
+      ],
+      "selected_files": [
+        {
+          "path": "game/data/archive.json",
+          "sha256": "f0ba6dd35afe48c4805d18cb8e3bd76734dd3e4993facecdc769039b9fefe9dc",
+          "bytes": 10822
+        },
+        {
+          "path": "game/data/archive_challenge.json",
+          "sha256": "c008104b66ff20367053ac37b8b934e82cb878b5d81f759c444adbd268acbef2",
+          "bytes": 12179
+        },
+        {
+          "path": "game/data/courtyard.json",
+          "sha256": "cd6496da9a74aeae10bb9a4e5d51c73496f259c14793edbcdc32cba431e7d601",
+          "bytes": 27028
+        },
+        {
+          "path": "game/data/depot.json",
+          "sha256": "f0326e8a29f00664cd1a118ae21f0588bbff815adf812fd3b045583e3f11460a",
+          "bytes": 10891
+        },
+        {
+          "path": "game/data/depot_challenge.json",
+          "sha256": "38de0f85263f92c3000ffa5645b194a18c824aedb09fe7dc759e519a563d2ec7",
+          "bytes": 12688
+        },
+        {
+          "path": "game/data/garage.json",
+          "sha256": "0fa276fec28fbea71b192a3dbfdb69a437c917dcb72092a690ea74146b40293d",
+          "bytes": 20066
+        },
+        {
+          "path": "game/data/historical_roster.json",
+          "sha256": "62bd3b2787ecdb15a55125e7f221e6cf574fc9181035c5c823a1614c07ebdbd6",
+          "bytes": 157
+        },
+        {
+          "path": "game/data/house.json",
+          "sha256": "d7e87311a5bcb14db104524452adf8b9a975bcc6d6247283f75d35d881937a91",
+          "bytes": 22924
+        },
+        {
+          "path": "game/data/house_challenge.json",
+          "sha256": "0f5afa6e601990fcb308b94d00dffc4be80c2e5447a08b447e0cd46ac66b5ca6",
+          "bytes": 24097
+        },
+        {
+          "path": "game/data/motel.json",
+          "sha256": "0d8f95141dfae1114f7586e7a2fc4aaa1dbd36a393c4ccb10a01cc45a5b3133c",
+          "bytes": 23717
+        },
+        {
+          "path": "game/data/offices.json",
+          "sha256": "13f661f4e3157df1e5207c87117b386b82038156656c6ea039f35fd105c188e4",
+          "bytes": 24815
+        },
+        {
+          "path": "game/data/shops.json",
+          "sha256": "b6203b86a45776c67d2df4c0ebb5958a8b8efc2327ecf630c85684d64d6896ff",
+          "bytes": 23344
+        },
+        {
+          "path": "game/data/terminal.json",
+          "sha256": "d2d95569935d74117c074c545334efbd57d5e9f275489062e39ea136e36d610e",
+          "bytes": 26178
+        },
+        {
+          "path": "game/data/tutorial.json",
+          "sha256": "0f81acef660bb24e54900d4868f974d7a0237a52594890b9b3dd51d736b2d163",
+          "bytes": 11105
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "original-miniature-art",
+      "creator": "OPEN BREACH",
+      "pack": "Original cutaway map geometry and civilian figures",
+      "source_url": null,
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Original-Assets.txt",
+      "processing": [
+        "Original low-poly meshes are generated from Godot primitives and shared materials.",
+        "Includes civilians, cutaway architecture and fallback furnishings; primary furniture uses Kenney assets."
+      ],
+      "selected_files": [
+        {
+          "path": "game/scripts/world_view.gd",
+          "sha256": "3ae592e14999a2e2b3b3dda82e933ac20192cbcca73b3bd4202b31b510b60781",
+          "bytes": 215432
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "kenney-particles",
+      "creator": "Kenney",
+      "pack": "Particle Pack",
+      "source_url": "https://kenney.nl/assets/particle-pack",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Kenney-Particles.txt",
+      "downloaded_at": "2026-10-06",
+      "archive_sha256": "b631d4b07f7002549fdcf155f01141ad482f79f3440e4e301eed49ce5f1d8958",
+      "processing": [
+        "Selected assets only; reproducible import via scripts/import_combat_assets.py."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/vfx/smoke_05.png",
+          "sha256": "e88c8416bd8da1b3f9f19e615dcebdf42f71045799cb4c41f545cb16dd835e35",
+          "bytes": 83445
+        },
+        {
+          "path": "game/assets/vfx/fire_01.png",
+          "sha256": "9727a9743ac6ab8dd4dd79f5fc5b0266290efae45f4d4452279eb5e4bcf3a978",
+          "bytes": 99891
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "firearm-recordings",
+      "creator": "Ben Jaszczak, Brian Nelson, Kevin Heras, Matthew Nanney",
+      "pack": "Free Firearm Sound Library",
+      "source_url": "https://opengameart.org/content/the-free-firearm-sound-library",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Free-Firearm-Library.txt",
+      "downloaded_at": "2026-10-06",
+      "archive_sha256": "cc1ab5a99a0a365105c7c5dd783f4b0b1fe90938114d3ceec53856bfe005f7d6",
+      "processing": [
+        "Selected assets only; reproducible import via scripts/import_combat_assets.py."
+      ],
+      "selected_files": [
+        {
+          "path": "web/assets/audio/shot.wav",
+          "sha256": "de74d90605086cb145d1f0cea7963c41ec279dae631b1b6e466fc0bae2ae86de",
+          "bytes": 77022
+        },
+        {
+          "path": "web/assets/audio/shot_alt.wav",
+          "sha256": "952b17a83e864d4eb36a39a2e8ba2b1b89d88f68fdc755fdd6e7fd48971f787e",
+          "bytes": 77022
+        },
+        {
+          "path": "web/assets/audio/shot_close.wav",
+          "sha256": "e97c7248b4a33b22794d316d3050b07f5a71368cfb94bf983c9c51cf2d82ed4d",
+          "bytes": 77022
+        },
+        {
+          "path": "web/assets/audio/shot_close_alt.wav",
+          "sha256": "7362d50a4ac2c8e189281654851eb50f5f1ed635d0d4408b1ef2f25f735c1777",
+          "bytes": 77022
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "quaternius-combat-models",
+      "creator": "Quaternius",
+      "pack": "SWAT / Assault Rifle",
+      "source_url": "https://quaternius.com/packs/ultimatemodularcharacters.html",
+      "source_urls": [
+        "https://poly.pizza/m/Btfn3G5Xv4",
+        "https://poly.pizza/m/Bgvuu4CUMV"
+      ],
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Quaternius-Modular-Characters.txt",
+      "processing": [
+        "Original SWAT skin and death clip, matte team colors, wrist-attached rifle.",
+        "All embedded motion is CC0 Toon Shooter / KayKit or original procedural pose adaptation."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/characters/combat-swat.glb",
+          "sha256": "7c739d3fb8213316dc463623d45aaf6807970f52ba537bc7b410726d87f4cc52",
+          "bytes": 1394328
+        },
+        {
+          "path": "game/assets/characters/rifle.glb",
+          "sha256": "a6b90047927c65d0026bb19b5d4625b5ed3270e4ea5e39619cc50f0770aa6259",
+          "bytes": 133980
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "cc0-swat-motion",
+      "creator": "Quaternius / Kay Lousberg / OPEN BREACH",
+      "pack": "Toon Shooter / KayKit Character Animations 1.1 / original pose adaptations",
+      "source_urls": [
+        "https://quaternius.com/packs/toonshootergamekit.html",
+        "https://kaylousberg.itch.io/kaykit-character-animations"
+      ],
+      "license_id": "CC0-1.0",
+      "license_evidence": [
+        "licenses/Quaternius-Toon-Shooter.txt",
+        "licenses/KayKit-Character-Animations.txt",
+        "licenses/Original-Assets.txt"
+      ],
+      "source_file": "scripts/build_cc0_swat_motion.py",
+      "processing": [
+        "Direct CC0 Toon Shooter poses with shared rifle upper-body layering.",
+        "KayKit torso and arm rest-space rotation retarget; source-free original support-hand IK and turn shuffles.",
+        "Planar Root/Body motion removed; vertical bob retained.",
+        "Joined skinned meshes with original weights and four materials."
+      ],
+      "source_files": [
+        {
+          "path": ".tools/asset-sources/kaykit/KayKit_Character_Animations_1.1/Animations/gltf/Rig_Medium/Rig_Medium_General.glb",
+          "bytes": 828240,
+          "sha256": "5f725c0f745f36078c7238968cd5c04843cbc6260689eb6e7f5e2bbd7ffdd7ad"
+        },
+        {
+          "path": ".tools/asset-sources/toon-shooter/swat.glb",
+          "bytes": 1560900,
+          "sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        }
+      ],
+      "clips": {
+        "Death": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Death",
+          "frames": 32,
+          "seconds": 1.0333333333333334,
+          "modifications": [
+            "Original CC0 death retained"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleIdle": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Idle_Gun_Shoot",
+          "frames": 51,
+          "seconds": 1.6666666666666667,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "Forward shooting pose held; authored two-hand grip IK and closed left fingers; source body bob"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleWalk": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Walk",
+          "frames": 41,
+          "seconds": 1.3333333333333333,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Original lower-body cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleWalkBack": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Walk",
+          "frames": 41,
+          "seconds": 1.3333333333333333,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Reversed cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleRun": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Run_Shoot",
+          "frames": 26,
+          "seconds": 0.8333333333333334,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Original lower-body cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleRunBack": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Run_Back",
+          "frames": 26,
+          "seconds": 0.8333333333333334,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Original lower-body cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleStrafeLeft": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Run_Left",
+          "frames": 25,
+          "seconds": 0.8,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Original lower-body cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleStrafeRight": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Run_Right",
+          "frames": 25,
+          "seconds": 0.8,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "RifleIdle upper body layered",
+            "Original lower-body cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleFire": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Idle_Gun_Shoot",
+          "frames": 21,
+          "seconds": 0.6666666666666666,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "Shooting rotation deltas over two-hand authored support pose"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleHit": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|HitRecieve",
+          "frames": 17,
+          "seconds": 0.5333333333333333,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "Torso reaction over rifle grip; runtime support-hand IK"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "DoorOpenOut": {
+          "source_pack": "Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "CharacterArmature|Interact",
+          "frames": 39,
+          "seconds": 1.2666666666666666,
+          "modifications": [
+            "30 fps sampling; planar Root/Body displacement removed",
+            "Right-arm reach only over RifleIdle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleTurnLeft": {
+          "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "Idle_Gun_Shoot + original foot shuffle",
+          "frames": 31,
+          "seconds": 1.0,
+          "modifications": [
+            "Original procedural closed foot shuffle over CC0 aim pose; no baked actor yaw"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleTurnRight": {
+          "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "Idle_Gun_Shoot + original foot shuffle",
+          "frames": 31,
+          "seconds": 1.0,
+          "modifications": [
+            "Original procedural closed foot shuffle over CC0 aim pose; no baked actor yaw"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleReload": {
+          "source_pack": "OPEN BREACH procedural adaptation of Quaternius Toon Shooter",
+          "source_file": ".tools/asset-sources/toon-shooter/swat.glb",
+          "source_clip": "Idle_Gun_Shoot + original reload key poses",
+          "frames": 49,
+          "seconds": 1.6,
+          "modifications": [
+            "Original two-bone IK reload: lower rifle, reach magazine, reach belt, insert, return",
+            "KayKit Ranged_2H_Reload retarget evaluated and rejected: support-hand contact mismatch",
+            "Closed fingers and aim lower body retained; 1.6 second cycle"
+          ],
+          "source_sha256": "a835107bac833eb916c494e10997ae1709e85957ea6f6c59ace3c9a66f6d1fec"
+        },
+        "RifleThrow": {
+          "source_pack": "KayKit Character Animations 1.1",
+          "source_file": ".tools/asset-sources/kaykit/KayKit_Character_Animations_1.1/Animations/gltf/Rig_Medium/Rig_Medium_General.glb",
+          "source_clip": "Throw",
+          "frames": 42,
+          "seconds": 1.3666666666666667,
+          "modifications": [
+            "Rest-space torso/arm rotation retarget; target limb lengths retained",
+            "Aim fingers and lower body held; five-frame boundary blends",
+            "Right arm only; left supports rifle"
+          ],
+          "source_sha256": "5f725c0f745f36078c7238968cd5c04843cbc6260689eb6e7f5e2bbd7ffdd7ad"
+        }
+      },
+      "selected_files": [
+        {
+          "path": "game/assets/characters/combat-swat.glb",
+          "sha256": "7c739d3fb8213316dc463623d45aaf6807970f52ba537bc7b410726d87f4cc52",
+          "bytes": 1394328
+        },
+        {
+          "path": "game/assets/characters/combat-swat-gear.glb",
+          "sha256": "70d2f0efa766feb0f95cb927ab4304ae3c5e9fd0c3b984462c608bc233cd68ec",
+          "bytes": 1246100
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "kenney-furniture",
+      "creator": "Kenney",
+      "pack": "Furniture Kit",
+      "source_url": "https://kenney.nl/assets/furniture-kit",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Kenney-Furniture.txt",
+      "archive_sha256": "e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0",
+      "processing": [
+        "Ten furniture models and an authored door leaf; normalized footprints, cutaway door top and shared matte palette. Existing collision and LOS proxies retained."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/environment/bedDouble.glb",
+          "sha256": "c49b33e7d797d2ba1111895587dba7ff63b17a712eb9b4ceeb40a598f73e476c",
+          "bytes": 23368
+        },
+        {
+          "path": "game/assets/environment/bookcaseClosedDoors.glb",
+          "sha256": "ff33f535acdb1825c0e958a293642b39665adcae0b1317b650e83d2bb687f4e2",
+          "bytes": 22644
+        },
+        {
+          "path": "game/assets/environment/bookcaseOpen.glb",
+          "sha256": "750702218d68c062b15dfef6ab06a4014d1cfa8bd05f02e57c53b7e13bec157c",
+          "bytes": 18020
+        },
+        {
+          "path": "game/assets/environment/cardboardBoxClosed.glb",
+          "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81",
+          "bytes": 5400
+        },
+        {
+          "path": "game/assets/environment/chairCushion.glb",
+          "sha256": "33544228984857f2cb502b58452fed72157335f9b1caf29e96da5c9094c53fdc",
+          "bytes": 12588
+        },
+        {
+          "path": "game/assets/environment/desk.glb",
+          "sha256": "0164fe828f028b321730fb8c74502e353583f751be74da1682d42fff7d3c5a42",
+          "bytes": 15048
+        },
+        {
+          "path": "game/assets/environment/loungeSofa.glb",
+          "sha256": "1886b811c0d3ad0d8525a4fd43adf4112c497c8e0ed906f06877ca3517f4c7dd",
+          "bytes": 9644
+        },
+        {
+          "path": "game/assets/environment/pottedPlant.glb",
+          "sha256": "5b760eda2766f75fda36b2c5df652a1662f82981ef64cd8fa7fe7bcd386b3a15",
+          "bytes": 7576
+        },
+        {
+          "path": "game/assets/environment/rugRectangle.glb",
+          "sha256": "a989d2d59c04e3071e0c90388b113a9a8f339ce1814ef984c51cb6dcd7c8e0eb",
+          "bytes": 3188
+        },
+        {
+          "path": "game/assets/environment/table.glb",
+          "sha256": "ff1a94498d023957f4bc3ff6f55a7a82977d336dbf01a573b3364f03afe5ff61",
+          "bytes": 8196
+        },
+        {
+          "path": "game/assets/environment/doorLeaf.glb",
+          "sha256": "06172e17a76eefba66f913bcb38d4cd743ec86f5cc694cdd4486493f22a1d27e",
+          "bytes": 11280
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "kenney-impact-audio",
+      "creator": "Kenney",
+      "pack": "Impact Sounds",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Kenney-Impact-Sounds.txt",
+      "archive_sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "processing": [
+        "Selected concrete/wood footsteps and soft/wood contacts, trimmed and normalized with scripts/import_tactical_audio.py. Prepared generic door contacts, not real ballistic or dedicated hinge recordings.",
+        "Footsteps follow observed travel distance; light contact follows actual door motion, medium contact follows DOOR_OPEN. Sample variation is deterministic and all files are self-hosted."
+      ],
+      "selected_files": [
+        {
+          "path": "web/assets/audio/hit.wav",
+          "sha256": "066c847c421107690086ed5c46cfa2a245c4ce38ca15cdf4c681c679f699747f",
+          "bytes": 7446
+        },
+        {
+          "path": "web/assets/audio/hit_alt.wav",
+          "sha256": "dd26661c4dc0cd911670f9b2995f8b9cb7d63084d0080e2cd622b1fe38317de7",
+          "bytes": 11624
+        },
+        {
+          "path": "web/assets/audio/door.wav",
+          "sha256": "46b56d6b5f6daf0ea7fb67cfc4ff5ce4155ef81fff1371e03a59b0f5494220e4",
+          "bytes": 21184
+        },
+        {
+          "path": "web/assets/audio/door_alt.wav",
+          "sha256": "75cbf72f63e1c41be2d39ceb8a5999101042fd2ab2651feee146f57e67a01328",
+          "bytes": 21184
+        },
+        {
+          "path": "web/assets/audio/door_alt2.wav",
+          "sha256": "6205e5a616d93e311d1dc4c3dbd13a59d3f7fdece18f1570d09ba569d7b70b17",
+          "bytes": 21184
+        },
+        {
+          "path": "web/assets/audio/door_latch.wav",
+          "sha256": "1ffe15ab7f5e4e5a57b462b904f5fabb99f220f61e36ab8c555b058a1706754d",
+          "bytes": 16892
+        },
+        {
+          "path": "web/assets/audio/door_latch_alt.wav",
+          "sha256": "8e919b928623cc3af467f8189a40a68e3c08d077ca66b8f3aa83218ba5a2aecd",
+          "bytes": 16892
+        },
+        {
+          "path": "web/assets/audio/door_latch_alt2.wav",
+          "sha256": "9f4232e3a8f08059fb8bb44dfd576ee501a1515e7860cbe3a1cafbfa67f3b8e3",
+          "bytes": 16892
+        },
+        {
+          "path": "web/assets/audio/footstep_concrete_000.wav",
+          "sha256": "3343bb443c99a8a9a50f224b108a031fa818ff64a3e43bef9818714475018282",
+          "bytes": 6674
+        },
+        {
+          "path": "web/assets/audio/footstep_concrete_001.wav",
+          "sha256": "6d394fe01e4e1354cb63d40d9625ffac864d28f848ebf594308049853669ab94",
+          "bytes": 6784
+        },
+        {
+          "path": "web/assets/audio/footstep_concrete_002.wav",
+          "sha256": "ff6fe73468450821ef6d9ad3d674d3641fd7bc939fa8ddb0a0943996df2f5ef0",
+          "bytes": 7114
+        },
+        {
+          "path": "web/assets/audio/footstep_concrete_003.wav",
+          "sha256": "996dc8695a02f7b3244d74fc5ec44d1d942e83fda4a5d8d3274f360df12318c4",
+          "bytes": 6966
+        },
+        {
+          "path": "web/assets/audio/footstep_concrete_004.wav",
+          "sha256": "44d658bd4c2ae476d7744e62f50c810f3bb0602811d2768ae4793243a4c52248",
+          "bytes": 7214
+        },
+        {
+          "path": "web/assets/audio/footstep_wood_000.wav",
+          "sha256": "1110d501687680bea06e90c88924ee7370ea5f2b24a2cb3c334ed270ac0fcf89",
+          "bytes": 17448
+        },
+        {
+          "path": "web/assets/audio/footstep_wood_001.wav",
+          "sha256": "0f259902f2d61d0c7dcbb59f143e6ae85336391ff004d48e341e26c24e77b3b7",
+          "bytes": 15994
+        },
+        {
+          "path": "web/assets/audio/footstep_wood_002.wav",
+          "sha256": "7ef328226bcb50d019042dd9f35374873d9249ac25cd44b47c66a5ac56df8412",
+          "bytes": 15984
+        },
+        {
+          "path": "web/assets/audio/footstep_wood_003.wav",
+          "sha256": "61e18815c8112b005cb0b6a842b4db5d6c038e4ffc157c4e607e89da04e72fb8",
+          "bytes": 15992
+        },
+        {
+          "path": "web/assets/audio/footstep_wood_004.wav",
+          "sha256": "5852d7629ea102898dd3394750930ba994e3d732b508450c660b0716600119d1",
+          "bytes": 15762
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "historical-models-original",
+      "creator": "OPEN BREACH",
+      "pack": "Special operations environment models",
+      "source_url": null,
+      "source_file": "scripts/build_historical_assets.py",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/special-ops-assets-original.txt",
+      "processing": [
+        "Blender source and exported GLB use metres with uniform scale. Fictional exteriors are authored designs, not surveyed CAD.",
+        "Asset-specific dimensions, sources, licenses and Blender provenance are recorded in licenses/provenance/SPECIAL_OPS_ASSET_PROVENANCE.json."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/historical/tanker_ship_hull.glb",
+          "sha256": "6f49138b63a01cbacd00f0b676e0c0b519eb2df60f448ed37e050eb15fd085bb",
+          "bytes": 105944
+        },
+        {
+          "path": "game/assets/historical/tanker_superstructure.glb",
+          "sha256": "5da3d28bb7856fba1c783bb654dcba9340fa39452e0d10c0a2650957a6fab98d",
+          "bytes": 437764
+        },
+        {
+          "path": "game/assets/historical/tanker_deck_pipes.glb",
+          "sha256": "83a556bd9bf2ec63dea3a82824b50adf6f2a603efe7522e57f219c9339e7a15a",
+          "bytes": 128092
+        },
+        {
+          "path": "game/assets/historical/watchtower.glb",
+          "sha256": "db81dc00ddf644da4c42e49813829e096d541202ada77481a694d9ac6cd0109c",
+          "bytes": 39104
+        },
+        {
+          "path": "game/assets/historical/hut.glb",
+          "sha256": "3a295b6a7569824054cd24fcdc2a7c2d788d43c38f36af5727bf91f3390f8652",
+          "bytes": 25008
+        },
+        {
+          "path": "game/assets/historical/utility_vehicle.glb",
+          "sha256": "80396d93a67068debc961c90f4c33619a4fd860031316ed5762b3cff66662a22",
+          "bytes": 87088
+        },
+        {
+          "path": "game/assets/historical/cargo_truck.glb",
+          "sha256": "ca475b964b0062695b995fbcb8314c89819316886b3f5531a42f4346058ef6f2",
+          "bytes": 48924
+        },
+        {
+          "path": "game/assets/historical/airliner_twinjet.glb",
+          "sha256": "cb6d226697f6343740a321dcf1c5dd80b9865fd438b406bb9f3250d0dfff209a",
+          "bytes": 718396
+        },
+        {
+          "path": "game/assets/historical/airliner_reartwin.glb",
+          "sha256": "2e7ddc08b77a9cd17e6bb411b4290e8565ce2e1fabf587563648b0af20a1db4a",
+          "bytes": 854544
+        },
+        {
+          "path": "game/assets/historical/airliner_quadjet.glb",
+          "sha256": "4b277ac71ae8aa7499b96a2e5f0ee9dee1290035ad1534b63f54aed20a6b39d9",
+          "bytes": 1079032
+        },
+        {
+          "path": "game/assets/historical/helicopter_heavy_lift.glb",
+          "sha256": "f42aadd4f3c6705983b4003ff8e168ee7145b7731a57e083840cb5d3920e58ff",
+          "bytes": 112708
+        },
+        {
+          "path": "game/assets/historical/terrace_townhouse.glb",
+          "sha256": "0bca08efc95a9752f0e7cd28978e22fa8d168189c6a2f4dcba30acdcbfea4ea3",
+          "bytes": 35920
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "historical-models-kenney",
+      "creator": "Kenney",
+      "pack": "Special operations environment models",
+      "source_url": "https://kenney.nl/assets/nature-kit",
+      "source_file": "scripts/build_historical_assets.py",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/special-ops-assets-kenney-nature.txt",
+      "processing": [
+        "Blender source and exported GLB use metres with uniform scale. Fictional exteriors are authored designs, not surveyed CAD.",
+        "Asset-specific dimensions, sources, licenses and Blender provenance are recorded in licenses/provenance/SPECIAL_OPS_ASSET_PROVENANCE.json."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/historical/pine_tree.glb",
+          "sha256": "2421e98b48bc1fb451799f8ea474709189af928f57f4dd40884c57a10b876b69",
+          "bytes": 8284
+        },
+        {
+          "path": "game/assets/historical/palm_tree.glb",
+          "sha256": "00538dc637209b64ad5de9b75fc91972cc8bd231dd6c9a2da463df3b58a99b47",
+          "bytes": 19600
+        },
+        {
+          "path": "game/assets/historical/bush.glb",
+          "sha256": "915ba486b6415ac37dd120b3ca4562f31490d926841a8167bb8c6e76e9605f92",
+          "bytes": 7612
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "historical-map-data",
+      "creator": "OPEN BREACH",
+      "pack": "12 fictional special operations",
+      "source_url": null,
+      "source_file": "scripts/create_historical_maps.py",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/special-ops-assets-original.txt",
+      "processing": [
+        "Authored metre-scale fictional layouts with localized locations and operation dossiers.",
+        "Core missions and special operations share the same fictional setting policy."
+      ],
+      "selected_files": [
+        {
+          "path": "game/data/historical/H01.json",
+          "sha256": "99d63756718f5bbb781458c2720cb30f371ea7585fa2d9ece14eb7f3fb48475e",
+          "bytes": 22657
+        },
+        {
+          "path": "game/data/historical/H02.json",
+          "sha256": "66e6df997789d1cb699c357fd88915913cf2e7cc99a8f4fb497da3683827cee3",
+          "bytes": 17000
+        },
+        {
+          "path": "game/data/historical/H03.json",
+          "sha256": "e2a373323f924d8e2e04b196981324d22d296afbceb9b202210902e108001b0f",
+          "bytes": 20840
+        },
+        {
+          "path": "game/data/historical/H04.json",
+          "sha256": "372a5a2e336fe33f692722b40d4bcc99287608d31fdeef4b1b2c08396f7c54a3",
+          "bytes": 40092
+        },
+        {
+          "path": "game/data/historical/H06.json",
+          "sha256": "a087fa5cbf4cf215c7258e4c3ed88c1108f79602cda5efda255fdf5827f5b469",
+          "bytes": 43426
+        },
+        {
+          "path": "game/data/historical/H07.json",
+          "sha256": "e270d2043c05f580affa040fc7d12f8eb74ca090bb7290a8f8c02942f11f87f9",
+          "bytes": 66669
+        },
+        {
+          "path": "game/data/historical/H09.json",
+          "sha256": "07b6c4682e968e605fa4e1a9516f14fd2e032d9d2273ac2bf4d6966be2826b21",
+          "bytes": 18366
+        },
+        {
+          "path": "game/data/historical/H11.json",
+          "sha256": "57bb3f9de02c45d981feb65dc94511e6fb1ff11ac7391351aded13cb1bd140f9",
+          "bytes": 18251
+        },
+        {
+          "path": "game/data/historical/H16.json",
+          "sha256": "0829690929a2d9b8938a202a92d616a9da01fd0edf45322324e6290d4d859b2d",
+          "bytes": 21504
+        },
+        {
+          "path": "game/data/historical/H26.json",
+          "sha256": "32f3fadc72bc28e0a38402d96b94221d55852ac6d239a63e620e20ab75930745",
+          "bytes": 14366
+        },
+        {
+          "path": "game/data/historical/H29.json",
+          "sha256": "df2d3818de17946e5239b36866297ffe210eb543cdf2d9fefc53cc7482ecfa1e",
+          "bytes": 27977
+        },
+        {
+          "path": "game/data/historical/H36.json",
+          "sha256": "1926562ce4b06a7ea751b6ab2aa8efcd355a18380e2720df94557428d3dbcc11",
+          "bytes": 19499
+        },
+        {
+          "path": "game/assets/historical/registry.json",
+          "sha256": "bf606a15b3ae4686e1dde1b0803113735d3b2c2690d9ae0c439cd02ac4c0ed39",
+          "bytes": 16491
+        },
+        {
+          "path": "licenses/provenance/SPECIAL_OPS_ASSET_PROVENANCE.json",
+          "sha256": "cf2c517cf13359bd49382e7f92a184874999eddf71bbb94244a6c472ba9aede2",
+          "bytes": 18330
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "operator-quaternius-weapons",
+      "creator": "Quaternius",
+      "pack": "Assault Rifle / Submachine Gun / Shotgun / Pistol",
+      "source_url": "https://poly.pizza/m/Bgvuu4CUMV",
+      "source_urls": [
+        "https://poly.pizza/m/Bgvuu4CUMV",
+        "https://poly.pizza/m/nsP3JukU73",
+        "https://poly.pizza/m/ZmPTnh7njL",
+        "https://poly.pizza/m/J3i9KDQ3kt"
+      ],
+      "downloaded_at": "2026-10-11",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "source_receipts": "licenses/provenance/model-source-receipts.json",
+      "processing": [
+        "Unbranded CC0 public model GLBs verified against each individual model page.",
+        "Normalize units to meters and place stable grip pivot; derive actual barrel sockets from front-ring vertices.",
+        "Fictional display names; matte materials; glTF Transform 4.3.0 dedup and prune; no runtime compression decoder."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/tern_c1.glb",
+          "sha256": "224707b1aed6b03f54352c484f187d0c2665fce816e7952480b8b377619a4ce3",
+          "bytes": 106288
+        },
+        {
+          "path": "game/assets/equipment/mica_s2.glb",
+          "sha256": "5548887bff507ed348786cef2222a32fb275dd953446009f0ba602ab2ba2a4eb",
+          "bytes": 82944
+        },
+        {
+          "path": "game/assets/equipment/flint_b1.glb",
+          "sha256": "8c2d30a6c9b7b26ed3c0716c39de881d8021f55706a0baddba69ea0ed764d4ed",
+          "bytes": 54828
+        },
+        {
+          "path": "game/assets/equipment/pico_p1.glb",
+          "sha256": "7786add0f5a070b8ffb6dfe0ce3be9c8da366459024b442a67eb3411d220732c",
+          "bytes": 54320
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "operator-detachable-headgear",
+      "creator": "Quaternius / OPEN BREACH modifications",
+      "pack": "CC0 SWAT detachable head unit and original helmet guards/skull",
+      "source_url": "https://poly.pizza/m/Btfn3G5Xv4",
+      "downloaded_at": "2026-10-11",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "source_receipts": "licenses/provenance/model-source-receipts.json",
+      "processing": [
+        "Detach source head geometry as non-skinned gear tied to Head bone rest transform.",
+        "Reduce original head unit to 1661 triangles; add original guards to heavy helmet.",
+        "Explicit no-helmet model retains CC0 goggles/cloth-mask details and uses original unarmored skull.",
+        "glTF Transform 4.3.0 dedup and prune; no borrowed textures/logos."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/crown_h1.glb",
+          "sha256": "6e4a7bc56eaa993327a9908ec9a1ca934d4a7f89ae94f926d45aa2385b8f18a9",
+          "bytes": 129360
+        },
+        {
+          "path": "game/assets/equipment/crown_h2.glb",
+          "sha256": "64052798d3adc70e862499bb596f24d090b1082fae633a54044f80d5f033b7b3",
+          "bytes": 137820
+        },
+        {
+          "path": "game/assets/equipment/mask_h0.glb",
+          "sha256": "72b04576e7ee0fc4cd8fd4ad24ca27bf6e5c6bd75959e98d04d05e7784c8a2dd",
+          "bytes": 39472
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "operator-original-equipment",
+      "creator": "OPEN BREACH",
+      "pack": "Four plate carriers, four weapon attachments, four tactical tools",
+      "source_url": null,
+      "source_file": "scripts/import_operator_assets.py",
+      "downloaded_at": null,
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Original-Assets.txt",
+      "processing": [
+        "Original low-poly fitting around existing CC0 SWAT uniform; front/back panels, shoulder straps, pouches and variant side/lower guards.",
+        "Original unbranded dot sight, scope, suppressor, extended magazine, camera, flashbang, smoke canister and entry tool.",
+        "Shared small matte materials, no textures; glTF Transform 4.3.0 dedup and prune.",
+        "Join fitted static parts per model before export; one mesh instance and at most three shared material surfaces per carrier/tool."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/equipment/veil_v1.glb",
+          "sha256": "f6a562cb007af34833ab7b10057a6e79778c87c052fce9840ae8e091a8bac8bb",
+          "bytes": 25680
+        },
+        {
+          "path": "game/assets/equipment/frame_v2.glb",
+          "sha256": "08a91dac1f8530f04d515452102cb6063fa93f4fd906bd538d218e543d0c99e6",
+          "bytes": 30836
+        },
+        {
+          "path": "game/assets/equipment/swift_v3.glb",
+          "sha256": "790c3edc03cfd46bf3cc78177dcc24a6579b380eb85b8052d2ea1fbaeb97409a",
+          "bytes": 25700
+        },
+        {
+          "path": "game/assets/equipment/bastion_v4.glb",
+          "sha256": "ed42d61942f61bcd97fbe11950b44cbddfcb2de914d201db1251746c5feab653",
+          "bytes": 37124
+        },
+        {
+          "path": "game/assets/equipment/dot.glb",
+          "sha256": "ab9ee7cd5ee5cc151a1a68d8f7f8c73e15736518097166ce4123b17a8632f2eb",
+          "bytes": 9592
+        },
+        {
+          "path": "game/assets/equipment/scope.glb",
+          "sha256": "b1605e4ac1b8f12205996d4403c2f13159e0153c4ac7a66495f9de78f66562ec",
+          "bytes": 7844
+        },
+        {
+          "path": "game/assets/equipment/suppressor.glb",
+          "sha256": "8110b1bed864b97d87e53b9b6f936204b9d2981bcdc0dbc5456662b4c4e329c6",
+          "bytes": 4528
+        },
+        {
+          "path": "game/assets/equipment/extended_mag.glb",
+          "sha256": "e4c96d0baab6417af30f9b4630e42a79c4d56ce554ab3e25bc4829aae05edf03",
+          "bytes": 3680
+        },
+        {
+          "path": "game/assets/equipment/probe_c1.glb",
+          "sha256": "f0abe89ef2921264afc5fe4838b6d1ebceb0d98c8a332c33c13844d4be1f8e56",
+          "bytes": 11708
+        },
+        {
+          "path": "game/assets/equipment/flare_f1.glb",
+          "sha256": "41cf189a17f4c865b472ea56e5c02ceb05c4a557205fc0e345a6b40814e0d47f",
+          "bytes": 6412
+        },
+        {
+          "path": "game/assets/equipment/haze_s1.glb",
+          "sha256": "88f89d775ea85178cd3f2547b7d0fa5ed0eb5761c18b9157da682c1dd98f50f9",
+          "bytes": 5672
+        },
+        {
+          "path": "game/assets/equipment/knock_b1.glb",
+          "sha256": "af6f99a95a60a9b623ab87054ab3425f32ed6b2f179b5407495284e284cb9a36",
+          "bytes": 3672
+        }
+      ],
+      "import_status": "ORIGINAL"
+    },
+    {
+      "asset_id": "operator-gear-ready-combat-character",
+      "creator": "Quaternius / Kay Lousberg / OPEN BREACH processing",
+      "pack": "Gear-ready SWAT with CC0 combat motion",
+      "source_url": "https://poly.pizza/m/Btfn3G5Xv4",
+      "source_file": "game/assets/characters/combat-swat.glb",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Operator-Equipment-CC0.txt",
+      "license_evidence_files": [
+        "licenses/Quaternius-Toon-Shooter.txt",
+        "licenses/KayKit-Character-Animations.txt",
+        "licenses/Operator-Equipment-CC0.txt",
+        "licenses/Original-Assets.txt"
+      ],
+      "processing": [
+        "Remove rigid original head unit; retain original skin/skeleton and all 15 CC0 combat clips.",
+        "Motion rebuilt with scripts/build_cc0_swat_motion.py from Toon Shooter, KayKit Character Animations 1.1 and original procedural poses.",
+        "Preserve gameplay barrel dimensions and use clip-relative runtime timing."
+      ],
+      "selected_files": [
+        {
+          "path": "game/assets/characters/combat-swat-gear.glb",
+          "sha256": "70d2f0efa766feb0f95cb927ab4304ae3c5e9fd0c3b984462c608bc233cd68ec",
+          "bytes": 1246100
+        }
+      ],
+      "import_status": "VERIFIED"
+    },
+    {
+      "asset_id": "equipment-catalog-photos",
+      "creator": "OPEN BREACH / GPT image generation",
+      "pack": "20 fictional equipment studio photographs",
+      "source_url": null,
+      "source_file": "web/assets/equipment/generation.json",
+      "license_id": "CC0-1.0",
+      "license_evidence": "licenses/Equipment-Images.txt",
+      "processing": [
+        "Each catalog item generated separately with the built-in GPT image generator; prompts are saved in generation.json with the project title updated for the public rename.",
+        "Converted to 1200px JPEG for the equipment UI. Existing 3D models are unchanged."
+      ],
+      "selected_files": [
+        {
+          "path": "web/assets/equipment/standard.jpg",
+          "sha256": "a05f37d22529893c447968b83ac80d6e0b5905008e86ac6c7e8efa41bd6c785b",
+          "bytes": 104530
+        },
+        {
+          "path": "web/assets/equipment/light.jpg",
+          "sha256": "0b1f57780ca994f55b9d0f1b9faf2b2fa5a2d63ecb572c9e1fabcd805446e3c3",
+          "bytes": 95619
+        },
+        {
+          "path": "web/assets/equipment/shotgun.jpg",
+          "sha256": "e277b6c44bcdecdfe7b3c59e71761688007c2ebae68ffda59fcb722a4308a457",
+          "bytes": 78319
+        },
+        {
+          "path": "web/assets/equipment/suppressed.jpg",
+          "sha256": "5adf6ba5ddf64f395fb6cae0e308f601963787790ceb3da95a05704d72feed90",
+          "bytes": 95042
+        },
+        {
+          "path": "web/assets/equipment/pico_p1.jpg",
+          "sha256": "cbffd1bab17b7c9e87776690fd047cd276f3c33f399744335c41675ce557a2ca",
+          "bytes": 161521
+        },
+        {
+          "path": "web/assets/equipment/veil_v1.jpg",
+          "sha256": "88c5afa1aec63b2f98263a8a18eabe4cd9f07e8a01cfacd5c31b9dfbee239c4b",
+          "bytes": 153996
+        },
+        {
+          "path": "web/assets/equipment/frame_v2.jpg",
+          "sha256": "42dcbb177e7a86b9088b41790c5b84578040de99bf5b778c8db96e1b2f6ed815",
+          "bytes": 195994
+        },
+        {
+          "path": "web/assets/equipment/swift_v3.jpg",
+          "sha256": "86f187a3e5d2cd635e7ba471e1a4bcabcfde12166dd6df36653f2609194ff1bd",
+          "bytes": 173817
+        },
+        {
+          "path": "web/assets/equipment/bastion_v4.jpg",
+          "sha256": "3dc1ad40dbcea2f496688410e228d9dceebdf014a0736eacdade2df385e6e0e1",
+          "bytes": 221981
+        },
+        {
+          "path": "web/assets/equipment/crown_h1.jpg",
+          "sha256": "eff153d783f5874fa754333210a358e60567ec7dc230ce817782a559f2c6e533",
+          "bytes": 165174
+        },
+        {
+          "path": "web/assets/equipment/crown_h2.jpg",
+          "sha256": "0f67e3bec9ce1a4cef1d4760fb69c0856a1d8370df4a980c5f399257561ff1c7",
+          "bytes": 157455
+        },
+        {
+          "path": "web/assets/equipment/dot.jpg",
+          "sha256": "0e3b7d22048e0cc2bb449e2cb3ae88f0d98ced000635468da4dc6f62940dddda",
+          "bytes": 104945
+        },
+        {
+          "path": "web/assets/equipment/scope.jpg",
+          "sha256": "b0270fca2d2cc4f74c273ecd41605504aac1ca6607952bb9a2add21c1d075bab",
+          "bytes": 127603
+        },
+        {
+          "path": "web/assets/equipment/suppressor.jpg",
+          "sha256": "58b19264931f8fe79d9741adc9f62cf2fbd29c20069c8f05b2ae2022b1ce06da",
+          "bytes": 106800
+        },
+        {
+          "path": "web/assets/equipment/extended_mag.jpg",
+          "sha256": "8f27310d5f372b524e0453c2a3b6cfb4ca6e7c8f55aa6486c3d4bf95afd551ba",
+          "bytes": 110830
+        },
+        {
+          "path": "web/assets/equipment/stun.jpg",
+          "sha256": "11fb899c6f4ed1b28a99c1a2e07a205d7f1c800a1cb03774688fe25c1f909af3",
+          "bytes": 117310
+        },
+        {
+          "path": "web/assets/equipment/smoke.jpg",
+          "sha256": "dbeaf0df61c4245739ee94f24c7ef18bd6961a59887e694cd19e01fbbebfc717",
+          "bytes": 98956
+        },
+        {
+          "path": "web/assets/equipment/breach.jpg",
+          "sha256": "7024ec538fb8b7a4e1b7cb4878a41a519606b68edbd1cd42869d0ad2bcd4c2d6",
+          "bytes": 201172
+        },
+        {
+          "path": "web/assets/equipment/probe_c1.jpg",
+          "sha256": "1ad1aa4b1b3d5cf8d9ca22df6dab955b58013890a959d03491afbb8bee9ecf6e",
+          "bytes": 129740
+        },
+        {
+          "path": "web/assets/equipment/frag.jpg",
+          "sha256": "13144b80b6de2b8d900fb5def94442f3582f6cb61b0b72b7028f5a2434360380",
+          "bytes": 132154
+        },
+        {
+          "path": "web/assets/equipment/generation.json",
+          "sha256": "e7f141b5ce1bc89ceac6d50c3efd5af5f46aaa2f0e5fde292335e74f63287981",
+          "bytes": 19389
+        }
+      ],
+      "import_status": "GENERATED"
+    }
+  ],
+  "runtime_components": [
+    {
+      "name": "Godot Engine",
+      "version": "4.7.2.stable",
+      "source_url": "https://github.com/godotengine/godot/tree/4.7.2-stable",
+      "release_url": "https://github.com/godotengine/godot-builds/releases/tag/4.7.2-stable",
+      "license_id": "MIT AND bundled third-party notices",
+      "license_evidence": [
+        "licenses/Godot-MIT.txt",
+        "licenses/Godot-COPYRIGHT.txt"
+      ],
+      "build_mode": "Compatibility renderer, single-threaded Web export",
+      "template_archive_sha256": "f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011"
+    }
+  ],
+  "license_files": [
+    {
+      "path": "licenses/CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048
+    },
+    {
+      "path": "licenses/Equipment-Images.txt",
+      "sha256": "841e864ae32094318a69565c51c20c7d40080039bf0d019a248c67e25a7a02e6",
+      "bytes": 1249
+    },
+    {
+      "path": "licenses/Free-Firearm-Library.txt",
+      "sha256": "9026d7201b20a80d5b18725d012d102d7d7952fb3ba9fef23f7c98b365cfd86e",
+      "bytes": 488
+    },
+    {
+      "path": "licenses/Godot-COPYRIGHT.txt",
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d",
+      "bytes": 100108
+    },
+    {
+      "path": "licenses/Godot-MIT.txt",
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+      "bytes": 1149
+    },
+    {
+      "path": "licenses/JetBrainsMono-OFL.txt",
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+      "bytes": 4399
+    },
+    {
+      "path": "licenses/KayKit-Character-Animations.txt",
+      "sha256": "632ee73362ad4ad2b9af66ab35446df325096a1a73a7f1fa3f584ac7d5341331",
+      "bytes": 812
+    },
+    {
+      "path": "licenses/Kenney-Furniture.txt",
+      "sha256": "bc0de1a0742cb490f9ed4bae0bd284286ebb27e23149b9917c7d8c0d590b8b29",
+      "bytes": 614
+    },
+    {
+      "path": "licenses/Kenney-Impact-Sounds.txt",
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db",
+      "bytes": 608
+    },
+    {
+      "path": "licenses/Kenney-Particles.txt",
+      "sha256": "f9e70b81d8cc07c4e07c9f2eff1d94fd371a06070b18cb67c651c41158ec2975",
+      "bytes": 651
+    },
+    {
+      "path": "licenses/NotoSansKR-OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "bytes": 4388
+    },
+    {
+      "path": "licenses/Operator-Equipment-CC0.txt",
+      "sha256": "1789c5e9367f3dec219c4d705a8761f47a9d03db12b19e6e26e35f570ac0dff6",
+      "bytes": 2735
+    },
+    {
+      "path": "licenses/Original-Assets.txt",
+      "sha256": "4267b889ae97f5bdaae6f70303815fb45231ed9ee9247f83fc437c49fed7524b",
+      "bytes": 1505
+    },
+    {
+      "path": "licenses/Oswald-OFL.txt",
+      "sha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652",
+      "bytes": 4483
+    },
+    {
+      "path": "licenses/Quaternius-Modular-Characters.txt",
+      "sha256": "1c4dd7d2b965c6bcf6f87c133e6709487173a97646b7b8d297e8409039b32bd9",
+      "bytes": 882
+    },
+    {
+      "path": "licenses/Quaternius-Toon-Shooter.txt",
+      "sha256": "2881b349a3a5446b2e20a9f17bd064300056697141c069abfd51045ea3946d74",
+      "bytes": 759
+    },
+    {
+      "path": "licenses/Quaternius-Universal-Animation-Library.txt",
+      "sha256": "0012b7776df54beffd850f63cd2303e39922411e6e58c2507851a045c7aeb2e0",
+      "bytes": 643
+    },
+    {
+      "path": "licenses/special-ops-assets-kenney-nature.txt",
+      "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d",
+      "bytes": 611
+    },
+    {
+      "path": "licenses/special-ops-assets-original.txt",
+      "sha256": "b62127c680f3a62b941aeb0035db685e82d8670b0efd5cd877afa2771cd8c6c1",
+      "bytes": 1022
+    }
+  ]
+}

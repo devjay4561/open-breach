@@ -1,0 +1,90 @@
+{
+  "source": "https://kenney.nl/assets/furniture-kit",
+  "download": "https://kenney.nl/media/pages/assets/furniture-kit/440e0608a4-1677580847/kenney_furniture-kit.zip",
+  "author": "Kenney",
+  "license": "CC0-1.0",
+  "source_archive_sha256": "e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0",
+  "acquired": "2026-10-06",
+  "assets": [
+    {
+      "path": "game/assets/environment/bedDouble.glb",
+      "archive_path": "Models/GLTF format/bedDouble.glb",
+      "bytes": 23368,
+      "sha256": "c49b33e7d797d2ba1111895587dba7ff63b17a712eb9b4ceeb40a598f73e476c",
+      "triangles": 264,
+      "materials": 4
+    },
+    {
+      "path": "game/assets/environment/bookcaseClosedDoors.glb",
+      "archive_path": "Models/GLTF format/bookcaseClosedDoors.glb",
+      "bytes": 22644,
+      "sha256": "ff33f535acdb1825c0e958a293642b39665adcae0b1317b650e83d2bb687f4e2",
+      "triangles": 296,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/bookcaseOpen.glb",
+      "archive_path": "Models/GLTF format/bookcaseOpen.glb",
+      "bytes": 18020,
+      "sha256": "750702218d68c062b15dfef6ab06a4014d1cfa8bd05f02e57c53b7e13bec157c",
+      "triangles": 320,
+      "materials": 1
+    },
+    {
+      "path": "game/assets/environment/cardboardBoxClosed.glb",
+      "archive_path": "Models/GLTF format/cardboardBoxClosed.glb",
+      "bytes": 5400,
+      "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81",
+      "triangles": 60,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/chairCushion.glb",
+      "archive_path": "Models/GLTF format/chairCushion.glb",
+      "bytes": 12588,
+      "sha256": "33544228984857f2cb502b58452fed72157335f9b1caf29e96da5c9094c53fdc",
+      "triangles": 198,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/desk.glb",
+      "archive_path": "Models/GLTF format/desk.glb",
+      "bytes": 15048,
+      "sha256": "0164fe828f028b321730fb8c74502e353583f751be74da1682d42fff7d3c5a42",
+      "triangles": 198,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/loungeSofa.glb",
+      "archive_path": "Models/GLTF format/loungeSofa.glb",
+      "bytes": 9644,
+      "sha256": "1886b811c0d3ad0d8525a4fd43adf4112c497c8e0ed906f06877ca3517f4c7dd",
+      "triangles": 128,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/pottedPlant.glb",
+      "archive_path": "Models/GLTF format/pottedPlant.glb",
+      "bytes": 7576,
+      "sha256": "5b760eda2766f75fda36b2c5df652a1662f82981ef64cd8fa7fe7bcd386b3a15",
+      "triangles": 60,
+      "materials": 3
+    },
+    {
+      "path": "game/assets/environment/rugRectangle.glb",
+      "archive_path": "Models/GLTF format/rugRectangle.glb",
+      "bytes": 3188,
+      "sha256": "a989d2d59c04e3071e0c90388b113a9a8f339ce1814ef984c51cb6dcd7c8e0eb",
+      "triangles": 28,
+      "materials": 2
+    },
+    {
+      "path": "game/assets/environment/table.glb",
+      "archive_path": "Models/GLTF format/table.glb",
+      "bytes": 8196,
+      "sha256": "ff1a94498d023957f4bc3ff6f55a7a82977d336dbf01a573b3364f03afe5ff61",
+      "triangles": 120,
+      "materials": 1
+    }
+  ]
+}

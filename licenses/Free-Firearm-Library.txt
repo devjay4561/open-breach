@@ -1,0 +1,8 @@
+Free Firearm Sound Library — CC0 1.0
+Creators: Ben Jaszczak, Brian Nelson, Kevin Heras, Matthew Nanney
+Source: https://opengameart.org/content/the-free-firearm-sound-library
+Downloaded: 2026-10-06
+Selected: Prepared SFX Library/AR-15/D_24P.wav
+Source page declares CC0 NO RIGHTS RESERVED for personal or professional application.
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Processing: two individual shots trimmed, mono 22050 Hz, high-pass 65 Hz, gain 0.62, tail fade.

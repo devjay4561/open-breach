@@ -1,0 +1,30 @@
+{
+  "name": "open-breach",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "A browser tactical planning game built with Godot: plan, breach, pause and replay.",
+  "scripts": {
+    "dev": "python3 scripts/serve.py --port 8080",
+    "start": "python3 scripts/serve.py --port 8080",
+    "build": "node scripts/build.mjs",
+    "build:engine": "bash scripts/build.sh && node scripts/build.mjs --portable",
+    "test": "node tests/headless.mjs",
+    "test:build": "node tests/build-pipeline-test.mjs && python3 -m unittest discover -s tests -p test_release_pipeline.py",
+    "test:meta": "node tests/debrief-test.mjs && node tests/meta-test.mjs && node tests/progression-test.mjs && node tests/map-editor-test.mjs && node tests/map-editor-drag-test.mjs && node tests/room-drill-web-test.mjs && node tests/room-control-web-test.mjs && node tests/formation-web-test.mjs && node tests/roe-catalog-test.mjs && node tests/roe-web-test.mjs && node tests/debrief-web-test.mjs && node tests/cqb-catalog-test.mjs && node tests/cqb-content-web-test.mjs && node tests/shoot-house-storage-test.mjs",
+    "test:equipment": "node tests/operator-equipment-test.mjs && python3 -m unittest discover -s tests -p test_equipment_schema.py",
+    "test:customization-browser": "node tests/operator-customization-browser.mjs",
+    "test:progression": "node tests/progression-test.mjs && node tests/progression-browser.mjs",
+    "test:sustained-browser": "node tests/sustained-browser.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:ui": "export BREACH_URL=${BREACH_URL:-http://127.0.0.1:8080}; node tests/roe-browser.mjs && node tests/formation-browser.mjs && node tests/room-control-browser.mjs && node tests/room-drill-browser.mjs && node tests/ui-controls-browser.mjs && node tests/ui-fx-browser.mjs && node tests/ui-gamepad-browser.mjs && node tests/ui-i18n-browser.mjs && node tests/ui-resolution-browser.mjs && node tests/ui-result-overflow-browser.mjs && node tests/ui-settings-browser.mjs && node tests/ui-typography-browser.mjs && node tests/combat-fx-determinism-browser.mjs && node tests/ui-optimization-browser.mjs && node tests/storage-optimization-browser.mjs && node tests/cqb-contact-browser.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devjay4561/open-breach.git"
+  },
+  "homepage": "https://devjay4561.github.io/open-breach/"
+}

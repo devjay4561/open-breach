@@ -1,0 +1,99 @@
+{
+  "scope": "Current shipped special operations GLBs; JSON structure and original binary geometry verified",
+  "asset_count": 15,
+  "errors": [],
+  "total_glb_bytes": 3708020,
+  "total_triangles": 74113,
+  "aircraft_cutaway_nodes": {
+    "airliner_quadjet": [
+      "CabinSeats_Cutaway",
+      "Roof_Cutaway"
+    ],
+    "airliner_reartwin": [
+      "CabinSeats_Cutaway",
+      "Roof_Cutaway"
+    ],
+    "airliner_twinjet": [
+      "CabinSeats_Cutaway",
+      "Roof_Cutaway"
+    ]
+  },
+  "registry_dimensions_m": {
+    "tanker_ship_hull": [
+      145.5,
+      14.435,
+      23.7
+    ],
+    "tanker_superstructure": [
+      24.175,
+      17.75,
+      20.837
+    ],
+    "tanker_deck_pipes": [
+      86.0,
+      0.93,
+      13.68
+    ],
+    "pine_tree": [
+      2.77784,
+      11.0,
+      2.81867
+    ],
+    "palm_tree": [
+      6.53964,
+      9.0,
+      6.53964
+    ],
+    "bush": [
+      1.67182,
+      1.0,
+      1.67182
+    ],
+    "watchtower": [
+      3.56,
+      7.085,
+      3.56
+    ],
+    "hut": [
+      6.28,
+      2.6,
+      4.28
+    ],
+    "utility_vehicle": [
+      3.625,
+      2.19,
+      1.71
+    ],
+    "cargo_truck": [
+      6.45,
+      2.375,
+      2.46
+    ],
+    "airliner_twinjet": [
+      30.53,
+      11.38,
+      28.35
+    ],
+    "airliner_reartwin": [
+      36.4,
+      8.4,
+      28.4
+    ],
+    "airliner_quadjet": [
+      46.61,
+      12.85,
+      43.4
+    ],
+    "helicopter_heavy_lift": [
+      20.0562,
+      5.51,
+      17.91522
+    ],
+    "terrace_townhouse": [
+      9.8,
+      14.4,
+      22.28
+    ]
+  },
+  "geometry_policy": "All 15 GLB binary chunks match their pre-fiction originals; Blender geometry and transforms also match all 51 source files."
+}

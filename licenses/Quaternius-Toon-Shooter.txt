@@ -1,0 +1,9 @@
+Quaternius — Toon Shooter Game Kit / Character Soldier
+Author: Quaternius
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Original pack: https://quaternius.com/packs/toonshootergamekit.html
+Authorized model page: https://poly.pizza/m/PpLF4rt4ah
+Includes original skeletal animations and weapon meshes.
+Runtime adjustments: matte materials, team tint, animation sampling and blending.
+Animation use: its skeletal animation clips (same skeleton as the SWAT model) are used directly (copied on the same skeleton) for most SWAT combat motion, with upper/lower-body layering and an IK shoulder pose. RifleThrow comes from KayKit; RifleReload and RifleTurnLeft/Right are project-authored procedural keys. Planar root motion removed.

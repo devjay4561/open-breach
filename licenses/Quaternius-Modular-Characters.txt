@@ -1,0 +1,18 @@
+Quaternius — SWAT / Ultimate Modular Characters and Assault Rifle
+
+Author: Quaternius
+License: Creative Commons Zero 1.0 Universal (CC0)
+Full license text: CC0-1.0.txt
+
+SWAT model source:
+https://poly.pizza/m/Btfn3G5Xv4
+https://quaternius.com/packs/ultimatemodularcharacters.html
+Original file: game/assets/characters/swat.glb
+
+Assault Rifle source:
+https://poly.pizza/m/Bgvuu4CUMV
+Original file: game/assets/characters/rifle.glb
+
+The combat character uses the original SWAT mesh, skin weights, skeleton,
+materials and original death animation. The four mesh objects were joined
+into one for fewer render calls while preserving their geometry and weights. CC0 combat clips come from Quaternius Toon Shooter (same skeleton), the KayKit Character Animations 1.1 Throw clip (retargeted) and project-authored keys; see their files in licenses/. Adobe Mixamo motion is no longer used.

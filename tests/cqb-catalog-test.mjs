@@ -1,0 +1,43 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+
+const source=await readFile(new URL('../web/meta.js',import.meta.url),'utf8');
+const meta=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+let checks=0;
+const equal=(actual,expected,label)=>{assert.deepEqual(actual,expected,label);checks++;};
+const truth=(value,label)=>{assert.ok(value,label);checks++;};
+const shoot=['SH01','SH02','SH03','SH04','SH05_PRECISION','SH05_HIGH_INTENSITY'];
+const puzzles=Array.from({length:12},(_,i)=>`CQB${String(i+1).padStart(2,'0')}`);
+const all=[...shoot,...puzzles];
+equal(meta.SHOOT_HOUSE_MISSIONS,shoot,'Shoot-house identities retain the specified order');
+equal(meta.CQB_PUZZLE_MISSIONS,puzzles,'Exactly twelve independent puzzle IDs');
+equal(meta.CQB_MISSIONS,all,'Content appends the complete six/twelve set');
+equal(meta.CAMPAIGN_MISSIONS,['M01','M02','M03','M04','M05','M06','M07','M08','M09'],'Standalone content does not extend the campaign');
+const profile=meta.progressionState([]),conditionKeys=new Set();
+for(const id of all){
+  truth(meta.isCQBContentMission(id)&&meta.isStandaloneMission(id),'Only exact authored IDs have the CQB standalone route');
+  equal(meta.missionBase(id),id,'Authored ID survives normalization without campaign remapping');
+  for(const difficulty of ['normal','challenge'])for(const variant of ['standard',...meta.VARIANTS.map(item=>item.id)])equal(meta.missionId(id,difficulty,variant),id,'Legacy variant controls cannot replace CQB identity');
+  equal(meta.isProgressionMission(id),false,'CQB cannot farm old campaign unlocks');
+  equal(meta.missionAccess(id,profile).unlocked,true,'CQB content is selectable without an unrequested gate');
+  const mission=JSON.parse(await readFile(new URL(`../game/data/cqb/${id}.json`,import.meta.url),'utf8'));
+  equal([mission.id,mission.schema_version],[id,6],'File and registered authored identity agree');
+  truth(Number.isSafeInteger(mission.seed)&&mission.seed>=0,'Shared seed uses the current schema numeric contract');
+  truth(typeof mission.title_en==='string'&&mission.title_en.length>0&&typeof mission.description_en==='string'&&mission.description_en.length>0,'Both languages exist in authored title/guidance');
+  const key=meta.conditionKey({mission:id,seed:mission.seed,variant:'normal'});
+  conditionKeys.add(key);
+  equal(key,meta.conditionKey({map_id:id,seed:mission.seed,variant:'standard'}),'Plan, replay and native normal variant share the same exact record key');
+  truth(key!==meta.conditionKey({mission:id,seed:mission.seed+1,variant:'normal'}),'Different shared seeds have independent records');
+  equal(meta.progressionState([{id,kind:'mission',completed:true,stars:{complete:true}}]).stars,0,'A standalone completion cannot change old unlock stars');
+}
+equal(conditionKeys.size,18,'No authored operations merge record identities');
+for(const id of ['SH05','SH010','SH01H','CQB00','CQB13','CQB01_ARREST','M01'])equal(meta.isCQBContentMission(id),false,'Lookalikes and legacy maps do not enter the new content route');
+for(const id of meta.ROE_MISSIONS)truth(meta.isStandaloneMission(id)&&!meta.isCQBContentMission(id),'P5 comparison identities retain their distinct route');
+equal(meta.missionId('M01','challenge','escort'),'M01_ESCORT','Original campaign variant expansion remains exact');
+equal(meta.missionId('M09','challenge','escort'),'M09H','Original late campaign difficulty expansion remains exact');
+equal(meta.missionId('H36','challenge','escort'),'H36','Historical identities remain exact');
+equal(meta.dailyOperation('2026-10-11'),meta.dailyOperation('2026-10-11'),'Existing daily campaign operation remains deterministic');
+truth(meta.CAMPAIGN_MISSIONS.includes(meta.missionBase(meta.dailyOperation('2026-10-11').id)),'Existing daily campaign menu remains within its old collection');
+const fnv=value=>{let hash=2166136261;for(const byte of Buffer.from(value,'utf8'))hash=Math.imul(hash^byte,16777619)>>>0;return hash;};
+for(const [value,expected] of [['',2166136261],['SH01:42:e1',1540358421],['SH05:2147483647:guard-a',2456487796],['CQB12:0:e8',3302359655],['공유 시드:42',1730508898]])equal(fnv(value),expected,'Independent UTF-8 FNV oracle matches the native fixed vectors');
+console.log(`CQB catalog/meta tests: ${checks} checks PASS`);

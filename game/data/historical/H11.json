@@ -1,0 +1,955 @@
+{
+  "schema_version": 6,
+  "roe": "precision",
+  "id": "H11",
+  "revision": 2,
+  "title": "나이트 레저",
+  "title_en": "NIGHT LEDGER",
+  "seed": 20261020,
+  "bounds": [
+    96,
+    98
+  ],
+  "focus": [
+    48.0,
+    49.0
+  ],
+  "rooms": [
+    {
+      "id": "unpaved_access_road",
+      "x": 24.5,
+      "z": 95.0,
+      "w": 49.0,
+      "d": 6.0,
+      "label": "좁은 비포장 진입도로",
+      "indoor": false
+    },
+    {
+      "id": "security_entrance",
+      "x": 35,
+      "z": 82,
+      "w": 12,
+      "d": 12,
+      "label": "두 출입문 사이의 공간",
+      "indoor": false
+    },
+    {
+      "id": "outer_courtyard",
+      "x": 50,
+      "z": 63,
+      "w": 70,
+      "d": 35,
+      "label": "외부 마당",
+      "indoor": false
+    },
+    {
+      "id": "main_house_ground_hall",
+      "x": 59,
+      "z": 24,
+      "w": 24,
+      "d": 1.8,
+      "label": "연결 복도",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_north_0",
+      "x": 51.0,
+      "z": 18.05,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "주방",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_north_1",
+      "x": 59.0,
+      "z": 18.05,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "생활실",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_north_2",
+      "x": 67.0,
+      "z": 18.05,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "저장실",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_south_0",
+      "x": 51.0,
+      "z": 29.95,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "침실",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_south_1",
+      "x": 59.0,
+      "z": 29.95,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "업무실",
+      "indoor": true
+    },
+    {
+      "id": "main_house_ground_south_2",
+      "x": 67.0,
+      "z": 29.95,
+      "w": 8.0,
+      "d": 10.1,
+      "label": "가족 생활실",
+      "indoor": true
+    },
+    {
+      "id": "guest_house",
+      "x": 24,
+      "z": 22,
+      "w": 14,
+      "d": 16,
+      "label": "별채·생활 구역",
+      "indoor": true
+    }
+  ],
+  "walls": [
+    {
+      "id": "compound_boundary_n_last",
+      "x": 48.0,
+      "z": 6.0,
+      "w": 84.0,
+      "d": 0.2,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "compound_boundary_s_s0",
+      "x": 19.8,
+      "z": 88.0,
+      "w": 27.6,
+      "d": 0.2,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "compound_boundary_s_last",
+      "x": 63.2,
+      "z": 88.0,
+      "w": 53.6,
+      "d": 0.2,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "compound_boundary_w_s0",
+      "x": 6.0,
+      "z": 39.2,
+      "w": 0.2,
+      "d": 66.4,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "compound_boundary_w_last",
+      "x": 6.0,
+      "z": 80.8,
+      "w": 0.2,
+      "d": 14.4,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "compound_boundary_e_last",
+      "x": 90.0,
+      "z": 47.0,
+      "w": 0.2,
+      "d": 82.0,
+      "height": 4.5,
+      "material": "concrete"
+    },
+    {
+      "id": "security_entrance_n_s0",
+      "x": 31.3,
+      "z": 76,
+      "w": 4.6,
+      "d": 0.2,
+      "height": 3.8,
+      "material": "concrete"
+    },
+    {
+      "id": "security_entrance_n_last",
+      "x": 38.7,
+      "z": 76,
+      "w": 4.6,
+      "d": 0.2,
+      "height": 3.8,
+      "material": "concrete"
+    },
+    {
+      "id": "security_entrance_w_last",
+      "x": 29,
+      "z": 82.0,
+      "w": 0.2,
+      "d": 12,
+      "height": 3.8,
+      "material": "concrete"
+    },
+    {
+      "id": "security_entrance_e_last",
+      "x": 41,
+      "z": 82.0,
+      "w": 0.2,
+      "d": 12,
+      "height": 3.8,
+      "material": "concrete"
+    },
+    {
+      "id": "internal_division_s0",
+      "x": 18.2,
+      "z": 46,
+      "w": 24.4,
+      "d": 0.2,
+      "height": 3.3,
+      "material": "concrete"
+    },
+    {
+      "id": "internal_division_last",
+      "x": 60.8,
+      "z": 46,
+      "w": 58.4,
+      "d": 0.2,
+      "height": 3.3,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_n_last",
+      "x": 59.0,
+      "z": 13.0,
+      "w": 24.0,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_s_last",
+      "x": 59.0,
+      "z": 35.0,
+      "w": 24.0,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_w_s0",
+      "x": 47.0,
+      "z": 18.225,
+      "w": 0.2,
+      "d": 10.45,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_w_last",
+      "x": 47.0,
+      "z": 29.775,
+      "w": 0.2,
+      "d": 10.45,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_e_s0",
+      "x": 71.0,
+      "z": 18.225,
+      "w": 0.2,
+      "d": 10.45,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_e_last",
+      "x": 71.0,
+      "z": 29.775,
+      "w": 0.2,
+      "d": 10.45,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_s0",
+      "x": 48.7375,
+      "z": 23.1,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_s1",
+      "x": 55.0,
+      "z": 23.1,
+      "w": 6.95,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_s2",
+      "x": 63.0,
+      "z": 23.1,
+      "w": 6.95,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_last",
+      "x": 69.2625,
+      "z": 23.1,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_partition1",
+      "x": 55.0,
+      "z": 18.05,
+      "w": 0.2,
+      "d": 10.1,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_north_partition2",
+      "x": 63.0,
+      "z": 18.05,
+      "w": 0.2,
+      "d": 10.1,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_s0",
+      "x": 48.7375,
+      "z": 24.9,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_s1",
+      "x": 55.0,
+      "z": 24.9,
+      "w": 6.95,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_s2",
+      "x": 63.0,
+      "z": 24.9,
+      "w": 6.95,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_last",
+      "x": 69.2625,
+      "z": 24.9,
+      "w": 3.475,
+      "d": 0.2,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_partition1",
+      "x": 55.0,
+      "z": 29.95,
+      "w": 0.2,
+      "d": 10.1,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "main_house_ground_south_partition2",
+      "x": 63.0,
+      "z": 29.95,
+      "w": 0.2,
+      "d": 10.1,
+      "height": 3.1,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_n_last",
+      "x": 24.0,
+      "z": 14.0,
+      "w": 14.0,
+      "d": 0.2,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_s_s0",
+      "x": 20.2375,
+      "z": 30.0,
+      "w": 6.475,
+      "d": 0.2,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_s_last",
+      "x": 27.7625,
+      "z": 30.0,
+      "w": 6.475,
+      "d": 0.2,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_w_last",
+      "x": 17.0,
+      "z": 22.0,
+      "w": 0.2,
+      "d": 16.0,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_e_s0",
+      "x": 31.0,
+      "z": 17.7375,
+      "w": 0.2,
+      "d": 7.475,
+      "height": 2.8,
+      "material": "concrete"
+    },
+    {
+      "id": "guest_house_e_last",
+      "x": 31.0,
+      "z": 26.2625,
+      "w": 0.2,
+      "d": 7.475,
+      "height": 2.8,
+      "material": "concrete"
+    }
+  ],
+  "doors": [
+    {
+      "id": "compound_boundary_s_d0",
+      "x": 35,
+      "z": 88.0,
+      "w": 2.8,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "compound_boundary_w_d0",
+      "x": 6.0,
+      "z": 73,
+      "w": 0.18,
+      "d": 1.2,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "security_entrance_n_d0",
+      "x": 35,
+      "z": 76,
+      "w": 2.8,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "internal_division_d0",
+      "x": 31,
+      "z": 46,
+      "w": 1.2,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_w_d0",
+      "x": 47.0,
+      "z": 24,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_e_d0",
+      "x": 71.0,
+      "z": 24,
+      "w": 0.18,
+      "d": 1.1,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_north_d0",
+      "x": 51.0,
+      "z": 23.1,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_north_d1",
+      "x": 59.0,
+      "z": 23.1,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_north_d2",
+      "x": 67.0,
+      "z": 23.1,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_south_d0",
+      "x": 51.0,
+      "z": 24.9,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_south_d1",
+      "x": 59.0,
+      "z": 24.9,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "main_house_ground_south_d2",
+      "x": 67.0,
+      "z": 24.9,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "guest_house_s_d0",
+      "x": 24,
+      "z": 30.0,
+      "w": 1.05,
+      "d": 0.18,
+      "axis": "x",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    },
+    {
+      "id": "guest_house_e_d0",
+      "x": 31.0,
+      "z": 22,
+      "w": 0.18,
+      "d": 1.05,
+      "axis": "z",
+      "height": 2.1,
+      "hinge_side": -1,
+      "swing_sign": -1,
+      "state": "CLOSED"
+    }
+  ],
+  "props": [
+    {
+      "id": "household_vehicle",
+      "type": "vehicle",
+      "x": 79,
+      "z": 69,
+      "w": 4.2,
+      "d": 1.75,
+      "solid": true,
+      "rotation": 0,
+      "height": 1.5,
+      "cover": "full"
+    },
+    {
+      "id": "household_objects_0",
+      "type": "table",
+      "x": 51,
+      "z": 17,
+      "w": 1.7,
+      "d": 0.8,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_1",
+      "type": "sofa",
+      "x": 58,
+      "z": 18,
+      "w": 2.1,
+      "d": 0.85,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_2",
+      "type": "cabinet",
+      "x": 69,
+      "z": 17,
+      "w": 1.5,
+      "d": 0.65,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_3",
+      "type": "bed",
+      "x": 51,
+      "z": 31,
+      "w": 1.4,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_4",
+      "type": "desk",
+      "x": 58,
+      "z": 30,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_5",
+      "type": "bed",
+      "x": 66,
+      "z": 31,
+      "w": 1.4,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_6",
+      "type": "table",
+      "x": 20,
+      "z": 18,
+      "w": 1.4,
+      "d": 0.7,
+      "solid": true,
+      "rotation": 0
+    },
+    {
+      "id": "household_objects_7",
+      "type": "bed",
+      "x": 27,
+      "z": 20,
+      "w": 1,
+      "d": 2,
+      "solid": true,
+      "rotation": 0
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "대원 1",
+      "role": "대원",
+      "x": 35,
+      "z": 93,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u2",
+      "name": "대원 2",
+      "role": "대원",
+      "x": 35.85,
+      "z": 93,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u3",
+      "name": "대원 3",
+      "role": "대원",
+      "x": 35,
+      "z": 93.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    },
+    {
+      "id": "u4",
+      "name": "대원 4",
+      "role": "대원",
+      "x": 35.85,
+      "z": 93.85,
+      "facing": -1.5707963267948966,
+      "weapon": "standard",
+      "hp": 100,
+      "ammo": 24,
+      "reserve_ammo": 168,
+      "stuns": 2,
+      "vision_range": 28,
+      "fov": 110
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e1",
+      "x": 43,
+      "z": 76,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e2",
+      "x": 74,
+      "z": 60,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e3",
+      "x": 31,
+      "z": 43,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "medium"
+    },
+    {
+      "id": "e4",
+      "x": 59,
+      "z": 24,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    },
+    {
+      "id": "e5",
+      "x": 68,
+      "z": 30,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    },
+    {
+      "id": "e6",
+      "x": 25,
+      "z": 22,
+      "facing": 3.141592653589793,
+      "weapon": "standard",
+      "hp": 70,
+      "ammo": 24,
+      "vision_range": 22,
+      "fov": 105,
+      "strength": "strong"
+    }
+  ],
+  "civilians": [
+    {
+      "id": "c1",
+      "x": 51,
+      "z": 29,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c2",
+      "x": 59,
+      "z": 17,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c3",
+      "x": 69,
+      "z": 19,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    },
+    {
+      "id": "c4",
+      "x": 20,
+      "z": 24,
+      "name": "구조 대상",
+      "hp": 100,
+      "facing": 0
+    }
+  ],
+  "objectives": [
+    "이중 출입 공간과 높은 외벽 안의 구획을 확인하세요.",
+    "생활 공간에서 비전투원을 보호하고 현장을 확보하세요."
+  ],
+  "scenery": [
+    {
+      "id": "compound_bush_0",
+      "asset": "bush",
+      "x": 12,
+      "z": 59,
+      "rotation": 0,
+      "scale": 1.0,
+      "height": 0
+    },
+    {
+      "id": "compound_bush_1",
+      "asset": "bush",
+      "x": 78,
+      "z": 55,
+      "rotation": 0,
+      "scale": 1.12,
+      "height": 0
+    },
+    {
+      "id": "compound_bush_2",
+      "asset": "bush",
+      "x": 16,
+      "z": 42,
+      "rotation": 0,
+      "scale": 1.24,
+      "height": 0
+    },
+    {
+      "id": "compound_bush_3",
+      "asset": "bush",
+      "x": 44,
+      "z": 10,
+      "rotation": 0,
+      "scale": 1.3599999999999999,
+      "height": 0
+    }
+  ],
+  "historical": {
+    "location": "오르브릭 구역 · 케브란 연맹",
+    "location_en": "Orvrik Ward · Kevran League",
+    "accuracy_note": "벨드렌 단지의 지상 구획을 확보하고 위협을 처리하세요.",
+    "accuracy_note_en": "Secure the ground level of Veldren Compound and neutralize threats."
+  },
+  "environment": {
+    "time_of_day": "day",
+    "lighting": 0.95,
+    "biome": "urban",
+    "ground_color": "#948f75",
+    "water": false,
+    "ground_surface": "concrete"
+  },
+  "description": "벨드렌 단지의 지상 구획을 확보하고 위협을 처리하세요.",
+  "briefing": {
+    "difficulty": "중급",
+    "estimated_minutes": "3–8",
+    "threat": "무장 위협과 구조 대상",
+    "tip": "출입구 앞에서 시작합니다. 문 진입과 구획 확인을 계획하고 민간인을 확보하세요."
+  },
+  "win": [
+    {
+      "type": "neutralize_all"
+    },
+    {
+      "type": "secure_all_civilians"
+    }
+  ],
+  "fail": [
+    {
+      "type": "no_civilian_loss"
+    }
+  ],
+  "description_en": "Secure the ground level of Veldren Compound and neutralize threats."
+}

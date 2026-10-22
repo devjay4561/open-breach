@@ -1,0 +1,15 @@
+KayKit — Character Animations 1.1
+Author: Kay Lousberg (www.kaylousberg.com)
+License: CC0 1.0 Universal (full text: licenses/CC0-1.0.txt)
+Source: https://kaylousberg.itch.io/kaykit-character-animations
+
+Pack license file (verbatim excerpt):
+  KayKit : Character Animations (1.1)
+  Created/distributed by Kay Lousberg (www.kaylousberg.com)
+  License: (Creative Commons Zero, CC0)
+  http://creativecommons.org/publicdomain/zero/1.0/
+  This content is free to use in personal, educational and commercial projects.
+  If you wish to credit me you can do so by crediting "Kay Lousberg, www.kaylousberg.com" (this is not mandatory)
+
+Use in OPEN BREACH: the `Throw` clip only, retargeted onto the Quaternius SWAT skeleton as RifleThrow (see asset-manifest.json).
+Modifications: retargeted; planar root motion removed.
