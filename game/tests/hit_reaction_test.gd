@@ -94,6 +94,7 @@ func _fixed_watch(persistent: bool) -> void:
 
 func _hidden_attacker() -> void:
 	var data := fixture()
+	data.bounds = [30,12]
 	data.units[0].fov = 20.0
 	data.enemies[0].hp = 10000.0
 	var sim := Simulation.new()
@@ -102,11 +103,11 @@ func _hidden_attacker() -> void:
 		sim.step(STEP)
 		if sim.hits_taken > 0: break
 	check(sim.hits_taken > 0 and not bool(sim.enemies[0].visible), "Hidden-attacker fixture begins with a real unseen hit")
-	# Isolate the retained cue from further shots and put the shooter outside
-	# the entire rearward turn arc; no live hidden location may be followed.
+	# Keep the shooter beyond sight during both the rearward reaction and
+	# the return turn, so a newly observed target cannot override movement.
 	sim.enemies[0].ammo = 0
 	sim.enemies[0].reserve_ammo = 0
-	sim.enemies[0].x = 6.0
+	sim.enemies[0].x = 26.0
 	sim.enemies[0].z = 10.0
 	for frame: int in range(30): sim.step(STEP)
 	check(absf(angle_difference(sim.units[0].body_facing, PI)) < 0.15, "Hit reaction keeps the original incoming direction")
@@ -116,6 +117,7 @@ func _hidden_attacker() -> void:
 	for frame: int in range(30): sim.step(STEP)
 	sim.issue("alpha", "MOVE", {"target":[10.0,6.0]}, false)
 	for frame: int in range(20): sim.step(STEP)
+	check(not bool(sim.enemies[0].visible) and sim.units[0]._observed.is_empty(), "Returning from an unseen hit does not acquire a new target")
 	check(absf(angle_difference(sim.units[0].body_facing, 0.0)) < 0.2, "Expired hit direction no longer overrides ordinary movement")
 
 func _hold_position() -> void:

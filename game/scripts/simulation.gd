@@ -2955,7 +2955,9 @@ func _follow_command_path(unit: Dictionary, command: Dictionary, dt: float) -> b
 		var own_formation: Dictionary = command.args.get("formation",{})
 		var other_formation: Dictionary = _active(blocker).get("args",{}).get("formation",{})
 		if other_formation.is_empty() and _active(blocker).is_empty() and not blocker.get("commands",[]).is_empty(): other_formation = blocker.commands[-1].args.get("formation",{})
-		if not temporary.is_empty() and str(own_formation.get("stage","")) in ["stack","move"] and str(own_formation.get("sync_id","")) == str(other_formation.get("sync_id","")):
+		var own_lane: Dictionary = own_formation if not own_formation.is_empty() else own_drill
+		var other_lane: Dictionary = other_formation if not own_formation.is_empty() else other_drill
+		if not temporary.is_empty() and str(own_lane.get("stage","")) in ["stack","move"] and not str(own_lane.get("sync_id","")).is_empty() and str(own_lane.sync_id) == str(other_lane.get("sync_id","")):
 			if _formation_recovery_route_clear(unit,path.slice(cursor)):
 				# Two cohort members may finish their previous avoidance legs at
 				# the same time. Resume an original divergent leg only after its
@@ -2966,7 +2968,7 @@ func _follow_command_path(unit: Dictionary, command: Dictionary, dt: float) -> b
 				_movement_stop(unit)
 				return false
 			var other_move := _active(blocker)
-			if command.type == "MOVE" and other_move.get("type","") == "MOVE" and command.state == "WAITING" and other_move.get("state","") == "WAITING" and str(other_formation.get("stage","")) in ["stack","move"] and int(unit.get("_movement_moved_tick",-5)) < tick-1 and int(blocker.get("_movement_moved_tick",-5)) < tick-1 and time >= float(unit.get("_movement_dynamic_route_at",0.0)):
+			if command.type == "MOVE" and other_move.get("type","") == "MOVE" and command.state == "WAITING" and other_move.get("state","") == "WAITING" and str(other_lane.get("stage","")) in ["stack","move"] and int(unit.get("_movement_moved_tick",-5)) < tick-1 and int(blocker.get("_movement_moved_tick",-5)) < tick-1 and time >= float(unit.get("_movement_dynamic_route_at",0.0)):
 				# The old detour can itself become occupied. A stopped named
 				# cohort may refresh it at the existing recovery cadence, only
 				# with a complete live body/leaf-safe route to the original goal.
@@ -2980,16 +2982,6 @@ func _follow_command_path(unit: Dictionary, command: Dictionary, dt: float) -> b
 					command["reason"] = "점유된 통로를 피해 다른 경로로 이동 중"
 					_movement_stop(unit)
 					return false
-		if not temporary.is_empty() and str(own_drill.get("stage", "")) == "stack" and str(other_drill.get("stage", "")) == "ready" and _active(blocker).get("type", "") == "WAIT_FOR_SIGNAL" and str(own_drill.get("sync_id", "")) == str(other_drill.get("sync_id", "")):
-			if _movement_route_clear(unit, path.slice(cursor)):
-				# A teammate may have reached its stack after this bypass was
-				# planned. Drop the stale detour only when the original complete
-				# leg is now physically clear; movement resumes next tick.
-				unit["_movement_detour"] = []
-				command["state"] = "WAITING"
-				command["reason"] = "변경된 통로를 다시 확인하는 중"
-				_movement_stop(unit)
-				return false
 		if not own_drill.is_empty() and str(own_drill.get("stage", "")) in ["entry", "domination"] and str(own_drill.get("sync_id", "")) == str(other_drill.get("sync_id", "")) and int(other_drill.get("order", 5)) < int(own_drill.order):
 			# Follow the preceding teammate's lane instead of overtaking across
 			# another entry lane. Swept collision remains the spacing authority.
@@ -3344,6 +3336,11 @@ func _movement_has_priority(actor: Dictionary, blocker: Dictionary) -> bool:
 	if str(departure.get("cohort_type", "")) == "drill_entry" and str(departure.get("requester_id", "")) == str(actor.id) and int(departure.get("requester_moved_tick", -6)) == int(actor.get("_movement_moved_tick", -5)) and str(departure.get("requester_command_id", "")) == str(own_command.get("id", "")) and str(departure.get("command_id", "")) == str(other_command.get("id", "")):
 		var pair := _drill_entry_recovery_pair(blocker, other_command, actor)
 		if not pair.is_empty() and str(pair.sync_id) == str(departure.get("sync_id", "")): return false
+	var own_drill: Dictionary = own_command.get("args", {}).get("drill", {})
+	var other_drill: Dictionary = other_command.get("args", {}).get("drill", {})
+	if str(own_drill.get("stage", "")) in ["entry", "domination"] and str(other_drill.get("stage", "")) in ["entry", "domination"] and not str(own_drill.get("sync_id", "")).is_empty() and str(own_drill.sync_id) == str(other_drill.get("sync_id", "")) and own_command.get("state", "") == "WAITING" and other_command.get("state", "") == "WAITING" and int(actor.get("_movement_moved_tick", -5)) < tick - 1 and int(blocker.get("_movement_moved_tick", -5)) < tick - 1:
+		# A later entrant waiting at the throat must yield to the earlier rank.
+		return int(own_drill.order) < int(other_drill.order)
 	if own_command.get("type","") == "MOVE" and other_command.get("type","") == "MOVE" and own_command.get("state","") == "WAITING" and other_command.get("state","") == "WAITING" and str(own_formation.get("stage","")) == "stack" and str(other_formation.get("stage","")) == "stack" and str(own_formation.get("sync_id","")) == str(other_formation.get("sync_id","")) and int(actor.get("_movement_moved_tick",-5)) < tick-1 and int(blocker.get("_movement_moved_tick",-5)) < tick-1:
 		# Two stopped approach lanes can converge onto one temporary corner.
 		# Neither actor is moving ahead of the other: tactical rank chooses
@@ -3353,6 +3350,7 @@ func _movement_has_priority(actor: Dictionary, blocker: Dictionary) -> bool:
 		return own_rank < other_rank if own_rank != other_rank else str(actor.id) < str(blocker.id)
 	var other_velocity := _movement_expected_velocity(blocker)
 	var own_direction := (_point(_active(actor).get("args", {}).get("target", _array_position(blocker))) - _position(actor)).normalized()
+	if own_command.get("args", {}).get("drill", {}).is_empty() and own_formation.is_empty() and not actor.get("_movement_detour", []).is_empty(): own_direction = _movement_expected_velocity(actor).normalized()
 	if other_velocity.length_squared() > 0.01 and other_velocity.normalized().dot(own_direction) > 0.65:
 		return false
 	return str(actor.get("id", "")) < str(blocker.get("id", ""))
@@ -3386,7 +3384,8 @@ func _movement_yield(actor: Dictionary, requester: Dictionary, destination: Vect
 	if str(actor.get("_movement_yield_requester", "")) != requester_id:
 		route = []
 	var origin := _position(actor)
-	if _movement_yield_lane(actor, requester, destination, dt): return
+	if not route.is_empty() and not _movement_route_clear(actor, route): route = []
+	if route.is_empty() and _movement_yield_lane(actor, requester, destination, dt): return
 	while not route.is_empty() and origin.distance_to(_point(route[0])) < 0.07:
 		route.pop_front()
 	if route.is_empty() and time >= float(actor.get("_movement_yield_search_at", 0.0)):
@@ -3411,6 +3410,9 @@ func _movement_yield(actor: Dictionary, requester: Dictionary, destination: Vect
 	actor["_movement_yield_requester"] = requester_id
 	actor["_movement_yield_route"] = route
 	if route.is_empty(): return
+	# Finish a validated bay departure instead of returning to the old lane.
+	actor.erase("_movement_lane_goal")
+	actor["_movement_lane_hold_until"] = -1.0
 	var waypoint := _point(route[0])
 	var candidate := origin.move_toward(waypoint, 1.3 * float(actor.get("mobility_multiplier", 1.0)) * dt)
 	if nav.walkable(candidate) and nav.segment_clear(origin, candidate, Navigation.RADIUS) and _movement_swept_blocker(actor, origin, candidate).is_empty():
@@ -3427,6 +3429,8 @@ func _movement_yield_lane(actor: Dictionary, requester: Dictionary, destination:
 	var requester_id := str(requester.get("id", ""))
 	var saved: Array = actor.get("_movement_lane_goal", [])
 	var goal := _point(saved) if saved.size() == 2 and actor.get("_movement_lane_requester", "") == requester_id else origin - lateral * 0.28
+	# A reached lane that still blocks a stopped requester needs a new bay.
+	if origin.distance_to(goal) <= 0.02 and float(_active(requester).get("_traffic_wait", 0.0)) > 1.0 and int(actor.get("_movement_moved_tick", -5)) < tick - 1 and int(requester.get("_movement_moved_tick", -5)) < tick - 1: return false
 	# Both sides require enough wall clearance; a one-body corridor instead
 	# uses the bay/backtrack recovery. This never attempts an impossible squeeze.
 	var requester_lane := _position(requester) + lateral * 0.28
@@ -3440,6 +3444,18 @@ func _movement_yield_lane(actor: Dictionary, requester: Dictionary, destination:
 		_movement_apply(actor, candidate, dt)
 	actor["status"] = "YIELDING"
 	actor["status_reason"] = "맞은편 대원이 지나갈 간격 유지 중"
+	return true
+
+func _movement_destination_clear(actor: Dictionary, point: Vector2) -> bool:
+	if not _movement_point_clear(actor, point): return false
+	# A teammate en route already owns its chosen arrival space.
+	var spacing := _movement_body_spacing() + 0.03
+	for other: Dictionary in units:
+		if other.id == actor.id or not _can_act(other): continue
+		var command := _active(other)
+		if command.get("type", "") != "MOVE" or command.get("state", "") == "FAILED" or not bool(command.get("_movement_destination_checked", false)): continue
+		var destination: Array = command.get("resolved_target", command.args.target)
+		if point.distance_to(_point(destination)) < spacing: return false
 	return true
 
 func _movement_resolve_destination(actor: Dictionary, command: Dictionary) -> void:
@@ -3458,7 +3474,7 @@ func _movement_resolve_destination(actor: Dictionary, command: Dictionary) -> vo
 			if float(other.get("hp", 0.0)) > 0.0 and not bool(other.get("visible", false)) and requested.distance_to(_position(other)) < _movement_body_spacing() + 0.03 and (_position(actor).distance_to(requested) > 2.0 or not nav.segment_clear(_position(actor), _position(other))):
 				command["_movement_destination_checked"] = false
 				return
-	if _movement_point_clear(actor, requested):
+	if _movement_destination_clear(actor, requested):
 		command.erase("_destination_reason")
 		command.erase("resolved_target")
 		return
@@ -3471,7 +3487,7 @@ func _movement_resolve_destination(actor: Dictionary, command: Dictionary) -> vo
 		var candidates: Array = []
 		for index: int in range(16):
 			var point := requested + Vector2.from_angle(float(index) * TAU / 16.0) * radius
-			if not _movement_point_clear(actor, point): continue
+			if not _movement_destination_clear(actor, point): continue
 			var score := _position(actor).distance_to(point) + radius * 2.0
 			candidates.append([point, score, index])
 		# The selected candidate depends on distance, not route length. Try the
@@ -3664,6 +3680,8 @@ func _door_permission(unit: Dictionary, candidate: Vector2) -> bool:
 		var cohort: Dictionary = _drill_passage(unit,door) if drill_door_id == str(door.id) else {}
 		if not cohort.is_empty() and not _drill_passage_order_clear(unit,door,cohort,candidate):
 			_movement_set_door_queue(unit, door)
+			# Keep the authored stack/retreat lane free for earlier entrants.
+			unit.erase("_movement_queue_point")
 			return false
 		if unit.get("kind", "") == "unit" and (candidate.distance_to(center) <= 4.5 or _movement_door_queues.has(str(door.id))):
 			_movement_refresh_door_queue(door)
@@ -3705,16 +3723,17 @@ func _door_permission(unit: Dictionary, candidate: Vector2) -> bool:
 		if portal.has_point(candidate) and not portal.has_point(_position(unit)):
 			for other: Dictionary in units + enemies + civilians:
 				if other.get("id", "") != unit.id and float(other.get("hp",0.0)) > 0.0 and portal.has_point(_position(other)):
+					if not cohort.is_empty() and str(_drill_passage(other, door).get("sync_id", "")) == str(cohort.sync_id): continue
 					unit["_movement_door_blocker"] = str(other.id)
 					_movement_set_door_queue(unit,door)
 					return false
 		if not cohort.is_empty():
 			if not portal.has_point(candidate): continue
 			var reserved := _movement_find_actor(str(_reservations.get(key, "")))
-			if not reserved.is_empty() and reserved.id != unit.id and (str(_drill_passage(reserved, door).get("sync_id", "")) != str(cohort.sync_id) or portal.has_point(_position(reserved))):
+			if not reserved.is_empty() and reserved.id != unit.id and str(_drill_passage(reserved, door).get("sync_id", "")) != str(cohort.sync_id):
 				_movement_set_door_queue(unit, door)
 				return false
-			# Release the same cohort's slot only after its whole body clears the portal.
+			# Ordered squad lanes share a wide portal; swept body collision still applies.
 			for other: Dictionary in units + enemies + civilians:
 				if other.id == unit.id or float(other.get("hp", 0.0)) <= 0.0: continue
 				if str(_drill_passage(other, door).get("sync_id", "")) == str(cohort.sync_id): continue
@@ -3751,7 +3770,8 @@ func _drill_passage_order_clear(unit: Dictionary, door: Dictionary, cohort: Dict
 	var normal := Vector2.DOWN if door.get("axis", "x") == "x" else Vector2.RIGHT
 	var inside_sign := 1.0 if (_position(room) - _position(door)).dot(normal) >= 0.0 else -1.0
 	if (_position(unit) - _position(door)).dot(normal) * inside_sign > 0.0: return true
-	var portal: Rect2 = nav._rect(door,Navigation.RADIUS)
+	# Order applies at the doorway, while approach lanes may move concurrently.
+	if (candidate - _position(door)).dot(normal) * inside_sign < -Navigation.RADIUS - float(door.get("d" if door.get("axis", "x") == "x" else "w", 0.2)) * 0.5: return true
 	for other: Dictionary in units:
 		if other.id == unit.id or float(other.hp) <= 0.0: continue
 		var participant := false
@@ -3760,7 +3780,7 @@ func _drill_passage_order_clear(unit: Dictionary, door: Dictionary, cohort: Dict
 			if command.state != "CANCELLED" and command.type == "MOVE" and str(drill.get("sync_id", "")) == str(cohort.sync_id) and int(drill.get("order", 5)) < int(cohort.order) and str(drill.get("stage", "")) in ["entry", "domination"]:
 				participant = true
 				break
-		if participant and ((_position(other) - _position(door)).dot(normal) * inside_sign <= 0.0 or portal.has_point(_position(other))): return false
+		if participant and (_position(other) - _position(door)).dot(normal) * inside_sign <= 0.0: return false
 	return true
 
 func _cleanup_reservations() -> void:
@@ -3784,6 +3804,9 @@ func _succeed(unit: Dictionary, command: Dictionary) -> void:
 	command["remaining"] = 0.0
 	command["completed_tick"] = tick
 	unit["status"] = "INCAPACITATED" if float(unit["hp"]) <= 0.0 else ("STUNNED" if float(unit["stunned"]) > 0.0 else "READY")
+	if _active(unit).is_empty():
+		for door_id: String in _reservations.keys():
+			if _reservations[door_id] == unit.id: _reservations.erase(door_id)
 
 func _fail(unit: Dictionary, command: Dictionary, reason: String) -> void:
 	if command["state"] == "FAILED":

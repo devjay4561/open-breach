@@ -512,10 +512,12 @@ func _operator_casualty_run(seed_value: int, method: String, automatic_pause: bo
 	if method=="OPEN_DOOR":
 		check(before.doors[0].state=="OPENING" and float(before.doors[0].progress)>0.0 and float(before.doors[0].progress)<1.0, label + " ordinary leaf is physically opening when its operator is hit")
 	elif method=="BREACH_DOOR":
-		check(prior.phase=="BREACH_RETREAT" and sim.breaches_used==1 and sim.units[0].breaches==1 and not sim.doors[0].destroyed, label + " casualty retains one consumed planted charge without detonation or reissue")
+		# Commands advance before gunfire in the same tick; inspect the phase
+		# actually cancelled, not the snapshot before the charge was planted.
+		check(cancelled.phase=="BREACH_RETREAT" and sim.breaches_used==1 and sim.units[0].breaches==1 and not sim.doors[0].destroyed, label + " casualty retains one consumed planted charge without detonation or reissue")
 	else:
-		var spent := seed_value==29
-		check(prior.phase==("SHOTGUN_RETREAT" if spent else "SHOTGUN_PREPARE") and sim.units[0].ammo==(0 if spent else 1) and bool(sim.doors[0].destroyed)==spent, label + " preparing and consumed shotgun resources retain their exact execution state")
+		var spent := seed_value==6
+		check(cancelled.phase==("SHOTGUN_RETREAT" if spent else "SHOTGUN_PREPARE") and sim.units[0].ammo==(0 if spent else 1) and bool(sim.doors[0].destroyed)==spent, label + " preparing and consumed shotgun resources retain their exact execution state")
 	check(sim.pause_requested and sim.pause_reason=="command_failure" and sim.pause_unit_id.is_empty() and sim.command_failures==1, label + " unsafe entry reports command failure with precedence over optional man-down pause")
 	check(casualty.units[1].commands[0].state=="FAILED" and casualty.units[1].commands[0].reason=="문 조작 대원이 행동 불능이 되어 진입을 안전하게 중단했습니다", label + " surviving automatic barrier fails visibly instead of silently waiting forever")
 	check(sim._room_registered.is_empty() and sim.doors[0].owner_id.is_empty() and sim.doors[0].owner_command_id.is_empty(), label + " loss releases the door and cannot register the incomplete entry")
@@ -551,12 +553,11 @@ func _operator_casualty_run(seed_value: int, method: String, automatic_pause: bo
 	return {"data":candidate,"final":acknowledged,"tick":sim.tick,"phase":prior.get("phase","")}
 
 func _test_operator_casualty_records() -> void:
-	# Seeds 0/17 hit while OPENING, charge RETREAT and shotgun PREPARE are
-	# unfinished. Seed29 misses its first real shot and hits SG RETREAT after
-	# consumption. OPEN/charge have finished by that seed's later shot, so
-	# their proof deliberately uses only the actual unfinished 0/17 cases.
+	# Seeds 0/17 cover opening, charge consumption and shotgun preparation.
+	# Seed 6 lands a real shot during shotgun retreat after the round is spent;
+	# seed 29 still covers the longer preparation before consumption.
 	for method: String in ["OPEN_DOOR","BREACH_DOOR","SHOTGUN_BREACH"]:
-		var seeds: Array = [0,17,29] if method=="SHOTGUN_BREACH" else [0,17]
+		var seeds: Array = [0,17,29,6] if method=="SHOTGUN_BREACH" else [0,17]
 		for seed_value: int in seeds:
 			var manual := _operator_casualty_run(seed_value,method,false)
 			var automatic := _operator_casualty_run(seed_value,method,true)

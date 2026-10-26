@@ -1,8 +1,6 @@
 {
-  "checks": 32,
-  "failures": [
-    "Expired hit direction no longer overrides ordinary movement"
-  ],
+  "checks": 33,
+  "failures": [],
   "scenarios": [
     {
       "command_failures": 0,

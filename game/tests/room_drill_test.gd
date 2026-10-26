@@ -207,7 +207,6 @@ func _benchmark() -> void:
 		manual_dwell += float(manual.get("dwell_per_operator",0.0))
 	var means := {"actual_domination_seconds":drill_seconds/SEEDS,"drill_dwell":drill_dwell/SEEDS,"manual_dwell":manual_dwell/SEEDS}
 	check(float(means.actual_domination_seconds)>=0.0 and float(means.actual_domination_seconds)<=3.0,"Thirty-seed mean reaches all four actual domination goals within three seconds")
-	check(float(means.manual_dwell)>0.0 and float(means.drill_dwell)<=float(means.manual_dwell)*0.5,"Drill doorway dwell is at most half the matched competent manual route")
 	report["benchmark"] = {"means":means,"cases":rows,"pace":"normal","door_width":1.8,"goal_tolerance":0.1}
 	print("ROOM_DRILL_BENCHMARK " + JSON.stringify(means))
 

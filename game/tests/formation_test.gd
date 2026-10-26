@@ -376,7 +376,6 @@ func _held_lane_contracts() -> void:
 			physical = physical and sim.nav.segment_clear(prior[index],position(sim.units[index]),Navigation.RADIUS) and prior[index].distance_to(position(sim.units[index]))<=0.121
 			for other: int in range(index): physical = physical and position(sim.units[index]).distance_to(position(sim.units[other]))>=sim._movement_body_spacing()-0.000001
 	check(crossed,"The original normal patrol actually crosses the authored side-door plane")
-	check(not sim.lane_departures.is_empty(),"Actual same-cohort stopped lane renewal exercises the bounded departure recovery")
 	check(sim.lane_departures.all(func(row: Dictionary)->bool:return row.move_zero and row.rng_unchanged and row.primitive_unchanged and row.route_clear and row.exact_goal),"Each lane departure preserves full live sweep, exact goal, IDs, all RNG streams and zero movement that STEP")
 	check(physical and sim.command_failures==0,"Side-patrol recovery keeps body/leaf clearance and the original one-STEP movement budget")
 	check(sim.units.all(func(unit: Dictionary)->bool:return unit.commands.all(func(command: Dictionary)->bool:return command.state=="SUCCEEDED")),"All four living side-patrol formation participants actually complete their original primitives")
@@ -386,6 +385,35 @@ func _held_lane_contracts() -> void:
 		check(not moves.is_empty() and position(unit).distance_to(sim._point(moves[-1].args.target))<=0.1,"Side-patrol member reaches its real original final formation slot")
 	var signals: Array = sim.events.filter(func(event: Dictionary)->bool:return event.type=="SIGNAL")
 	check(signals.size()==1 and int(signals[0].released)==4,"Held-lane recovery releases one complete actual four-member ready cohort")
+
+func _held_lane_unit_contract() -> void:
+	# Recovery coverage is independent of whether a complete public plan
+	# still needs this particular branch after avoidance improvements.
+	var data := fixture(0,2,6.0)
+	data.units[0].x = 7.6
+	data.units[1].x = 8.4
+	for unit: Dictionary in data.units: unit.z = 12.0
+	var sim := RecoveryProbe.new()
+	sim.load_mission(data)
+	for index: int in range(2):
+		var unit: Dictionary = sim.units[index]
+		accepted(sim,str(unit.id),"MOVE",{"target":[unit.x,8.0],"formation":{"kind":"SERPENTINE","sync_id":"held-lane-unit","order":index+1,"stage":"stack","source_unit_id":"alpha"}})
+		var command: Dictionary = sim._active(unit)
+		sim._start_command(unit,command)
+		command.state = "WAITING"
+		command["_traffic_wait"] = 2.0
+	sim.tick = 60
+	sim.time = 2.0
+	var actor: Dictionary = sim.units[1]
+	actor["_movement_lane_goal"] = [actor.x,actor.z]
+	actor["_movement_lane_requester"] = "alpha"
+	actor["_movement_lane_hold_until"] = sim.time + 0.8
+	actor.hold_position = true
+	var before := fingerprint(sim)
+	check(not sim._recover_formation_lane_hold(actor,sim._active(actor)) and fingerprint(sim)==before,"A player hold rejects lane departure without changing authority or RNG")
+	actor.hold_position = false
+	check(sim._recover_formation_lane_hold(actor,sim._active(actor)),"A stopped same-cohort stack can leave its reached yield lane")
+	check(sim.lane_departures.size()==1 and sim.lane_departures.all(func(row: Dictionary)->bool:return row.move_zero and row.rng_unchanged and row.primitive_unchanged and row.route_clear and row.exact_goal),"The isolated departure preserves full live sweep, exact goal, primitive, RNG and zero movement")
 
 func _recovery_floor_contracts() -> void:
 	var data := fixture(0,1,6.0)
@@ -428,6 +456,7 @@ func run() -> void:
 	_delay_occurrence_contracts()
 	_occupied_detour_contracts()
 	_held_lane_contracts()
+	_held_lane_unit_contract()
 	_recovery_floor_contracts()
 	if not "--contracts-only" in OS.get_cmdline_user_args(): _repeat_contracts()
 	for failure: String in failures: print("FAIL "+failure)

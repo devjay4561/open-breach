@@ -189,6 +189,8 @@ func _contended_portal() -> void:
 	var maximum := 0
 	var approaches := 0
 	var complete := false
+	var physical_clear := true
+	var crossings: Array = []
 	var portal := Door.funnel_rect(sim.doors[0],float(sim.doors[0].d)*0.5).grow(Navigation.RADIUS)
 	var approach := Door.funnel_rect(sim.doors[0],1.0).grow(Navigation.RADIUS)
 	for frame: int in range(900):
@@ -198,6 +200,10 @@ func _contended_portal() -> void:
 		var entering := 0
 		for index: int in range(sim.units.size()):
 			var unit: Dictionary = sim.units[index]
+			var here: Vector2 = sim._position(unit)
+			if before[index].y>=6.0 and here.y<6.0: crossings.append(str(unit.id))
+			physical_clear = physical_clear and sim.nav.segment_clear(before[index],here,Navigation.RADIUS) and not Door.overlaps_actor(sim.doors[0],-1.0,here,Navigation.RADIUS)
+			for other: int in range(index): physical_clear = physical_clear and here.distance_to(sim._position(sim.units[other]))>=sim._movement_body_spacing()-0.00001
 			var stage := str(sim._active(unit).get("args",{}).get("drill",{}).get("stage",""))
 			if stage in ["entry","domination"] and portal.has_point(sim._position(unit)): occupants += 1
 			if stage in ["entry","domination"] and before[index].y>=6.0 and approach.has_point(sim._position(unit)) and before[index].distance_to(sim._position(unit))>0.0001: entering += 1
@@ -206,9 +212,12 @@ func _contended_portal() -> void:
 		complete = sim.units.all(func(unit: Dictionary) -> bool: return sim._active(unit).is_empty())
 		if complete or sim.command_failures>0: break
 	print("PORTAL_CONTENTION maximum=%d simultaneous_approaches=%d complete=%s time=%.2f" % [maximum,approaches,complete,sim.time])
-	check(maximum == 1, "A drill never sends two bodies into the doorway at once")
-	check(approaches == 1, "Only the current leader advances into the doorway approach while followers hold their stacks")
-	check(complete and sim.command_failures == 0, "All four complete after exclusive doorway admission")
+	# A wide portal admits the same ordered cohort concurrently. Physical
+	# spacing and actual plane crossings enforce safety, not one-slot occupancy.
+	check(maximum>1 and approaches>1,"A wide portal lets the ordered cohort approach and pass concurrently")
+	check(physical_clear,"Concurrent entry preserves full body spacing, walls and the physical door leaf on every STEP")
+	check(crossings==order,"Concurrent approaches retain the requested actual door-plane crossing order")
+	check(complete and sim.command_failures == 0,"All four complete their ordered doorway entry")
 
 func _chained_doors() -> void:
 	var data := fixture("x",true)

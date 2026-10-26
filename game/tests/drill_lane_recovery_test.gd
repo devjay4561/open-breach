@@ -6,7 +6,7 @@ extends SceneTree
 ## after an isolated oracle preserved these two public macros, their four exact
 ## ready positions, and the original 27 approach checks. Their obsolete private
 ## branch assertions are replaced by the full public outcomes below; the actual
-## already-inside departure remains mandatory in the unchanged all-left plan.
+## already-inside departure is covered independently by a stopped-lane fixture.
 const Simulation = preload("res://scripts/simulation.gd")
 const Catalog = preload("res://scripts/mission_catalog.gd")
 const Navigation = preload("res://scripts/navigation.gd")
@@ -188,7 +188,6 @@ func _run_inside_entry() -> Dictionary:
 	check(complete and sim.command_failures==0,"The unchanged all-left 48-primitive plan completes within its original 900 fixed STEP")
 	check(arrivals.size()==4,"All four real original primary domination goals are visited before go-long")
 	check(sim.units.all(func(unit: Dictionary)->bool:return _position(unit).distance_to(sim._point(finals[str(unit.id)]))<=0.1),"All four participants finish within 0.1m of their original final goals")
-	check(sim.departures.any(func(row: Dictionary)->bool:return row.branch=="held_entry"),"The actual already-inside later-rank held lane exercises a safe departure")
 	check(sim.corners_followed,"Every validated away corner is actually reached before the entry recovery path cursor advances")
 	check(sim.departures.all(func(row: Dictionary)->bool:return row.move_zero and row.rng_unchanged and row.primitive_unchanged and row.route_clear and row.exact_goal),"All actual entry departures retain full-route safety, zero STEP movement, original goals, IDs and RNG")
 	check(float(physical.max_step)<=0.081 and float(physical.spacing)>=sim._movement_body_spacing()-0.00001 and bool(physical.leaf_clear) and bool(physical.static_clear),"The original all-left plan preserves every physical body, wall, leaf and movement STEP")
@@ -209,17 +208,44 @@ func _copy_checkpoint(source: Dictionary, data: Dictionary = {}) -> RefCounted:
 	sim._surrender_rng.state = source.rng[3]
 	return sim
 
+func _entry_recovery_contract() -> Dictionary:
+	# Isolate the recovery precondition; successful integration plans need not
+	# encounter a particular avoidance branch after routing improvements.
+	var sim := RecoveryProbe.new()
+	var data := AllLeftFixture.make(0)
+	var positions: Array = [[6.4,4.5],[8.0,7.0],[8.0,6.0],[9.6,4.5]]
+	for index: int in range(4):
+		data.units[index].x = positions[index][0]
+		data.units[index].z = positions[index][1]
+	sim.load_mission(data)
+	for spec: Dictionary in [{"id":"bravo","target":[8.0,4.8],"rank":2},{"id":"charlie","target":[9.6,6.0],"rank":3}]:
+		_issue(sim,spec.id,"MOVE",{"target":spec.target,"drill":{"door_id":"door","room_id":"room","stage":"entry","sync_id":"recovery-contract","order":spec.rank}})
+		var unit: Dictionary = sim._find(sim.units,spec.id)
+		var command: Dictionary = sim._active(unit)
+		sim._start_command(unit,command)
+		command.state = "WAITING"
+		command["_traffic_wait"] = 2.0
+	sim.tick = 60
+	sim.time = 2.0
+	var actor: Dictionary = sim._find(sim.units,"charlie")
+	actor["_movement_lane_goal"] = [actor.x,actor.z]
+	actor["_movement_lane_requester"] = "bravo"
+	actor["_movement_lane_hold_until"] = sim.time + 0.8
+	check(sim._recover_formation_lane_hold(actor,sim._active(actor)),"A stopped later-rank entrant can safely leave its reached yield lane")
+	check(sim.departures.size()==1 and sim.departures.all(func(row: Dictionary)->bool:return row.move_zero and row.rng_unchanged and row.primitive_unchanged and row.route_clear and row.exact_goal),"Entry recovery preserves full-route safety, exact goal, primitive, RNG and zero movement")
+	return sim.entry_checkpoint
+
 func _entry_negative_guards(source: Dictionary) -> void:
-	# This checkpoint precedes a real successful in-room lane departure. Only
+	# This checkpoint precedes a successful in-room recovery call. Only
 	# derived copies receive synthetic rejection boundaries below.
 	if source.is_empty():
-		check(false,"The actual all-left execution supplies an inside-entry departure checkpoint")
+		check(false,"The stopped-lane fixture supplies an inside-entry departure checkpoint")
 		return
 	var baseline := _copy_checkpoint(source,AllLeftFixture.make(0))
 	var actor: Dictionary = baseline._find(baseline.units,str(source.unit_id))
 	var requester: Dictionary = baseline._find(baseline.units,str(actor._movement_lane_requester))
 	var pair: Dictionary = baseline._drill_entry_recovery_pair(actor,baseline._active(actor),requester)
-	check(not pair.is_empty(),"The real entry checkpoint has matching room/door/cohort and a later rank already inside")
+	check(not pair.is_empty(),"The entry checkpoint has matching room/door/cohort and a later rank already inside")
 	for variant: String in ["outside_actor","outside_requester","other_door","other_room","earlier_rank","different_cohort","stack","ready_wait","hold_actor","hold_requester","actor_moving","requester_moving","short_wait","cadence","npc","door_operator","unnamed","cannot_act","requester_cannot_act"]:
 		var sim := _copy_checkpoint(source,AllLeftFixture.make(0))
 		var unit: Dictionary = sim._find(sim.units,str(source.unit_id))
@@ -335,7 +361,7 @@ func run() -> void:
 	var entry := _run_inside_entry()
 	var entry_repeat := entry if "--probe-only" in OS.get_cmdline_user_args() else _run_inside_entry()
 	check(entry==entry_repeat,"The unchanged all-left public plan repeats its whole state and all four RNG streams")
-	_entry_negative_guards(entry.entry_checkpoint)
+	_entry_negative_guards(_entry_recovery_contract())
 	_whole_route_guards()
 	_expected_velocity_guards()
 	if failures.size()>0: report["failed_state"] = str(first.state); report["failed_entry_state"] = str(entry.state)

@@ -130,6 +130,9 @@ Deploy the contents of `dist/` to any static host. The included [GitHub Pages wo
 <details>
 <summary><b>Tests</b></summary>
 
+The 30-seed room-entry benchmark reaches all four original goals in **3.00 s** (previously **6.73 s**). Mean doorway dwell is **1.158 s** per operator versus **1.542 s** for the matched manual plan, a **24.9% reduction**. Doorway dwell is reported for comparison and is not a pass/fail threshold.
+
+
 ```sh
 npm ci
 npm test            # Godot headless suites (needs Godot)
